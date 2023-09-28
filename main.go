@@ -20,6 +20,7 @@ type SpamBody struct {
 }
 
 func main() {
+	rand.Seed(time.Now().UnixMilli())
 	attempts := 0
 
 	c := make(chan os.Signal)
