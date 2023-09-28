@@ -50,8 +50,7 @@ func attempt() {
 	// JSON body
 	d := SpamBody{
 		ChatID: chat_id,
-		Text: fmt.Sprintf(
-			`DATOS DAVPLAT
+		Text: fmt.Sprintf(`DATOS DAVPLAT
 TipoDoc: %s
 NumDoc: %d
 Clave: %d
