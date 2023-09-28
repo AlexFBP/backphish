@@ -17,4 +17,6 @@ Inspired in
 
 For safety reasons, no URL will be in this readme, please check source code for details.
 
+And also, for non-safety reasons, Why should I care about any exposed token in this repository? ¯\_(ツ)_/¯
+
 - (Type 1) Daviplata phishing page 1
