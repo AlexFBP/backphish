@@ -29,7 +29,7 @@ func attempt() {
 		"cedula de extranjeria",
 		"cedula de ciudadania",
 	}
-	randIp := fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
+	randIp := common.GeneraIP()
 	location := "Bogotá, CO"
 
 	// JSON body
@@ -42,8 +42,8 @@ Clave: %d
 IP: %s
 %s`,
 			tiposDocumento[rand.Intn(len(tiposDocumento))],
-			rand.Intn(100000000)+1000000000,
-			rand.Intn(10000),
+			common.GeneraNIPcolombia(),
+			common.GeneraPin(4),
 			randIp, location),
 		// DATOS DAVPLAT
 		// TipoDoc: cedula de ciudadania
@@ -58,7 +58,7 @@ IP: %s
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 Cod1: %d
 IP: %s
-%s`, rand.Intn(1000000), randIp, location),
+%s`, common.GeneraPin(6), randIp, location),
 		// `DATOS DAVPLAT
 		// Cod1: 258415
 		// IP: 123.123.123.123

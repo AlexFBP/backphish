@@ -1,7 +1,9 @@
 package common
 
 import (
+	"fmt"
 	"log"
+	"math"
 	"math/rand" // "crypto/rand"
 	"os"
 	"os/signal"
@@ -25,4 +27,16 @@ func AttackRunner(attemptHandle func()) error {
 	for ; ; attempts++ {
 		attemptHandle()
 	}
+}
+
+func GeneraNIPcolombia() int {
+	return rand.Intn(100000000) + 1000000000
+}
+
+func GeneraPin(digitos int) int {
+	return rand.Intn(int(math.Pow10(digitos)))
+}
+
+func GeneraIP() string {
+	return fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
 }
