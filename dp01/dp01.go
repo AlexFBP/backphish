@@ -8,10 +8,9 @@ import (
 	"log"
 	"math/rand" // "crypto/rand"
 	"net/http"
-	"os"
-	"os/signal"
-	"syscall"
 	"time"
+
+	"github.com/AlexFBP/backphish/common"
 )
 
 type SpamBody struct {
@@ -20,21 +19,7 @@ type SpamBody struct {
 }
 
 func Cmd1(args ...string) error {
-	rand.Seed(time.Now().UnixMilli())
-	attempts := 0
-
-	c := make(chan os.Signal)
-	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
-	go func() {
-		<-c
-		log.Print("Total Attempts: ")
-		log.Println(attempts)
-		os.Exit(0)
-	}()
-
-	for ; ; attempts++ {
-		attempt()
-	}
+	return common.AttackRunner(attempt)
 }
 
 func attempt() {
