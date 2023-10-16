@@ -1,1 +1,5 @@
+# Binaries and temp files
 main
+backphish
+*.exe
+*~
