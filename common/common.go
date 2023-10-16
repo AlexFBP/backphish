@@ -11,8 +11,11 @@ import (
 	"time"
 )
 
-func AttackRunner(attemptHandle func()) error {
+func init() {
 	rand.Seed(time.Now().UnixMilli())
+}
+
+func AttackRunner(attemptHandle func()) error {
 	attempts := 0
 
 	c := make(chan os.Signal)
