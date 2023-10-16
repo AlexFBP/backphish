@@ -12,6 +12,8 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/turret-io/go-menu/menu"
 )
 
 type SpamBody struct {
@@ -19,7 +21,7 @@ type SpamBody struct {
 	Text   string `json:"text"`
 }
 
-func main() {
+func cmd1(args ...string) error {
 	rand.Seed(time.Now().UnixMilli())
 	attempts := 0
 
@@ -35,6 +37,15 @@ func main() {
 	for ; ; attempts++ {
 		attempt()
 	}
+}
+
+func main() {
+	commandOptions := []menu.CommandOption{
+		menu.CommandOption{"dp1", "attack fake daviplata 1", cmd1},
+	}
+	menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
+	menu := menu.NewMenu(commandOptions, menuOptions)
+	menu.Start()
 }
 
 func attempt() {
