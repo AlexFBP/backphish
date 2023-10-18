@@ -82,7 +82,11 @@ func sendReq(v any) {
 		log.Fatal(err)
 	}
 
-	client := &http.Client{}
+	client := &http.Client{
+		CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse
+		},
+	}
 	req, err := http.NewRequest("POST", posturl, bytes.NewBuffer(reqBody))
 	if err != nil {
 		log.Fatal(err)

@@ -39,7 +39,11 @@ func attempt() {
 }
 
 func sendReq(postUrl string, params map[string]string) {
-	client := &http.Client{}
+	client := &http.Client{
+		CheckRedirect: func(req *http.Request, via []*http.Request) error {
+			return http.ErrUseLastResponse
+		},
+	}
 	data := url.Values{}
 	for k, v := range params {
 		data.Add(k, v)
