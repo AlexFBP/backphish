@@ -8,7 +8,6 @@ import (
 	"log"
 	"math/rand" // "crypto/rand"
 	"net/http"
-	"time"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -66,17 +65,9 @@ IP: %s
 	}
 
 	sendReq(d)
-	delay()
+	common.RandDelay(30, 60)
 	sendReq(d2)
-	delay()
-}
-
-func delay() {
-	const a = 35
-	const b = 30
-	// const a = 3
-	// const b = 3
-	time.Sleep(time.Second * time.Duration(a+rand.Intn(b)))
+	common.RandDelay(30, 60)
 }
 
 func sendReq(v any) {

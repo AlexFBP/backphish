@@ -43,3 +43,7 @@ func GeneraPin(digitos int) int {
 func GeneraIP() string {
 	return fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
 }
+
+func RandDelay(minSeconds, maxSeconds int) {
+	time.Sleep(time.Second * time.Duration(minSeconds+rand.Intn(maxSeconds-minSeconds)))
+}
