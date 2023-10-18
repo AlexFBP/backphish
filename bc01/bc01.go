@@ -23,12 +23,15 @@ func attempt() {
 		// "http://localhost:1080",
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
 		map[string]string{"cedula": "224224242424"})
+	common.RandDelay(3, 10)
 
 	// POST https://activacion--vitualclave.repl.co/finish9.php
 	// clave=6248
+	common.RandDelay(2, 5)
 
 	// POST https://dinamica.vitualclave.repl.co/finish9.php
 	// clave=245871
+	common.RandDelay(12, 51)
 }
 
 func sendReq(postUrl string, params map[string]string) {
