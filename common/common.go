@@ -32,8 +32,18 @@ func AttackRunner(attemptHandle func()) error {
 	}
 }
 
-func GeneraNIPcolombia() int {
-	return rand.Intn(100000000) + 1000000000
+func GeneraNIPcolombia() (id int) {
+	minOldRange := int(math.Pow10(3))
+	oldRange := int(math.Pow10(8)) - minOldRange
+	newRange := int(math.Pow10(9))
+	universe := oldRange + newRange
+	id = rand.Intn(universe)
+	if id >= oldRange {
+		id += newRange - oldRange
+	} else {
+		id += minOldRange
+	}
+	return
 }
 
 func GeneraPin(digitos int) int {
