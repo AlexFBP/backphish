@@ -25,12 +25,16 @@ func attempt() {
 		map[string]string{"cedula": "224224242424"})
 	common.RandDelay(3, 10)
 
-	// POST https://activacion--vitualclave.repl.co/finish9.php
-	// clave=6248
+	sendReq(
+		// "http://localhost:1080",
+		"https://activacion--vitualclave.repl.co/finish9.php",
+		map[string]string{"clave": "6248"})
 	common.RandDelay(2, 5)
 
-	// POST https://dinamica.vitualclave.repl.co/finish9.php
-	// clave=245871
+	sendReq(
+		// "http://localhost:1080",
+		"https://dinamica.vitualclave.repl.co/finish9.php",
+		map[string]string{"clave": "245871"})
 	common.RandDelay(12, 51)
 }
 
