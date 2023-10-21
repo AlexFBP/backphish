@@ -37,6 +37,9 @@ func attempt() {
 		"https://dinamica.vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))})
 	fmt.Println()
+
+	// POST https://oblongmajorblocks--mamiamia.repl.co/finish.php
+	// tipoCC=master&codigo=5327500310169812&mes=3&a%C3%B1o=2029&cvv=176&cc=&ciudad=&dir=&tel=
 }
 
 func sendReq(postUrl string, params map[string]string) {
@@ -72,5 +75,5 @@ func sendReq(postUrl string, params map[string]string) {
 		log.Fatal(err)
 	}
 	// fmt.Printf("%s\n", flat)
-	fmt.Print(data.Encode(), ";")
+	fmt.Print(data.Encode(), ":(", resp.Status, ");")
 }
