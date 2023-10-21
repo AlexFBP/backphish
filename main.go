@@ -5,12 +5,14 @@ import (
 
 	"github.com/AlexFBP/backphish/bc01"
 	"github.com/AlexFBP/backphish/dp01"
+	"github.com/AlexFBP/backphish/playground"
 )
 
 func main() {
 	commandOptions := []menu.CommandOption{
-		menu.CommandOption{"dp1", "attack fake daviplata 1", dp01.Cmd1},
-		menu.CommandOption{"bc1", "attack fake bancolombia 1", bc01.Cmd},
+		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
+		{Command: "bc1", Description: "attack fake bancolombia 1", Function: bc01.Cmd},
+		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}
 	menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
 	menu := menu.NewMenu(commandOptions, menuOptions)
