@@ -28,6 +28,7 @@ func AttackRunner(attemptHandle func()) error {
 	}()
 
 	for ; ; attempts++ {
+		log.Println("Attempt Nº ", attempts)
 		attemptHandle()
 	}
 }
