@@ -55,8 +55,27 @@ func attempt() {
 		},
 	)
 
-	// POST https://oblongmajorblocks--mamiamia.repl.co/finish.php
-	// tipoCC=master&codigo=5327500310169812&mes=3&a%C3%B1o=2029&cvv=176&cc=&ciudad=&dir=&tel=
+	// common.RandDelay(12, 51)
+	sendReq(
+		// "http://localhost:1080",
+		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
+		map[string]string{
+			"tipoCC": "master",
+			"codigo": "5327500310169812",
+			"mes":    "3",
+			"año":    "2029",
+			"cvv":    "176",
+			"cc":     "",
+			"ciudad": "",
+			"dir":    "",
+			"tel":    "",
+		},
+		map[string]string{
+			"Host":    "oblongmajorblocks--mamiamia.repl.co",
+			"Origin":  "https://oblongmajorblocks--mamiamia.repl.co",
+			"Referer": "https://oblongmajorblocks--mamiamia.repl.co/pagar.php",
+		},
+	)
 
 	fmt.Println()
 }
