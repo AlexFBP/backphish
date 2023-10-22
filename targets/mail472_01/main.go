@@ -20,6 +20,7 @@ func attempt() {
 	// POST https://guianacional4-72.com/actualizar_datos.php
 
 	pers := gofakeit.Person()
+	common.RandDelay(60, 60*5)
 	common.SendPostEncoded(
 		"https://guianacional4-72.com/informacion_pago.php",
 		map[string]string{
@@ -38,6 +39,7 @@ func attempt() {
 		},
 	)
 
+	common.RandDelay(30, 80)
 	common.SendPostEncoded(
 		"https://guianacional4-72.com/comprobando.php",
 		map[string]string{
