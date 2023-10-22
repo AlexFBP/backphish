@@ -54,7 +54,7 @@ func attempt() {
 		},
 	)
 
-	// common.RandDelay(12, 51)
+	common.RandDelay(30, 80)
 	var c *gofakeit.CreditCardInfo
 	var month, year, attempts int
 	var cardtype string
