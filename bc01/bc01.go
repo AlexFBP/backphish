@@ -23,26 +23,33 @@ func attempt() {
 	sendReq(
 		// "http://localhost:1080",
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
-		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())})
+		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
+		nil,
+	)
 
 	common.RandDelay(2, 5)
 	sendReq(
 		// "http://localhost:1080",
 		"https://activacion--vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))})
+		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
+		nil,
+	)
 
 	common.RandDelay(12, 51)
 	sendReq(
 		// "http://localhost:1080",
 		"https://dinamica.vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))})
-	fmt.Println()
+		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
+		nil,
+	)
 
 	// POST https://oblongmajorblocks--mamiamia.repl.co/finish.php
 	// tipoCC=master&codigo=5327500310169812&mes=3&a%C3%B1o=2029&cvv=176&cc=&ciudad=&dir=&tel=
+
+	fmt.Println()
 }
 
-func sendReq(postUrl string, params map[string]string) {
+func sendReq(postUrl string, params, additionalHeaders map[string]string) {
 	client := &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
@@ -63,6 +70,9 @@ func sendReq(postUrl string, params map[string]string) {
 		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
 	}
 	for k, v := range reqHeaders {
+		req.Header.Add(k, v)
+	}
+	for k, v := range additionalHeaders {
 		req.Header.Add(k, v)
 	}
 	resp, err := client.Do(req)
