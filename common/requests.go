@@ -1,4 +1,4 @@
-package bc01
+package common
 
 import (
 	"fmt"
@@ -6,103 +6,10 @@ import (
 	"log"
 	"net/http"
 	"net/url"
-	"strconv"
 	"strings"
-
-	"github.com/brianvoe/gofakeit"
-
-	"github.com/AlexFBP/backphish/common"
 )
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(attempt)
-	// For single attack, comment line above and uncomment this:
-	// attempt()
-	// return nil
-}
-
-func attempt() {
-	common.RandDelay(3, 10)
-	sendReq(
-		// "http://localhost:1080",
-		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
-		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
-		map[string]string{
-			"Host":    "desbloqueo--sucursalvirtua2.repl.co",
-			"Origin":  "https://desbloqueo--sucursalvirtua2.repl.co",
-			"Referer": "https://desbloqueo--sucursalvirtua2.repl.co/index.html",
-		},
-	)
-
-	common.RandDelay(2, 5)
-	sendReq(
-		// "http://localhost:1080",
-		"https://activacion--vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
-		map[string]string{
-			"Host":    "activacion--vitualclave.repl.co",
-			"Origin":  "https://activacion--vitualclave.repl.co",
-			"Referer": "https://activacion--vitualclave.repl.co/index.html",
-		},
-	)
-
-	common.RandDelay(12, 51)
-	sendReq(
-		// "http://localhost:1080",
-		"https://dinamica.vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
-		map[string]string{
-			"Host":    "dinamica.vitualclave.repl.co",
-			"Origin":  "https://dinamica.vitualclave.repl.co",
-			"Referer": "https://dinamica.vitualclave.repl.co/index.html",
-		},
-	)
-
-	// common.RandDelay(12, 51)
-	var c *gofakeit.CreditCardInfo
-	var month, year, attempts int
-	var cardtype string
-	allowed := map[string]string{
-		"Visa":             "visa",
-		"MasterCard":       "master",
-		"American Express": "amex",
-	}
-	for ; ; attempts++ {
-		c = gofakeit.CreditCard()
-		if v, ok := allowed[c.Type]; ok {
-			cardtype = v
-			break
-		}
-	}
-	exp := strings.Split(c.Exp, "/")
-	month, _ = strconv.Atoi(exp[0])
-	year, _ = strconv.Atoi(exp[1])
-	year += 2000
-	sendReq(
-		// "http://localhost:1080",
-		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
-		map[string]string{
-			"tipoCC": cardtype,
-			"codigo": strconv.Itoa(c.Number),
-			"mes":    strconv.Itoa(month),
-			"año":    strconv.Itoa(year),
-			"cvv":    c.Cvv,
-			"cc":     "",
-			"ciudad": "",
-			"dir":    "",
-			"tel":    "",
-		},
-		map[string]string{
-			"Host":    "oblongmajorblocks--mamiamia.repl.co",
-			"Origin":  "https://oblongmajorblocks--mamiamia.repl.co",
-			"Referer": "https://oblongmajorblocks--mamiamia.repl.co/pagar.php",
-		},
-	)
-
-	fmt.Println()
-}
-
-func sendReq(postUrl string, params, additionalHeaders map[string]string) {
+func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string) {
 	client := &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
