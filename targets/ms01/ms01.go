@@ -18,13 +18,14 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
+	common.RandDelay(20, 60)
 	domains := []string{
 		"hotmail.com",
 		"live.com",
 		"outlook.com",
 	}
 	em := gofakeit.Email()
-	em += fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], domains[rand.Intn(len(domains))])
+	em = fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], domains[rand.Intn(len(domains))])
 	form := map[string]string{
 		"argaml": em,
 		"argapw": gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(5, 20)),
@@ -35,7 +36,6 @@ func attempt() {
 	if gofakeit.Bool() {
 		form["KMSI"] = "on"
 	}
-
 	common.SendPostEncoded("http://recuperacion004.0hi.me/next.php",
 		form,
 		map[string]string{
