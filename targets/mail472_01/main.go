@@ -3,13 +3,16 @@ package mail47201
 import (
 	"fmt"
 
-	"github.com/AlexFBP/backphish/common"
 	"github.com/brianvoe/gofakeit"
+
+	"github.com/AlexFBP/backphish/common"
 )
 
 func Cmd(args ...string) error {
-	attempt()
-	return nil
+	return common.AttackRunner(attempt)
+	// For single attack, comment line above and uncomment this:
+	// attempt()
+	// return nil
 }
 
 func attempt() {
