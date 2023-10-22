@@ -24,7 +24,11 @@ func attempt() {
 		// "http://localhost:1080",
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
 		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
-		nil,
+		map[string]string{
+			"Host":    "desbloqueo--sucursalvirtua2.repl.co",
+			"Origin":  "https://desbloqueo--sucursalvirtua2.repl.co",
+			"Referer": "https://desbloqueo--sucursalvirtua2.repl.co/index.html",
+		},
 	)
 
 	common.RandDelay(2, 5)
@@ -32,7 +36,11 @@ func attempt() {
 		// "http://localhost:1080",
 		"https://activacion--vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
-		nil,
+		map[string]string{
+			"Host":    "activacion--vitualclave.repl.co",
+			"Origin":  "https://activacion--vitualclave.repl.co",
+			"Referer": "https://activacion--vitualclave.repl.co/index.html",
+		},
 	)
 
 	common.RandDelay(12, 51)
@@ -40,7 +48,11 @@ func attempt() {
 		// "http://localhost:1080",
 		"https://dinamica.vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
-		nil,
+		map[string]string{
+			"Host":    "dinamica.vitualclave.repl.co",
+			"Origin":  "https://dinamica.vitualclave.repl.co",
+			"Referer": "https://dinamica.vitualclave.repl.co/index.html",
+		},
 	)
 
 	// POST https://oblongmajorblocks--mamiamia.repl.co/finish.php
