@@ -10,8 +10,11 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
-func Cmd() {
-	attempt()
+func Cmd(args ...string) error {
+	return common.AttackRunner(attempt)
+	// For single attack, comment line above and uncomment this:
+	// attempt()
+	// return nil
 }
 
 func attempt() {
