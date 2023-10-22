@@ -36,13 +36,12 @@ func AttackRunner(attemptHandle func()) error {
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Print("Total Attempts: ")
-		log.Println(attempts)
+		log.Println(fmt.Sprintf("\nTotal Attempts: %d", attempts))
 		os.Exit(0)
 	}()
 
 	for ; ; attempts++ {
-		log.Println("Attempt Nº ", attempts)
+		fmt.Print(fmt.Sprintf("\nAttempt Nº %d - ", attempts))
 		attemptHandle()
 	}
 }

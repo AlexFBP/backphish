@@ -56,6 +56,4 @@ func attempt() {
 			"Referer": "https://guianacional4-72.com/informacion_pago.php",
 		},
 	)
-
-	fmt.Println()
 }

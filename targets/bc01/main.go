@@ -90,6 +90,4 @@ func attempt() {
 			"Referer": "https://oblongmajorblocks--mamiamia.repl.co/pagar.php",
 		},
 	)
-
-	fmt.Println()
 }
