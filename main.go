@@ -3,9 +3,9 @@ package main
 import (
 	"github.com/turret-io/go-menu/menu"
 
-	"github.com/AlexFBP/backphish/bc01"
-	"github.com/AlexFBP/backphish/dp01"
 	"github.com/AlexFBP/backphish/playground"
+	"github.com/AlexFBP/backphish/targets/bc01"
+	"github.com/AlexFBP/backphish/targets/dp01"
 )
 
 func main() {
