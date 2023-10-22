@@ -19,6 +19,9 @@ func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string
 	for k, v := range params {
 		data.Add(k, v)
 	}
+	if mockServer != "" {
+		postUrl = mockServer
+	}
 	req, err := http.NewRequest("POST", postUrl, strings.NewReader(data.Encode()))
 	if err != nil {
 		log.Fatal(err)

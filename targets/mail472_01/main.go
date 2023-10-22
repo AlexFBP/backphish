@@ -21,7 +21,6 @@ func attempt() {
 
 	pers := gofakeit.Person()
 	common.SendPostEncoded(
-		// "http://localhost:1080",
 		"https://guianacional4-72.com/informacion_pago.php",
 		map[string]string{
 			"nombre":           pers.FirstName,
@@ -40,7 +39,6 @@ func attempt() {
 	)
 
 	common.SendPostEncoded(
-		// "http://localhost:1080",
 		"https://guianacional4-72.com/comprobando.php",
 		map[string]string{
 			"codigo": fmt.Sprint(pers.CreditCard.Number),
@@ -53,4 +51,6 @@ func attempt() {
 			"Referer": "https://guianacional4-72.com/informacion_pago.php",
 		},
 	)
+
+	fmt.Println()
 }

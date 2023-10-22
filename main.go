@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/turret-io/go-menu/menu"
 
+	// "github.com/AlexFBP/backphish/common"
 	"github.com/AlexFBP/backphish/playground"
 	"github.com/AlexFBP/backphish/targets/bc01"
 	"github.com/AlexFBP/backphish/targets/dp01"
@@ -10,6 +11,7 @@ import (
 )
 
 func main() {
+	// common.SetMockServer("http://localhost:1080")
 	commandOptions := []menu.CommandOption{
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
 		{Command: "bc1", Description: "attack fake bancolombia 1", Function: bc01.Cmd},

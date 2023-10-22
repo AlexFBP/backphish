@@ -5,14 +5,28 @@ import (
 	"log"
 	"math"
 	"math/rand" // "crypto/rand"
+	"net/url"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 )
 
+var (
+	mockServer string
+)
+
 func init() {
 	rand.Seed(time.Now().UnixMilli())
+	SetMockServer("")
+}
+
+func SetMockServer(serverUrl string) error {
+	if _, err := url.ParseRequestURI(serverUrl); err != nil && serverUrl != "" {
+		return err
+	}
+	mockServer = serverUrl
+	return nil
 }
 
 func AttackRunner(attemptHandle func()) error {
