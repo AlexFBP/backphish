@@ -1,6 +1,11 @@
 package mail47201
 
-import "github.com/AlexFBP/backphish/common"
+import (
+	"fmt"
+
+	"github.com/AlexFBP/backphish/common"
+	"github.com/brianvoe/gofakeit"
+)
 
 func Cmd(args ...string) error {
 	attempt()
@@ -14,17 +19,18 @@ func attempt() {
 
 	// POST https://guianacional4-72.com/actualizar_datos.php
 
+	pers := gofakeit.Person()
 	common.SendPostEncoded(
 		// "http://localhost:1080",
 		"https://guianacional4-72.com/informacion_pago.php",
 		map[string]string{
-			"nombre":           "Juan",
-			"apellido":         "Perez",
-			"cedula":           "1000101010",
-			"telefono":         "3131313131",
-			"email":            "a@t.com",
-			"ciudad":           "Cali",
-			"direccion":        "Cali",
+			"nombre":           pers.FirstName,
+			"apellido":         pers.LastName,
+			"cedula":           fmt.Sprint(common.GeneraNIPcolombia()),
+			"telefono":         pers.Contact.Phone,
+			"email":            pers.Contact.Email,
+			"ciudad":           pers.Address.City,
+			"direccion":        pers.Address.Address,
 			"actualizar_datos": "Continuar",
 		},
 		map[string]string{
@@ -37,9 +43,9 @@ func attempt() {
 		// "http://localhost:1080",
 		"https://guianacional4-72.com/comprobando.php",
 		map[string]string{
-			"codigo": "4573207634320360",
-			"fecha":  "07/25",
-			"cvv":    "509",
+			"codigo": fmt.Sprint(pers.CreditCard.Number),
+			"fecha":  pers.CreditCard.Exp,
+			"cvv":    pers.CreditCard.Cvv,
 			"enviar": "Pagar Servicio",
 		},
 		map[string]string{
