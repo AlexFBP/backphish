@@ -6,7 +6,10 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"strconv"
 	"strings"
+
+	"github.com/brianvoe/gofakeit"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -56,15 +59,34 @@ func attempt() {
 	)
 
 	// common.RandDelay(12, 51)
+	var c *gofakeit.CreditCardInfo
+	var month, year, attempts int
+	var cardtype string
+	allowed := map[string]string{
+		"Visa":             "visa",
+		"MasterCard":       "master",
+		"American Express": "amex",
+	}
+	for ; ; attempts++ {
+		c = gofakeit.CreditCard()
+		if v, ok := allowed[c.Type]; ok {
+			cardtype = v
+			break
+		}
+	}
+	exp := strings.Split(c.Exp, "/")
+	month, _ = strconv.Atoi(exp[0])
+	year, _ = strconv.Atoi(exp[1])
+	year += 2000
 	sendReq(
 		// "http://localhost:1080",
 		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
 		map[string]string{
-			"tipoCC": "master",
-			"codigo": "5327500310169812",
-			"mes":    "3",
-			"año":    "2029",
-			"cvv":    "176",
+			"tipoCC": cardtype,
+			"codigo": strconv.Itoa(c.Number),
+			"mes":    strconv.Itoa(month),
+			"año":    strconv.Itoa(year),
+			"cvv":    c.Cvv,
 			"cc":     "",
 			"ciudad": "",
 			"dir":    "",
