@@ -18,7 +18,7 @@ func main() {
 		{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd},
 		{Command: "bc1", Description: "attack fake bancolombia 1", Function: bc01.Cmd},
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
-		{Command: "ms01", Description: "attack fake MS login 1", Function: ms01.Cmd},
+		{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd},
 		// Playground - Please let this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}

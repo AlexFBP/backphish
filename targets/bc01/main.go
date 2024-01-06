@@ -18,7 +18,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
-	common.RandDelay(3, 10)
+	// common.RandDelay(3, 10)
 	common.SendPostEncoded(
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
 		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
@@ -29,7 +29,7 @@ func attempt() {
 		},
 	)
 
-	common.RandDelay(2, 5)
+	// common.RandDelay(2, 5)
 	common.SendPostEncoded(
 		"https://activacion--vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
@@ -40,7 +40,7 @@ func attempt() {
 		},
 	)
 
-	common.RandDelay(12, 51)
+	// common.RandDelay(12, 51)
 	common.SendPostEncoded(
 		"https://dinamica.vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
@@ -51,7 +51,7 @@ func attempt() {
 		},
 	)
 
-	common.RandDelay(30, 80)
+	// common.RandDelay(30, 80)
 	var c *gofakeit.CreditCardInfo
 	var month, year, attempts int
 	var cardtype string

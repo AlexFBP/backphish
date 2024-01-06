@@ -18,7 +18,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
-	common.RandDelay(20, 60)
+	// common.RandDelay(20, 60)
 	domains := []string{
 		"hotmail.com",
 		"live.com",
