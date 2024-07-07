@@ -46,6 +46,13 @@ go build
 ```sh
 ./backphish
 ```
+If no options (as above), will list the available targets.
+
+Available CLI options (bypass the menu):
+```
+-t TARGET       Use a listed TARGET
+```
+
 
 ### (Miscellaneous)
 

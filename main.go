@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/turret-io/go-menu/menu"
 
 	// "github.com/AlexFBP/backphish/common"
@@ -15,6 +17,7 @@ import (
 
 func main() {
 	// common.SetMockServer("http://localhost:1080")
+	parseFlags()
 	commandOptions := []menu.CommandOption{
 		// Attacks - Please sort alphabetically by key
 		{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd},
@@ -26,7 +29,23 @@ func main() {
 		// Playground - Please let this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}
-	menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
-	menu := menu.NewMenu(commandOptions, menuOptions)
-	menu.Start()
+	if target == "" {
+		menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
+		menu := menu.NewMenu(commandOptions, menuOptions)
+		menu.Start()
+	} else {
+		var command *menu.CommandOption
+		for _, v := range commandOptions {
+			if v.Command == target {
+				command = &v
+				break
+			}
+		}
+		if command != nil {
+			fmt.Printf("Using target \"%s\"\n", target)
+			command.Function()
+		} else {
+			fmt.Printf("\"%s\" is not a valid target\n", target)
+		}
+	}
 }
