@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"os"
 	"os/signal"
+	"strconv"
 	"syscall"
 	"time"
 )
@@ -29,21 +30,36 @@ func SetMockServer(serverUrl string) error {
 	return nil
 }
 
-func AttackRunner(attemptHandle func()) error {
-	attempts := 0
+func ArgsHaveTimes(args ...string) int {
+	const DEFAULT = 0
+	if len(args) == 1 {
+		if v, err := strconv.Atoi(args[0]); err == nil {
+			return v
+		}
+	}
+	return DEFAULT
+}
+
+func AttackRunner(attemptHandle func(), q int) error {
+	attempts := 1
 
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Printf("\nTotal Attempts: %d\n", attempts)
+		log.Printf("\n\nTotal Attempts: %d\n", attempts)
 		os.Exit(0)
 	}()
 
 	for ; ; attempts++ {
 		fmt.Printf("\nAttempt Nº %d - ", attempts)
 		attemptHandle()
+
+		if q > 0 && attempts >= q {
+			break
+		}
 	}
+	return nil
 }
 
 func GeneraNIPcolombia() (id int) {

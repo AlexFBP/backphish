@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 )
 
 var (
@@ -10,7 +11,7 @@ var (
 )
 
 const (
-	DEFAULT_TIMES = 1
+	DEFAULT_TIMES = 4
 )
 
 func clearFlags() {
@@ -22,7 +23,7 @@ func parseFlags() {
 	clearFlags()
 
 	targetPtr := flag.String("t", "", "Target name")
-	timesPtr := flag.Int("n", DEFAULT_TIMES, "Times. Default")
+	timesPtr := flag.Int("n", DEFAULT_TIMES, fmt.Sprintf("Times. Default:%d times", DEFAULT_TIMES))
 
 	flag.Parse()
 	target = *targetPtr

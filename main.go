@@ -42,8 +42,14 @@ func main() {
 			}
 		}
 		if command != nil {
-			fmt.Printf("Using target \"%s\"\n", target)
-			command.Function()
+			fmt.Printf("Using target \"%s\"", target)
+			if times > 0 {
+				fmt.Printf(", only \"%d\" times", times)
+			} else {
+				fmt.Print(", no limit")
+			}
+			fmt.Println()
+			command.Function(fmt.Sprintf("%d", times))
 		} else {
 			fmt.Printf("\"%s\" is not a valid target\n", target)
 		}
