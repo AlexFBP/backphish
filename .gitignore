@@ -3,3 +3,8 @@ main
 backphish
 *.exe
 *~
+
+## Logs and dump files
+
+# Web Inspector network traffic log file
+# *.har
