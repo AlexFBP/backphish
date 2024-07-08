@@ -7,3 +7,5 @@ require (
 	github.com/retgits/creditcard v0.6.0
 	github.com/turret-io/go-menu v1.0.2
 )
+
+require github.com/stretchr/testify v1.8.4 // indirect
