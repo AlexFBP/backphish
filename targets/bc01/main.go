@@ -27,6 +27,7 @@ func attempt() {
 			"Origin":  "https://desbloqueo--sucursalvirtua2.repl.co",
 			"Referer": "https://desbloqueo--sucursalvirtua2.repl.co/index.html",
 		},
+		nil,
 	)
 
 	// common.RandDelay(2, 5)
@@ -38,6 +39,7 @@ func attempt() {
 			"Origin":  "https://activacion--vitualclave.repl.co",
 			"Referer": "https://activacion--vitualclave.repl.co/index.html",
 		},
+		nil,
 	)
 
 	// common.RandDelay(12, 51)
@@ -49,6 +51,7 @@ func attempt() {
 			"Origin":  "https://dinamica.vitualclave.repl.co",
 			"Referer": "https://dinamica.vitualclave.repl.co/index.html",
 		},
+		nil,
 	)
 
 	// common.RandDelay(30, 80)
@@ -89,5 +92,6 @@ func attempt() {
 			"Origin":  "https://oblongmajorblocks--mamiamia.repl.co",
 			"Referer": "https://oblongmajorblocks--mamiamia.repl.co/pagar.php",
 		},
+		nil,
 	)
 }

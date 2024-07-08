@@ -1,6 +1,10 @@
 package bc03
 
 import (
+	"fmt"
+
+	// fd "github.com/udistrital/utils_oas/formatdata"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -12,6 +16,9 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
+	// var respBody interface{}
+	// respBody := map[string]string{}
+	ans := map[string]interface{}{}
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
@@ -24,6 +31,7 @@ func attempt() {
 			"Origin":  "https://pineapple21108900.temporary-demo.site",
 			"Referer": "https://pineapple21108900.temporary-demo.site/",
 		},
+		&ans,
 	)
 
 	/*
@@ -33,6 +41,9 @@ func attempt() {
 		https://validaciones.uno/_pass.php?&registro=3148187&action=_pass.php&_=1720371274419
 		The second number is the unix timestamp in milliseconds
 	*/
+
+	// fd.JsonPrint(ans)
+	fmt.Println("registro:", ans["registro"])
 
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
@@ -46,5 +57,6 @@ func attempt() {
 			"Origin":  "https://pineapple21108900.temporary-demo.site",
 			"Referer": "https://pineapple21108900.temporary-demo.site/",
 		},
+		nil,
 	)
 }

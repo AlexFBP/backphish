@@ -1,15 +1,15 @@
 package common
 
 import (
+	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
 	"strings"
 )
 
-func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string) {
+func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string, filler interface{}) {
 	client := &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
@@ -19,6 +19,7 @@ func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string
 	for k, v := range params {
 		data.Add(k, v)
 	}
+	fmt.Printf("mockServer: %s\n", mockServer)
 	if mockServer != "" {
 		postUrl = mockServer
 	}
@@ -43,10 +44,13 @@ func SendPostEncoded(postUrl string, params, additionalHeaders map[string]string
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
-	_, err = ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatal(err)
+	if filler != nil {
+		// _, err = io.ReadAll(resp.Body)
+		err := json.NewDecoder(resp.Body).Decode(filler)
+		if err != nil {
+			log.Fatal(err)
+		}
+		// fmt.Printf("%s\n", flat)
 	}
-	// fmt.Printf("%s\n", flat)
 	fmt.Print(data.Encode(), ":(", resp.Status, ");")
 }

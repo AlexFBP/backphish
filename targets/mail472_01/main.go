@@ -40,6 +40,7 @@ func attempt() {
 			"Origin":  "https://guianacional4-72.com",
 			"Referer": "https://guianacional4-72.com/actualizar_datos.php",
 		},
+		nil,
 	)
 
 	// common.RandDelay(30, 80)
@@ -55,5 +56,6 @@ func attempt() {
 			"Origin":  "https://guianacional4-72.com",
 			"Referer": "https://guianacional4-72.com/informacion_pago.php",
 		},
+		nil,
 	)
 }
