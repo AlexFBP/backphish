@@ -15,10 +15,13 @@ func Cmd(args ...string) error {
 	return nil
 }
 
+type ValidaBody struct {
+	Registro int    `json:"registro"`
+	Action   string `json:"action"`
+}
+
 func attempt() {
-	// var respBody interface{}
-	// respBody := map[string]string{}
-	ans := map[string]interface{}{}
+	var ans ValidaBody
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
@@ -43,12 +46,12 @@ func attempt() {
 	*/
 
 	// fd.JsonPrint(ans)
-	fmt.Println("registro:", ans["registro"])
+	fmt.Println("registro:", ans.Registro)
 
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
-			"registro": "3148187",
+			"registro": fmt.Sprint(ans.Registro),
 			"tok":      "qwerty0918po22",
 			"t":        "password",
 			"password": "6666",
