@@ -8,6 +8,8 @@ import (
 
 	"github.com/brianvoe/gofakeit"
 	"github.com/retgits/creditcard"
+
+	"github.com/AlexFBP/backphish/common"
 )
 
 func init() {
@@ -17,8 +19,11 @@ func init() {
 func Cmd(args ...string) (err error) {
 
 	// P1: Create
+	p := gofakeit.Person()
+	user := common.RandUserName(p)
+	fmt.Println("user: ", user)
 
-	c := gofakeit.CreditCard()
+	c := p.CreditCard
 	fmt.Printf("%+v\n", c)
 
 	// P2: Validate

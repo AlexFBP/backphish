@@ -2,17 +2,19 @@ package bc03
 
 import (
 	"fmt"
+	"strconv"
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
+	"github.com/brianvoe/gofakeit"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
 func Cmd(args ...string) error {
-	// return common.AttackRunner(attempt)
+	return common.AttackRunner(attempt, common.ArgsHaveTimes(args...))
 	// For single attack, comment line above and uncomment this:
-	attempt()
-	return nil
+	// attempt()
+	// return nil
 }
 
 type ValidaBody struct {
@@ -21,6 +23,7 @@ type ValidaBody struct {
 }
 
 func attempt() {
+	p := gofakeit.Person()
 	var ans ValidaBody
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
@@ -28,7 +31,7 @@ func attempt() {
 			"registro": "undefined",
 			"tok":      "qwerty0918po22",
 			"t":        "usuario",
-			"usuario":  "gonorreas",
+			"usuario":  common.RandUserName(p),
 		},
 		map[string]string{
 			"Origin":  "https://pineapple21108900.temporary-demo.site",
@@ -45,16 +48,13 @@ func attempt() {
 		The second number is the unix timestamp in milliseconds
 	*/
 
-	// fd.JsonPrint(ans)
-	fmt.Println("registro:", ans.Registro)
-
 	common.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
 			"registro": fmt.Sprint(ans.Registro),
 			"tok":      "qwerty0918po22",
 			"t":        "password",
-			"password": "6666",
+			"password": strconv.Itoa(common.GeneraPin(4)),
 		},
 		map[string]string{
 			"Origin":  "https://pineapple21108900.temporary-demo.site",

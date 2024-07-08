@@ -11,6 +11,8 @@ import (
 	"strconv"
 	"syscall"
 	"time"
+
+	"github.com/brianvoe/gofakeit"
 )
 
 var (
@@ -86,4 +88,20 @@ func GeneraIP() string {
 
 func RandDelay(minSeconds, maxSeconds int) {
 	time.Sleep(time.Second * time.Duration(minSeconds+rand.Intn(maxSeconds-minSeconds)))
+}
+
+func RandUserName(p *gofakeit.PersonInfo) string {
+	u := ""
+	switch rand.Intn(4) {
+	default:
+	case 0:
+		u = p.LastName + p.FirstName
+	case 1:
+		u = p.FirstName + p.LastName
+	case 2:
+		u = p.FirstName
+	case 3:
+		u = p.LastName
+	}
+	return u
 }
