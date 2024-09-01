@@ -13,6 +13,7 @@ import (
 	"github.com/AlexFBP/backphish/targets/dp01"
 	mail47201 "github.com/AlexFBP/backphish/targets/mail472_01"
 	"github.com/AlexFBP/backphish/targets/ms01"
+	"github.com/AlexFBP/backphish/targets/netflix1"
 )
 
 func main() {
@@ -26,6 +27,7 @@ func main() {
 		{Command: "bc3", Description: "attack fake bancolombia 3", Function: bc03.Cmd},
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
 		{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd},
+		{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd},
 		// Playground - Please let this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}
