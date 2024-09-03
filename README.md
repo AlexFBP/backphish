@@ -65,3 +65,10 @@ docker run -it --rm -p 1080:1080 mockserver/mockserver
 ```
 
 And then [go to the dashboard](http://localhost:1080/mockserver/dashboard)
+
+## Refereces or related links
+
+The following is a recopilation of technologies/providers used in this repo and/or by phishing pages
+
+- [VCC Genator](https://www.vccgenerator.org/) - Generates cards for testing purposes
+- [Replit deployments](https://replit.com/deployments)
