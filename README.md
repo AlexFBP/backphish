@@ -70,5 +70,5 @@ And then [go to the dashboard](http://localhost:1080/mockserver/dashboard)
 
 The following is a recopilation of technologies/providers used in this repo and/or by phishing pages
 
-- [VCC Genator](https://www.vccgenerator.org/) - Generates cards for testing purposes
+- [VCC Generator](https://www.vccgenerator.org/) - Generates cards for testing purposes
 - [Replit deployments](https://replit.com/deployments)
