@@ -18,8 +18,9 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
+	h := common.ReqHandler{}
 	// common.RandDelay(3, 10)
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
 		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
 		map[string]string{
@@ -31,7 +32,7 @@ func attempt() {
 	)
 
 	// common.RandDelay(2, 5)
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://activacion--vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
 		map[string]string{
@@ -43,7 +44,7 @@ func attempt() {
 	)
 
 	// common.RandDelay(12, 51)
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://dinamica.vitualclave.repl.co/finish9.php",
 		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
 		map[string]string{
@@ -74,7 +75,7 @@ func attempt() {
 	month, _ = strconv.Atoi(exp[0])
 	year, _ = strconv.Atoi(exp[1])
 	year += 2000
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
 		map[string]string{
 			"tipoCC": cardtype,

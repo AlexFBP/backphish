@@ -16,6 +16,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
+	h := common.ReqHandler{}
 	// GET https://guianacional4-72.com/inicio.php
 
 	// POST https://guianacional4-72.com/consultar.php
@@ -24,7 +25,7 @@ func attempt() {
 
 	pers := gofakeit.Person()
 	// common.RandDelay(60, 60*5)
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://guianacional4-72.com/informacion_pago.php",
 		map[string]string{
 			"nombre":           pers.FirstName,
@@ -44,7 +45,7 @@ func attempt() {
 	)
 
 	// common.RandDelay(30, 80)
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://guianacional4-72.com/comprobando.php",
 		map[string]string{
 			"codigo": fmt.Sprint(pers.CreditCard.Number),

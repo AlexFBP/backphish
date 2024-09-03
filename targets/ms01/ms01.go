@@ -18,6 +18,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
+	h := common.ReqHandler{}
 	// common.RandDelay(20, 60)
 	domains := []string{
 		"hotmail.com",
@@ -36,7 +37,7 @@ func attempt() {
 	if gofakeit.Bool() {
 		form["KMSI"] = "on"
 	}
-	common.SendPostEncoded("http://recuperacion004.0hi.me/next.php",
+	h.SendPostEncoded("http://recuperacion004.0hi.me/next.php",
 		form,
 		map[string]string{
 			"Host":    "recuperacion004.0hi.me",

@@ -23,9 +23,10 @@ type ValidaBody struct {
 }
 
 func attempt() {
+	h := common.ReqHandler{}
 	p := gofakeit.Person()
-	var ans ValidaBody
-	common.SendPostEncoded(
+	ans := ValidaBody{}
+	h.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
 			"registro": "undefined",
@@ -37,7 +38,7 @@ func attempt() {
 			"Origin":  "https://pineapple21108900.temporary-demo.site",
 			"Referer": "https://pineapple21108900.temporary-demo.site/",
 		},
-		&ans,
+		ans,
 	)
 
 	/*
@@ -48,7 +49,7 @@ func attempt() {
 		The second number is the unix timestamp in milliseconds
 	*/
 
-	common.SendPostEncoded(
+	h.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
 		map[string]string{
 			"registro": fmt.Sprint(ans.Registro),
