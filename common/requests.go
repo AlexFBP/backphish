@@ -80,11 +80,11 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		req.Header.Add(k, v)
 	}
 	r.Request = req
-	if filler == nil {
-		log.Print("no filler")
-	} else {
-		log.Print("with filler")
-	}
+	// if filler == nil {
+	// 	log.Print("no filler")
+	// } else {
+	// 	log.Print("with filler")
+	// }
 	r.doRequest(filler)
 }
 
@@ -100,7 +100,11 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 	}
 	coded := data.Encode()
 	// fmt.Print(coded, ":")
-	req, err := http.NewRequest("GET", getUrl, strings.NewReader(coded))
+	getUrl += "?" + coded
+	if _, err := url.Parse(getUrl); err != nil {
+		log.Fatal("[FATAL] Malformed/Wrong URL:", getUrl)
+	}
+	req, err := http.NewRequest("GET", getUrl, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -116,11 +120,11 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 		req.Header.Add(k, v)
 	}
 	r.Request = req
-	if filler == nil {
-		log.Print("no filler")
-	} else {
-		log.Print("with filler")
-	}
+	// if filler == nil {
+	// 	log.Print("no filler")
+	// } else {
+	// 	log.Print("with filler")
+	// }
 	r.doRequest(filler)
 }
 
@@ -131,11 +135,11 @@ func (r *ReqHandler) doRequest(filler interface{}) {
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
-	if filler == nil {
-		log.Print("do req - no filler")
-	} else {
-		log.Print("do req - with filler")
-	}
+	// if filler == nil {
+	// 	log.Print("do req - no filler")
+	// } else {
+	// 	log.Print("do req - with filler")
+	// }
 	if filler != nil {
 		// _, err = io.ReadAll(resp.Body)
 		err := json.NewDecoder(resp.Body).Decode(filler)
