@@ -49,6 +49,12 @@ func attempt() {
 		}, nil,
 	)
 
+	h.SendGet(
+		"https://mi-cuentasuscripcionflix.com/includes/get_setup.php",
+		map[string]string{"auth": "FREELIVE"},
+		map[string]string{"Referer": "https://mi-cuentasuscripcionflix.com/billing.php"}, nil,
+	)
+
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/send.php",
 		map[string]string{
