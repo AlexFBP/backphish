@@ -5,7 +5,7 @@ import (
 
 	"github.com/turret-io/go-menu/menu"
 
-	// "github.com/AlexFBP/backphish/common"
+	"github.com/AlexFBP/backphish/common"
 	"github.com/AlexFBP/backphish/playground"
 	"github.com/AlexFBP/backphish/targets/bc01"
 	"github.com/AlexFBP/backphish/targets/bc02"
@@ -17,8 +17,10 @@ import (
 )
 
 func main() {
-	// common.SetMockServer("http://localhost:1080")
 	parseFlags()
+	if mock {
+		common.SetMockServer(DEFAULT_MOCK)
+	}
 	commandOptions := []menu.CommandOption{
 		// Attacks - Please sort alphabetically by key
 		{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd},

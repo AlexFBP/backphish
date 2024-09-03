@@ -63,3 +63,5 @@ Runs a mock/dummy HTTP server in your local 1080 port - Based in [mockserver](ht
 ```sh
 docker run -it --rm -p 1080:1080 mockserver/mockserver
 ```
+
+And then [go to the dashboard](http://localhost:1080/mockserver/dashboard)
