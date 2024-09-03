@@ -27,13 +27,8 @@ func attempt() {
 
 	// Maybe all the following is not needed
 	// u, _ := url.Parse("https://mi-cuentasuscripcionflix.com")
-	// const COOKIE_NAME = "PHPSESSID"
-	// sess := ""
 	// for _, cookie := range h.Jar.Cookies(u) {
 	// 	fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
-	// 	if cookie.Name == COOKIE_NAME {
-	// 		sess = cookie.Value
-	// 	}
 	// }
 
 	h.SendPostEncoded(
