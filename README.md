@@ -17,9 +17,7 @@ Inspired in
 
 For safety reasons, no URL will be in this readme, please check source code for details.
 
-And also, for non-safety reasons, Why should I care about any exposed token in this repository? ¯\_(ツ)_/¯
-
-- (Type 1) Daviplata phishing page 1
+And also, for non-safety reasons, Why should I care about any exposed token in this repository? ¯\\\_(ツ)\_/¯
 
 ## Usage
 
@@ -46,13 +44,16 @@ go build
 ```sh
 ./backphish
 ```
-If no options (as above), will list the available targets.
 
-Available CLI options (bypass the menu):
-```
--t TARGET       Use a listed TARGET
-```
+If no options (as above), will list the available phishing targets.
 
+Available CLI options:
+
+```
+-t TARGET       Use a listed TARGET - Bypass the menu if specified
+-n TIMES        Quantity of attacks, 0 means unlimited - Default: 4
+-m              Use mock server (helpful while developing)
+```
 
 ### (Miscellaneous)
 
@@ -72,3 +73,4 @@ The following is a recopilation of technologies/providers used in this repo and/
 
 - [VCC Generator](https://www.vccgenerator.org/) - Generates cards for testing purposes
 - [Replit deployments](https://replit.com/deployments)
+- [devtools-detect](https://github.com/sindresorhus/devtools-detect) - Trigger actions depending on detection of devtools/inspector usage
