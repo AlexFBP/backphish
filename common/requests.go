@@ -1,6 +1,7 @@
 package common
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -69,6 +70,44 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 	}
 	reqHeaders := map[string]string{
 		"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+		"Pragma":       "no-cache",
+		"Sec-Ch-Ua":    `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
+		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+	}
+	for k, v := range reqHeaders {
+		req.Header.Add(k, v)
+	}
+	for k, v := range additionalHeaders {
+		req.Header.Add(k, v)
+	}
+	r.Request = req
+	// if filler == nil {
+	// 	log.Print("no filler")
+	// } else {
+	// 	log.Print("with filler")
+	// }
+	r.doRequest(filler)
+}
+
+func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders map[string]string, filler interface{}) {
+	r.checkClient()
+	if mockServer != "" {
+		fmt.Printf("mockServer: %s\n", mockServer)
+		target = mockServer
+	}
+	b := new(bytes.Buffer)
+	if payload != nil {
+		err := json.NewEncoder(b).Encode(payload)
+		if err != nil {
+			log.Fatalf("[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
+		}
+	}
+	req, err := http.NewRequest("POST", target, b)
+	if err != nil {
+		log.Fatal(err)
+	}
+	reqHeaders := map[string]string{
+		"Content-Type": "application/json",
 		"Pragma":       "no-cache",
 		"Sec-Ch-Ua":    `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
 		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
