@@ -69,10 +69,12 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		log.Fatal(err)
 	}
 	reqHeaders := map[string]string{
-		"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-		"Pragma":       "no-cache",
-		"Sec-Ch-Ua":    `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
-		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+		"Pragma":     "no-cache",
+		"Sec-Ch-Ua":  `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
+		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+	}
+	if params != nil {
+		reqHeaders["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
 	}
 	for k, v := range reqHeaders {
 		req.Header.Add(k, v)
