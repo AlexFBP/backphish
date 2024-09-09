@@ -38,6 +38,12 @@ func (r *ReqHandler) UseJar(use bool) {
 	r.InitClient()
 }
 
+func (r *ReqHandler) PrintCookies(u *url.URL) {
+	for _, cookie := range r.Jar.Cookies(u) {
+		fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
+	}
+}
+
 // Initializes the HTTP client
 func (r *ReqHandler) InitClient() {
 	r.Client = &http.Client{

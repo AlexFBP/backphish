@@ -1,7 +1,6 @@
 package netflix1
 
 import (
-	"fmt"
 	"math/rand"
 	"net/url"
 	"strconv"
@@ -29,9 +28,7 @@ func attempt() {
 
 	// Maybe all the following is not needed
 	u, _ := url.Parse("https://mi-cuentasuscripcionflix.com")
-	for _, cookie := range h.Jar.Cookies(u) {
-		fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
-	}
+	h.PrintCookies(u)
 
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/captcha/set_captcha_session.php",

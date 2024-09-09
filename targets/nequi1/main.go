@@ -1,6 +1,8 @@
 package nequi1
 
 import (
+	"net/url"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -33,6 +35,8 @@ func attempt() {
 		}, nil)
 	//     SET-COOKIE:
 	// usuario, contrasena, registro, estado
+	u, _ := url.Parse("https://finanzasaturitmo.com")
+	h.PrintCookies(u)
 
 	status := ""
 	// POST https://finanzasaturitmo.com/NEQUI/3d/process2/estado.php
@@ -55,6 +59,7 @@ func attempt() {
 		}, nil)
 	//     SET-COOKIE:
 	// cdinamica
+	h.PrintCookies(u)
 
 	// POST https://finanzasaturitmo.com/NEQUI/3d/process2/estado.php
 	//     NOTE: This request returns a "status" number as body, related to consultar_estado()
