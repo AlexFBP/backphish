@@ -31,10 +31,13 @@ func main() {
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
 		{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd},
 		{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd},
-		{Command: "nq1", Description: "attack fake nequi 1", Function: nequi1.Cmd},
-		// Playground - Please let this one at the end
-		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}
+	commandOptions = append(commandOptions, nequi1.GetAllCmds()...)
+	// Playground - Please keep this one at the end
+	commandOptions = append(commandOptions, menu.CommandOption{
+		Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd,
+	})
+
 	if target == "" {
 		menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
 		menu := menu.NewMenu(commandOptions, menuOptions)

@@ -1,14 +1,30 @@
 package nequi1
 
 import (
+	"fmt"
 	"log"
 	"net/url"
+
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(mirrorAttempt(1), common.ArgsHaveTimes(args...))
+func GetAllCmds(args ...string) (opts []menu.CommandOption) {
+	for k, v := range mirrors {
+		opts = append(opts, menu.CommandOption{
+			Command:     fmt.Sprintf("nq1-%d", k+1),
+			Description: fmt.Sprintf("attack fake nequi 1, mirror %d (%s)", k+1, v),
+			Function:    getCmd(k, args...),
+		})
+	}
+	return
+}
+
+func getCmd(k int, argss ...string) (f func(args ...string) error) {
+	return func(args ...string) error {
+		return common.AttackRunner(mirrorAttempt(k), common.ArgsHaveTimes(argss...))
+	}
 }
 
 var mirrors = []string{
