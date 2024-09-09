@@ -42,7 +42,9 @@ func ArgsHaveTimes(args ...string) int {
 	return DEFAULT
 }
 
-func AttackRunner(attemptHandle func(), q int) error {
+type AttemptHander func()
+
+func AttackRunner(attemptHandle AttemptHander, q int) error {
 	attempts := 1
 
 	c := make(chan os.Signal)
