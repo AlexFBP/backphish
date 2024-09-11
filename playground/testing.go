@@ -55,5 +55,8 @@ func Cmd(args ...string) (err error) {
 	fmt.Printf("%+v\n", validation)
 	fmt.Printf("%+v\n", validation.Card)
 
+	cel := common.GeneraCelColombia()
+	fmt.Printf("cel: %d", cel)
+
 	return nil
 }
