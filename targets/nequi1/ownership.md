@@ -1631,6 +1631,7 @@ yousitesureonlineverification.com. 8891 IN A    92.205.169.9
 aplicaparahoy.com.      14400   IN      A       108.167.149.240
 siperpropcolombia.com.  1800    IN      A       157.173.209.216
 nqprepropulso.com.      1800    IN      A       157.173.209.251
+nqipr0pulsor.com.       14400   IN      A       162.241.2.171
 prepropulneq.com.       6631    IN      A       162.241.2.172
 onlineparati.com.       5230    IN      A       162.241.60.254
 nqpropulsa.com.         6751    IN      A       162.241.60.255

@@ -33,6 +33,7 @@ var mirrors = []string{
 	`finanzasaturitmo.com`,
 	`neq.n3quionline.com`,
 	`n3quionline.com`,
+	`nqipr0pulsor.com`,
 	`nqprepropulso.com`, // DNS CATCHED?
 	`nqpropulsa.com`,
 	`nuevopropulsor.com`,
