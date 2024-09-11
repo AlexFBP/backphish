@@ -2,7 +2,6 @@ package bc03
 
 import (
 	"fmt"
-	"strconv"
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
 	"github.com/brianvoe/gofakeit"
@@ -55,7 +54,7 @@ func attempt() {
 			"registro": fmt.Sprint(ans.Registro),
 			"tok":      "qwerty0918po22",
 			"t":        "password",
-			"password": strconv.Itoa(common.GeneraPin(4)),
+			"password": common.GeneraPin(4),
 		},
 		map[string]string{
 			"Origin":  "https://pineapple21108900.temporary-demo.site",

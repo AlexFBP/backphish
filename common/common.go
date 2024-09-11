@@ -67,18 +67,18 @@ func AttackRunner(attemptHandle AttemptHander, q int) error {
 	return nil
 }
 
-func GeneraNIPcolombia() (id int) {
+func GeneraNIPcolombia() string {
 	minOldRange := int(math.Pow10(3))
 	oldRange := int(math.Pow10(8)) - minOldRange
 	newRange := int(math.Pow10(9))
 	universe := oldRange + newRange
-	id = rand.Intn(universe)
+	id := rand.Intn(universe)
 	if id >= oldRange {
 		id += newRange - oldRange
 	} else {
 		id += minOldRange
 	}
-	return
+	return strconv.Itoa(id)
 }
 
 // From https://wiki.openstreetmap.org/wiki/ES:Colombia/Gu%C3%ADa_para_mapear/n%C3%BAmeros_telef%C3%B3nicos
@@ -152,14 +152,15 @@ func generaCelValido(pos int) (cel int, e error) {
 	return -1, fmt.Errorf("unhandled value: %d", pos)
 }
 
-func GeneraCelColombia() int {
+func GeneraCelColombia() string {
 	u := rand.Intn(indicesRangosCelulares[len(indicesRangosCelulares)-1])
 	n, _ := generaCelValido(u)
-	return n
+	return strconv.Itoa(n)
 }
 
-func GeneraPin(digitos int) int {
-	return rand.Intn(int(math.Pow10(digitos)))
+func GeneraPin(digitos int) string {
+	pin := rand.Intn(int(math.Pow10(digitos)))
+	return fmt.Sprintf("%0"+strconv.Itoa(digitos)+"d", pin)
 }
 
 func GeneraIP() string {

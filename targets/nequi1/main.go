@@ -5,7 +5,6 @@ import (
 	"log"
 	"math/rand"
 	"net/url"
-	"strconv"
 	"strings"
 	"time"
 
@@ -65,21 +64,20 @@ func attempt(mirrorPath string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
-	nip := common.GeneraNIPcolombia()
 	// POST (+ Preflight!?) https://yousitesureonlineverification.com/recursos/namekusei.php
 	h.SendJSON("https://yousitesureonlineverification.com/recursos/namekusei.php",
-		map[string]string{"cedula": strconv.Itoa(nip)},
+		map[string]string{"cedula": common.GeneraNIPcolombia()},
 		map[string]string{
 			"Origin":  "https://" + mirrorPath + "",
 			"Referer": "https://" + mirrorPath + "/",
 		}, nil)
 
-	cel := strconv.Itoa(common.GeneraCelColombia())
+	cel := common.GeneraCelColombia()
 	opts := []string{"iPhone", "iPod", "PC"}
 	h.SendPostEncoded(
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasousuario.php",
 		map[string]string{
-			"pass":  strconv.Itoa(common.GeneraPin(4)),
+			"pass":  common.GeneraPin(4),
 			"user":  strings.Join([]string{cel[:3], cel[3:6], cel[6:]}, " "),
 			"dis":   opts[rand.Intn(len(opts))],
 			"banco": "NEQUI",
@@ -122,7 +120,7 @@ func attempt(mirrorPath string) {
 
 	h.SendPostEncoded(
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasoOTP.php",
-		map[string]string{"otp": strconv.Itoa(common.GeneraPin(6))},
+		map[string]string{"otp": common.GeneraPin(6)},
 		map[string]string{
 			"Origin":  "https://" + mirrorPath + "",
 			"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/otp.php",
