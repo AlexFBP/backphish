@@ -28,14 +28,20 @@ func getCmd(k int, argss ...string) (f func(args ...string) error) {
 }
 
 var mirrors = []string{
+	`aplicaparahoy.com`,
 	`aplicaya-neq.com`,
 	`finanzasaturitmo.com`,
-	`nqprepropulso.com`,
+	`neq.n3quionline.com`,
+	`n3quionline.com`,
+	`nqprepropulso.com`, // DNS CATCHED?
 	`nqpropulsa.com`,
 	`nuevopropulsor.com`,
 	`onlineparati.com`,
+	`parati-nqui.com`,
 	`prepropulneq.com`,
+	`prestamo-nequi.website`,
 	`siperpropcolombia.com`,
+	`51.107.8.147`, // DNS CATCHED?
 }
 
 func mirrorAttempt(n int) common.AttemptHander {

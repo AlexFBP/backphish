@@ -74,3 +74,4 @@ The following is a recopilation of technologies/providers used in this repo and/
 - [VCC Generator](https://www.vccgenerator.org/) - Generates cards for testing purposes
 - [Replit deployments](https://replit.com/deployments)
 - [devtools-detect](https://github.com/sindresorhus/devtools-detect) - Trigger actions depending on detection of devtools/inspector usage
+- [Reverse IP Lookup](https://reverseip.domaintools.com/)
