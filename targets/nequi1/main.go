@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/turret-io/go-menu/menu"
 
@@ -91,17 +92,33 @@ func attempt(mirrorPath string) {
 	u, _ := url.Parse("https://" + mirrorPath + "")
 	h.PrintCookies(u)
 
-	status := ""
-	// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
-	//     NOTE: This request returns a "status" number as body, related to consultar_estado()
-	// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
-	// (NO PAYLOAD! - MUST BE REPEATED WHILE REPLY BODY = "1" - should break with 2)
-	h.SendPostEncoded(
-		"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
-		map[string]string{
-			"Origin":  "https://" + mirrorPath + "",
-			"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
-		}, &status)
+	awaitStatusChange := func() {
+		poll_secs := 3
+		max_secs := 90
+		max_attempts := max_secs / poll_secs
+		status := ""
+		for attempts := 0; attempts < max_attempts; attempts++ {
+			// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
+			//     NOTE: This request returns a "status" number as body, related to consultar_estado()
+			// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
+			// (NO PAYLOAD! - MUST BE REPEATED WHILE REPLY BODY = "3" - should break with 12)
+			updatedStatus := ""
+			h.SendPostEncoded(
+				"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
+				map[string]string{
+					"Origin":  "https://" + mirrorPath + "",
+					"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
+				}, &updatedStatus)
+			if status == "" {
+				status = updatedStatus
+			} else if status != updatedStatus {
+				break
+			}
+			time.Sleep(time.Duration(poll_secs) * time.Second)
+		}
+	}
+
+	awaitStatusChange()
 
 	h.SendPostEncoded(
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasoOTP.php",
@@ -114,14 +131,5 @@ func attempt(mirrorPath string) {
 	// cdinamica
 	h.PrintCookies(u)
 
-	// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
-	//     NOTE: This request returns a "status" number as body, related to consultar_estado()
-	// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
-	// (NO PAYLOAD! - MUST BE REPEATED WHILE REPLY BODY = "3" - should break with 12)
-	h.SendPostEncoded(
-		"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
-		map[string]string{
-			"Origin":  "https://" + mirrorPath + "",
-			"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
-		}, &status)
+	awaitStatusChange()
 }
