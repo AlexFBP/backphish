@@ -31,21 +31,31 @@ func getCmd(k int, argss ...string) (f func(args ...string) error) {
 }
 
 var mirrors = []string{
-	`aplicaparahoy.com`,
-	`aplicaya-neq.com`,
-	`finanzasaturitmo.com`,
-	`neq.n3quionline.com`,
-	`n3quionline.com`,
-	`nqipr0pulsor.com`,
-	`nqprepropulso.com`, // DNS CATCHED?
-	`nqpropulsa.com`,
-	`nuevopropulsor.com`,
-	`onlineparati.com`,
-	`parati-nqui.com`,
-	`prepropulneq.com`,
-	`prestamo-nequi.website`,
-	`siperpropcolombia.com`,
-	`51.107.8.147`, // DNS CATCHED?
+	`aplicaparahoy.com`,          // CATCHED
+	`aplicaya-neq.com`,           // NO DNS REPLY (DOWN?)
+	`finanzasaturitmo.com`,       // REPORTED
+	`impuestoscol.com`,           // CATCHED
+	`intelcore.online`,           // REPORTED
+	`neq.n3quionline.com`,        // REPORTED
+	`newactivalo.com`,            // CATCHED - NO DNS REPLY (DOWN?)
+	`n3quionline.com`,            // REPORTED
+	`nqipr0pulsor.com`,           // NO DNS REPLY (DOWN?)
+	`nqprepropulso.com`,          // CATCHED
+	`nqpropulsa.com`,             // CATCHED
+	`nqpropulsando.com`,          // CATCHED
+	`nuevopropulsor.com`,         // REPORTED
+	`onlineparati.com`,           // REPORTED
+	`perfectoparti.com`,          // REPORTED
+	`parati-nqui.com`,            // NO DNS REPLY (DOWN?)
+	`prepropulsandonq.com`,       // CATCHED - NO DNS REPLY (DOWN?)
+	`prepropulneq.com`,           // NO DNS REPLY (DOWN?)
+	`prepropulnq.com`,            // CATCHED
+	`prestamo-nequi.website`,     // NO DNS REPLY (DOWN?)
+	`propulsandoneqpro.com`,      // REPORTED
+	`propulsoraprobados.website`, // NO DNS REPLY (DOWN?)
+	`siperpropcolombia.com`,      // REPORTED
+	`solicitadesdeya.com`,        // REPORTED
+	`51.107.8.147`,               // DNS CATCHED or DOWN?
 }
 
 func mirrorAttempt(n int) common.AttemptHander {

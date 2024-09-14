@@ -1627,16 +1627,23 @@ With `dig +noall +answer @$(dig +short $(dig +short ns DOMAIN | head -n 1)) DOMA
 
 ```log
 prestamo-nequi.website. 1800    IN      A       82.112.247.12
+impuestoscol.com.       50      IN      A       84.32.84.32
 yousitesureonlineverification.com. 8891 IN A    92.205.169.9
 aplicaparahoy.com.      14400   IN      A       108.167.149.240
+nqpropulsando.com.      14400   IN      A       108.167.149.241
+prepropulnq.com.        14400   IN      A       108.167.149.241
+intelcore.online.       1800    IN      A       157.173.209.51
 siperpropcolombia.com.  1800    IN      A       157.173.209.216
 nqprepropulso.com.      1800    IN      A       157.173.209.251
 nqipr0pulsor.com.       14400   IN      A       162.241.2.171
 prepropulneq.com.       6631    IN      A       162.241.2.172
 onlineparati.com.       5230    IN      A       162.241.60.254
 nqpropulsa.com.         6751    IN      A       162.241.60.255
+propulsandoneqpro.com.  14400   IN      A       162.241.60.255
+solicitadesdeya.com.    14400   IN      A       162.241.60.255
 n3quionline.com.        6243    IN      A       162.241.61.78
 neq.n3quionline.com.    14400   IN      A       162.241.61.78
+perfectoparti.com.      14400   IN      A       162.241.61.79
 parati-nqui.com.        3625    IN      A       162.241.61.244
 finanzasaturitmo.com.   2200    IN      A       162.241.203.120
 aplicaya-neq.com.       12389   IN      A       162.241.203.121
