@@ -36,22 +36,27 @@ var mirrors = []string{
 	`finanzasaturitmo.com`,       // REPORTED
 	`impuestoscol.com`,           // CATCHED
 	`intelcore.online`,           // REPORTED
-	`neq.n3quionline.com`,        // REPORTED
-	`newactivalo.com`,            // CATCHED - NO DNS REPLY (DOWN?)
 	`n3quionline.com`,            // REPORTED
+	`neq.n3quionline.com`,        // REPORTED
+	`neqwtx.com`,                 // CATCHED
+	`newactivalo.com`,            // CATCHED - NO DNS REPLY (DOWN?)
 	`nqipr0pulsor.com`,           // NO DNS REPLY (DOWN?)
 	`nqprepropulso.com`,          // CATCHED
 	`nqpropulsa.com`,             // CATCHED
 	`nqpropulsando.com`,          // CATCHED
 	`nuevopropulsor.com`,         // REPORTED
 	`onlineparati.com`,           // REPORTED
-	`perfectoparti.com`,          // REPORTED
 	`parati-nqui.com`,            // NO DNS REPLY (DOWN?)
+	`perfectoparti.com`,          // REPORTED
 	`prepropulsandonq.com`,       // CATCHED - NO DNS REPLY (DOWN?)
 	`prepropulneq.com`,           // NO DNS REPLY (DOWN?)
 	`prepropulnq.com`,            // CATCHED
 	`prestamo-nequi.website`,     // NO DNS REPLY (DOWN?)
+	`propulahorrosneq.com`,       // REPORTED
+	`propulcolombiano.com`,       // REPORTED
+	`propulideas.com`,            // REPORTED
 	`propulsandoneqpro.com`,      // REPORTED
+	`propulsor-pre.website`,      // NO DNS REPLY (DOWN?)
 	`propulsoraprobados.website`, // NO DNS REPLY (DOWN?)
 	`siperpropcolombia.com`,      // REPORTED
 	`solicitadesdeya.com`,        // REPORTED
