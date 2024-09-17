@@ -1,6 +1,6 @@
 # PhishPayback: Phising Spammer
 
-The idea is to combat phishing with spam, this is a hacking repo (needless to add "ethical").
+The idea is to combat phishing with spam, this is a hacking repo (needless to add that "hacking" IS "ethical" by its sole [origin](https://youtu.be/XMm0HsmOTFI?si=mBFLIIfae_TRcQDD). **Please stop confusing hacking with cracking, there's no need to add "ethical" after "hacking"!**).
 
 Inspired in
 
@@ -74,4 +74,7 @@ The following is a recopilation of technologies/providers used in this repo and/
 - [VCC Generator](https://www.vccgenerator.org/) - Generates cards for testing purposes
 - [Replit deployments](https://replit.com/deployments)
 - [devtools-detect](https://github.com/sindresorhus/devtools-detect) - Trigger actions depending on detection of devtools/inspector usage
+- [Chrome DevTools - Network requests: Test your site by blocking network requests](https://developer.chrome.com/docs/devtools/network-request-blocking) (To disable loading of utilities that mess with devtools/debugger)
 - [Reverse IP Lookup](https://reverseip.domaintools.com/)
+- [Engintron: Nginx on cPanel/WHM server](https://github.com/engintron/engintron)
+- [cf-clearance (old?)](https://github.com/vvanglro/cf-clearance) - [cf-clearance (active?)](https://github.com/ModestasBar/cf-clearance) - _"make a cloudflare v2 challenge pass successfully"_
