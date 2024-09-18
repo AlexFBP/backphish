@@ -4,8 +4,10 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 
 - `aplicaparahoy.com`
 - `aplicaya-neq.com`
+- `https://cuztco.com/NEQUI/NEQUI/3d/propulsor/nequi/n.html`
 - `finanzasaturitmo.com`
 - `impuestoscol.com`
+- `impulsornequi.github.io` ([GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse!)
 - `intelcore.online`
 - `n3quionline.com`
 - `neq.n3quionline.com`
@@ -33,9 +35,9 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `solicitadesdeya.com`
 - `51.107.8.147`
 
-Some of them sends a few requests to
+_Technical detail: some of them sends (or used to send) a few additional requests to `yousitesureonlineverification.com`_
 
-- `yousitesureonlineverification.com`
+All domains above listed are impersonating Nequi and its product ["Crédito Propulsor"](https://www.nequi.com.co/personas/credito/propulsor) to stole username (phone number) and password (4 digit pin), and even 2FA (6 digit time-based token).
 
 ## WHOIS for domains
 
@@ -74,6 +76,13 @@ aplicaya-neq.com.       12389   IN      A       162.241.203.121
 propulcolombiano.com.   1800    IN      A       194.164.64.16
 nuevopropulsor.com.     1800    IN      A       194.164.64.213
 ```
+
+Non relevant DNS A records listed for the following ones:
+
+|           Domain          |       Reason         |
+|            ---            |         ---          |
+| `cuztco.com`              | Through Cloudflare   |
+| `impulsornequi.github.io` | Through GitHub Pages |
 
 ## WHOIS of IPs
 
