@@ -115,15 +115,12 @@ func attempt(mirrorPath string) {
 	h.PrintCookies(u)
 
 	awaitStatusChange := func() {
-		poll_secs := 3
-		max_secs := 90
-		max_attempts := max_secs / poll_secs
 		status := ""
-		for attempts := 0; attempts < max_attempts; attempts++ {
+		common.TimedCall(3*time.Second, 90*time.Second, func() bool {
 			// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
 			//     NOTE: This request returns a "status" number as body, related to consultar_estado()
 			// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
-			// (NO PAYLOAD! - MUST BE REPEATED WHILE REPLY BODY = "3" - should break with 12)
+			// (NO PAYLOAD! - MUST BE REPEATED WHILE SAME REPLY BODY)
 			updatedStatus := ""
 			h.SendPostEncoded(
 				"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
@@ -139,10 +136,10 @@ func attempt(mirrorPath string) {
 			if status == "" {
 				status = updatedStatus
 			} else if status != updatedStatus {
-				break
+				return false
 			}
-			time.Sleep(time.Duration(poll_secs) * time.Second)
-		}
+			return true
+		})
 	}
 
 	awaitStatusChange()

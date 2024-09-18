@@ -1,0 +1,35 @@
+package common
+
+import (
+	"log"
+	"time"
+)
+
+// Calls a handler repeatedly in a limit time and if handler needs it.
+//
+// The handler function will be called at most "limit"/"each" times
+// while it returns true
+func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
+	const FORMAT = time.TimeOnly
+
+	nextAttempt := time.Now()
+	timeout := nextAttempt.Add(limit)
+	log.Printf("start/next: %s - timeout: %s", nextAttempt.Format(FORMAT), timeout.Format(FORMAT))
+	for {
+		t := time.Now()
+		if t.After(timeout) {
+			break
+		}
+		if t.After(nextAttempt) {
+			// Calculate next attempt time in terms of duration and ellapsed time
+			times := t.Sub(nextAttempt) / each
+			nextAttempt = nextAttempt.Add(each * (times + 1))
+			log.Printf("next: %s", nextAttempt.Format(FORMAT))
+
+			// Call handler
+			if !handler() {
+				break
+			}
+		}
+	}
+}
