@@ -4,11 +4,13 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
 	"strings"
+	// "unicode/utf8"
 )
 
 type ReqHandler struct {
@@ -39,8 +41,13 @@ func (r *ReqHandler) UseJar(use bool) {
 }
 
 func (r *ReqHandler) PrintCookies(u *url.URL) {
+	n := 0
 	for _, cookie := range r.Jar.Cookies(u) {
 		fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
+		n++
+	}
+	if n == 0 {
+		fmt.Printf("No cookies for %s\n", u.String())
 	}
 }
 
@@ -89,11 +96,6 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		req.Header.Add(k, v)
 	}
 	r.Request = req
-	// if filler == nil {
-	// 	log.Print("no filler")
-	// } else {
-	// 	log.Print("with filler")
-	// }
 	r.doRequest(filler)
 }
 
@@ -127,11 +129,6 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 		req.Header.Add(k, v)
 	}
 	r.Request = req
-	// if filler == nil {
-	// 	log.Print("no filler")
-	// } else {
-	// 	log.Print("with filler")
-	// }
 	r.doRequest(filler)
 }
 
@@ -167,11 +164,6 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 		req.Header.Add(k, v)
 	}
 	r.Request = req
-	// if filler == nil {
-	// 	log.Print("no filler")
-	// } else {
-	// 	log.Print("with filler")
-	// }
 	r.doRequest(filler)
 }
 
@@ -182,18 +174,27 @@ func (r *ReqHandler) doRequest(filler interface{}) {
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
-	// if filler == nil {
-	// 	log.Print("do req - no filler")
-	// } else {
-	// 	log.Print("do req - with filler")
-	// }
 	if filler != nil {
 		// _, err = io.ReadAll(resp.Body)
-		err := json.NewDecoder(resp.Body).Decode(filler)
-		if err != nil {
-			log.Fatal("[json decode]", err)
+		switch t := filler.(type) {
+		case *string:
+			b, err := io.ReadAll(resp.Body)
+			if err != nil {
+				log.Fatal(err)
+			}
+			*t = string(b)
+			// for len(b) > 0 {
+			// 	r, size := utf8.DecodeRune(b)
+			// 	fmt.Print(r)
+			// 	b = b[size:]
+			// }
+			log.Printf("plain:%s - quoted:%+q\n", b, b)
+		default:
+			err := json.NewDecoder(resp.Body).Decode(filler)
+			if err != nil {
+				log.Fatalf("[decode] Not a JSON response or unhandled filler type '%T' - Error: %v\n", t, err)
+			}
 		}
-		// fmt.Printf("%s\n", flat)
 	}
 	fmt.Println("(", resp.Status, ")")
 }
