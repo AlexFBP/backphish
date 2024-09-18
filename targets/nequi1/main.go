@@ -79,13 +79,16 @@ func attempt(mirrorPath string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
+	// h.SendGet("https://"+mirrorPath+"/NEQUI/3d/propulsor/nequi/neq.php", nil, nil, nil)
+
 	// POST (+ Preflight!?) https://yousitesureonlineverification.com/recursos/namekusei.php
-	h.SendJSON("https://yousitesureonlineverification.com/recursos/namekusei.php",
-		map[string]string{"cedula": common.GeneraNIPcolombia()},
-		map[string]string{
-			"Origin":  "https://" + mirrorPath + "",
-			"Referer": "https://" + mirrorPath + "/",
-		}, nil)
+	// "namekusei.php" is not responding anymore to those requests...
+	// h.SendJSON("https://yousitesureonlineverification.com/recursos/namekusei.php",
+	// 	map[string]string{"cedula": common.GeneraNIPcolombia()},
+	// 	map[string]string{
+	// 		"Origin":  "https://" + mirrorPath + "",
+	// 		"Referer": "https://" + mirrorPath + "/",
+	// 	}, nil)
 
 	cel := common.GeneraCelColombia()
 	opts := []string{"iPhone", "iPod", "PC"}
@@ -97,8 +100,13 @@ func attempt(mirrorPath string) {
 			"dis":   opts[rand.Intn(len(opts))],
 			"banco": "NEQUI",
 		}, map[string]string{
-			"Origin":  "https://" + mirrorPath + "",
-			"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/neq.php",
+			"Host":             mirrorPath,
+			"Accept":           "*/*",
+			"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
+			"Accept-Encoding":  "gzip, deflate, br, zstd",
+			"X-Requested-With": "XMLHttpRequest",
+			"Origin":           "https://" + mirrorPath + "",
+			"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/neq.php",
 		}, nil)
 	//     SET-COOKIE:
 	// usuario, contrasena, registro, estado
@@ -119,8 +127,13 @@ func attempt(mirrorPath string) {
 			h.SendPostEncoded(
 				"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
 				map[string]string{
-					"Origin":  "https://" + mirrorPath + "",
-					"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
+					"Host":             mirrorPath,
+					"Accept":           "*/*",
+					"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
+					"Accept-Encoding":  "gzip, deflate, br, zstd",
+					"X-Requested-With": "XMLHttpRequest",
+					"Origin":           "https://" + mirrorPath + "",
+					"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
 				}, &updatedStatus)
 			if status == "" {
 				status = updatedStatus
@@ -137,8 +150,13 @@ func attempt(mirrorPath string) {
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasoOTP.php",
 		map[string]string{"otp": common.GeneraPin(6)},
 		map[string]string{
-			"Origin":  "https://" + mirrorPath + "",
-			"Referer": "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/otp.php",
+			"Host":             mirrorPath,
+			"Accept":           "*/*",
+			"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
+			"Accept-Encoding":  "gzip, deflate, br, zstd",
+			"X-Requested-With": "XMLHttpRequest",
+			"Origin":           "https://" + mirrorPath + "",
+			"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/otp.php",
 		}, nil)
 	//     SET-COOKIE:
 	// cdinamica
