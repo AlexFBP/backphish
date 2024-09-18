@@ -68,9 +68,9 @@ func AttackRunner(attemptHandle AttemptHander, q int) error {
 }
 
 func GeneraNIPcolombia() string {
-	minOldRange := int(math.Pow10(3))
-	oldRange := int(math.Pow10(8)) - minOldRange
-	newRange := int(math.Pow10(9))
+	minOldRange := int(1e3)
+	oldRange := int(1e8) - minOldRange
+	newRange := int(1e9)
 	universe := oldRange + newRange
 	id := rand.Intn(universe)
 	if id >= oldRange {
@@ -140,7 +140,7 @@ func generaCelValido(pos int) (cel int, e error) {
 			continue
 		}
 		rule := colombiaRangosCelulares[k]
-		cel = rule[0] * int(math.Pow10(7))
+		cel = rule[0] * int(1e7)
 		cel += rule[1]
 		if k > 0 {
 			cel += pos - indicesRangosCelulares[k-1]
