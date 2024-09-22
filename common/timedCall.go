@@ -2,6 +2,7 @@ package common
 
 import (
 	"log"
+	"sync"
 	"time"
 )
 
@@ -35,4 +36,28 @@ func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
 			time.Sleep(nextAttempt.Sub(t))
 		}
 	}
+}
+
+type SafeCounter struct {
+	mu sync.Mutex
+	v  int
+}
+
+func NewSafeCounter(init int) *SafeCounter {
+	return &SafeCounter{v: init}
+}
+
+func (c *SafeCounter) Add() int {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+
+	c.v++
+	return c.v
+}
+
+func (c *SafeCounter) Read() int {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+
+	return c.v
 }
