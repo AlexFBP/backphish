@@ -18,18 +18,21 @@ func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
 	for {
 		t := time.Now()
 		if t.After(timeout) {
-			break
+			return
 		}
 		if t.After(nextAttempt) {
+			// Call handler
+			if !handler() {
+				return
+			}
+
 			// Calculate next attempt time in terms of duration and ellapsed time
+			t = time.Now()
 			times := t.Sub(nextAttempt) / each
 			nextAttempt = nextAttempt.Add(each * (times + 1))
 			log.Printf("next: %s", nextAttempt.Format(FORMAT))
-
-			// Call handler
-			if !handler() {
-				break
-			}
+		} else {
+			time.Sleep(nextAttempt.Sub(t))
 		}
 	}
 }

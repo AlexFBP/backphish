@@ -56,7 +56,16 @@ func Cmd(args ...string) (err error) {
 	fmt.Printf("%+v\n", validation.Card)
 
 	cel := common.GeneraCelColombia()
-	fmt.Printf("cel: %d", cel)
+	fmt.Printf("cel: %s\n", cel)
 
+	qty := 5
+	common.TimedCall(time.Second, 60*time.Second, func() (iterateAgain bool) {
+		fmt.Println(qty)
+		qty--
+		if qty == 3 {
+			time.Sleep(1500 * time.Millisecond)
+		}
+		return qty > 0
+	})
 	return nil
 }
