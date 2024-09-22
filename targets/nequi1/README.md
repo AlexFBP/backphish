@@ -69,6 +69,8 @@ solicitadesdeya.com.    14400   IN      A       162.241.60.255
 n3quionline.com.        6243    IN      A       162.241.61.78
 neq.n3quionline.com.    14400   IN      A       162.241.61.78
 perfectoparti.com.      14400   IN      A       162.241.61.79
+impulsatunq.com.        14400   IN      A       162.241.61.138
+co.nqicolmbia.com.      14400   IN      A       162.241.61.244
 parati-nqui.com.        3625    IN      A       162.241.61.244
 finanzasaturitmo.com.   2200    IN      A       162.241.203.120
 neqwtx.com.             14400   IN      A       162.241.203.120

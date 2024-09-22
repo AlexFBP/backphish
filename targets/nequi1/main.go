@@ -33,9 +33,11 @@ func getCmd(k int, argss ...string) (f func(args ...string) error) {
 var mirrors = []string{
 	`aplicaparahoy.com`,          // CATCHED
 	`aplicaya-neq.com`,           // NO DNS REPLY (DOWN?)
-	`cuztco.com/NEQUI`,           // ALIVE
+	`co.nqicolmbia.com`,          // REPORTED
+	`cuztco.com/NEQUI`,           // REPORTED
 	`finanzasaturitmo.com`,       // NO DNS REPLY (DOWN?)
 	`impuestoscol.com`,           // DOWN BY PROVIDER
+	`impulsatunq.com`,            // REPORTED
 	`intelcore.online`,           // REPORTED
 	`n3quionline.com`,            // REPORTED
 	`neq.n3quionline.com`,        // REPORTED
