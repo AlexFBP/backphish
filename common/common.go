@@ -44,24 +44,40 @@ func ArgsHaveTimes(args ...string) int {
 }
 
 type AttemptHander func()
+type dummyType bool // struct{} ?
 
 func AttackRunner(attemptHandle AttemptHander, q int) error {
-	attempts := 1
+	attempts := NewSafeCounter(0)
+	maxGoRoutines := 1
 
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Printf("\n\nTotal Attempts: %d\n", attempts)
+		log.Printf("\n\nTotal Attempts: %d\n", attempts.Read())
 		os.Exit(0)
 	}()
 
-	for ; ; attempts++ {
-		fmt.Printf("\nAttempt Nº %d - ", attempts)
+	nextAttempt := func(done chan dummyType) {
+		defer func() { done <- true }()
+		fmt.Printf("\nAttempt Nº %d - ", attempts.Add())
 		attemptHandle()
+	}
 
-		if q > 0 && attempts >= q {
+	// Chan for ended routines
+	done := make(chan dummyType)
+
+	// Initial routines
+	for r := 0; r < maxGoRoutines; r++ {
+		go nextAttempt(done)
+	}
+	// Wait while any routine ends to launch another one
+	for {
+		<-done
+		if q > 0 && attempts.Read() >= q {
 			break
+		} else {
+			go nextAttempt(done)
 		}
 	}
 	return nil
