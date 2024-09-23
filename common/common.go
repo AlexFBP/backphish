@@ -79,6 +79,10 @@ func AttackRunner(attemptHandle AttemptHander) error {
 	// Chan for ended routines
 	done := make(chan dummyType)
 
+	totalShift := 3 * time.Second
+	baseDelay := totalShift / time.Duration(maxGoRoutines)
+	jitter := baseDelay / 10
+
 	for {
 		for activeRoutines < maxGoRoutines {
 			if q > 0 && attempts.Read() >= q {
@@ -86,6 +90,7 @@ func AttackRunner(attemptHandle AttemptHander) error {
 			}
 			activeRoutines++
 			go nextAttempt(done)
+			RandDelayWindowed(baseDelay, jitter) // Randomly wait a little
 		}
 		<-done
 		activeRoutines--
