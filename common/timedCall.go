@@ -17,23 +17,23 @@ func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
 	timeout := nextAttempt.Add(limit)
 	log.Printf("start/next: %s - timeout: %s", nextAttempt.Format(FORMAT), timeout.Format(FORMAT))
 	for {
-		t := time.Now()
-		if t.After(timeout) {
+		now := time.Now()
+		if now.After(timeout) {
 			return
 		}
-		if t.After(nextAttempt) {
+		if now.After(nextAttempt) {
 			// Call handler
 			if !handler() {
 				return
 			}
 
 			// Calculate next attempt time in terms of duration and ellapsed time
-			t = time.Now()
-			times := t.Sub(nextAttempt) / each
+			now = time.Now()
+			times := now.Sub(nextAttempt) / each
 			nextAttempt = nextAttempt.Add(each * (times + 1))
 			log.Printf("next: %s", nextAttempt.Format(FORMAT))
 		} else {
-			time.Sleep(nextAttempt.Sub(t))
+			time.Sleep(nextAttempt.Sub(now))
 		}
 	}
 }
