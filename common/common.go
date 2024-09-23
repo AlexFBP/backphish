@@ -49,7 +49,7 @@ type dummyType struct{}
 func AttackRunner(attemptHandle AttemptHander) error {
 	q := conf.GetTimes()
 	attempts := NewSafeCounter(0)
-	maxGoRoutines := 1 // TODO: Read from CLI flag
+	maxGoRoutines := conf.threadQty
 	activeRoutines := 0
 
 	c := make(chan os.Signal)

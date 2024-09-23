@@ -35,7 +35,7 @@ func main() {
 		Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd,
 	})
 
-	target, times := conf.GetTarget(), conf.GetTimes()
+	target, times, threads := conf.GetTarget(), conf.GetTimes(), conf.GetThreads()
 	if target == "" {
 		menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
 		menu := menu.NewMenu(commandOptions, menuOptions)
@@ -55,8 +55,9 @@ func main() {
 			} else {
 				fmt.Print(", no limit")
 			}
+			fmt.Printf(" in %d threads", threads)
 			fmt.Println()
-			command.Function(fmt.Sprintf("%d", times)) // TODO: Also pass qty. of threads/processes
+			command.Function()
 		} else {
 			fmt.Printf("\"%s\" is not a valid target\n", target)
 		}

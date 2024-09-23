@@ -29,6 +29,9 @@ func (c *Config) GetTarget() string {
 func (c *Config) GetTimes() int {
 	return c.times
 }
+func (c *Config) GetThreads() int {
+	return c.threadQty
+}
 
 const (
 	DEFAULT_TIMES     = 4
