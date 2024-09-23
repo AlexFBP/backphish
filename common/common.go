@@ -44,11 +44,12 @@ func ArgsHaveTimes(args ...string) int {
 }
 
 type AttemptHander func()
-type dummyType bool // struct{} ?
+type dummyType struct{}
 
 func AttackRunner(attemptHandle AttemptHander, q int) error {
 	attempts := NewSafeCounter(0)
 	maxGoRoutines := 1
+	activeRoutines := 0
 
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
@@ -59,28 +60,29 @@ func AttackRunner(attemptHandle AttemptHander, q int) error {
 	}()
 
 	nextAttempt := func(done chan dummyType) {
-		defer func() { done <- true }()
-		fmt.Printf("\nAttempt Nº %d - ", attempts.Add())
+		attempt := attempts.Add()
+		defer func() {
+			fmt.Printf("Attempt Nº %d finished", attempt)
+			done <- struct{}{}
+		}()
+		fmt.Printf("\nAttempt Nº %d - ", attempt)
 		attemptHandle()
 	}
 
 	// Chan for ended routines
 	done := make(chan dummyType)
 
-	// Initial routines
-	for r := 0; r < maxGoRoutines; r++ {
-		go nextAttempt(done)
-	}
-	// Wait while any routine ends to launch another one
 	for {
-		<-done
-		if q > 0 && attempts.Read() >= q {
-			break
-		} else {
+		for activeRoutines < maxGoRoutines {
+			if q > 0 && attempts.Read() >= q {
+				return nil
+			}
+			activeRoutines++
 			go nextAttempt(done)
 		}
+		<-done
+		activeRoutines--
 	}
-	return nil
 }
 
 func GeneraNIPcolombia() string {
