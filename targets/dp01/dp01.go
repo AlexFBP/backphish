@@ -112,6 +112,7 @@ func sendReq(v any) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%s\n", flat)
-
+	if common.CanLog(common.LOG_VERBOSE) {
+		fmt.Printf("%s\n", flat)
+	}
 }

@@ -56,17 +56,23 @@ func AttackRunner(attemptHandle AttemptHander) error {
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Printf("\n\nTotal Attempts: %d\n", attempts.Read())
+		if CanLog(LOG_NORMAL) {
+			log.Printf("\n\nTotal Attempts: %d\n", attempts.Read())
+		}
 		os.Exit(0)
 	}()
 
 	nextAttempt := func(done chan dummyType) {
 		attempt := attempts.Add()
 		defer func() {
-			fmt.Printf("Attempt Nº %d finished", attempt)
+			if CanLog(LOG_NORMAL) {
+				fmt.Printf("Attempt Nº %d finished\n", attempt)
+			}
 			done <- struct{}{}
 		}()
-		fmt.Printf("\nAttempt Nº %d - ", attempt)
+		if CanLog(LOG_NORMAL) {
+			fmt.Printf("Attempt Nº %d - ", attempt)
+		}
 		attemptHandle()
 	}
 

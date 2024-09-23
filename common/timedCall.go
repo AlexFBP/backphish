@@ -15,7 +15,9 @@ func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
 
 	nextAttempt := time.Now()
 	timeout := nextAttempt.Add(limit)
-	log.Printf("start/next: %s - timeout: %s", nextAttempt.Format(FORMAT), timeout.Format(FORMAT))
+	if CanLog(LOG_VERBOSE) {
+		log.Printf("start/next: %s - timeout: %s", nextAttempt.Format(FORMAT), timeout.Format(FORMAT))
+	}
 	for {
 		now := time.Now()
 		if now.After(timeout) {
@@ -31,7 +33,9 @@ func TimedCall(each, limit time.Duration, handler func() (iterateAgain bool)) {
 			now = time.Now()
 			times := now.Sub(nextAttempt) / each
 			nextAttempt = nextAttempt.Add(each * (times + 1))
-			log.Printf("next: %s", nextAttempt.Format(FORMAT))
+			if CanLog(LOG_VERBOSE) {
+				log.Printf("next: %s", nextAttempt.Format(FORMAT))
+			}
 		} else {
 			time.Sleep(nextAttempt.Sub(now))
 		}

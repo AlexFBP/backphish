@@ -49,17 +49,21 @@ func main() {
 			}
 		}
 		if command != nil {
-			fmt.Printf("Using target \"%s\"", target)
-			if times > 0 {
-				fmt.Printf(", only \"%d\" times", times)
-			} else {
-				fmt.Print(", no limit")
+			if common.CanLog(common.LOG_NORMAL) {
+				fmt.Printf("Using target \"%s\"", target)
+				if times > 0 {
+					fmt.Printf(", only \"%d\" times", times)
+				} else {
+					fmt.Print(", no limit")
+				}
+				fmt.Printf(" in %d threads", threads)
+				fmt.Println()
 			}
-			fmt.Printf(" in %d threads", threads)
-			fmt.Println()
 			command.Function()
 		} else {
-			fmt.Printf("\"%s\" is not a valid target\n", target)
+			if common.CanLog(common.LOG_QUIET) {
+				fmt.Printf("\"%s\" is not a valid target\n", target)
+			}
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package netflix1
 
 import (
+	"fmt"
 	"math/rand"
 	"net/url"
 	"strconv"
@@ -44,8 +45,10 @@ func attempt() {
 	l_max := 20
 	// TODO: Choose randomly either a "strong" or a "dictionary" password
 	pass := gofakeit.Password(true, true, true, true, false, rand.Intn(l_max-l_min+1)+l_min)
-	// fd.JsonPrint(p)
-	// fmt.Println(p)
+	if common.CanLog(common.LOG_VERBOSE) {
+		// fd.JsonPrint(p)
+		fmt.Println(p)
+	}
 
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/send.php",
@@ -69,7 +72,9 @@ func attempt() {
 	bd := gofakeit.DateRange(n.AddDate(-70, 0, 0), n.AddDate(-18, 0, 5))
 	cc := strconv.Itoa(p.CreditCard.Number)
 	cc = strings.Join([]string{cc[:4], cc[4:8], cc[8:12], cc[12:]}, " ")
-	// fmt.Println("cardNum:", cc)
+	if common.CanLog(common.LOG_VERBOSE) {
+		fmt.Println("cardNum:", cc)
+	}
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/send.php",
 		map[string]string{

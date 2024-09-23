@@ -5,9 +5,9 @@ import (
 )
 
 const (
-	LOG_VERBOSE = iota
-	LOG_NORMAL
-	LOG_QUIET
+	LOG_VERBOSE = iota // Verbose and/or debug
+	LOG_NORMAL         // Moderate
+	LOG_QUIET          // Severe only
 )
 
 var logLevels map[int]string = map[int]string{
