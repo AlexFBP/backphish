@@ -44,27 +44,57 @@ func ArgsHaveTimes(args ...string) int {
 }
 
 type AttemptHander func()
+type dummyType struct{}
 
-func AttackRunner(attemptHandle AttemptHander, q int) error {
-	attempts := 1
+func AttackRunner(attemptHandle AttemptHander) error {
+	q := conf.GetTimes()
+	attempts := NewSafeCounter(0)
+	maxGoRoutines := conf.threadQty
+	activeRoutines := 0
 
-	c := make(chan os.Signal)
+	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Printf("\n\nTotal Attempts: %d\n", attempts)
+		if CanLog(LOG_NORMAL) {
+			log.Printf("\n\nTotal Attempts: %d\n", attempts.Read())
+		}
 		os.Exit(0)
 	}()
 
-	for ; ; attempts++ {
-		fmt.Printf("\nAttempt Nº %d - ", attempts)
-		attemptHandle()
-
-		if q > 0 && attempts >= q {
-			break
+	nextAttempt := func(done chan dummyType) {
+		attempt := attempts.Add()
+		defer func() {
+			if CanLog(LOG_NORMAL) {
+				fmt.Printf("[Nº %d]end ", attempt)
+			}
+			done <- struct{}{}
+		}()
+		if CanLog(LOG_NORMAL) {
+			fmt.Printf("[Nº %d]begin ", attempt)
 		}
+		attemptHandle()
 	}
-	return nil
+
+	// Chan for ended routines
+	done := make(chan dummyType)
+
+	totalShift := 3 * time.Second
+	baseDelay := totalShift / time.Duration(maxGoRoutines)
+	jitter := baseDelay / 10
+
+	for {
+		for activeRoutines < maxGoRoutines {
+			if q > 0 && attempts.Read() >= q {
+				return nil
+			}
+			activeRoutines++
+			go nextAttempt(done)
+			RandDelayWindowed(baseDelay, jitter) // Randomly wait a little
+		}
+		<-done
+		activeRoutines--
+	}
 }
 
 func GeneraNIPcolombia() string {
@@ -167,8 +197,48 @@ func GeneraIP() string {
 	return fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
 }
 
-func RandDelay(minSeconds, maxSeconds int) {
-	time.Sleep(time.Second * time.Duration(minSeconds+rand.Intn(maxSeconds-minSeconds)))
+// Random delay in a range of time Duration. If min > max, values will be considered swapped!
+//
+// Example:
+//
+//	RandDelayRange(3*time.Second, 5*time.Second)
+//
+// is a random delay ranging from 3 to 5 seconds
+//
+// Previous example is equivalent to:
+//
+//	RandDelayWindowed(4*time.Second, 2*time.Second)
+func RandDelayRange(min, max time.Duration) {
+	if min > max {
+		min, max = max, min
+	}
+	time.Sleep(min + time.Duration(rand.Intn(int(max-min))))
+}
+
+// Delay within a random window of duration. The 'duration' is the middle/average delay
+// of a 'window' of allowed deviations against the specified duration.
+// If half of the window (the peak) exceeds the duration, the window will be trimmed
+// to twice the duration
+//
+// Example:
+//
+//	RandDelayWindowed(10*time.Second, 2*time.Second)
+//
+// would be equivalent to a delay of 10 seconds, in average.
+// The 2 seconds window, will give a range of +/- 1 second
+// in which the final delay will be randomly ranging
+//
+// Previous example, in other words, is equivalent to:
+//
+//	RandDelayRange(9*time.Second, 11*time.Second)
+func RandDelayWindowed(duration, window time.Duration) {
+	peak := window / 2
+	if peak > duration {
+		// Trim peak and fit window
+		peak, window = duration, 2*duration
+	}
+	min := duration - peak
+	RandDelayRange(min, min+window)
 }
 
 func RandUserName(p *gofakeit.PersonInfo) string {

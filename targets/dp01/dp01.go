@@ -4,10 +4,11 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"math/rand" // "crypto/rand"
 	"net/http"
+	"time"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -18,7 +19,7 @@ type SpamBody struct {
 }
 
 func Cmd1(args ...string) error {
-	return common.AttackRunner(attempt, common.ArgsHaveTimes(args...))
+	return common.AttackRunner(attempt)
 }
 
 func attempt() {
@@ -36,8 +37,8 @@ func attempt() {
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 TipoDoc: %s
-NumDoc: %d
-Clave: %d
+NumDoc: %s
+Clave: %s
 IP: %s
 %s`,
 			tiposDocumento[rand.Intn(len(tiposDocumento))],
@@ -55,7 +56,7 @@ IP: %s
 	d2 := SpamBody{
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
-Cod1: %d
+Cod1: %s
 IP: %s
 %s`, common.GeneraPin(6), randIp, location),
 		// `DATOS DAVPLAT
@@ -65,9 +66,9 @@ IP: %s
 	}
 
 	sendReq(d)
-	common.RandDelay(30, 60)
+	common.RandDelayRange(30*time.Second, 60*time.Second)
 	sendReq(d2)
-	common.RandDelay(30, 60)
+	common.RandDelayRange(30*time.Second, 60*time.Second)
 }
 
 func sendReq(v any) {
@@ -108,10 +109,11 @@ func sendReq(v any) {
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
-	flat, err := ioutil.ReadAll(resp.Body)
+	flat, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%s\n", flat)
-
+	if common.CanLog(common.LOG_VERBOSE) {
+		fmt.Printf("%s\n", flat)
+	}
 }

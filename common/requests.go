@@ -41,13 +41,15 @@ func (r *ReqHandler) UseJar(use bool) {
 }
 
 func (r *ReqHandler) PrintCookies(u *url.URL) {
-	n := 0
-	for _, cookie := range r.Jar.Cookies(u) {
-		fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
-		n++
-	}
-	if n == 0 {
-		fmt.Printf("No cookies for %s\n", u.String())
+	if CanLog(LOG_VERBOSE) {
+		n := 0
+		for _, cookie := range r.Jar.Cookies(u) {
+			fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
+			n++
+		}
+		if n == 0 {
+			fmt.Printf("No cookies for %s\n", u.String())
+		}
 	}
 }
 
@@ -74,7 +76,9 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		data.Add(k, v)
 	}
 	if mockServer != "" {
-		fmt.Printf("mockServer: %s\n", mockServer)
+		if CanLog(LOG_VERBOSE) {
+			fmt.Printf("mockServer: %s\n", mockServer)
+		}
 		postUrl = mockServer
 	}
 	req, err := http.NewRequest("POST", postUrl, strings.NewReader(data.Encode()))
@@ -102,7 +106,9 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders map[string]string, filler interface{}) {
 	r.checkClient()
 	if mockServer != "" {
-		fmt.Printf("mockServer: %s\n", mockServer)
+		if CanLog(LOG_VERBOSE) {
+			fmt.Printf("mockServer: %s\n", mockServer)
+		}
 		target = mockServer
 	}
 	b := new(bytes.Buffer)
@@ -139,11 +145,15 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 		data.Add(k, v)
 	}
 	if mockServer != "" {
-		fmt.Printf("mockServer: %s\n", mockServer)
+		if CanLog(LOG_VERBOSE) {
+			fmt.Printf("mockServer: %s\n", mockServer)
+		}
 		getUrl = mockServer
 	}
 	coded := data.Encode()
-	// fmt.Print(coded, ":")
+	if CanLog(LOG_VERBOSE) {
+		fmt.Println(coded, ":")
+	}
 	getUrl += "?" + coded
 	if _, err := url.Parse(getUrl); err != nil {
 		log.Fatal("[FATAL] Malformed/Wrong URL:", getUrl)
@@ -185,10 +195,14 @@ func (r *ReqHandler) doRequest(filler interface{}) {
 			*t = string(b)
 			// for len(b) > 0 {
 			// 	r, size := utf8.DecodeRune(b)
-			// 	fmt.Print(r)
+			// 	if CanLog(LOG_VERBOSE) {
+			// 		fmt.Print(r)
+			// 	}
 			// 	b = b[size:]
 			// }
-			log.Printf("plain:%s - quoted:%+q\n", b, b)
+			if CanLog(LOG_VERBOSE) {
+				log.Printf("plain:%s - quoted:%+q\n", b, b)
+			}
 		default:
 			err := json.NewDecoder(resp.Body).Decode(filler)
 			if err != nil {
@@ -196,5 +210,7 @@ func (r *ReqHandler) doRequest(filler interface{}) {
 			}
 		}
 	}
-	fmt.Println("(", resp.Status, ")")
+	if CanLog(LOG_VERBOSE) {
+		fmt.Println("(", resp.Status, ")")
+	}
 }

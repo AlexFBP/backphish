@@ -18,10 +18,7 @@ import (
 )
 
 func main() {
-	parseFlags()
-	if mock {
-		common.SetMockServer(DEFAULT_MOCK)
-	}
+	conf := common.GetConfig()
 	commandOptions := []menu.CommandOption{
 		// Attacks - Please sort alphabetically by key
 		{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd},
@@ -38,6 +35,7 @@ func main() {
 		Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd,
 	})
 
+	target, times, threads := conf.GetTarget(), conf.GetTimes(), conf.GetThreads()
 	if target == "" {
 		menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
 		menu := menu.NewMenu(commandOptions, menuOptions)
@@ -51,16 +49,21 @@ func main() {
 			}
 		}
 		if command != nil {
-			fmt.Printf("Using target \"%s\"", target)
-			if times > 0 {
-				fmt.Printf(", only \"%d\" times", times)
-			} else {
-				fmt.Print(", no limit")
+			if common.CanLog(common.LOG_NORMAL) {
+				fmt.Printf("Using target \"%s\"", target)
+				if times > 0 {
+					fmt.Printf(", only \"%d\" times", times)
+				} else {
+					fmt.Print(", no limit")
+				}
+				fmt.Printf(" in %d threads", threads)
+				fmt.Println()
 			}
-			fmt.Println()
-			command.Function(fmt.Sprintf("%d", times))
+			command.Function()
 		} else {
-			fmt.Printf("\"%s\" is not a valid target\n", target)
+			if common.CanLog(common.LOG_QUIET) {
+				fmt.Printf("\"%s\" is not a valid target\n", target)
+			}
 		}
 	}
 }
