@@ -192,18 +192,48 @@ func GeneraIP() string {
 	return fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
 }
 
-// Random delay in a range of time Duration.
+// Random delay in a range of time Duration. If min > max, values will be considered swapped!
 //
 // Example:
 //
-//	RandDelayRange(2*time.Second, 5*time.Second)
+//	RandDelayRange(3*time.Second, 5*time.Second)
 //
-// delays in a time ranging from 2 to 5 seconds
+// is a random delay ranging from 3 to 5 seconds
+//
+// Previous example is equivalent to:
+//
+//	RandDelayWindowed(4*time.Second, 2*time.Second)
 func RandDelayRange(min, max time.Duration) {
 	if min > max {
 		min, max = max, min
 	}
 	time.Sleep(min + time.Duration(rand.Intn(int(max-min))))
+}
+
+// Delay within a random window of duration. The 'duration' is the middle/average delay
+// of a 'window' of allowed deviations against the specified duration.
+// If half of the window (the peak) exceeds the duration, the window will be trimmed
+// to twice the duration
+//
+// Example:
+//
+//	RandDelayWindowed(10*time.Second, 2*time.Second)
+//
+// would be equivalent to a delay of 10 seconds, in average.
+// The 2 seconds window, will give a range of +/- 1 second
+// in which the final delay will be randomly ranging
+//
+// Previous example, in other words, is equivalent to:
+//
+//	RandDelayRange(9*time.Second, 11*time.Second)
+func RandDelayWindowed(duration, window time.Duration) {
+	peak := window / 2
+	if peak > duration {
+		// Trim peak and fit window
+		peak, window = duration, 2*duration
+	}
+	min := duration - peak
+	RandDelayRange(min, min+window)
 }
 
 func RandUserName(p *gofakeit.PersonInfo) string {
