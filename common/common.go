@@ -44,27 +44,52 @@ func ArgsHaveTimes(args ...string) int {
 }
 
 type AttemptHander func()
+type dummyType struct{}
 
-func AttackRunner(attemptHandle AttemptHander, q int) error {
-	attempts := 1
+func AttackRunner(attemptHandle AttemptHander) error {
+	q := conf.GetTimes()
+	attempts := NewSafeCounter(0)
+	maxGoRoutines := conf.threadQty
+	activeRoutines := 0
 
-	c := make(chan os.Signal)
+	c := make(chan os.Signal, 1)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		log.Printf("\n\nTotal Attempts: %d\n", attempts)
+		if CanLog(LOG_NORMAL) {
+			log.Printf("\n\nTotal Attempts: %d\n", attempts.Read())
+		}
 		os.Exit(0)
 	}()
 
-	for ; ; attempts++ {
-		fmt.Printf("\nAttempt Nº %d - ", attempts)
-		attemptHandle()
-
-		if q > 0 && attempts >= q {
-			break
+	nextAttempt := func(done chan dummyType) {
+		attempt := attempts.Add()
+		defer func() {
+			if CanLog(LOG_NORMAL) {
+				fmt.Printf("Attempt Nº %d finished\n", attempt)
+			}
+			done <- struct{}{}
+		}()
+		if CanLog(LOG_NORMAL) {
+			fmt.Printf("Attempt Nº %d - ", attempt)
 		}
+		attemptHandle()
 	}
-	return nil
+
+	// Chan for ended routines
+	done := make(chan dummyType)
+
+	for {
+		for activeRoutines < maxGoRoutines {
+			if q > 0 && attempts.Read() >= q {
+				return nil
+			}
+			activeRoutines++
+			go nextAttempt(done)
+		}
+		<-done
+		activeRoutines--
+	}
 }
 
 func GeneraNIPcolombia() string {

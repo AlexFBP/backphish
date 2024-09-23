@@ -1,10 +1,11 @@
 package bc02
 
+import (
+	"github.com/AlexFBP/backphish/common"
+)
+
 func Cmd(args ...string) error {
-	// return common.AttackRunner(attempt)
-	// For single attack, comment line above and uncomment this:
-	attempt()
-	return nil
+	return common.AttackRunner(attempt)
 }
 
 func attempt() {
