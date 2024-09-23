@@ -66,12 +66,12 @@ func AttackRunner(attemptHandle AttemptHander) error {
 		attempt := attempts.Add()
 		defer func() {
 			if CanLog(LOG_NORMAL) {
-				fmt.Printf("Attempt Nº %d finished\n", attempt)
+				fmt.Printf("[Nº %d]end ", attempt)
 			}
 			done <- struct{}{}
 		}()
 		if CanLog(LOG_NORMAL) {
-			fmt.Printf("Attempt Nº %d - ", attempt)
+			fmt.Printf("[Nº %d]begin ", attempt)
 		}
 		attemptHandle()
 	}
