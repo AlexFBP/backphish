@@ -31,7 +31,7 @@ func attempt() {
 	// common.RandDelay(2, 5)
 	h.SendPostEncoded(
 		"https://activacion--vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%04d", common.GeneraPin(4))},
+		map[string]string{"clave": common.GeneraPin(4)},
 		map[string]string{
 			"Host":    "activacion--vitualclave.repl.co",
 			"Origin":  "https://activacion--vitualclave.repl.co",
@@ -43,7 +43,7 @@ func attempt() {
 	// common.RandDelay(12, 51)
 	h.SendPostEncoded(
 		"https://dinamica.vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": fmt.Sprintf("%06d", common.GeneraPin(6))},
+		map[string]string{"clave": common.GeneraPin(6)},
 		map[string]string{
 			"Host":    "dinamica.vitualclave.repl.co",
 			"Origin":  "https://dinamica.vitualclave.repl.co",
