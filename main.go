@@ -58,7 +58,7 @@ func main() {
 				fmt.Print(", no limit")
 			}
 			fmt.Println()
-			command.Function(fmt.Sprintf("%d", times))
+			command.Function(fmt.Sprintf("%d", times)) // TODO: Also pass qty. of threads/processes
 		} else {
 			fmt.Printf("\"%s\" is not a valid target\n", target)
 		}
