@@ -10,6 +10,7 @@ type Config struct {
 	times     int
 	mock      bool
 	threadQty int
+	logLevel  int
 }
 
 var conf Config
@@ -37,6 +38,7 @@ const (
 	DEFAULT_TIMES     = 4
 	DEFAULT_MOCK      = "http://localhost:1080"
 	DEFAULT_PROCESSES = 1
+	DEFAULT_LOGLEVEL  = LOG_NORMAL
 )
 
 func (c *Config) ClearFlags() {
@@ -49,16 +51,18 @@ func (c *Config) ClearFlags() {
 func (c *Config) ParseFlags() {
 	c.ClearFlags()
 
-	targetPtr := flag.String("a", "", "Attack name")
-	timesPtr := flag.Int("n", DEFAULT_TIMES, fmt.Sprintf("Times. Default:%d times", DEFAULT_TIMES))
-	mockPtr := flag.Bool("m", false, "Use mock server in HTTP requests. Default: false")
-	threadQtyPtr := flag.Int("p", DEFAULT_PROCESSES, fmt.Sprint("Quantity of simultaneous processes. Default:", DEFAULT_PROCESSES))
+	targetPtr := flag.String("n", "", "Attack name")
+	timesPtr := flag.Int("q", DEFAULT_TIMES, "Total quantity of attacks. Set 0 for unlimited")
+	mockPtr := flag.Bool("m", false, "Use mock server in HTTP requests")
+	threadQtyPtr := flag.Int("p", DEFAULT_PROCESSES, "Simultaneous processes/threads")
+	logLevelPtr := flag.Int("l", DEFAULT_LOGLEVEL, fmt.Sprintf("Log Level. Values:%s", LogLevelsHelp()))
 
 	flag.Parse()
 	c.target = *targetPtr
 	c.times = *timesPtr
 	c.mock = *mockPtr
 	c.threadQty = *threadQtyPtr
+	c.logLevel = *logLevelPtr
 
 	if c.mock {
 		SetMockServer(DEFAULT_MOCK)
