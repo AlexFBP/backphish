@@ -13,20 +13,20 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
-func GetAllCmds(args ...string) (opts []menu.CommandOption) {
+func GetAllCmds() (opts []menu.CommandOption) {
 	for k, v := range mirrors {
 		opts = append(opts, menu.CommandOption{
 			Command:     fmt.Sprintf("nq1-%d", k+1),
 			Description: fmt.Sprintf("attack fake nequi 1, mirror %d (%s)", k+1, v),
-			Function:    getCmd(k, args...),
+			Function:    getCmd(k),
 		})
 	}
 	return
 }
 
-func getCmd(k int, argss ...string) (f func(args ...string) error) {
+func getCmd(k int) (f func(...string) error) {
 	return func(args ...string) error {
-		return common.AttackRunner(mirrorAttempt(k), common.ArgsHaveTimes(argss...))
+		return common.AttackRunner(mirrorAttempt(k), common.ArgsHaveTimes(args...))
 	}
 }
 
