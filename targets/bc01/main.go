@@ -11,10 +11,7 @@ import (
 )
 
 func Cmd(args ...string) error {
-	return common.AttackRunner(attempt, common.ArgsHaveTimes(args...))
-	// For single attack, comment line above and uncomment this:
-	// attempt()
-	// return nil
+	return common.AttackRunner(attempt)
 }
 
 func attempt() {

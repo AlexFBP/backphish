@@ -18,10 +18,7 @@ import (
 )
 
 func main() {
-	parseFlags()
-	if mock {
-		common.SetMockServer(DEFAULT_MOCK)
-	}
+	conf := common.GetConfig()
 	commandOptions := []menu.CommandOption{
 		// Attacks - Please sort alphabetically by key
 		{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd},
@@ -38,6 +35,7 @@ func main() {
 		Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd,
 	})
 
+	target, times := conf.GetTarget(), conf.GetTimes()
 	if target == "" {
 		menuOptions := menu.NewMenuOptions("'menu' for help > ", 0)
 		menu := menu.NewMenu(commandOptions, menuOptions)

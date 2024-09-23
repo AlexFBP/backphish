@@ -18,7 +18,7 @@ type SpamBody struct {
 }
 
 func Cmd1(args ...string) error {
-	return common.AttackRunner(attempt, common.ArgsHaveTimes(args...))
+	return common.AttackRunner(attempt)
 }
 
 func attempt() {

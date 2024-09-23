@@ -26,7 +26,7 @@ func GetAllCmds() (opts []menu.CommandOption) {
 
 func getCmd(k int) (f func(...string) error) {
 	return func(args ...string) error {
-		return common.AttackRunner(mirrorAttempt(k), common.ArgsHaveTimes(args...))
+		return common.AttackRunner(mirrorAttempt(k))
 	}
 }
 

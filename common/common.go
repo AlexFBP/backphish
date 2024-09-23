@@ -46,7 +46,8 @@ func ArgsHaveTimes(args ...string) int {
 type AttemptHander func()
 type dummyType struct{}
 
-func AttackRunner(attemptHandle AttemptHander, q int) error {
+func AttackRunner(attemptHandle AttemptHander) error {
+	q := conf.GetTimes()
 	attempts := NewSafeCounter(0)
 	maxGoRoutines := 1 // TODO: Read from CLI flag
 	activeRoutines := 0
