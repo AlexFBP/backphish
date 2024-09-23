@@ -192,8 +192,18 @@ func GeneraIP() string {
 	return fmt.Sprintf("%d.%d.%d.%d", rand.Intn(256), rand.Intn(256), rand.Intn(256), rand.Intn(256))
 }
 
-func RandDelay(minSeconds, maxSeconds int) {
-	time.Sleep(time.Second * time.Duration(minSeconds+rand.Intn(maxSeconds-minSeconds)))
+// Random delay in a range of time Duration.
+//
+// Example:
+//
+//	RandDelayRange(2*time.Second, 5*time.Second)
+//
+// delays in a time ranging from 2 to 5 seconds
+func RandDelayRange(min, max time.Duration) {
+	if min > max {
+		min, max = max, min
+	}
+	time.Sleep(min + time.Duration(rand.Intn(int(max-min))))
 }
 
 func RandUserName(p *gofakeit.PersonInfo) string {
