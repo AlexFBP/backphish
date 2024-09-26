@@ -15,3 +15,4 @@ The following domain used to had the same scam structure:
 
 - `pree-populsorwebside.online`
 - `pree-propulsoraprobado.website`
+- `propulsorpreaprobado.website`
