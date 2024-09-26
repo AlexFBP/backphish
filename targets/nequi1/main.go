@@ -30,40 +30,47 @@ func getCmd(k int) (f func(...string) error) {
 	}
 }
 
+// (*1): "no such host" - Down
+// (*2): TLS error? Down?
+// (*3): "no route to host" - Down?
 var mirrors = []string{
-	`aplicaparahoy.com`,          // CATCHED
-	`aplicaya-neq.com`,           // NO DNS REPLY (DOWN?)
-	`co.nqicolmbia.com`,          // REPORTED
+	`aplicaparahoy.com`,          // CATCHED (*1)
+	`aplicaya-neq.com`,           // NO DNS REPLY (*1)
+	`co.nqicolmbia.com`,          // REPORTED (*1)
 	`cuztco.com/NEQUI`,           // REPORTED
-	`finanzasaturitmo.com`,       // NO DNS REPLY (DOWN?)
-	`impuestoscol.com`,           // DOWN BY PROVIDER
+	`finanzasaturitmo.com`,       // NO DNS REPLY (*1)
+	`impuestoscol.com`,           // DOWN BY PROVIDER (*??)
 	`impulsatunq.com`,            // REPORTED
-	`intelcore.online`,           // REPORTED
-	`n3quionline.com`,            // REPORTED
-	`neq.n3quionline.com`,        // REPORTED
+	`intelcore.online`,           // REPORTED (*1)
+	`n3quionline.com`,            // REPORTED (*1)
+	`neq.n3quionline.com`,        // REPORTED (*1)
 	`neqwtx.com`,                 // CATCHED
-	`newactivalo.com`,            // CATCHED - NO DNS REPLY (DOWN?)
-	`nqipr0pulsor.com`,           // NO DNS REPLY (DOWN?)
-	`nqprepropulso.com`,          // CATCHED
+	`newactivalo.com`,            // CATCHED - NO DNS REPLY (*1)
+	`nq-colombiaonline.website`,  // NO DNS REPLY (*1)
+	`nqi-pr0pls0r.com`,           // CATCHED/ALIVE
+	`nqicolmbia.com/NEQUI`,       // REPORTED
+	`nqipr0pulsor.com`,           // NO DNS REPLY (*1)
+	`nqprepropulso.com`,          // CATCHED (*1)
 	`nqpropulsa.com`,             // CATCHED
 	`nqpropulsando.com`,          // CATCHED
-	`nuevopropulsor.com`,         // REPORTED
-	`onlineparati.com`,           // REPORTED
-	`parati-nqui.com`,            // NO DNS REPLY (DOWN?)
-	`perfectoparti.com`,          // REPORTED
-	`prepropulsandonq.com`,       // CATCHED - NO DNS REPLY (DOWN?)
-	`prepropulneq.com`,           // NO DNS REPLY (DOWN?)
-	`prepropulnq.com`,            // CATCHED
-	`prestamo-nequi.website`,     // NO DNS REPLY (DOWN?)
+	`nuevopropulsor.com`,         // REPORTED (*2)
+	`onlineparati.com`,           // REPORTED (*3)
+	`parati-nqui.com`,            // NO DNS REPLY (*1)
+	`perfectoparti.com`,          // REPORTED (*??)
+	`preadelanto.online`,         // NO DNS REPLY (*1)
+	`prepropulsandonq.com`,       // CATCHED - NO DNS REPLY (*1)
+	`prepropulneq.com`,           // NO DNS REPLY (*1)
+	`prepropulnq.com`,            // CATCHED (*1)
+	`prestamo-nequi.website`,     // NO DNS REPLY (*1)
 	`propulahorrosneq.com`,       // REPORTED
 	`propulcolombiano.com`,       // REPORTED
-	`propulideas.com`,            // REPORTED
-	`propulsandoneqpro.com`,      // REPORTED
-	`propulsor-pre.website`,      // NO DNS REPLY (DOWN?)
-	`propulsoraprobados.website`, // NO DNS REPLY (DOWN?)
-	`siperpropcolombia.com`,      // REPORTED
+	`propulideas.com`,            // REPORTED (*1)
+	`propulsandoneqpro.com`,      // REPORTED (*1)
+	`propulsor-pre.website`,      // NO DNS REPLY (*1)
+	`propulsoraprobados.website`, // NO DNS REPLY (*1)
+	`siperpropcolombia.com`,      // REPORTED (*2)
 	`solicitadesdeya.com`,        // REPORTED
-	`51.107.8.147`,               // DNS CATCHED or DOWN?
+	`51.107.8.147`,               // DNS CATCHED or DOWN? (*??)
 }
 
 func mirrorAttempt(n int) common.AttemptHander {

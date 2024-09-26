@@ -2,35 +2,41 @@
 
 Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / pointed by :
 
-- `aplicaparahoy.com`
-- `aplicaya-neq.com`
+- `aplicaparahoy.com` (*1)
+- `aplicaya-neq.com` (*1)
+- `co.nqicolmbia.com` (*1)
 - `cuztco.com/NEQUI`
-- `finanzasaturitmo.com`
+- `finanzasaturitmo.com` (*1)
 - `impuestoscol.com`
+- `impulsatunq.com`
 - `impulsornequi.github.io` ([GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse!)
-- `intelcore.online`
-- `n3quionline.com`
-- `neq.n3quionline.com`
+- `intelcore.online` (*1)
+- `n3quionline.com` (*1)
+- `neq.n3quionline.com` (*1)
 - `neqwtx.com`
-- `newactivalo.com`
-- `nqipr0pulsor.com`
-- `nqprepropulso.com`
+- `newactivalo.com` (*1)
+- `nq-colombiaonline.website` (*1)
+- `nqi-pr0pls0r.com`
+- `nqicolmbia.com/NEQUI`
+- `nqipr0pulsor.com` (*1)
+- `nqprepropulso.com` (*1)
 - `nqpropulsa.com`
 - `nqpropulsando.com`
 - `nuevopropulsor.com`
 - `onlineparati.com`
+- `parati-nqui.com` (*1)
 - `perfectoparti.com`
-- `parati-nqui.com`
-- `prepropulsandonq.com`
-- `prepropulneq.com`
-- `prepropulnq.com`
-- `prestamo-nequi.website`
+- `preadelanto.online` (*1)
+- `prepropulsandonq.com` (*1)
+- `prepropulneq.com` (*1)
+- `prepropulnq.com` (*1)
+- `prestamo-nequi.website` (*1)
 - `propulahorrosneq.com`
 - `propulcolombiano.com`
-- `propulideas.com`
-- `propulsandoneqpro.com`
-- `propulsor-pre.website`
-- `propulsoraprobados.website`
+- `propulideas.com` (*1)
+- `propulsandoneqpro.com` (*1)
+- `propulsor-pre.website` (*1)
+- `propulsoraprobados.website` (*1)
 - `siperpropcolombia.com`
 - `solicitadesdeya.com`
 - `51.107.8.147`
@@ -40,6 +46,10 @@ _Technical detail: some of them sends (or used to send) a few additional request
 All domains above listed are impersonating Nequi and its product ["Crédito Propulsor"](https://www.nequi.com.co/personas/credito/propulsor) to stole username (phone number) and password (4 digit pin), and even 2FA (6 digit time-based token).
 
 The entrypoint of the scam is `https://${DOMAIN}/NEQUI/3d/propulsor/nequi/n.html` or ended in `neq.php` instead of `n.html`
+
+**Notes (*N)**
+
+1. Seems to be currently down (Otherwise, please open a Issue!)
 
 ## WHOIS for domains
 
