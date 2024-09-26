@@ -4,7 +4,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 
 - `aplicaparahoy.com`
 - `aplicaya-neq.com`
-- `https://cuztco.com/NEQUI/NEQUI/3d/propulsor/nequi/n.html`
+- `cuztco.com/NEQUI`
 - `finanzasaturitmo.com`
 - `impuestoscol.com`
 - `impulsornequi.github.io` ([GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse!)
@@ -38,6 +38,8 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 _Technical detail: some of them sends (or used to send) a few additional requests to `yousitesureonlineverification.com`_
 
 All domains above listed are impersonating Nequi and its product ["Crédito Propulsor"](https://www.nequi.com.co/personas/credito/propulsor) to stole username (phone number) and password (4 digit pin), and even 2FA (6 digit time-based token).
+
+The entrypoint of the scam is `https://${DOMAIN}/NEQUI/3d/propulsor/nequi/n.html` or ended in `neq.php` instead of `n.html`
 
 ## WHOIS for domains
 
