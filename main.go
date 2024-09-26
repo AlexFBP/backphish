@@ -14,6 +14,7 @@ import (
 	mail47201 "github.com/AlexFBP/backphish/targets/mail472_01"
 	"github.com/AlexFBP/backphish/targets/ms01"
 	"github.com/AlexFBP/backphish/targets/nequi1"
+	"github.com/AlexFBP/backphish/targets/nequi2"
 	"github.com/AlexFBP/backphish/targets/netflix1"
 )
 
@@ -30,10 +31,11 @@ func main() {
 		{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd},
 	}
 	commandOptions = append(commandOptions, nequi1.GetAllCmds()...)
-	// Playground - Please keep this one at the end
-	commandOptions = append(commandOptions, menu.CommandOption{
-		Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd,
-	})
+	commandOptions = append(commandOptions, []menu.CommandOption{
+		{Command: "nq2", Description: "attack fake nequi2", Function: nequi2.Cmd},
+		// Playground - Please keep this one at the end
+		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
+	}...)
 
 	target, times, threads := conf.GetTarget(), conf.GetTimes(), conf.GetThreads()
 	if target == "" {
