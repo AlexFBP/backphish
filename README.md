@@ -1,4 +1,4 @@
-# PhishPayback: Phising Spammer
+# PhishPayback: Phishing Spammer
 
 The idea is to combat phishing with spam, this is a hacking repo (needless to add that "hacking" IS "ethical" by its sole [origin](https://youtu.be/XMm0HsmOTFI?si=mBFLIIfae_TRcQDD). **Please stop confusing hacking with cracking, there's no need to add "ethical" after "hacking"!**).
 
@@ -6,6 +6,8 @@ Inspired in
 
 - GitHub - [v3lip/PhishingSpammer](https://github.com/v3lip/PhishingSpammer/)
 - YouTube - [@ScammerPayback](https://www.youtube.com/@ScammerPayback)
+
+_**Dear Cracker, a note for you if you dare to feel "affected" by this repo:**: First of all: You're not a hacker, you're just a cracker. Be a real hacker: some companies offer [bounties for finding bugs and other vulnerabilities](https://www.google.com/search?q=bounties+for+finding+softwar+evulnerabilities) in their systems. I trust you are able to apply to one of them, look: I'm just doing this for fun in my free time and I'm not even an expert in what you surely can do with your knowledge. Wether you get a bounty, or you find a job in which you feel comfortable, once you have free a little of your precious time, please come back here and [give me a hand](TODO.md) with this repo. I've learnt a lot by just developing this repo_
 
 ## Types
 
