@@ -49,4 +49,5 @@ Difficulty or Quantity-of-lines-to-be-changed: (E)asy-few / (M)edium-moderate / 
 - [ ] (L-L) nq1 target: test if `awaitStatusChange()` is really needed (priorize sending of values)
 - [ ] (L-H) Improve calculation of `totalShift` in `AttackRunner()`. Possibly by a refactor in which it can be set to each target an average workflow time, or parameters of a range that can be randomly picked by means of any of `RandDelay...()`
 - [ ] (L-L) Use a [Random User Agent](https://iplogger.org/useragents/) (UA) for each attack, initially from a predefined list of, let's say, 10 UAs; to be updated periodically, monthly perhaps.
-- [ ] (M-H) Generalyze mirror handling, generalyze what it was done in nq1 for all attacks (By default, a single mirror)
+- [ ] (H-H) Generalyze mirror handling, generalyze what it was done in nq1 for all attacks (By default, a single mirror)
+- [ ] (L-M) When using mock server, send the original target in a header, "Debug-Original-URL"

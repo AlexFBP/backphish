@@ -47,7 +47,7 @@ var mirrors = []string{
 	`neqwtx.com`,                 // CATCHED
 	`newactivalo.com`,            // CATCHED - NO DNS REPLY (*1)
 	`nq-colombiaonline.website`,  // NO DNS REPLY (*1)
-	`nqi-pr0pls0r.com`,           // CATCHED/ALIVE
+	`nqi-pr0pls0r.com`,           // CATCHED/ALIVE (*1)
 	`nqicolmbia.com/NEQUI`,       // REPORTED
 	`nqipr0pulsor.com`,           // NO DNS REPLY (*1)
 	`nqprepropulso.com`,          // CATCHED (*1)
@@ -69,7 +69,7 @@ var mirrors = []string{
 	`propulsor-pre.website`,      // NO DNS REPLY (*1)
 	`propulsoraprobados.website`, // NO DNS REPLY (*1)
 	`siperpropcolombia.com`,      // REPORTED (*2)
-	`solicitadesdeya.com`,        // REPORTED
+	`solicitadesdeya.com`,        // REPORTED (*1)
 	`51.107.8.147`,               // DNS CATCHED or DOWN? (*??)
 }
 

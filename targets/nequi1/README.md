@@ -6,6 +6,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `aplicaya-neq.com` (*1)
 - `co.nqicolmbia.com` (*1)
 - `cuztco.com/NEQUI`
+- `dasbord.online` (*1)
 - `finanzasaturitmo.com` (*1)
 - `impuestoscol.com`
 - `impulsatunq.com`

@@ -80,3 +80,4 @@ The following is a recopilation of technologies/providers used in this repo and/
 - [Reverse IP Lookup](https://reverseip.domaintools.com/)
 - [Engintron: Nginx on cPanel/WHM server](https://github.com/engintron/engintron)
 - [cf-clearance (old?)](https://github.com/vvanglro/cf-clearance) - [cf-clearance (active?)](https://github.com/ModestasBar/cf-clearance) - _"make a cloudflare v2 challenge pass successfully"_
+- [HTTrack](https://github.com/xroche/httrack) - website copier

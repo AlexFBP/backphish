@@ -3,7 +3,10 @@
 Will only be listed here DNS A records, sorted by IP:
 
 ```
+prestadecision.com.     14400   IN      A       162.241.2.172
+propuladmin.com.        14400   IN      A       162.241.2.172
 neqpropulsaya.com.      14400   IN      A       162.241.60.255
+tucredirapido.com.      14400   IN      A       162.241.61.78
 creatusahorros.com.     14400   IN      A       162.241.203.121
 ```
 
