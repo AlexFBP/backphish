@@ -32,8 +32,7 @@ type ReqHandler struct {
 // Also calls InitClient()
 func (r *ReqHandler) UseJar(use bool) {
 	if use {
-		jar, _ := cookiejar.New(nil)
-		r.Jar = jar
+		r.Jar, _ = cookiejar.New(nil)
 	} else {
 		r.Jar = nil
 	}
@@ -81,7 +80,8 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		}
 		postUrl = mockServer
 	}
-	req, err := http.NewRequest("POST", postUrl, strings.NewReader(data.Encode()))
+	var err error
+	r.Request, err = http.NewRequest("POST", postUrl, strings.NewReader(data.Encode()))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -94,12 +94,11 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 		reqHeaders["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
 	}
 	for k, v := range reqHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
 	for k, v := range additionalHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
-	r.Request = req
 	r.doRequest(filler)
 }
 
@@ -118,7 +117,8 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 			log.Fatalf("[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
 		}
 	}
-	req, err := http.NewRequest("POST", target, b)
+	var err error
+	r.Request, err = http.NewRequest("POST", target, b)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -129,12 +129,11 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
 	}
 	for k, v := range reqHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
 	for k, v := range additionalHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
-	r.Request = req
 	r.doRequest(filler)
 }
 
@@ -158,7 +157,8 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 	if _, err := url.Parse(getUrl); err != nil {
 		log.Fatal("[FATAL] Malformed/Wrong URL:", getUrl)
 	}
-	req, err := http.NewRequest("GET", getUrl, nil)
+	var err error
+	r.Request, err = http.NewRequest("GET", getUrl, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -168,27 +168,26 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
 	}
 	for k, v := range reqHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
 	for k, v := range additionalHeaders {
-		req.Header.Add(k, v)
+		r.Request.Header.Add(k, v)
 	}
-	r.Request = req
 	r.doRequest(filler)
 }
 
 func (r *ReqHandler) doRequest(filler interface{}) {
-	resp, err := r.Client.Do(r.Request)
-	r.Response = resp
+	var err error
+	r.Response, err = r.Client.Do(r.Request)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer resp.Body.Close()
+	defer r.Response.Body.Close()
 	if filler != nil {
 		// _, err = io.ReadAll(resp.Body)
 		switch t := filler.(type) {
 		case *string:
-			b, err := io.ReadAll(resp.Body)
+			b, err := io.ReadAll(r.Response.Body)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -204,13 +203,13 @@ func (r *ReqHandler) doRequest(filler interface{}) {
 				log.Printf("plain:%s - quoted:%+q\n", b, b)
 			}
 		default:
-			err := json.NewDecoder(resp.Body).Decode(filler)
+			err := json.NewDecoder(r.Response.Body).Decode(filler)
 			if err != nil {
 				log.Fatalf("[decode] Not a JSON response or unhandled filler type '%T' - Error: %v\n", t, err)
 			}
 		}
 	}
 	if CanLog(LOG_VERBOSE) {
-		fmt.Println("(", resp.Status, ")")
+		fmt.Println("(", r.Response.Status, ")")
 	}
 }
