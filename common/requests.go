@@ -176,10 +176,21 @@ func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
 	for _, h := range reqHeaders {
 		r.Request.Header.Add(h.K, h.V)
 	}
+	retries := uint8(0)
+	const MAX_RETRIES = 10
 	var err error
-	r.Response, err = r.Client.Do(r.Request)
-	if err != nil {
-		log.Fatal(err)
+	for {
+		r.Response, err = r.Client.Do(r.Request)
+		if err == nil {
+			break
+		}
+		if retries == MAX_RETRIES {
+			log.Fatal(err)
+		}
+		retries++
+		if CanLog(LOG_NORMAL) {
+			fmt.Printf("WARN:RET#%d ", retries)
+		}
 	}
 	defer r.Response.Body.Close()
 	if filler != nil {

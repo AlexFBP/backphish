@@ -40,7 +40,7 @@ Priorities: (L)ow / (M)edium / (H)igh
 Difficulty or Quantity-of-lines-to-be-changed: (E)asy-few / (M)edium-moderate / (H)ard-huge
 
 - [x] Add huge useless payload
-- [ ] (M-M) Make it auto-restart instead of stopping/killing, or give a better handling, i.e.: killing only after N failed attempts to same URL within same attack round
+- [x] (M-M) Make it auto-restart instead of stopping/killing, or give a better handling, i.e.: killing only after N failed attempts to same URL within same attack round
 - [x] Create CLI arg to define number of processes (and/or threads?)
 - [ ] (L-E) Create CLI arg to pass alternative mock server (Implies `-m`)
 - [ ] (L-E) Pass attempt number to goroutines for logging purpose
