@@ -11,7 +11,6 @@ type Target struct {
 	Prefix, Description string
 	Mirrors             []string
 	Handler             func(mirror string)
-	GetMirrorEntries    func() (opts []menu.CommandOption)
 }
 
 func (t *Target) GetAllCmds() (opts []menu.CommandOption) {

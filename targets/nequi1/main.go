@@ -23,7 +23,7 @@ func init() {
 }
 
 func GetAllCmds() []menu.CommandOption {
-	return target.GetMirrorEntries()
+	return target.GetAllCmds()
 }
 
 // (*1): "no such host" - Down
