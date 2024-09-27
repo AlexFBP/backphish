@@ -24,15 +24,15 @@ func attempt() {
 	ans := ValidaBody{}
 	h.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
-		map[string]string{
-			"registro": "undefined",
-			"tok":      "qwerty0918po22",
-			"t":        "usuario",
-			"usuario":  common.RandUserName(p),
+		[]common.SimpleTerm{
+			{K: "registro", V: "undefined"},
+			{K: "tok", V: "qwerty0918po22"},
+			{K: "t", V: "usuario"},
+			{K: "usuario", V: common.RandUserName(p)},
 		},
-		map[string]string{
-			"Origin":  "https://pineapple21108900.temporary-demo.site",
-			"Referer": "https://pineapple21108900.temporary-demo.site/",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://pineapple21108900.temporary-demo.site"},
+			{K: "Referer", V: "https://pineapple21108900.temporary-demo.site/"},
 		},
 		ans,
 	)
@@ -47,15 +47,15 @@ func attempt() {
 
 	h.SendPostEncoded(
 		"https://validaciones.uno/processing.php",
-		map[string]string{
-			"registro": fmt.Sprint(ans.Registro),
-			"tok":      "qwerty0918po22",
-			"t":        "password",
-			"password": common.GeneraPin(4),
+		[]common.SimpleTerm{
+			{K: "registro", V: fmt.Sprint(ans.Registro)},
+			{K: "tok", V: "qwerty0918po22"},
+			{K: "t", V: "password"},
+			{K: "password", V: common.GeneraPin(4)},
 		},
-		map[string]string{
-			"Origin":  "https://pineapple21108900.temporary-demo.site",
-			"Referer": "https://pineapple21108900.temporary-demo.site/",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://pineapple21108900.temporary-demo.site"},
+			{K: "Referer", V: "https://pineapple21108900.temporary-demo.site/"},
 		},
 		nil,
 	)

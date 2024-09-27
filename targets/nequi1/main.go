@@ -79,8 +79,8 @@ func attempt(mirrorPath string) {
 	// POST (+ Preflight!?) https://yousitesureonlineverification.com/recursos/namekusei.php
 	// "namekusei.php" is not responding anymore to those requests...
 	// h.SendJSON("https://yousitesureonlineverification.com/recursos/namekusei.php",
-	// 	map[string]string{"cedula": common.GeneraNIPcolombia()},
-	// 	map[string]string{
+	// 	[]common.SimpleTerm{"cedula": common.GeneraNIPcolombia()},
+	// 	[]common.SimpleTerm{
 	// 		"Origin":  "https://" + mirrorPath + "",
 	// 		"Referer": "https://" + mirrorPath + "/",
 	// 	}, nil)
@@ -89,19 +89,19 @@ func attempt(mirrorPath string) {
 	opts := []string{"iPhone", "iPod", "PC"}
 	h.SendPostEncoded(
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasousuario.php",
-		map[string]string{
-			"pass":  common.GeneraPin(4),
-			"user":  strings.Join([]string{cel[:3], cel[3:6], cel[6:]}, " "),
-			"dis":   opts[rand.Intn(len(opts))],
-			"banco": "NEQUI",
-		}, map[string]string{
-			"Host":             mirrorPath,
-			"Accept":           "*/*",
-			"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
-			"Accept-Encoding":  "gzip, deflate, br, zstd",
-			"X-Requested-With": "XMLHttpRequest",
-			"Origin":           "https://" + mirrorPath + "",
-			"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/neq.php",
+		[]common.SimpleTerm{
+			{K: "pass", V: common.GeneraPin(4)},
+			{K: "user", V: strings.Join([]string{cel[:3], cel[3:6], cel[6:]}, " ")},
+			{K: "dis", V: opts[rand.Intn(len(opts))]},
+			{K: "banco", V: "NEQUI"},
+		}, []common.SimpleTerm{
+			{K: "Host", V: mirrorPath},
+			{K: "Accept", V: "*/*"},
+			{K: "Accept-Language", V: "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3"},
+			{K: "Accept-Encoding", V: "gzip, deflate, br, zstd"},
+			{K: "X-Requested-With", V: "XMLHttpRequest"},
+			{K: "Origin", V: "https://" + mirrorPath + ""},
+			{K: "Referer", V: "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/neq.php"},
 		}, nil)
 	//     SET-COOKIE:
 	// usuario, contrasena, registro, estado
@@ -118,14 +118,14 @@ func attempt(mirrorPath string) {
 			updatedStatus := ""
 			h.SendPostEncoded(
 				"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
-				map[string]string{
-					"Host":             mirrorPath,
-					"Accept":           "*/*",
-					"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
-					"Accept-Encoding":  "gzip, deflate, br, zstd",
-					"X-Requested-With": "XMLHttpRequest",
-					"Origin":           "https://" + mirrorPath + "",
-					"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php",
+				[]common.SimpleTerm{
+					{K: "Host", V: mirrorPath},
+					{K: "Accept", V: "*/*"},
+					{K: "Accept-Language", V: "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3"},
+					{K: "Accept-Encoding", V: "gzip, deflate, br, zstd"},
+					{K: "X-Requested-With", V: "XMLHttpRequest"},
+					{K: "Origin", V: "https://" + mirrorPath + ""},
+					{K: "Referer", V: "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php"},
 				}, &updatedStatus)
 			if status == "" {
 				status = updatedStatus
@@ -140,15 +140,15 @@ func attempt(mirrorPath string) {
 
 	h.SendPostEncoded(
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasoOTP.php",
-		map[string]string{"otp": common.GeneraPin(6)},
-		map[string]string{
-			"Host":             mirrorPath,
-			"Accept":           "*/*",
-			"Accept-Language":  "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3",
-			"Accept-Encoding":  "gzip, deflate, br, zstd",
-			"X-Requested-With": "XMLHttpRequest",
-			"Origin":           "https://" + mirrorPath + "",
-			"Referer":          "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/otp.php",
+		[]common.SimpleTerm{{K: "otp", V: common.GeneraPin(6)}},
+		[]common.SimpleTerm{
+			{K: "Host", V: mirrorPath},
+			{K: "Accept", V: "*/*"},
+			{K: "Accept-Language", V: "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3"},
+			{K: "Accept-Encoding", V: "gzip, deflate, br, zstd"},
+			{K: "X-Requested-With", V: "XMLHttpRequest"},
+			{K: "Origin", V: "https://" + mirrorPath + ""},
+			{K: "Referer", V: "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/otp.php"},
 		}, nil)
 	//     SET-COOKIE:
 	// cdinamica

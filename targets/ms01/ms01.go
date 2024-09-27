@@ -24,22 +24,24 @@ func attempt() {
 	}
 	em := gofakeit.Email()
 	em = fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], domains[rand.Intn(len(domains))])
-	form := map[string]string{
-		"argaml": em,
-		"argapw": gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(5, 20)),
+	form := []common.SimpleTerm{
+		{K: "argaml", V: em},
+		{K: "argapw", V: gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(5, 20))},
 	}
-	pin := fmt.Sprintf("%04d", common.GeneraPin(4))
-	form["pn1"] = pin
-	form["pn2"] = pin
+	pin := common.GeneraPin(4)
+	form = append(form, []common.SimpleTerm{
+		{K: "pn1", V: pin},
+		{K: "pn2", V: pin},
+	}...)
 	if gofakeit.Bool() {
-		form["KMSI"] = "on"
+		form = append(form, common.SimpleTerm{K: "KMSI", V: "on"})
 	}
 	h.SendPostEncoded("http://recuperacion004.0hi.me/next.php",
 		form,
-		map[string]string{
-			"Host":    "recuperacion004.0hi.me",
-			"Origin":  "http://recuperacion004.0hi.me",
-			"Referer": "http://recuperacion004.0hi.me/Iniciar%20Sesi%C3%B3n.html",
+		[]common.SimpleTerm{
+			{K: "Host", V: "recuperacion004.0hi.me"},
+			{K: "Origin", V: "http://recuperacion004.0hi.me"},
+			{K: "Referer", V: "http://recuperacion004.0hi.me/Iniciar%20Sesi%C3%B3n.html"},
 		},
 		nil,
 	)

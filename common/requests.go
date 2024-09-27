@@ -13,6 +13,11 @@ import (
 	// "unicode/utf8"
 )
 
+type SimpleTerm struct {
+	K string // Key
+	V string // Value
+}
+
 type ReqHandler struct {
 
 	// Cookie jar to be used in subsequent requests
@@ -68,11 +73,11 @@ func (r *ReqHandler) checkClient() {
 	}
 }
 
-func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders map[string]string, filler interface{}) {
+func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders []SimpleTerm, filler interface{}) {
 	r.checkClient()
 	data := url.Values{}
-	for k, v := range params {
-		data.Add(k, v)
+	for _, v := range params {
+		data.Add(v.K, v.V)
 	}
 	if mockServer != "" {
 		if CanLog(LOG_VERBOSE) {
@@ -85,24 +90,21 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders m
 	if err != nil {
 		log.Fatal(err)
 	}
-	reqHeaders := map[string]string{
-		"Pragma":     "no-cache",
-		"Sec-Ch-Ua":  `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
-		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+	reqHeaders := []SimpleTerm{
+		{"Pragma", "no-cache"},
+		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
+		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
 	}
 	if params != nil {
-		reqHeaders["Content-Type"] = "application/x-www-form-urlencoded; charset=UTF-8"
+		reqHeaders = append(reqHeaders, SimpleTerm{"Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"})
 	}
-	for k, v := range reqHeaders {
-		r.Request.Header.Add(k, v)
+	if additionalHeaders != nil {
+		reqHeaders = append(reqHeaders, additionalHeaders...)
 	}
-	for k, v := range additionalHeaders {
-		r.Request.Header.Add(k, v)
-	}
-	r.doRequest(filler)
+	r.doRequest(reqHeaders, filler)
 }
 
-func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders map[string]string, filler interface{}) {
+func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders []SimpleTerm, filler interface{}) {
 	r.checkClient()
 	if mockServer != "" {
 		if CanLog(LOG_VERBOSE) {
@@ -122,26 +124,23 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 	if err != nil {
 		log.Fatal(err)
 	}
-	reqHeaders := map[string]string{
-		"Content-Type": "application/json",
-		"Pragma":       "no-cache",
-		"Sec-Ch-Ua":    `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
-		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+	reqHeaders := []SimpleTerm{
+		{"Content-Type", "application/json"},
+		{"Pragma", "no-cache"},
+		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
+		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
 	}
-	for k, v := range reqHeaders {
-		r.Request.Header.Add(k, v)
+	if additionalHeaders != nil {
+		reqHeaders = append(reqHeaders, additionalHeaders...)
 	}
-	for k, v := range additionalHeaders {
-		r.Request.Header.Add(k, v)
-	}
-	r.doRequest(filler)
+	r.doRequest(reqHeaders, filler)
 }
 
-func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string]string, filler interface{}) {
+func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []SimpleTerm, filler interface{}) {
 	r.checkClient()
 	data := url.Values{}
-	for k, v := range params {
-		data.Add(k, v)
+	for _, v := range urlParams {
+		data.Add(v.K, v.V)
 	}
 	if mockServer != "" {
 		if CanLog(LOG_VERBOSE) {
@@ -162,21 +161,21 @@ func (r *ReqHandler) SendGet(getUrl string, params, additionalHeaders map[string
 	if err != nil {
 		log.Fatal(err)
 	}
-	reqHeaders := map[string]string{
-		"Pragma":     "no-cache",
-		"Sec-Ch-Ua":  `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
-		"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+	reqHeaders := []SimpleTerm{
+		{"Pragma", "no-cache"},
+		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
+		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
 	}
-	for k, v := range reqHeaders {
-		r.Request.Header.Add(k, v)
+	if additionalHeaders != nil {
+		reqHeaders = append(reqHeaders, additionalHeaders...)
 	}
-	for k, v := range additionalHeaders {
-		r.Request.Header.Add(k, v)
-	}
-	r.doRequest(filler)
+	r.doRequest(reqHeaders, filler)
 }
 
-func (r *ReqHandler) doRequest(filler interface{}) {
+func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
+	for _, h := range reqHeaders {
+		r.Request.Header.Add(h.K, h.V)
+	}
 	var err error
 	r.Response, err = r.Client.Do(r.Request)
 	if err != nil {

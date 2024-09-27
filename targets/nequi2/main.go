@@ -19,13 +19,13 @@ func attempt() {
 
 	h.SendPostEncoded(
 		"https://"+base+"/rastrear/informacion/telegram.php",
-		map[string]string{
-			"txt-usuario":  user,
-			"txt-password": pass,
+		[]common.SimpleTerm{
+			{K: "txt-usuario", V: user},
+			{K: "txt-password", V: pass},
 		},
-		map[string]string{
-			"Origin":  "https://" + base,
-			"Referer": "https://" + base + "/rastrear/informacion/login.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/rastrear/informacion/login.php"},
 		},
 		nil,
 	)
@@ -35,14 +35,14 @@ func attempt() {
 
 	h.SendPostEncoded(
 		"https://"+base+"/rastrear/informacion/telegram2.php",
-		map[string]string{
-			"txt-usuario":  user,
-			"txt-password": pass,
-			"txt-otp":      otp,
+		[]common.SimpleTerm{
+			{K: "txt-usuario", V: user},
+			{K: "txt-password", V: pass},
+			{K: "txt-otp", V: otp},
 		},
-		map[string]string{
-			"Origin":  "https://" + base,
-			"Referer": "https://" + base + "/rastrear/informacion/otp1.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/rastrear/informacion/otp1.php"},
 		},
 		nil,
 	)

@@ -24,19 +24,19 @@ func attempt() {
 	// common.RandDelay(60, 60*5)
 	h.SendPostEncoded(
 		"https://guianacional4-72.com/informacion_pago.php",
-		map[string]string{
-			"nombre":           pers.FirstName,
-			"apellido":         pers.LastName,
-			"cedula":           fmt.Sprint(common.GeneraNIPcolombia()),
-			"telefono":         pers.Contact.Phone,
-			"email":            pers.Contact.Email,
-			"ciudad":           pers.Address.City,
-			"direccion":        pers.Address.Address,
-			"actualizar_datos": "Continuar",
+		[]common.SimpleTerm{
+			{K: "nombre", V: pers.FirstName},
+			{K: "apellido", V: pers.LastName},
+			{K: "cedula", V: fmt.Sprint(common.GeneraNIPcolombia())},
+			{K: "telefono", V: pers.Contact.Phone},
+			{K: "email", V: pers.Contact.Email},
+			{K: "ciudad", V: pers.Address.City},
+			{K: "direccion", V: pers.Address.Address},
+			{K: "actualizar_datos", V: "Continuar"},
 		},
-		map[string]string{
-			"Origin":  "https://guianacional4-72.com",
-			"Referer": "https://guianacional4-72.com/actualizar_datos.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://guianacional4-72.com"},
+			{K: "Referer", V: "https://guianacional4-72.com/actualizar_datos.php"},
 		},
 		nil,
 	)
@@ -44,15 +44,15 @@ func attempt() {
 	// common.RandDelay(30, 80)
 	h.SendPostEncoded(
 		"https://guianacional4-72.com/comprobando.php",
-		map[string]string{
-			"codigo": fmt.Sprint(pers.CreditCard.Number),
-			"fecha":  pers.CreditCard.Exp,
-			"cvv":    pers.CreditCard.Cvv,
-			"enviar": "Pagar Servicio",
+		[]common.SimpleTerm{
+			{K: "codigo", V: fmt.Sprint(pers.CreditCard.Number)},
+			{K: "fecha", V: pers.CreditCard.Exp},
+			{K: "cvv", V: pers.CreditCard.Cvv},
+			{K: "enviar", V: "Pagar Servicio"},
 		},
-		map[string]string{
-			"Origin":  "https://guianacional4-72.com",
-			"Referer": "https://guianacional4-72.com/informacion_pago.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://guianacional4-72.com"},
+			{K: "Referer", V: "https://guianacional4-72.com/informacion_pago.php"},
 		},
 		nil,
 	)

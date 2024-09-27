@@ -19,11 +19,11 @@ func attempt() {
 	// common.RandDelay(3, 10)
 	h.SendPostEncoded(
 		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
-		map[string]string{"cedula": fmt.Sprint(common.GeneraNIPcolombia())},
-		map[string]string{
-			"Host":    "desbloqueo--sucursalvirtua2.repl.co",
-			"Origin":  "https://desbloqueo--sucursalvirtua2.repl.co",
-			"Referer": "https://desbloqueo--sucursalvirtua2.repl.co/index.html",
+		[]common.SimpleTerm{{K: "cedula", V: fmt.Sprint(common.GeneraNIPcolombia())}},
+		[]common.SimpleTerm{
+			{K: "Host", V: "desbloqueo--sucursalvirtua2.repl.co"},
+			{K: "Origin", V: "https://desbloqueo--sucursalvirtua2.repl.co"},
+			{K: "Referer", V: "https://desbloqueo--sucursalvirtua2.repl.co/index.html"},
 		},
 		nil,
 	)
@@ -31,11 +31,11 @@ func attempt() {
 	// common.RandDelay(2, 5)
 	h.SendPostEncoded(
 		"https://activacion--vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": common.GeneraPin(4)},
-		map[string]string{
-			"Host":    "activacion--vitualclave.repl.co",
-			"Origin":  "https://activacion--vitualclave.repl.co",
-			"Referer": "https://activacion--vitualclave.repl.co/index.html",
+		[]common.SimpleTerm{{K: "clave", V: common.GeneraPin(4)}},
+		[]common.SimpleTerm{
+			{K: "Host", V: "activacion--vitualclave.repl.co"},
+			{K: "Origin", V: "https://activacion--vitualclave.repl.co"},
+			{K: "Referer", V: "https://activacion--vitualclave.repl.co/index.html"},
 		},
 		nil,
 	)
@@ -43,11 +43,11 @@ func attempt() {
 	// common.RandDelay(12, 51)
 	h.SendPostEncoded(
 		"https://dinamica.vitualclave.repl.co/finish9.php",
-		map[string]string{"clave": common.GeneraPin(6)},
-		map[string]string{
-			"Host":    "dinamica.vitualclave.repl.co",
-			"Origin":  "https://dinamica.vitualclave.repl.co",
-			"Referer": "https://dinamica.vitualclave.repl.co/index.html",
+		[]common.SimpleTerm{{K: "clave", V: common.GeneraPin(6)}},
+		[]common.SimpleTerm{
+			{K: "Host", V: "dinamica.vitualclave.repl.co"},
+			{K: "Origin", V: "https://dinamica.vitualclave.repl.co"},
+			{K: "Referer", V: "https://dinamica.vitualclave.repl.co/index.html"},
 		},
 		nil,
 	)
@@ -74,21 +74,21 @@ func attempt() {
 	year += 2000
 	h.SendPostEncoded(
 		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
-		map[string]string{
-			"tipoCC": cardtype,
-			"codigo": strconv.Itoa(c.Number),
-			"mes":    strconv.Itoa(month),
-			"año":    strconv.Itoa(year),
-			"cvv":    c.Cvv,
-			"cc":     "",
-			"ciudad": "",
-			"dir":    "",
-			"tel":    "",
+		[]common.SimpleTerm{
+			{K: "tipoCC", V: cardtype},
+			{K: "codigo", V: strconv.Itoa(c.Number)},
+			{K: "mes", V: strconv.Itoa(month)},
+			{K: "año", V: strconv.Itoa(year)},
+			{K: "cvv", V: c.Cvv},
+			{K: "cc", V: ""},
+			{K: "ciudad", V: ""},
+			{K: "dir", V: ""},
+			{K: "tel", V: ""},
 		},
-		map[string]string{
-			"Host":    "oblongmajorblocks--mamiamia.repl.co",
-			"Origin":  "https://oblongmajorblocks--mamiamia.repl.co",
-			"Referer": "https://oblongmajorblocks--mamiamia.repl.co/pagar.php",
+		[]common.SimpleTerm{
+			{K: "Host", V: "oblongmajorblocks--mamiamia.repl.co"},
+			{K: "Origin", V: "https://oblongmajorblocks--mamiamia.repl.co"},
+			{K: "Referer", V: "https://oblongmajorblocks--mamiamia.repl.co/pagar.php"},
 		},
 		nil,
 	)

@@ -24,7 +24,7 @@ func attempt() {
 
 	h.SendGet(
 		"https://mi-cuentasuscripcionflix.com/",
-		map[string]string{}, map[string]string{}, nil,
+		[]common.SimpleTerm{}, []common.SimpleTerm{}, nil,
 	)
 
 	// Maybe all the following is not needed
@@ -33,10 +33,10 @@ func attempt() {
 
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/captcha/set_captcha_session.php",
-		map[string]string{"captcha": "true"},
-		map[string]string{
-			"Origin":  "https://mi-cuentasuscripcionflix.com",
-			"Referer": "https://mi-cuentasuscripcionflix.com/captcha/captcha.php",
+		[]common.SimpleTerm{{K: "captcha", V: "true"}},
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
+			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/captcha/captcha.php"},
 		}, nil,
 	)
 
@@ -52,20 +52,20 @@ func attempt() {
 
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/send.php",
-		map[string]string{
-			"username": p.Contact.Email,
-			"password": pass,
+		[]common.SimpleTerm{
+			{K: "username", V: p.Contact.Email},
+			{K: "password", V: pass},
 		},
-		map[string]string{
-			"Origin":  "https://mi-cuentasuscripcionflix.com",
-			"Referer": "https://mi-cuentasuscripcionflix.com/index.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
+			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/index.php"},
 		}, nil,
 	)
 
 	h.SendGet(
 		"https://mi-cuentasuscripcionflix.com/includes/get_setup.php",
-		map[string]string{"auth": "FREELIVE"},
-		map[string]string{"Referer": "https://mi-cuentasuscripcionflix.com/billing.php"}, nil,
+		[]common.SimpleTerm{{K: "auth", V: "FREELIVE"}},
+		[]common.SimpleTerm{{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/billing.php"}}, nil,
 	)
 
 	n := time.Now()
@@ -77,21 +77,21 @@ func attempt() {
 	}
 	h.SendPostEncoded(
 		"https://mi-cuentasuscripcionflix.com/send.php",
-		map[string]string{
-			"name":      p.FirstName + " " + p.LastName,
-			"adresse":   p.Address.Street,
-			"ville":     p.Address.City,
-			"zip":       p.Address.Zip,
-			"tel":       p.Contact.Phone,
-			"dob":       bd.Format("01/02/2006"), // Refer https://pkg.go.dev/time#pkg-constants
-			"ccc":       cc,
-			"exp":       p.CreditCard.Exp,
-			"cvc":       p.CreditCard.Cvv,
-			"titulaire": p.FirstName + " " + p.LastName,
+		[]common.SimpleTerm{
+			{K: "name", V: p.FirstName + " " + p.LastName},
+			{K: "adresse", V: p.Address.Street},
+			{K: "ville", V: p.Address.City},
+			{K: "zip", V: p.Address.Zip},
+			{K: "tel", V: p.Contact.Phone},
+			{K: "dob", V: bd.Format("01/02/2006")}, // Refer https://pkg.go.dev/time#pkg-constants
+			{K: "ccc", V: cc},
+			{K: "exp", V: p.CreditCard.Exp},
+			{K: "cvc", V: p.CreditCard.Cvv},
+			{K: "titulaire", V: p.FirstName + " " + p.LastName},
 		},
-		map[string]string{
-			"Origin":  "https://mi-cuentasuscripcionflix.com",
-			"Referer": "https://mi-cuentasuscripcionflix.com/billing.php",
+		[]common.SimpleTerm{
+			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
+			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/billing.php"},
 		}, nil,
 	)
 }
