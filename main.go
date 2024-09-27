@@ -15,6 +15,7 @@ import (
 	"github.com/AlexFBP/backphish/targets/ms01"
 	"github.com/AlexFBP/backphish/targets/nequi1"
 	"github.com/AlexFBP/backphish/targets/nequi2"
+	"github.com/AlexFBP/backphish/targets/nequi3"
 	"github.com/AlexFBP/backphish/targets/netflix1"
 )
 
@@ -33,6 +34,7 @@ func main() {
 	commandOptions = append(commandOptions, nequi1.GetAllCmds()...)
 	commandOptions = append(commandOptions, []menu.CommandOption{
 		{Command: "nq2", Description: "attack fake nequi2", Function: nequi2.Cmd},
+		{Command: "nq3", Description: "attack fake nequi3", Function: nequi3.Cmd},
 		// Playground - Please keep this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 	}...)
