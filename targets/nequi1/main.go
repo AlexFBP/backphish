@@ -1,8 +1,6 @@
 package nequi1
 
 import (
-	"fmt"
-	"log"
 	"math/rand"
 	"net/url"
 	"strings"
@@ -13,21 +11,19 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
-func GetAllCmds() (opts []menu.CommandOption) {
-	for k, v := range mirrors {
-		opts = append(opts, menu.CommandOption{
-			Command:     fmt.Sprintf("nq1-%d", k+1),
-			Description: fmt.Sprintf("attack fake nequi 1, mirror %d (%s)", k+1, v),
-			Function:    getCmd(k),
-		})
+var target *common.Target
+
+func init() {
+	target = &common.Target{
+		Prefix:      "nq1",
+		Description: "attack fake nequi 1",
+		Mirrors:     mirrors,
+		Handler:     attempt,
 	}
-	return
 }
 
-func getCmd(k int) (f func(...string) error) {
-	return func(args ...string) error {
-		return common.AttackRunner(mirrorAttempt(k))
-	}
+func GetAllCmds() []menu.CommandOption {
+	return target.GetMirrorEntries()
 }
 
 // (*1): "no such host" - Down
@@ -72,18 +68,6 @@ var mirrors = []string{
 	`siperpropcolombia.com`,      // REPORTED (*2)
 	`solicitadesdeya.com`,        // REPORTED (*1)
 	`51.107.8.147`,               // DNS CATCHED or DOWN? (*??)
-}
-
-func mirrorAttempt(n int) common.AttemptHander {
-	L := len(mirrors)
-	if 0 <= n && n < L {
-		return func() {
-			attempt(mirrors[n])
-		}
-	}
-	return func() {
-		log.Fatalf("[FATAL] Wrong mirror number, max:%d - got:%d", L, n)
-	}
 }
 
 func attempt(mirrorPath string) {
