@@ -16,6 +16,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `neq.n3quionline.com` (*1)
 - `neqwtx.com`
 - `newactivalo.com` (*1)
+- `nq-col.website`
 - `nq-colombiaonline.website` (*1)
 - `nqi-pr0pls0r.com`
 - `nqicolmbia.com/NEQUI`
@@ -76,6 +77,7 @@ propulahorrosneq.com.   14400   IN      A       162.241.2.171
 prepropulneq.com.       6631    IN      A       162.241.2.172
 onlineparati.com.       5230    IN      A       162.241.60.254
 propulideas.com.        14400   IN      A       162.241.60.254
+nq-col.website.         14400   IN      A       162.241.60.255
 nqpropulsa.com.         6751    IN      A       162.241.60.255
 propulsandoneqpro.com.  14400   IN      A       162.241.60.255
 solicitadesdeya.com.    14400   IN      A       162.241.60.255

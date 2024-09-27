@@ -46,6 +46,7 @@ var mirrors = []string{
 	`neq.n3quionline.com`,        // REPORTED (*1)
 	`neqwtx.com`,                 // CATCHED
 	`newactivalo.com`,            // CATCHED - NO DNS REPLY (*1)
+	`nq-col.website`,             // REPORTED
 	`nq-colombiaonline.website`,  // NO DNS REPLY (*1)
 	`nqi-pr0pls0r.com`,           // CATCHED/ALIVE (*1)
 	`nqicolmbia.com/NEQUI`,       // REPORTED
