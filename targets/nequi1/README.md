@@ -34,7 +34,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `prepropulnq.com` (*1)
 - `prestamo-nequi.website` (*1)
 - `propulahorrosneq.com`
-- `propulcolombiano.com`
+- `propulcolombiano.com` (*1)
 - `propulideas.com` (*1)
 - `propulsandoneqpro.com` (*1)
 - `propulsor-pre.website` (*1)

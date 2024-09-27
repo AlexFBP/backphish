@@ -60,7 +60,7 @@ var mirrors = []string{
 	`prepropulnq.com`,            // CATCHED (*1)
 	`prestamo-nequi.website`,     // NO DNS REPLY (*1)
 	`propulahorrosneq.com`,       // REPORTED
-	`propulcolombiano.com`,       // REPORTED
+	`propulcolombiano.com`,       // REPORTED (*1)
 	`propulideas.com`,            // REPORTED (*1)
 	`propulsandoneqpro.com`,      // REPORTED (*1)
 	`propulsor-pre.website`,      // NO DNS REPLY (*1)
