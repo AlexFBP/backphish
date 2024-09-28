@@ -1,13 +1,8 @@
 package dp01
 
 import (
-	"bytes"
-	"encoding/json"
 	"fmt"
-	"io"
-	"log"
 	"math/rand" // "crypto/rand"
-	"net/http"
 	"time"
 
 	"github.com/AlexFBP/backphish/common"
@@ -23,6 +18,13 @@ func Cmd1(args ...string) error {
 }
 
 func attempt() {
+	h := common.ReqHandler{}
+	posturl := "https://api.telegram.org/bot6328508246:AAFU2THEk8nvxuzFLR5C6FfqQNuxmsiaFWk/sendMessage"
+	headers := []common.SimpleTerm{
+		{K: "Origin", V: "https://ingressar1davidd.sayo1296.repl.co"},
+		{K: "Referer", V: "https://ingressar1davidd.sayo1296.repl.co/"},
+	}
+
 	chat_id := "6332256769"
 	tiposDocumento := []string{
 		"tarjeta de identidad",
@@ -32,8 +34,7 @@ func attempt() {
 	randIp := common.GeneraIP()
 	location := "Bogotá, CO"
 
-	// JSON body
-	d := SpamBody{
+	h.SendJSON(posturl, SpamBody{
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 TipoDoc: %s
@@ -51,9 +52,11 @@ IP: %s
 		// Clave: 2365
 		// IP: 123.123.123.123
 		// Bogotá, CO
-	}
+	}, headers, nil)
 
-	d2 := SpamBody{
+	common.RandDelayRange(30*time.Second, 60*time.Second)
+
+	h.SendJSON(posturl, SpamBody{
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 Cod1: %s
@@ -63,57 +66,7 @@ IP: %s
 		// Cod1: 258415
 		// IP: 123.123.123.123
 		// Bogotá, CO`,
-	}
+	}, headers, nil)
 
-	sendReq(d)
 	common.RandDelayRange(30*time.Second, 60*time.Second)
-	sendReq(d2)
-	common.RandDelayRange(30*time.Second, 60*time.Second)
-}
-
-func sendReq(v any) {
-
-	// HTTP endpoint
-	// posturl := "https://jsonplaceholder.typicode.com/posts"
-	// posturl := "http://localhost:8080/"
-	posturl := "https://api.telegram.org/bot6328508246:AAFU2THEk8nvxuzFLR5C6FfqQNuxmsiaFWk/sendMessage"
-
-	reqBody, err := json.Marshal(v)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	client := &http.Client{
-		CheckRedirect: func(req *http.Request, via []*http.Request) error {
-			return http.ErrUseLastResponse
-		},
-	}
-	req, err := http.NewRequest("POST", posturl, bytes.NewBuffer(reqBody))
-	if err != nil {
-		log.Fatal(err)
-	}
-	headers := map[string]string{
-		"Content-Type": "application/json",
-		"Origin":       "https://ingressar1davidd.sayo1296.repl.co",
-		"Pragma":       "no-cache",
-		"Referer":      "https://ingressar1davidd.sayo1296.repl.co/",
-		"Sec-Ch-Ua":    `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`,
-		"User-Agent":   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
-	}
-	for k, v := range headers {
-		req.Header.Set(k, v)
-	}
-
-	resp, err := client.Do(req)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer resp.Body.Close()
-	flat, err := io.ReadAll(resp.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if common.CanLog(common.LOG_VERBOSE) {
-		fmt.Printf("%s\n", flat)
-	}
 }
