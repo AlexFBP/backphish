@@ -9,7 +9,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
-	const base = "propulsorpreaprobado.website"
+	const base = "propulsores-aprobados.website"
 
 	h := common.ReqHandler{}
 	h.UseJar(true)

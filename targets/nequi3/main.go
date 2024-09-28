@@ -21,11 +21,12 @@ func init() {
 }
 
 var mirrors = []string{
-	`prestadecision.com`, // REPORTED
-	`propuladmin.com`,    // REPORTED
-	`neqpropulsaya.com`,  // CATCHED
-	`tucredirapido.com`,  // REPORTED
-	`creatusahorros.com`, // REPORTED
+	`creatusahorros.com`,    // REPORTED
+	`impulsadorahorros.com`, // REPORTED
+	`neqpropulsaya.com`,     // CATCHED
+	`prestadecision.com`,    // REPORTED
+	`propuladmin.com`,       // REPORTED
+	`tucredirapido.com`,     // REPORTED
 }
 
 func GetAllCmds() []menu.CommandOption {

@@ -4,6 +4,7 @@ Will only be listed here DNS A records, sorted by IP:
 
 ```
 propulsorpreaprobado.website. 1800 IN   A       194.164.64.208
+propulsores-aprobados.website. 1800 IN  A       194.164.64.208
 ```
 
 The entrypoint of the scam page is `https://${DOMAIN}/agil.html`

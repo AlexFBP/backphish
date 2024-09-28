@@ -33,6 +33,7 @@ var mirrors = []string{
 	`aplicaparahoy.com`,          // CATCHED (*1)
 	`aplicaya-neq.com`,           // NO DNS REPLY (*1)
 	`co.nqicolmbia.com`,          // REPORTED (*1)
+	`colmbianeq.website`,         // REPORTED
 	`cuztco.com/NEQUI`,           // REPORTED
 	`finanzasaturitmo.com`,       // NO DNS REPLY (*1)
 	`impuestoscol.com`,           // DOWN BY PROVIDER (*??)
