@@ -3,7 +3,6 @@ package nequi1
 import (
 	"math/rand"
 	"net/url"
-	"strings"
 	"time"
 
 	"github.com/turret-io/go-menu/menu"
@@ -92,7 +91,7 @@ func attempt(mirrorPath string) {
 		"https://"+mirrorPath+"/NEQUI/3d/process2/pasousuario.php",
 		[]common.SimpleTerm{
 			{K: "pass", V: common.GeneraPin(4)},
-			{K: "user", V: strings.Join([]string{cel[:3], cel[3:6], cel[6:]}, " ")},
+			{K: "user", V: common.AddSeparator(cel, 0, " ")},
 			{K: "dis", V: opts[rand.Intn(len(opts))]},
 			{K: "banco", V: "NEQUI"},
 		}, []common.SimpleTerm{

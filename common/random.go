@@ -5,6 +5,7 @@ import (
 	"math"
 	"math/rand" // "crypto/rand"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/brianvoe/gofakeit"
@@ -103,6 +104,23 @@ func GeneraCelColombia() string {
 	u := rand.Intn(indicesRangosCelulares[len(indicesRangosCelulares)-1])
 	n, _ := generaCelValido(u)
 	return strconv.Itoa(n)
+}
+
+// Adds a separator S in middle, according to given format
+//
+// Formats:
+//   - 0: NNNSNNNSNNNN - Example: phone number
+//   - 1: NNNNSNNNNSNNNNSNNNN - Example: credit card
+//
+// Another format will return the string untouched
+func AddSeparator(num string, format int, separator string) string {
+	switch format {
+	case 0:
+		return strings.Join([]string{num[:3], num[3:6], num[6:]}, separator)
+	case 1:
+		return strings.Join([]string{num[:4], num[4:8], num[8:12], num[12:]}, separator)
+	}
+	return num
 }
 
 func GeneraPin(digitos int) string {

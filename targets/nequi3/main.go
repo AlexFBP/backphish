@@ -2,7 +2,6 @@ package nequi3
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/turret-io/go-menu/menu"
 
@@ -42,7 +41,7 @@ func attempt(base string) {
 		"https://"+base+"/process/pasousuario.php",
 		[]common.SimpleTerm{
 			{K: "pass", V: fmt.Sprintf("%s - %sOTP %s", // "316 546 4981 - 3795OTP 524844"
-				strings.Join([]string{cel[:3], cel[3:6], cel[6:]}, " "),
+				common.AddSeparator(cel, 0, " "),
 				common.GeneraPin(4), common.GeneraPin(6))},
 			{K: "dis", V: "Android"},
 			{K: "banco", V: "bancolombia"},

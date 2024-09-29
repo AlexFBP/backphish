@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"net/url"
 	"strconv"
-	"strings"
 	"time"
 
 	"github.com/brianvoe/gofakeit"
@@ -71,7 +70,7 @@ func attempt() {
 	n := time.Now()
 	bd := gofakeit.DateRange(n.AddDate(-70, 0, 0), n.AddDate(-18, 0, 5))
 	cc := strconv.Itoa(p.CreditCard.Number)
-	cc = strings.Join([]string{cc[:4], cc[4:8], cc[8:12], cc[12:]}, " ")
+	cc = common.AddSeparator(cc, 1, " ")
 	if common.CanLog(common.LOG_VERBOSE) {
 		fmt.Println("cardNum:", cc)
 	}
