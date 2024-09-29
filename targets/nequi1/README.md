@@ -6,6 +6,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `aplicaya-neq.com` (*1)
 - `co.nqicolmbia.com` (*1)
 - `colmbianeq.website`
+- `credialinstante.com`
 - `cuztco.com/NEQUI`
 - `dasbord.online` (*1)
 - `finanzasaturitmo.com` (*1)
@@ -48,7 +49,7 @@ _Technical detail: some of them sends (or used to send) a few additional request
 
 All domains above listed are impersonating Nequi and its product ["Crédito Propulsor"](https://www.nequi.com.co/personas/credito/propulsor) to stole username (phone number) and password (4 digit pin), and even 2FA (6 digit time-based token).
 
-The entrypoint of the scam is `https://${DOMAIN}/NEQUI/3d/propulsor/nequi/n.html` or ended in `neq.php` instead of `n.html`
+The entrypoint of the scam is `https://LISTED_DOMAIN/NEQUI/3d/propulsor/nequi/n.html` or ended in `neq.php` instead of `n.html`
 
 **Notes (*N)**
 
@@ -86,6 +87,7 @@ solicitadesdeya.com.    14400   IN      A       162.241.60.255
 n3quionline.com.        6243    IN      A       162.241.61.78
 neq.n3quionline.com.    14400   IN      A       162.241.61.78
 perfectoparti.com.      14400   IN      A       162.241.61.79
+credialinstante.com.    14400   IN      A       162.241.61.138
 impulsatunq.com.        14400   IN      A       162.241.61.138
 co.nqicolmbia.com.      14400   IN      A       162.241.61.244
 parati-nqui.com.        3625    IN      A       162.241.61.244

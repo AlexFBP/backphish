@@ -25,49 +25,50 @@ func GetAllCmds() []menu.CommandOption {
 	return target.GetAllCmds()
 }
 
-// (*1): "no such host" - Down
-// (*2): TLS error? Down?
-// (*3): "no route to host" - Down?
+// Mirrors. The comment depending on last checked state:
+//   - (*1): "no such host" - Down
+//   - (*2): TLS error? internal error? Down?
 var mirrors = []string{
-	`aplicaparahoy.com`,          // CATCHED (*1)
-	`aplicaya-neq.com`,           // NO DNS REPLY (*1)
-	`co.nqicolmbia.com`,          // REPORTED (*1)
-	`colmbianeq.website`,         // REPORTED
-	`cuztco.com/NEQUI`,           // REPORTED
-	`finanzasaturitmo.com`,       // NO DNS REPLY (*1)
-	`impuestoscol.com`,           // DOWN BY PROVIDER (*??)
-	`impulsatunq.com`,            // REPORTED
-	`intelcore.online`,           // REPORTED (*1)
-	`n3quionline.com`,            // REPORTED (*1)
-	`neq.n3quionline.com`,        // REPORTED (*1)
-	`neqwtx.com`,                 // CATCHED
-	`newactivalo.com`,            // CATCHED - NO DNS REPLY (*1)
-	`nq-col.website`,             // REPORTED
-	`nq-colombiaonline.website`,  // NO DNS REPLY (*1)
-	`nqi-pr0pls0r.com`,           // CATCHED/ALIVE (*1)
-	`nqicolmbia.com/NEQUI`,       // REPORTED
-	`nqipr0pulsor.com`,           // NO DNS REPLY (*1)
-	`nqprepropulso.com`,          // CATCHED (*1)
-	`nqpropulsa.com`,             // CATCHED
-	`nqpropulsando.com`,          // CATCHED
-	`nuevopropulsor.com`,         // REPORTED (*2)
-	`onlineparati.com`,           // REPORTED (*3)
-	`parati-nqui.com`,            // NO DNS REPLY (*1)
-	`perfectoparti.com`,          // REPORTED (*??)
-	`preadelanto.online`,         // NO DNS REPLY (*1)
-	`prepropulsandonq.com`,       // CATCHED - NO DNS REPLY (*1)
-	`prepropulneq.com`,           // NO DNS REPLY (*1)
-	`prepropulnq.com`,            // CATCHED (*1)
-	`prestamo-nequi.website`,     // NO DNS REPLY (*1)
-	`propulahorrosneq.com`,       // REPORTED
-	`propulcolombiano.com`,       // REPORTED (*1)
-	`propulideas.com`,            // REPORTED (*1)
-	`propulsandoneqpro.com`,      // REPORTED (*1)
-	`propulsor-pre.website`,      // NO DNS REPLY (*1)
-	`propulsoraprobados.website`, // NO DNS REPLY (*1)
-	`siperpropcolombia.com`,      // REPORTED (*2)
-	`solicitadesdeya.com`,        // REPORTED (*1)
-	`51.107.8.147`,               // DNS CATCHED or DOWN? (*??)
+	`aplicaparahoy.com`,            // CATCHED (*1)
+	`aplicaya-neq.com`,             // NO DNS REPLY (*1)
+	`co.nqicolmbia.com`,            // REPORTED (*1)
+	`colmbianeq.website`,           // REPORTED
+	`credialinstante.com/prestamo`, // CATCHED
+	`cuztco.com/NEQUI`,             // REPORTED
+	`finanzasaturitmo.com`,         // NO DNS REPLY (*1)
+	`impuestoscol.com`,             // DOWN BY PROVIDER (*??)
+	`impulsatunq.com`,              // REPORTED
+	`intelcore.online`,             // REPORTED (*1)
+	`n3quionline.com`,              // REPORTED (*1)
+	`neq.n3quionline.com`,          // REPORTED (*1)
+	`neqwtx.com`,                   // CATCHED
+	`newactivalo.com`,              // CATCHED - NO DNS REPLY (*1)
+	`nq-col.website`,               // REPORTED
+	`nq-colombiaonline.website`,    // NO DNS REPLY (*1)
+	`nqi-pr0pls0r.com`,             // CATCHED/ALIVE (*1)
+	`nqicolmbia.com/NEQUI`,         // REPORTED
+	`nqipr0pulsor.com`,             // NO DNS REPLY (*1)
+	`nqprepropulso.com`,            // CATCHED (*1)
+	`nqpropulsa.com`,               // CATCHED
+	`nqpropulsando.com`,            // CATCHED
+	`nuevopropulsor.com`,           // REPORTED (*2)
+	`onlineparati.com`,             // REPORTED (*1)
+	`parati-nqui.com`,              // NO DNS REPLY (*1)
+	`perfectoparti.com`,            // REPORTED (*1)
+	`preadelanto.online`,           // NO DNS REPLY (*1)
+	`prepropulsandonq.com`,         // CATCHED - NO DNS REPLY (*1)
+	`prepropulneq.com`,             // NO DNS REPLY (*1)
+	`prepropulnq.com`,              // CATCHED (*1)
+	`prestamo-nequi.website`,       // NO DNS REPLY (*1)
+	`propulahorrosneq.com`,         // REPORTED
+	`propulcolombiano.com`,         // REPORTED (*1)
+	`propulideas.com`,              // REPORTED (*1)
+	`propulsandoneqpro.com`,        // REPORTED (*1)
+	`propulsor-pre.website`,        // NO DNS REPLY (*1)
+	`propulsoraprobados.website`,   // NO DNS REPLY (*1)
+	`siperpropcolombia.com`,        // REPORTED (*2)
+	`solicitadesdeya.com`,          // REPORTED (*1)
+	`51.107.8.147`,                 // DNS CATCHED or DOWN? (*??)
 }
 
 func attempt(mirrorPath string) {

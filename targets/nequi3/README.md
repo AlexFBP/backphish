@@ -11,7 +11,7 @@ impulsadorahorros.com.  14400   IN      A       162.241.203.120
 creatusahorros.com.     14400   IN      A       162.241.203.121
 ```
 
-It is required to use DevTools with Android/iPhone emulation. Once ready, the entrypoint of the scam is `https://${DOMAIN}/bdigital/inicio.php`.
+It is required to use DevTools with Android/iPhone emulation. Once ready, the entrypoint of the scam is `https://LISTED_DOMAIN/bdigital/inicio.php`.
 
 
 ## Mirrors down

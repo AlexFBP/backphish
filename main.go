@@ -31,9 +31,7 @@ func main() {
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
 		{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd},
 		{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd},
-	}, append(nequi1.GetAllCmds(), append([]menu.CommandOption{
-		{Command: "nq2", Description: "attack fake nequi2", Function: nequi2.Cmd},
-	}, append(nequi3.GetAllCmds(), []menu.CommandOption{
+	}, append(nequi1.GetAllCmds(), append(nequi2.GetAllCmds(), append(nequi3.GetAllCmds(), []menu.CommandOption{
 		{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd},
 		// Playground - Please keep this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},

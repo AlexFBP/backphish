@@ -1,15 +1,33 @@
 package nequi2
 
 import (
+	"github.com/turret-io/go-menu/menu"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+var target *common.Target
+
+func init() {
+	target = &common.Target{
+		Prefix:      "nq2",
+		Description: "attack fake nequi2",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
 }
 
-func attempt() {
-	const base = "propulsores-aprobados.website"
+func GetAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
+}
+
+// (*1): "no such host" - Down
+var mirrors = []string{
+	"activatupropulsor.store",       // ALIVE
+	"propulsores-aprobados.website", // (*1)
+}
+
+func attempt(base string) {
 
 	h := common.ReqHandler{}
 	h.UseJar(true)
