@@ -100,7 +100,7 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 	if payload != nil {
 		err := json.NewEncoder(b).Encode(payload)
 		if err != nil {
-			log.Fatalf("[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
+			log.Fatalf("\n[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
 		}
 	}
 	reqHeaders := []SimpleTerm{
@@ -135,14 +135,14 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 	}
 
 	// Validate URL to be used
-	if _, err := url.Parse(finalUrl); err != nil {
-		log.Fatal("[FATAL] Malformed/Wrong URL:", finalUrl)
+	if err = CheckURL(finalUrl); err != nil {
+		log.Fatalf("\n[FATAL] Malformed/Wrong URL: '%s'\nError: %v\n", finalUrl, err)
 	}
 
 	// Prepare request
 	r.Request, err = http.NewRequest(method, finalUrl, body)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 
 	// Add request headers
@@ -186,7 +186,7 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 		case *string:
 			b, err := io.ReadAll(r.Response.Body)
 			if err != nil {
-				log.Fatal(err)
+				log.Fatalln(err)
 			}
 			*t = string(b)
 			// for len(b) > 0 {
@@ -202,7 +202,7 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 		default:
 			err := json.NewDecoder(r.Response.Body).Decode(filler)
 			if err != nil {
-				log.Fatalf("[decode] Not a JSON response or unhandled filler type '%T' - Error: %v\n", t, err)
+				log.Fatalf("\n[decode] Not a JSON response or unhandled filler type '%T' - Error: %v\n", t, err)
 			}
 		}
 	}

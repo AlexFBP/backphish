@@ -21,15 +21,27 @@ func init() {
 	SetMockServer("")
 }
 
-func SetMockServer(serverUrl string) error {
-	if _, err := url.ParseRequestURI(serverUrl); err != nil && serverUrl != "" {
-		return err
+func CheckURI(testUrl string) (err error) {
+	_, err = url.ParseRequestURI(testUrl)
+	return
+}
+
+func CheckURL(testUrl string) (err error) {
+	_, err = url.Parse(testUrl)
+	return
+}
+
+func SetMockServer(serverUrl string) (err error) {
+	if serverUrl != "" {
+		if err = CheckURI(serverUrl); err != nil {
+			return
+		}
 	}
 	mockServer = serverUrl
 	if mockServer != "" && CanLog(LOG_NORMAL) {
 		fmt.Printf("Using mockServer: %s\n", mockServer)
 	}
-	return nil
+	return
 }
 
 func ArgsHaveTimes(args ...string) int {

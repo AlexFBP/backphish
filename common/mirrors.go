@@ -38,6 +38,6 @@ func (t *Target) mirrorAttempt(n int) AttemptHander {
 		}
 	}
 	return func() {
-		log.Fatalf("[FATAL] Wrong mirror number, max:%d - got:%d", L, n)
+		log.Fatalf("\n[FATAL] Wrong mirror number, max:%d - got:%d\n", L, n)
 	}
 }
