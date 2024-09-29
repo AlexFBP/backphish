@@ -1,6 +1,10 @@
 package nequi4
 
 import (
+	"strconv"
+
+	"github.com/brianvoe/gofakeit"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -23,8 +27,8 @@ func attempt() {
 	}
 
 	h.SendPostEncoded("https://"+base+"/tele1.php", []common.SimpleTerm{
-		{K: "usuario", V: "3224684616"},
-		{K: "contrasena", V: "8438"},
+		{K: "usuario", V: common.GeneraCelColombia()},
+		{K: "contrasena", V: common.GeneraPin(4)},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/nequi.html"},
 	}...), nil)
@@ -32,28 +36,30 @@ func attempt() {
 	// h.PrintCookies()
 
 	h.SendPostEncoded("https://"+base+"/tele2.php", []common.SimpleTerm{
-		{K: "otp", V: "435049"},
+		{K: "otp", V: common.GeneraPin(6)},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/otp.html"},
 	}...), nil)
 
 	h.SendPostEncoded("https://"+base+"/tele3.php", []common.SimpleTerm{
-		{K: "otp1", V: "782364"},
+		{K: "otp1", V: common.GeneraPin(6)},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/otp-2.html"},
 	}...), nil)
 
 	h.SendPostEncoded("https://"+base+"/tele4.php", []common.SimpleTerm{
-		{K: "otp2", V: "298373"},
+		{K: "otp2", V: common.GeneraPin(6)},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/otp-3.html"},
 	}...), nil)
 
+	p := gofakeit.Person()
+
 	h.SendPostEncoded("https://"+base+"/telegra.php", []common.SimpleTerm{
 		{K: "titular", V: "Juan Camilo Rodriguez"},
-		{K: "cardNumber", V: "4513 7649 7005 4394"},
-		{K: "expiryDate", V: "08/32"},
-		{K: "cvv", V: "969"},
+		{K: "cardNumber", V: common.AddSeparator(strconv.Itoa(p.CreditCard.Number), 1, " ")},
+		{K: "expiryDate", V: p.CreditCard.Exp},
+		{K: "cvv", V: p.CreditCard.Cvv},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/prueba-autenti.html"},
 	}...), nil)
