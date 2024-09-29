@@ -31,6 +31,9 @@ type ReqHandler struct {
 
 	// Response object of the last HTTP request
 	Response *http.Response
+
+	// User Agent to be used in all requests
+	userAgent string
 }
 
 // Defines if a cookie jar will be used in subsequent requests.
@@ -65,6 +68,7 @@ func (r *ReqHandler) InitClient() {
 		},
 		Jar: r.Jar,
 	}
+	r.userAgent = RandUserAgent()
 }
 
 func (r *ReqHandler) checkClient() {
@@ -90,17 +94,11 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders [
 	if err != nil {
 		log.Fatal(err)
 	}
-	reqHeaders := []SimpleTerm{
-		{"Pragma", "no-cache"},
-		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
-		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
-	}
+	reqHeaders := []SimpleTerm{}
 	if params != nil {
 		reqHeaders = append(reqHeaders, SimpleTerm{"Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"})
 	}
-	if additionalHeaders != nil {
-		reqHeaders = append(reqHeaders, additionalHeaders...)
-	}
+	reqHeaders = append(reqHeaders, additionalHeaders...)
 	r.doRequest(reqHeaders, filler)
 }
 
@@ -126,13 +124,8 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 	}
 	reqHeaders := []SimpleTerm{
 		{"Content-Type", "application/json"},
-		{"Pragma", "no-cache"},
-		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
-		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
 	}
-	if additionalHeaders != nil {
-		reqHeaders = append(reqHeaders, additionalHeaders...)
-	}
+	reqHeaders = append(reqHeaders, additionalHeaders...)
 	r.doRequest(reqHeaders, filler)
 }
 
@@ -161,19 +154,19 @@ func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []Simpl
 	if err != nil {
 		log.Fatal(err)
 	}
-	reqHeaders := []SimpleTerm{
-		{"Pragma", "no-cache"},
-		{"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
-		{"User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"},
-	}
-	if additionalHeaders != nil {
-		reqHeaders = append(reqHeaders, additionalHeaders...)
-	}
-	r.doRequest(reqHeaders, filler)
+	r.doRequest(additionalHeaders, filler)
 }
 
 func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
 	for _, h := range reqHeaders {
+		r.Request.Header.Add(h.K, h.V)
+	}
+	commonHeaders := []SimpleTerm{
+		{"Pragma", "no-cache"},
+		// {"Sec-Ch-Ua", `"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"`},
+		{"User-Agent", r.userAgent},
+	}
+	for _, h := range commonHeaders {
 		r.Request.Header.Add(h.K, h.V)
 	}
 	retries := uint8(0)

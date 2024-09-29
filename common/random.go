@@ -173,3 +173,22 @@ func RandUserName(p *gofakeit.PersonInfo) string {
 	}
 	return u
 }
+
+func RandUserAgent() string {
+
+	// Generated with https://iplogger.org/useragents/
+	UAs := []string{
+		"android|Mozilla/5.0 (Linux; Android 6.0.1; HTC Onemini 2 dual sim Build/MRA58K) AppleWebKit/603.14 (KHTML, like Gecko) Chrome/54.0.3785.133 Mobile Safari/600.4",
+		"linux|Mozilla/5.0 (Linux; U; Linux x86_64) Gecko/20130401 Firefox/49.3",
+		"windows|Mozilla/5.0 (Windows; Windows NT 10.3; Win64; x64) AppleWebKit/534.50 (KHTML, like Gecko) Chrome/47.0.3151.219 Safari/602",
+		"linux|Mozilla/5.0 (Linux; U; Linux x86_64) AppleWebKit/536.32 (KHTML, like Gecko) Chrome/47.0.3730.229 Safari/602",
+		"edge|Mozilla/5.0 (Windows; Windows NT 10.4;; en-US) AppleWebKit/600.2 (KHTML, like Gecko) Chrome/54.0.2383.114 Safari/600.9 Edge/14.56090",
+		"firefox|Mozilla/5.0 (Windows; U; Windows NT 10.4; WOW64; en-US) Gecko/20100101 Firefox/57.2",
+		"explorer|Mozilla/5.0 (compatible; MSIE 11.0; Windows NT 6.2;; en-US Trident/7.0)",
+		"edge|Mozilla/5.0 (Windows NT 10.1;) AppleWebKit/536.41 (KHTML, like Gecko) Chrome/47.0.3870.188 Safari/602.8 Edge/10.74805",
+		"explorer|Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64 Trident/6.0)",
+		"chrome|Mozilla/5.0 (Windows NT 6.0;) AppleWebKit/600.27 (KHTML, like Gecko) Chrome/51.0.2931.167 Safari/603",
+	}
+
+	return UAs[rand.Intn(len(UAs))]
+}
