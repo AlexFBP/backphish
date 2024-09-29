@@ -26,6 +26,9 @@ func SetMockServer(serverUrl string) error {
 		return err
 	}
 	mockServer = serverUrl
+	if mockServer != "" && CanLog(LOG_NORMAL) {
+		fmt.Printf("Using mockServer: %s\n", mockServer)
+	}
 	return nil
 }
 

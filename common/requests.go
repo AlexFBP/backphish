@@ -62,6 +62,9 @@ func (r *ReqHandler) PrintCookies(u *url.URL) {
 
 // Initializes the HTTP client
 func (r *ReqHandler) InitClient() {
+	if r.Client != nil {
+		return
+	}
 	r.Client = &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
@@ -83,33 +86,16 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders [
 	for _, v := range params {
 		data.Add(v.K, v.V)
 	}
-	if mockServer != "" {
-		if CanLog(LOG_VERBOSE) {
-			fmt.Printf("mockServer: %s\n", mockServer)
-		}
-		postUrl = mockServer
-	}
-	var err error
-	r.Request, err = http.NewRequest("POST", postUrl, strings.NewReader(data.Encode()))
-	if err != nil {
-		log.Fatal(err)
-	}
 	reqHeaders := []SimpleTerm{}
 	if params != nil {
 		reqHeaders = append(reqHeaders, SimpleTerm{"Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"})
 	}
 	reqHeaders = append(reqHeaders, additionalHeaders...)
-	r.doRequest(reqHeaders, filler)
+	r.doRequest("POST", postUrl, strings.NewReader(data.Encode()), reqHeaders, filler)
 }
 
 func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders []SimpleTerm, filler interface{}) {
 	r.checkClient()
-	if mockServer != "" {
-		if CanLog(LOG_VERBOSE) {
-			fmt.Printf("mockServer: %s\n", mockServer)
-		}
-		target = mockServer
-	}
 	b := new(bytes.Buffer)
 	if payload != nil {
 		err := json.NewEncoder(b).Encode(payload)
@@ -117,16 +103,11 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 			log.Fatalf("[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
 		}
 	}
-	var err error
-	r.Request, err = http.NewRequest("POST", target, b)
-	if err != nil {
-		log.Fatal(err)
-	}
 	reqHeaders := []SimpleTerm{
 		{"Content-Type", "application/json"},
 	}
 	reqHeaders = append(reqHeaders, additionalHeaders...)
-	r.doRequest(reqHeaders, filler)
+	r.doRequest("POST", target, b, reqHeaders, filler)
 }
 
 func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []SimpleTerm, filler interface{}) {
@@ -135,29 +116,36 @@ func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []Simpl
 	for _, v := range urlParams {
 		data.Add(v.K, v.V)
 	}
-	if mockServer != "" {
-		if CanLog(LOG_VERBOSE) {
-			fmt.Printf("mockServer: %s\n", mockServer)
-		}
-		getUrl = mockServer
-	}
 	coded := data.Encode()
 	if CanLog(LOG_VERBOSE) {
 		fmt.Println(coded, ":")
 	}
 	getUrl += "?" + coded
-	if _, err := url.Parse(getUrl); err != nil {
-		log.Fatal("[FATAL] Malformed/Wrong URL:", getUrl)
-	}
+	r.doRequest("GET", getUrl, nil, additionalHeaders, filler)
+}
+
+func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHeaders []SimpleTerm, filler interface{}) {
 	var err error
-	r.Request, err = http.NewRequest("GET", getUrl, nil)
+	var finalUrl string
+
+	if mockServer != "" {
+		finalUrl = mockServer
+	} else {
+		finalUrl = urlRequest
+	}
+
+	// Validate URL to be used
+	if _, err := url.Parse(finalUrl); err != nil {
+		log.Fatal("[FATAL] Malformed/Wrong URL:", finalUrl)
+	}
+
+	// Prepare request
+	r.Request, err = http.NewRequest(method, finalUrl, body)
 	if err != nil {
 		log.Fatal(err)
 	}
-	r.doRequest(additionalHeaders, filler)
-}
 
-func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
+	// Add request headers
 	for _, h := range reqHeaders {
 		r.Request.Header.Add(h.K, h.V)
 	}
@@ -169,23 +157,29 @@ func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
 	for _, h := range commonHeaders {
 		r.Request.Header.Add(h.K, h.V)
 	}
+	if mockServer != "" {
+		r.Request.Header.Add("Mocked-Address", urlRequest)
+	}
+
+	// Do request. Retry at most MAX_RETRIES
 	retries := uint8(0)
 	const MAX_RETRIES = 10
-	var err error
 	for {
 		r.Response, err = r.Client.Do(r.Request)
 		if err == nil {
 			break
 		}
 		if retries == MAX_RETRIES {
-			log.Fatal(err)
+			log.Fatalln("Request failed after", MAX_RETRIES, "retries. Error:", err)
 		}
 		retries++
-		if CanLog(LOG_NORMAL) {
+		if CanLog(LOG_VERBOSE) {
 			fmt.Printf("WARN:RET#%d ", retries)
 		}
 	}
 	defer r.Response.Body.Close()
+
+	// Fill supplied response object (if any)
 	if filler != nil {
 		// _, err = io.ReadAll(resp.Body)
 		switch t := filler.(type) {
@@ -212,6 +206,7 @@ func (r *ReqHandler) doRequest(reqHeaders []SimpleTerm, filler interface{}) {
 			}
 		}
 	}
+
 	if CanLog(LOG_VERBOSE) {
 		fmt.Println("(", r.Response.Status, ")")
 	}
