@@ -8,7 +8,7 @@ propulsorpreaprobado.website. 1800 IN   A       194.164.64.208
 propulsores-aprobados.website. 1800 IN  A       194.164.64.208
 ```
 
-The entrypoint of the scam page is `https://LISTED_DOMAIN/agil.html`
+The entrypoint of the scam page is `https://LISTED_DOMAIN/agil.html` or ended in `activa.php`
 
 
 ## Mirrors down

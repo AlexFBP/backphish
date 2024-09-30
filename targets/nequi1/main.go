@@ -68,6 +68,7 @@ var mirrors = []string{
 	`propulsoraprobados.website`,   // NO DNS REPLY (*1)
 	`siperpropcolombia.com`,        // REPORTED (*2)
 	`solicitadesdeya.com`,          // REPORTED (*1)
+	`web.nqicolmbia.com`,           // REPORTED
 	`51.107.8.147`,                 // DNS CATCHED or DOWN? (*??)
 }
 

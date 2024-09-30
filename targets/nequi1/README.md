@@ -20,16 +20,16 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `newactivalo.com` (*1)
 - `nq-col.website`
 - `nq-colombiaonline.website` (*1)
-- `nqi-pr0pls0r.com`
+- `nqi-pr0pls0r.com` (*1)
 - `nqicolmbia.com/NEQUI`
 - `nqipr0pulsor.com` (*1)
 - `nqprepropulso.com` (*1)
 - `nqpropulsa.com`
 - `nqpropulsando.com`
 - `nuevopropulsor.com`
-- `onlineparati.com`
+- `onlineparati.com` (*1)
 - `parati-nqui.com` (*1)
-- `perfectoparti.com`
+- `perfectoparti.com` (*1)
 - `preadelanto.online` (*1)
 - `prepropulsandonq.com` (*1)
 - `prepropulneq.com` (*1)
@@ -42,7 +42,8 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `propulsor-pre.website` (*1)
 - `propulsoraprobados.website` (*1)
 - `siperpropcolombia.com`
-- `solicitadesdeya.com`
+- `solicitadesdeya.com` (*1)
+- `web.nqicolmbia.com`
 - `51.107.8.147`
 
 _Technical detail: some of them sends (or used to send) a few additional requests to `yousitesureonlineverification.com`_
@@ -91,6 +92,7 @@ credialinstante.com.    14400   IN      A       162.241.61.138
 impulsatunq.com.        14400   IN      A       162.241.61.138
 co.nqicolmbia.com.      14400   IN      A       162.241.61.244
 parati-nqui.com.        3625    IN      A       162.241.61.244
+web.nqicolmbia.com.     14400   IN      A       162.241.61.244
 finanzasaturitmo.com.   2200    IN      A       162.241.203.120
 neqwtx.com.             14400   IN      A       162.241.203.120
 aplicaya-neq.com.       12389   IN      A       162.241.203.121
