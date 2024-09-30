@@ -37,8 +37,8 @@ func attempt(base string) {
 
 	h.SendMultipart("https://"+base+"/ban.php", map[string]io.Reader{
 		"t1": strings.NewReader("c&eacutedula"),
-		"t2": strings.NewReader("78264583"),
-		"t3": strings.NewReader("832411"),
+		"t2": strings.NewReader(common.GeneraNIPcolombia()),
+		"t3": strings.NewReader(common.GeneraPin(6)),
 	}, nil, nil)
 
 }
