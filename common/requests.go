@@ -12,6 +12,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
 	// "unicode/utf8"
 )
 
@@ -85,7 +86,6 @@ func (r *ReqHandler) checkClient() {
 }
 
 func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders []SimpleTerm, filler interface{}) {
-	r.checkClient()
 	data := url.Values{}
 	for _, v := range params {
 		data.Add(v.K, v.V)
@@ -99,7 +99,6 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders [
 }
 
 func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders []SimpleTerm, filler interface{}) {
-	r.checkClient()
 	b := new(bytes.Buffer)
 	if payload != nil {
 		err := json.NewEncoder(b).Encode(payload)
@@ -115,7 +114,6 @@ func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHead
 }
 
 func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []SimpleTerm, filler interface{}) {
-	r.checkClient()
 	data := url.Values{}
 	for _, v := range urlParams {
 		data.Add(v.K, v.V)
@@ -130,7 +128,6 @@ func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []Simpl
 
 // To send multipart/form-data
 func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader, additionalHeaders []SimpleTerm, filler interface{}) (err error) {
-	r.checkClient()
 	// Based on https://stackoverflow.com/a/20397167/3180052
 
 	// Prepare a form that you will submit to that URL.
@@ -173,6 +170,7 @@ func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader
 }
 
 func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHeaders []SimpleTerm, filler interface{}) {
+	r.checkClient()
 	var err error
 	var finalUrl string
 
@@ -224,6 +222,8 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 		if CanLog(LOG_VERBOSE) {
 			fmt.Printf("WARN:RET#%d ", retries)
 		}
+		// Random delay of 1s +/+ 0.5s before next attempt
+		RandDelayWindowed(time.Second, time.Second)
 	}
 	defer r.Response.Body.Close()
 
