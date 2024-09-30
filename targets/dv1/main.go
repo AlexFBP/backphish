@@ -4,15 +4,33 @@ import (
 	"io"
 	"strings"
 
+	"github.com/turret-io/go-menu/menu"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+var target *common.Target
+
+func init() {
+	target = &common.Target{
+		Prefix:      "dv1",
+		Description: "attack fake davivienda 1",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
 }
 
-func attempt() {
-	const base = "inf.davivnda.com"
+func GetAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
+}
+
+var mirrors = []string{
+	`inf.davivnda.com`,
+	`davivnda.com`,
+	`tucrdtodavivienda.com`,
+}
+
+func attempt(base string) {
 
 	h := common.ReqHandler{}
 	// h.UseJar(true)

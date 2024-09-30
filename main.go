@@ -30,14 +30,14 @@ func main() {
 		{Command: "bc2", Description: "attack fake bancolombia 2", Function: bc02.Cmd},
 		{Command: "bc3", Description: "attack fake bancolombia 3", Function: bc03.Cmd},
 		{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},
-		{Command: "dv1", Description: "attack fake davivienda 1", Function: dv1.Cmd},
+	}, append(dv1.GetAllCmds(), append([]menu.CommandOption{
 		{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd},
 		{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd},
 	}, append(nequi1.GetAllCmds(), append(nequi2.GetAllCmds(), append(nequi3.GetAllCmds(), []menu.CommandOption{
 		{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd},
 		// Playground - Please keep this one at the end
 		{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
-	}...)...)...)...)
+	}...)...)...)...)...)...)
 
 	target, times, threads := conf.GetTarget(), conf.GetTimes(), conf.GetThreads()
 	if target == "" {
