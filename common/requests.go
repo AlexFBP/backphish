@@ -23,10 +23,10 @@ type SimpleTerm struct {
 type ReqHandler struct {
 
 	// Cookie jar to be used in subsequent requests
-	Jar *cookiejar.Jar
+	jar *cookiejar.Jar
 
 	// HTTP Client to be used in subsequent requests
-	Client *http.Client
+	client *http.Client
 
 	// Request object of the last HTTP request
 	Request *http.Request
@@ -42,9 +42,9 @@ type ReqHandler struct {
 // Also calls InitClient()
 func (r *ReqHandler) UseJar(use bool) {
 	if use {
-		r.Jar, _ = cookiejar.New(nil)
+		r.jar, _ = cookiejar.New(nil)
 	} else {
-		r.Jar = nil
+		r.jar = nil
 	}
 	r.InitClient()
 }
@@ -52,7 +52,7 @@ func (r *ReqHandler) UseJar(use bool) {
 func (r *ReqHandler) PrintCookies(u *url.URL) {
 	if CanLog(LOG_VERBOSE) {
 		n := 0
-		for _, cookie := range r.Jar.Cookies(u) {
+		for _, cookie := range r.jar.Cookies(u) {
 			fmt.Printf("%s\t%s\n", cookie.Name, cookie.Value)
 			n++
 		}
@@ -64,20 +64,22 @@ func (r *ReqHandler) PrintCookies(u *url.URL) {
 
 // Initializes the HTTP client
 func (r *ReqHandler) InitClient() {
-	if r.Client != nil {
+	if r.client != nil {
 		return
 	}
-	r.Client = &http.Client{
+	r.client = &http.Client{
 		CheckRedirect: func(req *http.Request, via []*http.Request) error {
 			return http.ErrUseLastResponse
 		},
-		Jar: r.Jar,
+	}
+	if r.jar != nil {
+		r.client.Jar = r.jar
 	}
 	r.userAgent = RandUserAgent()
 }
 
 func (r *ReqHandler) checkClient() {
-	if r.Client == nil {
+	if r.client == nil {
 		r.InitClient()
 	}
 }
@@ -211,7 +213,7 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 	retries := uint8(0)
 	const MAX_RETRIES = 10
 	for {
-		r.Response, err = r.Client.Do(r.Request)
+		r.Response, err = r.client.Do(r.Request)
 		if err == nil {
 			break
 		}
