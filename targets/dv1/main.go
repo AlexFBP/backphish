@@ -24,10 +24,13 @@ func GetAllCmds() []menu.CommandOption {
 	return target.GetAllCmds()
 }
 
+// Mirrors. The comment depending on last checked state:
+//   - (*1): "no such host" - Down
+//   - (*2): TLS error? internal error? Down?
 var mirrors = []string{
-	`inf.davivnda.com`,
-	`davivnda.com`,
-	`tucrdtodavivienda.com`,
+	`inf.davivnda.com`,      // REPORTED
+	`davivnda.com`,          // REPORTED
+	`tucrdtodavivienda.com`, // (*2)
 }
 
 func attempt(base string) {
