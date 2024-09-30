@@ -6,9 +6,11 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"mime/multipart"
 	"net/http"
 	"net/http/cookiejar"
 	"net/url"
+	"os"
 	"strings"
 	// "unicode/utf8"
 )
@@ -122,6 +124,50 @@ func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []Simpl
 	}
 	getUrl += "?" + coded
 	r.doRequest("GET", getUrl, nil, additionalHeaders, filler)
+}
+
+// To send multipart/form-data
+func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader, additionalHeaders []SimpleTerm, filler interface{}) (err error) {
+	r.checkClient()
+	// Based on https://stackoverflow.com/a/20397167/3180052
+
+	// Prepare a form that you will submit to that URL.
+	b := &bytes.Buffer{}
+	w := multipart.NewWriter(b)
+	for key, rd := range values {
+		var fw io.Writer
+		if x, ok := rd.(io.Closer); ok {
+			defer x.Close()
+		}
+		// Add a file
+		if x, ok := rd.(*os.File); ok {
+			if fw, err = w.CreateFormFile(key, x.Name()); err != nil {
+				return
+			}
+		} else {
+			// Add form fields
+			if fw, err = w.CreateFormField(key); err != nil {
+				return
+			}
+		}
+		if _, err = io.Copy(fw, rd); err != nil {
+			return
+		}
+
+	}
+	// Don't forget to close the multipart writer.
+	// If you don't close it, your request will be missing the terminating boundary.
+	if err = w.Close(); err != nil {
+		return
+	}
+
+	if CanLog(LOG_VERBOSE) {
+		fmt.Printf("body:\n%s\n", b.String())
+	}
+
+	additionalHeaders = append(additionalHeaders, SimpleTerm{"Content-Type", w.FormDataContentType()})
+	r.doRequest("POST", targetURL, b, additionalHeaders, filler)
+	return
 }
 
 func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHeaders []SimpleTerm, filler interface{}) {
