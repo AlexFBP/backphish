@@ -107,3 +107,11 @@ func AttackRunner(attemptHandle AttemptHander) error {
 		activeRoutines--
 	}
 }
+
+func JoinSlices[T any](slices ...[]T) []T {
+	var opts []T
+	for _, slice := range slices {
+		opts = append(opts, slice...)
+	}
+	return opts
+}
