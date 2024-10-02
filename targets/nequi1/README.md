@@ -11,7 +11,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `dasbord.online` (*1)
 - `finanzasaturitmo.com` (*1)
 - `impuestoscol.com`
-- `impulsatunq.com`
+- `impulsatunq.com` (*1)
 - `impulsornequi.github.io` ([GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse!)
 - `intelcore.online` (*1)
 - `n3quionline.com` (*1)
@@ -35,7 +35,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `prepropulneq.com` (*1)
 - `prepropulnq.com` (*1)
 - `prestamo-nequi.website` (*1)
-- `propulahorrosneq.com`
+- `propulahorrosneq.com` (*1)
 - `propulcolombiano.com` (*1)
 - `propulideas.com` (*1)
 - `propulsandoneqpro.com` (*1)

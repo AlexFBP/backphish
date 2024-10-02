@@ -37,7 +37,7 @@ var mirrors = []string{
 	`cuztco.com/NEQUI`,             // REPORTED
 	`finanzasaturitmo.com`,         // NO DNS REPLY (*1)
 	`impuestoscol.com`,             // DOWN BY PROVIDER (*??)
-	`impulsatunq.com`,              // REPORTED
+	`impulsatunq.com`,              // REPORTED (*1)
 	`intelcore.online`,             // REPORTED (*1)
 	`n3quionline.com`,              // REPORTED (*1)
 	`neq.n3quionline.com`,          // REPORTED (*1)
@@ -60,7 +60,7 @@ var mirrors = []string{
 	`prepropulneq.com`,             // NO DNS REPLY (*1)
 	`prepropulnq.com`,              // CATCHED (*1)
 	`prestamo-nequi.website`,       // NO DNS REPLY (*1)
-	`propulahorrosneq.com`,         // REPORTED
+	`propulahorrosneq.com`,         // REPORTED (*1)
 	`propulcolombiano.com`,         // REPORTED (*1)
 	`propulideas.com`,              // REPORTED (*1)
 	`propulsandoneqpro.com`,        // REPORTED (*1)

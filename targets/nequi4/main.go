@@ -13,7 +13,7 @@ func Cmd(args ...string) error {
 }
 
 func attempt() {
-	const base = "prestamos.website"
+	const base = "prestamos.website" // DOWN
 
 	h := common.ReqHandler{}
 	h.UseJar(true)

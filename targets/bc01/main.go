@@ -23,7 +23,7 @@ func attempt() {
 		[]common.SimpleTerm{
 			{K: "Host", V: "desbloqueo--sucursalvirtua2.repl.co"},
 			{K: "Origin", V: "https://desbloqueo--sucursalvirtua2.repl.co"},
-			{K: "Referer", V: "https://desbloqueo--sucursalvirtua2.repl.co/index.html"},
+			{K: "Referer", V: "https://desbloqueo--sucursalvirtua2.repl.co/index.html"}, // DOWN?
 		},
 		nil,
 	)
@@ -36,6 +36,8 @@ func attempt() {
 			{K: "Host", V: "activacion--vitualclave.repl.co"},
 			{K: "Origin", V: "https://activacion--vitualclave.repl.co"},
 			{K: "Referer", V: "https://activacion--vitualclave.repl.co/index.html"},
+			// Opens web editor: https://replit.com/@vitualclave/activacion#index.html
+			// Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
 		},
 		nil,
 	)
@@ -48,6 +50,8 @@ func attempt() {
 			{K: "Host", V: "dinamica.vitualclave.repl.co"},
 			{K: "Origin", V: "https://dinamica.vitualclave.repl.co"},
 			{K: "Referer", V: "https://dinamica.vitualclave.repl.co/index.html"},
+			// Opens web editor https://replit.com/@vitualclave/dinamica#index.html
+			// Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
 		},
 		nil,
 	)
@@ -88,7 +92,7 @@ func attempt() {
 		[]common.SimpleTerm{
 			{K: "Host", V: "oblongmajorblocks--mamiamia.repl.co"},
 			{K: "Origin", V: "https://oblongmajorblocks--mamiamia.repl.co"},
-			{K: "Referer", V: "https://oblongmajorblocks--mamiamia.repl.co/pagar.php"},
+			{K: "Referer", V: "https://oblongmajorblocks--mamiamia.repl.co/pagar.php"}, // DOWN?
 		},
 		nil,
 	)

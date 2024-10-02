@@ -23,6 +23,8 @@ func attempt() {
 	headers := []common.SimpleTerm{
 		{K: "Origin", V: "https://ingressar1davidd.sayo1296.repl.co"},
 		{K: "Referer", V: "https://ingressar1davidd.sayo1296.repl.co/"},
+		// Opens https://replit.com/@sayo1296/ingressar1davidd?v=1#index.html
+		// Uses tg bot & chat id: 6328508246:AAFU2THEk8nvxuzFLR5C6FfqQNuxmsiaFWk 6332256769
 	}
 
 	chat_id := "6332256769"

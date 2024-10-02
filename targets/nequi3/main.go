@@ -19,13 +19,16 @@ func init() {
 	}
 }
 
+// Mirrors. The comment depending on last checked state:
+//   - (*1): "no such host" - Down
 var mirrors = []string{
+	`ahorrosnq.com`,         // REPORTED
 	`creatusahorros.com`,    // REPORTED
-	`impulsadorahorros.com`, // REPORTED
+	`impulsadorahorros.com`, // REPORTED (*1)
 	`neqpropulsaya.com`,     // CATCHED
-	`prestadecision.com`,    // REPORTED
-	`propuladmin.com`,       // REPORTED
-	`tucredirapido.com`,     // REPORTED
+	`prestadecision.com`,    // REPORTED (*1)
+	`propuladmin.com`,       // REPORTED (*1)
+	`tucredirapido.com`,     // REPORTED (*1)
 }
 
 func GetAllCmds() []menu.CommandOption {

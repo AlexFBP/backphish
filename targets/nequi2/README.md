@@ -15,6 +15,7 @@ The entrypoint of the scam page is `https://LISTED_DOMAIN/agil.html` or ended in
 
 The following domains used to have the same scam structure:
 
+- `activatupropulsor.store`
 - `pree-populsorwebside.online`
 - `pree-propulsoraprobado.website`
 - `propulsores-aprobados.website`

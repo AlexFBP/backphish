@@ -53,3 +53,5 @@ Difficulty or Quantity-of-lines-to-be-changed: (E)asy-few / (M)edium-moderate / 
 - [x] (L-M) When using mock server, send the original target in a header, "Debug-Original-URL"
 - [ ] (L-L) [Discard body reply](https://www.google.com/search?q=golang+http+client+%22discard+OR+drop%22+reply+body) when not passed a object to be filled with reply
 - [ ] (L-L) [Build and restart on change](https://www.reddit.com/r/golang/comments/6yap3o/how_do_you_rebuildrestart_your_app_on_file_changes/)
+- [ ] (M-H) Refactor all targets, in such a manner that for each mirror it could be defined if is alive, so with a CLI flag could be set to attack all active targets... Furthermore, dynamically detect which targets are alive, and attack all of them
+- [ ] (M-M) Refactor or reuse dp1, to spam with Telegram Bots, [all within fair usage](https://rollout.com/integration-guides/telegram-bot-api/api-essentials) - [oficial](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this)
