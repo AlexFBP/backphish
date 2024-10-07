@@ -24,10 +24,12 @@ func attempt() {
 
 	devices := []string{"Android", "iPhone"}
 	device := devices[1]
+	cel := common.AddSeparator(common.GeneraCelColombia(), 0, " ")
+	pin := common.GeneraPin(4)
 
 	req1 := func(end string) {
 		h.SendPostEncoded("https://"+base+"/process/pasousuario.php", []common.SimpleTerm{
-			{K: "pass", V: "318 458 7545 - 2546"},
+			{K: "pass", V: cel + " - " + pin},
 			{K: "dis", V: device},
 		}, append(commonHeaders, []common.SimpleTerm{
 			{K: "Referer", V: "https://" + base + "/bdigital/" + end},
@@ -48,7 +50,7 @@ func attempt() {
 		// Cookie contrasena,registro,estado
 		// Cookie bmuid, cdContextId, cdSNum ???
 		h.SendPostEncoded("https://"+base+"/process/pasoOTP.php", []common.SimpleTerm{
-			{K: "otp", V: "742169"},
+			{K: "otp", V: common.GeneraPin(6)},
 		}, append(commonHeaders, []common.SimpleTerm{
 			{K: "Referer", V: "https://" + base + "/bdigital/dinamica.php"},
 		}...), nil)
