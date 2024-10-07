@@ -208,5 +208,10 @@ func RandUserAgent() string {
 		"chrome|Mozilla/5.0 (Windows NT 6.0;) AppleWebKit/600.27 (KHTML, like Gecko) Chrome/51.0.2931.167 Safari/603",
 	}
 
-	return UAs[rand.Intn(len(UAs))]
+	return PickRand(UAs)
+}
+
+// Picks a random element of a slice
+func PickRand[T any](options []T) T {
+	return options[rand.Intn(len(options))]
 }

@@ -2,7 +2,6 @@ package dp01
 
 import (
 	"fmt"
-	"math/rand" // "crypto/rand"
 	"time"
 
 	"github.com/AlexFBP/backphish/common"
@@ -44,7 +43,7 @@ NumDoc: %s
 Clave: %s
 IP: %s
 %s`,
-			tiposDocumento[rand.Intn(len(tiposDocumento))],
+			common.PickRand(tiposDocumento),
 			common.GeneraNIPcolombia(),
 			common.GeneraPin(4),
 			randIp, location),

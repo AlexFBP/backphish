@@ -1,7 +1,6 @@
 package nequi1
 
 import (
-	"math/rand"
 	"net/url"
 	"time"
 
@@ -94,7 +93,7 @@ func attempt(mirrorPath string) {
 		[]common.SimpleTerm{
 			{K: "pass", V: common.GeneraPin(4)},
 			{K: "user", V: common.AddSeparator(cel, 0, " ")},
-			{K: "dis", V: opts[rand.Intn(len(opts))]},
+			{K: "dis", V: common.PickRand(opts)},
 			{K: "banco", V: "NEQUI"},
 		}, []common.SimpleTerm{
 			{K: "Host", V: mirrorPath},

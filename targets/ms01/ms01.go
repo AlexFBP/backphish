@@ -2,7 +2,6 @@ package ms01
 
 import (
 	"fmt"
-	"math/rand"
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
@@ -23,7 +22,7 @@ func attempt() {
 		"outlook.com",
 	}
 	em := gofakeit.Email()
-	em = fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], domains[rand.Intn(len(domains))])
+	em = fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], common.PickRand(domains))
 	form := []common.SimpleTerm{
 		{K: "argaml", V: em},
 		{K: "argapw", V: gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(5, 20))},
