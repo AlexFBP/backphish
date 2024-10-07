@@ -83,3 +83,9 @@ The following is a recopilation of technologies/providers used in this repo and/
 - [HTTrack](https://github.com/xroche/httrack) - website copier
 - [Webflow](https://webflow.com/) - Website builder
 - [clevertap(.min.js)](https://developer.clevertap.com/docs/web-quickstart-guide) - ???
+- [r/dataisbeautiful - Most common 4 digit PIN numbers](https://www.reddit.com/r/dataisbeautiful/comments/1cn7l7r/oc_most_common_4_digit_pin_numbers_from_an/#lightbox)
+
+### Abuse reporting
+
+- [Cloudflare](https://abuse.cloudflare.com/phishing)
+- [openprovider](https://www.openprovider.com/company/contact-us/report-abuse)

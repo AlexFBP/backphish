@@ -6,14 +6,14 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `aplicaya-neq.com` (*1)
 - `co.nqicolmbia.com` (*1)
 - `colmbianeq.website`
-- `credialinstante.com`
+- `credialinstante.com/prestamo` (*1)
 - `cuztco.com/NEQUI`
 - `dasbord.online` (*1)
 - `finanzasaturitmo.com` (*1)
 - `impuestoscol.com`
 - `impulsatunq.com` (*1)
-- `impulsornequi.github.io` ([GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse!)
 - `intelcore.online` (*1)
+- `n.colmbianeq.website`
 - `n3quionline.com` (*1)
 - `neq.n3quionline.com` (*1)
 - `neqwtx.com`
@@ -34,6 +34,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `prepropulsandonq.com` (*1)
 - `prepropulneq.com` (*1)
 - `prepropulnq.com` (*1)
+- `prestainmediatamente.com/prestamo` (*1)
 - `prestamo-nequi.website` (*1)
 - `propulahorrosneq.com` (*1)
 - `propulcolombiano.com` (*1)
@@ -41,6 +42,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `propulsandoneqpro.com` (*1)
 - `propulsor-pre.website` (*1)
 - `propulsoraprobados.website` (*1)
+- `rivaloscudo.website`
 - `siperpropcolombia.com`
 - `solicitadesdeya.com` (*1)
 - `web.nqicolmbia.com`
@@ -78,7 +80,10 @@ nqprepropulso.com.      1800    IN      A       157.173.209.251
 nqipr0pulsor.com.       14400   IN      A       162.241.2.171
 propulahorrosneq.com.   14400   IN      A       162.241.2.171
 prepropulneq.com.       6631    IN      A       162.241.2.172
+rivaloscudo.website.    14400   IN      A       162.241.60.20
+prestainmediatamente.com. 14400 IN      A       162.241.60.183
 colmbianeq.website.     14400   IN      A       162.241.60.254
+n.colmbianeq.website.   14400   IN      A       162.241.60.254
 onlineparati.com.       5230    IN      A       162.241.60.254
 propulideas.com.        14400   IN      A       162.241.60.254
 nq-col.website.         14400   IN      A       162.241.60.255
@@ -91,6 +96,7 @@ perfectoparti.com.      14400   IN      A       162.241.61.79
 credialinstante.com.    14400   IN      A       162.241.61.138
 impulsatunq.com.        14400   IN      A       162.241.61.138
 co.nqicolmbia.com.      14400   IN      A       162.241.61.244
+nqicolmbia.com.         14400   IN      A       162.241.61.244
 parati-nqui.com.        3625    IN      A       162.241.61.244
 web.nqicolmbia.com.     14400   IN      A       162.241.61.244
 finanzasaturitmo.com.   2200    IN      A       162.241.203.120
@@ -105,7 +111,7 @@ Non relevant DNS A records listed for the following ones:
 |           Domain          |       Reason         |
 |            ---            |         ---          |
 | `cuztco.com`              | Through Cloudflare   |
-| `impulsornequi.github.io` | Through GitHub Pages |
+| `impulsornequi.github.io` | Through GitHub Pages - [GitHub repo](https://github.com/impulsornequi/impulsornequi.github.io) abuse! |
 
 ## WHOIS of IPs
 

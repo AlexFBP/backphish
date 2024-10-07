@@ -28,6 +28,9 @@ func GetAllCmds() []menu.CommandOption {
 //   - (*1): "no such host" - Down
 //   - (*2): TLS error? internal error? Down?
 var mirrors = []string{
+	`col.davivnda.com`,      // ALIVE?
+	`co.davivnda.com`,       // ALIVE?
+	`val.davivnda.com`,      // ALIVE?
 	`inf.davivnda.com`,      // REPORTED
 	`davivnda.com`,          // REPORTED
 	`tucrdtodavivienda.com`, // (*2)
