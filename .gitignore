@@ -7,4 +7,6 @@ backphish
 ## Logs and dump files
 
 # Web Inspector network traffic log file
-# *.har
+*.har
+# This allows to keep additional HAR logs in local
+# It must be used -f when added/updated additional HAR logs

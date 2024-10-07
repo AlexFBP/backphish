@@ -32,3 +32,14 @@ function dns-a() {
   dig +noall +answer @$(dig +short $(dig +short ns $DOMAIN | head -n 1)) $DOMAIN_OR_SUBDOMAIN
   # dig +noall +answer @$(dig +short $(dns-ns $DOMAIN)) $DOMAIN_OR_SUBDOMAIN
 }
+
+function bp-single() {
+  if [ -z $1 ]; then
+    echo 'Unspecified target'
+    return 1
+  fi
+
+  target=$1
+  aditional_args=$2
+  ./backphish -l 0 -q 1 -n ${target} $(echo "$2")
+}
