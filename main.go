@@ -18,6 +18,7 @@ import (
 	"github.com/AlexFBP/backphish/targets/nequi2"
 	"github.com/AlexFBP/backphish/targets/nequi3"
 	"github.com/AlexFBP/backphish/targets/nequi4"
+	"github.com/AlexFBP/backphish/targets/nequi5"
 	"github.com/AlexFBP/backphish/targets/netflix1"
 )
 
@@ -41,6 +42,7 @@ func main() {
 		nequi3.GetAllCmds(),
 		[]menu.CommandOption{
 			{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd},
+			{Command: "nq5", Description: "attack fake nequi5", Function: nequi5.Cmd},
 			{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd}, // DOWN? (Domain still alive)
 			// Playground - Please keep this one at the end
 			{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
