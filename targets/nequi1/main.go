@@ -115,33 +115,34 @@ func attempt(mirrorPath string) {
 	h.PrintCookies(u)
 
 	awaitStatusChange := func() {
-		// /*
-		status := ""
-		common.TimedCall(3*time.Second, 90*time.Second, func() bool {
-			// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
-			//     NOTE: This request returns a "status" number as body, related to consultar_estado()
-			// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
-			// (NO PAYLOAD! - MUST BE REPEATED WHILE SAME REPLY BODY)
-			updatedStatus := ""
-			h.SendPostEncoded(
-				"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
-				[]common.SimpleTerm{
-					{K: "Host", V: mirrorPath},
-					{K: "Accept", V: "*/*"},
-					{K: "Accept-Language", V: "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3"},
-					{K: "Accept-Encoding", V: "gzip, deflate, br, zstd"},
-					{K: "X-Requested-With", V: "XMLHttpRequest"},
-					{K: "Origin", V: "https://" + mirrorPath + ""},
-					{K: "Referer", V: "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php"},
-				}, &updatedStatus)
-			if status == "" {
-				status = updatedStatus
-			} else if status != updatedStatus {
-				return false
-			}
-			return true
-		})
-		// */
+		const enabled = false
+		if enabled {
+			status := ""
+			common.TimedCall(3*time.Second, 90*time.Second, func() bool {
+				// POST https://{mirrorPath}/NEQUI/3d/process2/estado.php
+				//     NOTE: This request returns a "status" number as body, related to consultar_estado()
+				// of https://{mirrorPath}/NEQUI/3d/propulsor/nequi/js/functions2.js
+				// (NO PAYLOAD! - MUST BE REPEATED WHILE SAME REPLY BODY)
+				updatedStatus := ""
+				h.SendPostEncoded(
+					"https://"+mirrorPath+"/NEQUI/3d/process2/estado.php", nil,
+					[]common.SimpleTerm{
+						{K: "Host", V: mirrorPath},
+						{K: "Accept", V: "*/*"},
+						{K: "Accept-Language", V: "es-MX,es;q=0.8,en-US;q=0.5,en;q=0.3"},
+						{K: "Accept-Encoding", V: "gzip, deflate, br, zstd"},
+						{K: "X-Requested-With", V: "XMLHttpRequest"},
+						{K: "Origin", V: "https://" + mirrorPath + ""},
+						{K: "Referer", V: "https://" + mirrorPath + "/NEQUI/3d/propulsor/nequi/cargando.php"},
+					}, &updatedStatus)
+				if status == "" {
+					status = updatedStatus
+				} else if status != updatedStatus {
+					return false
+				}
+				return true
+			})
+		}
 	}
 
 	awaitStatusChange()
