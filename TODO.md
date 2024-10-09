@@ -60,3 +60,4 @@ Difficulty or Quantity-of-lines-to-be-changed: (E)asy-few / (M)edium-moderate / 
 - [ ] (M-H) With concurrency, [clear screen](https://stackoverflow.com/questions/22891644/how-can-i-clear-the-terminal-screen-in-go) and **refactor** so that the status/step of each goroutine can be read peridically, to draw all running goroutines and their states like "Number:Status" separated by "\t"
 - [ ] (M-M) Restart current goroutine instead of killing, when there's another goroutine not stuck
 - [ ] (M-M) Detect overall i/o timeout on target, so if all goroutines are stuck
+- [ ] (L-H) When using menu (and no target selected in CLI), create a sub-menu that allows to save custom defaults in a [.ini file](https://ini.unknwon.io/docs/intro/getting_started), so if the .ini is available, any default values there will take precedence. Also, it mus be an option to restore defaults.

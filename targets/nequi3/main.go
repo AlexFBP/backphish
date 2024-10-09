@@ -22,8 +22,8 @@ func init() {
 // Mirrors. The comment depending on last checked state:
 //   - (*1): "no such host" - Down
 var mirrors = []string{
-	`ahorrosnq.com`,         // REPORTED
-	`creatusahorros.com`,    // REPORTED
+	`ahorrosnq.com`,         // REPORTED (*1)
+	`creatusahorros.com`,    // REPORTED (*1)
 	`impulsadorahorros.com`, // REPORTED (*1)
 	`neqpropulsaya.com`,     // CATCHED
 	`neqpronet.online`,      // ALIVE (*1)

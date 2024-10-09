@@ -38,7 +38,7 @@ var mirrors = []string{
 	`impuestoscol.com`,                  // DOWN BY PROVIDER (*??)
 	`impulsatunq.com`,                   // REPORTED (*1)
 	`intelcore.online`,                  // REPORTED (*1)
-	`n.colmbianeq.website`,              // ALIVE
+	`n.colmbianeq.website`,              // ALIVE (*1)
 	`n3quionline.com`,                   // REPORTED (*1)
 	`neq.n3quionline.com`,               // REPORTED (*1)
 	`neqwtx.com`,                        // CATCHED
@@ -59,8 +59,9 @@ var mirrors = []string{
 	`prepropulsandonq.com`,              // CATCHED - NO DNS REPLY (*1)
 	`prepropulneq.com`,                  // NO DNS REPLY (*1)
 	`prepropulnq.com`,                   // CATCHED (*1)
-	`prestainmediatamente.com/prestamo`, // ALIVE
+	`prestainmediatamente.com/prestamo`, // ALIVE (*1)
 	`prestamo-nequi.website`,            // NO DNS REPLY (*1)
+	`prestandoando.com/prestamo`,        // ALIVE
 	`propulahorrosneq.com`,              // REPORTED (*1)
 	`propulcolombiano.com`,              // REPORTED (*1)
 	`propulideas.com`,                   // REPORTED (*1)
@@ -70,6 +71,7 @@ var mirrors = []string{
 	`rivaloscudo.website`,               // ALIVE
 	`siperpropcolombia.com`,             // REPORTED (*2)
 	`solicitadesdeya.com`,               // REPORTED (*1)
+	`todoparati.website`,                // ALIVE
 	`web.nqicolmbia.com`,                // REPORTED
 	`51.107.8.147`,                      // DNS CATCHED or DOWN? (*??)
 }

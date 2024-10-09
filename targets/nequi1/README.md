@@ -36,6 +36,7 @@ Phishing pages impersonating [Nequi](https://www.nequi.com.co) hosted in / point
 - `prepropulnq.com` (*1)
 - `prestainmediatamente.com/prestamo` (*1)
 - `prestamo-nequi.website` (*1)
+- `prestandoando.com/prestamo`
 - `propulahorrosneq.com` (*1)
 - `propulcolombiano.com` (*1)
 - `propulideas.com` (*1)
@@ -79,6 +80,7 @@ siperpropcolombia.com.  1800    IN      A       157.173.209.216
 nqprepropulso.com.      1800    IN      A       157.173.209.251
 nqipr0pulsor.com.       14400   IN      A       162.241.2.171
 propulahorrosneq.com.   14400   IN      A       162.241.2.171
+todoparati.website.     14400   IN      A       162.241.2.171
 prepropulneq.com.       6631    IN      A       162.241.2.172
 rivaloscudo.website.    14400   IN      A       162.241.60.20
 prestainmediatamente.com. 14400 IN      A       162.241.60.183
@@ -95,6 +97,7 @@ neq.n3quionline.com.    14400   IN      A       162.241.61.78
 perfectoparti.com.      14400   IN      A       162.241.61.79
 credialinstante.com.    14400   IN      A       162.241.61.138
 impulsatunq.com.        14400   IN      A       162.241.61.138
+prestandoando.com.      14400   IN      A       162.241.61.138
 co.nqicolmbia.com.      14400   IN      A       162.241.61.244
 nqicolmbia.com.         14400   IN      A       162.241.61.244
 parati-nqui.com.        3625    IN      A       162.241.61.244
