@@ -16,6 +16,14 @@ func init() {
 	gofakeit.Seed(time.Now().UnixNano()) // or gofakeit.Seed(0)
 }
 
+func pruebaDefer() (equis common.CustErr) {
+	defer func() {
+		equis.Explain = "entré despues de la muerte"
+	}()
+	equis.Explain = "entré una vez"
+	return
+}
+
 func Cmd(args ...string) (err error) {
 
 	// P1: Create
@@ -67,5 +75,9 @@ func Cmd(args ...string) (err error) {
 		}
 		return qty > 0
 	})
+
+	valPrueba := pruebaDefer().Explain
+	fmt.Println("pruebaDefer().Explain:", valPrueba)
+
 	return nil
 }
