@@ -25,6 +25,10 @@ func pruebaDefer() (equis common.CustErr) {
 }
 
 func Cmd(args ...string) (err error) {
+	fmt.Println("Input args:")
+	for k, v := range args {
+		fmt.Printf("[%d]:%s\n", k, v)
+	}
 
 	// P1: Create
 	p := gofakeit.Person()

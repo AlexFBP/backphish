@@ -32,6 +32,7 @@ var mirrors = []string{
 	`aplicaparahoy.com`,                 // CATCHED (*1)
 	`aplicaya-neq.com`,                  // NO DNS REPLY (*1)
 	`co.nqicolmbia.com`,                 // REPORTED (*1)
+	`colmbia.nq-col.website`,            // (*1)
 	`colmbianeq.website`,                // REPORTED
 	`credialinstante.com/prestamo`,      // CATCHED (*1)
 	`finanzasaturitmo.com`,              // NO DNS REPLY (*1)
@@ -61,17 +62,18 @@ var mirrors = []string{
 	`prepropulnq.com`,                   // CATCHED (*1)
 	`prestainmediatamente.com/prestamo`, // ALIVE (*1)
 	`prestamo-nequi.website`,            // NO DNS REPLY (*1)
-	`prestandoando.com/prestamo`,        // ALIVE
+	`prestandoando.com/prestamo`,        // ALIVE (*1)
 	`propulahorrosneq.com`,              // REPORTED (*1)
 	`propulcolombiano.com`,              // REPORTED (*1)
 	`propulideas.com`,                   // REPORTED (*1)
 	`propulsandoneqpro.com`,             // REPORTED (*1)
 	`propulsor-pre.website`,             // NO DNS REPLY (*1)
 	`propulsoraprobados.website`,        // NO DNS REPLY (*1)
-	`rivaloscudo.website`,               // ALIVE
+	`rivaloscudo.website`,               // ALIVE (*1)
 	`siperpropcolombia.com`,             // REPORTED (*2)
 	`solicitadesdeya.com`,               // REPORTED (*1)
 	`todoparati.website`,                // ALIVE
+	`tucredialinstante.com/propulsor`,   // ALIVE (*1)
 	`web.nqicolmbia.com`,                // REPORTED
 	`51.107.8.147`,                      // DNS CATCHED or DOWN? (*??)
 }

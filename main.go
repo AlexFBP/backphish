@@ -38,10 +38,10 @@ func main() {
 			{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd}, // DOWN
 		},
 		nequi1.GetAllCmds(),
-		nequi2.GetAllCmds(),
+		nequi2.GetAllCmds(), // DOWN
 		nequi3.GetAllCmds(),
 		[]menu.CommandOption{
-			{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd},
+			{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd}, // DOWN
 			{Command: "nq5", Description: "attack fake nequi5", Function: nequi5.Cmd},
 			{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd}, // DOWN? (Domain still alive)
 			// Playground - Please keep this one at the end

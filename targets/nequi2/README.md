@@ -18,5 +18,6 @@ The following domains used to have the same scam structure:
 - `activatupropulsor.store`
 - `pree-populsorwebside.online`
 - `pree-propulsoraprobado.website`
+- `preaprobado.site`
 - `propulsores-aprobados.website`
 - `propulsorpreaprobado.website`
