@@ -34,14 +34,15 @@ var mirrors = []string{
 	`col.davivnda.com`,                  // ALIVE? (*2)
 	`davivenda.website`,                 // ALIVE
 	`davivendacol.website`,              // ALIVE
-	`davivnda.com`,                      // REPORTED
+	`davivnda.com`,                      // REPORTED (*1)
 	`dvviendacol.site`,                  // ALIVE
 	`inf.davivnda.com`,                  // REPORTED (*1)
-	`inf.dvviendacol.site`,              // ALIVE
+	`inf.dvviendacol.site`,              // ALIVE (*1)
+	`informacion.davivendacol.website`,  // ALIVE
 	`pre-aprobado.davivendacol.website`, // ALIVE
 	`tucrdtodavivienda.com`,             // (*2)
 	`val.davivnda.com`,                  // ALIVE (*1)
-	`web.davivendacol.website`,          // ALIVE
+	`web.davivendacol.website`,          // ALIVE (*1)
 }
 
 func attempt(base string) {
