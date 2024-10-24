@@ -4,9 +4,16 @@ import (
 	"strconv"
 
 	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "nq4", Description: "attack fake nequi4", Function: Cmd, // DOWN
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

@@ -6,9 +6,16 @@ import (
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "bc1", Description: "attack fake bancolombia 1", Function: Cmd, // Half down? still spamable?
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

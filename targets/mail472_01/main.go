@@ -4,9 +4,16 @@ import (
 	"fmt"
 
 	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "472-1", Description: "attack fake 4-72 1", Function: Cmd, // DOWN
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

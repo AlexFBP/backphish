@@ -1,8 +1,16 @@
 package nequi5
 
 import (
+	"github.com/turret-io/go-menu/menu"
+
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "nq5", Description: "attack fake nequi5", Function: Cmd,
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

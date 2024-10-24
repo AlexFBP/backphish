@@ -15,6 +15,7 @@ func init() {
 		Mirrors:     mirrors,
 		Handler:     attempt,
 	}
+	common.MainMenu.AddMany(GetAllCmds())
 }
 
 func GetAllCmds() []menu.CommandOption {

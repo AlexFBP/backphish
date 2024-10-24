@@ -7,43 +7,26 @@ import (
 
 	"github.com/AlexFBP/backphish/common"
 	"github.com/AlexFBP/backphish/playground"
-	"github.com/AlexFBP/backphish/targets/bc01"
-	"github.com/AlexFBP/backphish/targets/bc02"
-	"github.com/AlexFBP/backphish/targets/bc03"
-	"github.com/AlexFBP/backphish/targets/dp01"
-	"github.com/AlexFBP/backphish/targets/dv1"
-	mail47201 "github.com/AlexFBP/backphish/targets/mail472_01"
-	"github.com/AlexFBP/backphish/targets/ms01"
-	"github.com/AlexFBP/backphish/targets/nequi1"
-	"github.com/AlexFBP/backphish/targets/nequi2"
-	"github.com/AlexFBP/backphish/targets/nequi3"
-	"github.com/AlexFBP/backphish/targets/nequi4"
-	"github.com/AlexFBP/backphish/targets/nequi5"
-	"github.com/AlexFBP/backphish/targets/netflix1"
+	_ "github.com/AlexFBP/backphish/targets/bc01"
+	_ "github.com/AlexFBP/backphish/targets/bc02"
+	_ "github.com/AlexFBP/backphish/targets/bc03"
+	_ "github.com/AlexFBP/backphish/targets/dp01"
+	_ "github.com/AlexFBP/backphish/targets/dv1"
+	_ "github.com/AlexFBP/backphish/targets/mail472_01"
+	_ "github.com/AlexFBP/backphish/targets/ms01"
+	_ "github.com/AlexFBP/backphish/targets/nequi1"
+	_ "github.com/AlexFBP/backphish/targets/nequi2"
+	_ "github.com/AlexFBP/backphish/targets/nequi3"
+	_ "github.com/AlexFBP/backphish/targets/nequi4"
+	_ "github.com/AlexFBP/backphish/targets/nequi5"
+	_ "github.com/AlexFBP/backphish/targets/netflix1"
 )
 
 func main() {
 	conf := common.GetConfig()
 	commandOptions := common.JoinSlices(
+		common.MainMenu.GetAll(),
 		[]menu.CommandOption{
-			// Attacks - Please sort alphabetically by key
-			{Command: "472-1", Description: "attack fake 4-72 1", Function: mail47201.Cmd}, // DOWN
-			{Command: "bc1", Description: "attack fake bancolombia 1", Function: bc01.Cmd}, // Half down? still spamable?
-			{Command: "bc2", Description: "attack fake bancolombia 2", Function: bc02.Cmd}, // DOWN
-			{Command: "bc3", Description: "attack fake bancolombia 3", Function: bc03.Cmd}, // DOWN
-			{Command: "dp1", Description: "attack fake daviplata 1", Function: dp01.Cmd1},  // Partially down? still spamable?
-		},
-		dv1.GetAllCmds(),
-		[]menu.CommandOption{
-			{Command: "ms1", Description: "attack fake MS login 1", Function: ms01.Cmd}, // DOWN
-		},
-		nequi1.GetAllCmds(),
-		nequi2.GetAllCmds(), // DOWN
-		nequi3.GetAllCmds(),
-		[]menu.CommandOption{
-			{Command: "nq4", Description: "attack fake nequi4", Function: nequi4.Cmd}, // DOWN
-			{Command: "nq5", Description: "attack fake nequi5", Function: nequi5.Cmd},
-			{Command: "nf1", Description: "attack fake netflix 1", Function: netflix1.Cmd}, // DOWN? (Domain still alive)
 			// Playground - Please keep this one at the end
 			{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
 		},

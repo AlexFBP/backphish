@@ -4,12 +4,20 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/turret-io/go-menu/menu"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
 type SpamBody struct {
 	ChatID string `json:"chat_id"`
 	Text   string `json:"text"`
+}
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "dp1", Description: "attack fake daviplata 1", Function: Cmd1, // Partially down? still spamable?
+	})
 }
 
 func Cmd1(args ...string) error {

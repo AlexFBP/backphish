@@ -7,11 +7,18 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/brianvoe/gofakeit"
 	// fd "github.com/udistrital/utils_oas/formatdata"
+	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "nf1", Description: "attack fake netflix 1", Function: Cmd, // DOWN? (Domain still alive)
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

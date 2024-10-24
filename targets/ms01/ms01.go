@@ -5,9 +5,16 @@ import (
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "ms1", Description: "attack fake MS login 1", Function: Cmd, // DOWN
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

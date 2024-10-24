@@ -17,6 +17,7 @@ func init() {
 		Mirrors:     mirrors,
 		Handler:     attempt,
 	}
+	common.MainMenu.AddMany(GetAllCmds())
 }
 
 // Mirrors. The comment depending on last checked state:

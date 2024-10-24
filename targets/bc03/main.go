@@ -5,9 +5,16 @@ import (
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
 	"github.com/brianvoe/gofakeit"
+	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "bc3", Description: "attack fake bancolombia 3", Function: Cmd, // DOWN
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)

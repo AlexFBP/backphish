@@ -1,8 +1,16 @@
 package bc02
 
 import (
+	"github.com/turret-io/go-menu/menu"
+
 	"github.com/AlexFBP/backphish/common"
 )
+
+func init() {
+	common.MainMenu.Add(menu.CommandOption{
+		Command: "bc2", Description: "attack fake bancolombia 2", Function: Cmd, // DOWN
+	})
+}
 
 func Cmd(args ...string) error {
 	return common.AttackRunner(attempt)
