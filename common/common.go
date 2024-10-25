@@ -3,6 +3,7 @@ package common
 import (
 	"fmt"
 	"log"
+	"math"
 	"math/rand" // "crypto/rand"
 	"net/url"
 	"os"
@@ -114,4 +115,8 @@ func JoinSlices[T any](slices ...[]T) []T {
 		opts = append(opts, slice...)
 	}
 	return opts
+}
+
+func Digits(n int) int {
+	return int(math.Log10(float64(n))) + 1
 }

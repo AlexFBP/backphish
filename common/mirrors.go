@@ -14,9 +14,10 @@ type Target struct {
 }
 
 func (t *Target) GetAllCmds() (opts []menu.CommandOption) {
+	digits := Digits(len(t.Mirrors))
 	for k, v := range t.Mirrors {
 		opts = append(opts, menu.CommandOption{
-			Command:     fmt.Sprintf("%s-%d", t.Prefix, k+1),
+			Command:     fmt.Sprintf("%s-%0*d", t.Prefix, digits, k+1),
 			Description: fmt.Sprintf("%s, mirror %d (%s)", t.Description, k+1, v),
 			Function:    t.getCmd(k),
 		})

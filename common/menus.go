@@ -1,6 +1,9 @@
 package common
 
 import (
+	"slices"
+	"strings"
+
 	"github.com/turret-io/go-menu/menu"
 )
 
@@ -32,7 +35,10 @@ func (mm *MenuManager_t) Created(name string) bool {
 }
 
 func (mm *MenuManager_t) GetAll() []menu.CommandOption {
-	// TODO: Sort before returning
+	cmp := func(a, b menu.CommandOption) int {
+		return strings.Compare(strings.ToLower(a.Command), strings.ToLower(b.Command))
+	}
+	slices.SortFunc(mm.menu, cmp)
 	return mm.menu
 }
 
