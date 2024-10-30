@@ -3,7 +3,9 @@
 Will only be listed here DNS A records, sorted by IP:
 
 ```
+impulsayatuidea.com.    14400   IN      A       162.241.203.121
 salvavidatepresta.online. 1800  IN      A       157.173.214.113
+tumejornq.com.          14400   IN      A       108.167.149.241
 ```
 
 It is required to use DevTools with Android/iPhone emulation, otherwise it won't allow the button to continue and/or will redirect to another page.

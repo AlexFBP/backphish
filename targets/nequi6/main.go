@@ -6,20 +6,31 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "nq6", Description: "attack fake nequi6", Function: cmd,
-	})
+	target = &common.Target{
+		Prefix:      "nq6",
+		Description: "attack fake nequi6",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(GetAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func GetAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
+var mirrors = []string{
+	`impulsayatuidea.com`,      // ALIVE
+	`salvavidatepresta.online`, // ALIVE
+	`tumejornq.com`,            // ALIVE
+}
+
+func attempt(base string) {
 	h := common.ReqHandler{}
-	// h.UseJar(true)
-	const base = "salvavidatepresta.online"
+	h.UseJar(true)
 	commonHeaders := []common.SimpleTerm{
 		{K: "Host", V: base},
 		{K: "Accept", V: "*/*"},
@@ -42,5 +53,11 @@ func attempt() {
 		{K: "banco", V: "Nequi"},
 	}, common.JoinSlices(commonHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/inicio.php?p"},
+	}), nil)
+
+	h.SendPostEncoded("https://"+base+"/process2/pasoOTP.php", []common.SimpleTerm{
+		{K: "otp", V: common.GeneraPin(6)},
+	}, common.JoinSlices(commonHeaders, []common.SimpleTerm{
+		{K: "Referer", V: "https://" + base + "/otp.php?p"},
 	}), nil)
 }
