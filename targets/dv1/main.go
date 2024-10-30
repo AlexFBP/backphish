@@ -34,6 +34,7 @@ var mirrors = []string{
 	`col.davivendacol.website`,          // ALIVE (*1)
 	`col.davivnda.com`,                  // ALIVE? (*2)
 	`davivenda.website`,                 // ALIVE
+	`davivendacol.online`,               // ALIVE
 	`davivendacol.website`,              // ALIVE
 	`davivnda.com`,                      // REPORTED (*1)
 	`dvviendacol.site`,                  // ALIVE

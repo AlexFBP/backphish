@@ -1,4 +1,4 @@
-# Phishing sites impersonating Nequi (alternative 3)
+# Phishing sites impersonating Nequi (alternative 5)
 
 Will only be listed here DNS A records, sorted by IP:
 
