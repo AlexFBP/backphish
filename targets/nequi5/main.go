@@ -6,21 +6,34 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "nq5", Description: "attack fake nequi5", Function: Cmd,
-	})
+	target = &common.Target{
+		Prefix:      "nq5",
+		Description: "attack fake nequi5",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(GetAllCmds())
 }
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func GetAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
+// Mirrors. The comment depending on last checked state:
+//   - (*1): "no such host" - Down
+//   - (*2): Timeout?
+var mirrors = []string{
+	"neqprepropul.online",      // ALIVE
+	"obtentupropulsivo.online", // ALIVE (*2)
+}
+
+func attempt(base string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
-	const base = "obtentupropulsivo.online"
 	commonHeaders := []common.SimpleTerm{
 		// {K: "Host", V: base},
 		{K: "Accept", V: "*/*"},

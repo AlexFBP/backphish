@@ -25,9 +25,9 @@ func GetAllCmds() []menu.CommandOption {
 // (*1): "no such host" - Down
 var mirrors = []string{
 	"activatupropulsor.store",       // (*1)
-	"aprobados-neq.site",            // ALIVE
+	"aprobados-neq.site",            // ALIVE (*1)
 	"propulsores-aprobados.website", // (*1)
-	"prpulsorpreeaprobado.website",  // ALIVE
+	"prpulsorpreeaprobado.website",  // ALIVE (*1)
 }
 
 func attempt(base string) {

@@ -28,21 +28,22 @@ func GetAllCmds() []menu.CommandOption {
 // Mirrors. The comment depending on last checked state:
 //   - (*1): "no such host" - Down
 //   - (*2): TLS error? internal error? Down?
+//   - (*3): "no such host" - Down, but domain still alive...
 var mirrors = []string{
-	`cl.davivendacol.website`,           // ALIVE
-	`co.davivnda.com`,                   // ALIVE (*2)
-	`col.davivendacol.website`,          // ALIVE (*1)
+	`cl.davivendacol.website`,           // ALIVE (*3)
+	`co.davivnda.com`,                   // ALIVE (*1)
+	`col.davivendacol.website`,          // ALIVE (*3)
 	`col.davivnda.com`,                  // ALIVE? (*2)
-	`davivenda.website`,                 // ALIVE
+	`davivenda.website`,                 // ALIVE (*3)
 	`davivendacol.online`,               // ALIVE
 	`davivendacol.website`,              // ALIVE
 	`davivnda.com`,                      // REPORTED (*1)
 	`dvviendacol.site`,                  // ALIVE
 	`inf.davivnda.com`,                  // REPORTED (*1)
 	`inf.dvviendacol.site`,              // ALIVE (*1)
-	`informacion.davivendacol.website`,  // ALIVE
-	`pre-aprobado.davivendacol.website`, // ALIVE
-	`tucrdtodavivienda.com`,             // (*2)
+	`informacion.davivendacol.website`,  // ALIVE (*3)
+	`pre-aprobado.davivendacol.website`, // ALIVE (*3)
+	`tucrdtodavivienda.com`,             // (*3)
 	`val.davivnda.com`,                  // ALIVE (*1)
 	`web.davivendacol.website`,          // ALIVE (*1)
 }
