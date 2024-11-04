@@ -117,6 +117,15 @@ func JoinSlices[T any](slices ...[]T) []T {
 	return opts
 }
 
+func FindPos[T string](needle T, haystack []T) int {
+	for k, v := range haystack {
+		if v == needle {
+			return k
+		}
+	}
+	return -1
+}
+
 func Digits(n int) int {
 	return int(math.Log10(float64(n))) + 1
 }

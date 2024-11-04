@@ -9,11 +9,6 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
-type SpamBody struct {
-	ChatID string `json:"chat_id"`
-	Text   string `json:"text"`
-}
-
 func init() {
 	common.MainMenu.Add(menu.CommandOption{
 		Command: "dp1", Description: "attack fake daviplata 1", Function: Cmd1, // Partially down? still spamable?
@@ -43,7 +38,7 @@ func attempt() {
 	randIp := common.GeneraIP()
 	location := "Bogotá, CO"
 
-	h.SendJSON(posturl, SpamBody{
+	h.SendJSON(posturl, common.TgMsg{
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 TipoDoc: %s
@@ -65,7 +60,7 @@ IP: %s
 
 	common.RandDelayRange(30*time.Second, 60*time.Second)
 
-	h.SendJSON(posturl, SpamBody{
+	h.SendJSON(posturl, common.TgMsg{
 		ChatID: chat_id,
 		Text: fmt.Sprintf(`DATOS DAVPLAT
 Cod1: %s
