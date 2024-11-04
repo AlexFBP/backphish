@@ -1,6 +1,8 @@
 package common
 
 import (
+	"strings"
+
 	"github.com/brianvoe/gofakeit"
 )
 
@@ -123,7 +125,7 @@ func GeneraApellidosCol() string {
 	return PickRand(colombiaLastNames)
 }
 
-func GeneraNombresApellidosPersonaCol() (nombres, apellidos string) {
+func GeneraNombresApellidosPersonaCol(noAccents bool) (nombres, apellidos string) {
 	if gofakeit.Bool() {
 		// Male
 		nombres = GeneraNombresHombreCol()
@@ -132,23 +134,47 @@ func GeneraNombresApellidosPersonaCol() (nombres, apellidos string) {
 		nombres = GeneraNombresMujerCol()
 	}
 	apellidos = GeneraApellidosCol()
+
+	if noAccents || gofakeit.Bool() {
+		RemoveAccents(&nombres)
+		RemoveAccents(&apellidos)
+	}
 	return
 }
 
-func GeneraNombresApellidosPersonaCombinadosCol() string {
+func GeneraNombresApellidosPersonaCombinadosCol(noAccents bool) (s string) {
 	if gofakeit.Bool() {
 		// Male
 		if gofakeit.Bool() {
-			return GeneraNombresHombreCol() + " " + GeneraApellidosCol()
+			s = GeneraNombresHombreCol() + " " + GeneraApellidosCol()
 		} else {
-			return PickRand(colombiaFullNamesMale)
+			s = PickRand(colombiaFullNamesMale)
 		}
 	} else {
 		// Female
 		if gofakeit.Bool() {
-			return GeneraNombresMujerCol() + " " + GeneraApellidosCol()
+			s = GeneraNombresMujerCol() + " " + GeneraApellidosCol()
 		} else {
-			return PickRand(colombiaFullNamesFemale)
+			s = PickRand(colombiaFullNamesFemale)
 		}
+	}
+
+	if noAccents || gofakeit.Bool() {
+		RemoveAccents(&s)
+	}
+	return
+}
+
+func RemoveAccents(s *string) {
+	replacements := map[string]string{
+		"á": "a",
+		"é": "e",
+		"í": "i",
+		"ó": "o",
+		"ú": "u",
+		"ñ": PickRand([]string{"n", "nh"}),
+	}
+	for replace, with := range replacements {
+		*s = strings.ReplaceAll(*s, replace, with)
 	}
 }
