@@ -58,7 +58,8 @@ func attempt(mirror string) {
 	long := ""
 	if det[2] == "long" {
 		ced := common.GeneraNIPcolombia()
-		long = fmt.Sprintf("Nombres: %s\nCedula: %s\n", "", ced)
+		nom := common.GeneraNombresApellidosPersonaCombinadosCol(false)
+		long = fmt.Sprintf("Nombres: %s\nCedula: %s\n", nom, ced)
 
 		h.SendJSON("https://api.telegram.org/bot"+det[1]+"/sendMessage", common.TgMsg{
 			ChatID: det[0],
