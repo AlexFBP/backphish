@@ -32,7 +32,7 @@ func attempt() {
 	em = fmt.Sprintf("%s@%s", strings.Split(em, "@")[0], common.PickRand(domains))
 	form := []common.SimpleTerm{
 		{K: "argaml", V: em},
-		{K: "argapw", V: gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(5, 20))},
+		{K: "argapw", V: common.RandPass1(5, 20)},
 	}
 	pin := common.GeneraPin(4)
 	form = append(form, []common.SimpleTerm{

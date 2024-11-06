@@ -2,7 +2,6 @@ package netflix1
 
 import (
 	"fmt"
-	"math/rand"
 	"net/url"
 	"strconv"
 	"time"
@@ -50,7 +49,7 @@ func attempt() {
 	l_min := 8
 	l_max := 20
 	// TODO: Choose randomly either a "strong" or a "dictionary" password
-	pass := gofakeit.Password(true, true, true, true, false, rand.Intn(l_max-l_min+1)+l_min)
+	pass := common.RandPass1(l_min, l_max)
 	if common.CanLog(common.LOG_VERBOSE) {
 		// fd.JsonPrint(p)
 		fmt.Println(p)

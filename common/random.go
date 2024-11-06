@@ -211,6 +211,10 @@ func RandUserAgent() string {
 	return PickRand(UAs)
 }
 
+func RandPass1(min, max int) string {
+	return gofakeit.Password(gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Bool(), gofakeit.Number(min, max))
+}
+
 // Picks a random element of a slice
 func PickRand[T any](options []T) T {
 	return options[rand.Intn(len(options))]

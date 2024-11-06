@@ -10,6 +10,7 @@ import (
 	_ "github.com/AlexFBP/backphish/targets/bc01"
 	_ "github.com/AlexFBP/backphish/targets/bc02"
 	_ "github.com/AlexFBP/backphish/targets/bc03"
+	_ "github.com/AlexFBP/backphish/targets/bdv1"
 	_ "github.com/AlexFBP/backphish/targets/dp01"
 	_ "github.com/AlexFBP/backphish/targets/dv1"
 	_ "github.com/AlexFBP/backphish/targets/mail472_01"
