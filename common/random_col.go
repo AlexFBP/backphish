@@ -1,6 +1,7 @@
 package common
 
 import (
+	"math/rand"
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
@@ -177,4 +178,52 @@ func RemoveAccents(s *string) {
 	for replace, with := range replacements {
 		*s = strings.ReplaceAll(*s, replace, with)
 	}
+}
+
+func GeneraCiudadDeptoColombia() (string, string) {
+	cities := []struct {
+		size float64
+		cap  string
+		dep  string
+	}{ // FROM https://es.wikipedia.org/wiki/Anexo:Departamentos_de_Colombia_por_poblaci%C3%B3n
+		{size: 8.02 + 3.50, cap: "Bogotá", dep: "Cundinamarca"},
+		{size: 6.95, cap: "Medellin", dep: "Antioquia"},
+		{size: 4.71, cap: "Cali", dep: "Valle del Cauca"},
+		{size: 2.85, cap: "Barranquilla", dep: "Atlántico"},
+		{size: 2.39, cap: "Bucaramanga", dep: "Santander"},
+		{size: 2.29, cap: "Cartagena de Indias", dep: "Bolivar"},
+		{size: 1.93, cap: "Montería", dep: "Córdoba"},
+		{size: 1.72, cap: "San Juan de Pasto", dep: "Nariño"},
+		{size: 1.72, cap: "Cúcuta", dep: "Norte de Santander"},
+		{size: 1.58, cap: "Popayán", dep: "Cauca"},
+		{size: 1.52, cap: "Santa Marta", dep: "Magdalena"},
+		{size: 1.39, cap: "Ibague", dep: "Tolima"},
+		{size: 1.37, cap: "Valledupar", dep: "Cesar"},
+		{size: 1.32, cap: "Santiago de Tunja", dep: "Boyacá"},
+		{size: 1.20, cap: "Neiva", dep: "Huila"},
+		{size: 1.14, cap: "Villavicencio", dep: "Meta"},
+		{size: 1.06, cap: "Manizales", dep: "Caldas"},
+		{size: 1.06, cap: "Riohacha", dep: "La Guajira"},
+		{size: 1.01, cap: "Sincelejo", dep: "Sucre"},
+		{size: 0.986, cap: "Pereira", dep: "Risaralda"},
+		{size: 0.604, cap: "Quibdó", dep: "Chocó"},
+	}
+
+	sum := 0.0
+	for _, v := range cities {
+		sum += v.size
+	}
+	selected := rand.Float64() * sum
+
+	sum = 0.0
+	selected_pos := 0
+	for k, v := range cities {
+		sum += v.size
+		if selected <= sum {
+			selected_pos = k
+			break
+		}
+	}
+
+	return cities[selected_pos].cap, cities[selected_pos].dep
 }
