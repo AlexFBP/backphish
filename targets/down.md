@@ -3,7 +3,13 @@
 Unless otherwise noted, the following targets were identified, but are currently down.
 
 - https://39bf8c27-119a-46fe-a023-cf8052cf0d76-00-3i85dhwcgdy5j.janeway.replit.dev/ - Down? (bancolombia a la mano)
+- https://507e0627-814f-47b1-a078-cd2895f9c1ed-00-1weg3cdj0xd24.riker.replit.dev/ - Apparently down
+- https://6365ff1b-f93f-490b-9d34-a2d91b7eaba9-00-2cfgh31txzz01.spock.replit.dev/
+- https://6cd75a9e-eb92-414b-9ee7-fddda1e7fe21-00-1vgczid0789kt.janeway.replit.dev/ - Apparently down
+- https://cca09bb7-f195-4a89-9418-c43b13e7a9db-00-21bqpgzw7ip55.riker.replit.dev/
 - https://dc5b98c0-ec6f-4ca9-8d31-b12ce0396354-00-2miau9f2nejda.spock.replit.dev/ - Down? (bancolombia a la mano)
+- https://dd60d5a0-da2e-4342-89e9-39efb26ca51e-00-10bl6ka3q7d9k.riker.replit.dev/ - Apparently down
+- https://f92663ac-e471-4911-973b-5d95183c2926-00-250s5lhzv97cq.spock.replit.dev/ - Apparently down
 - https://157lux.online/config/
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://aumentatulimitetdc.glitch.me/ - bdv
@@ -13,23 +19,34 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
 - https://inf.daviv1enda.online/libre.php - ???
+- https://jetssolucionalternas.site/prestamo-propulsor/
 - https://mejoratueconomia.online/?p&
+- https://n-propus.site/agil.html
+- https://nequicolombia.blob.core.windows.net/nequi1/ini.html - Apparently down
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
 - https://neqprepropul.online/?p
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
 - https://nq-col.website/
+- https://pre-aprobadoparatiii.website/agil.html
 - https://preaprobadopropulssor.website/agil.html - ???
+- https://preaprobdoparatii.website/agil.html
+- https://preaprobdoprati.website/agil.html
+- https://pree-aprobadooparaatii.website/agil.html?
 - https://prepropulsornequi.online/Activa.php
 - https://prepropulsornequsimulador.website/Activa.php - ???
 - https://prepropulsornew.online/?p&
 - https://propulnq.com/?p&
 - https://propulsor-prestamo.com/
 - https://propulsores-pre-aprobadoss.website/agil.html
+- https://propulsornequi.blob.core.windows.net/nequi15/ini.html - Apparently down
+- https://propulsornequi.blob.core.windows.net/nequi5/ini.html - Apparently down
 - https://propulsorpreta.online/?p& - ???
 - https://saludyprosperidadnq.com/ - login?
 - https://salvavida.shop/propulsor/ - down?
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
+- https://tepresta.online/nequi
 - https://tuplanneq.com/prestamo/index.html
+- https://tupropulsorhoy.shop/neq/
 - https://vuelosnacionales1.info/

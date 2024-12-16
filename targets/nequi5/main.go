@@ -26,8 +26,9 @@ func GetAllCmds() []menu.CommandOption {
 //   - (*1): "no such host" - Down
 //   - (*2): Timeout?
 var mirrors = []string{
-	"neqprepropul.online",      // ALIVE
-	"obtentupropulsivo.online", // ALIVE (*2)
+	"neqprepropul.online",         // ALIVE (*1)
+	"obtentupropulsivo.online",    // ALIVE (*2)
+	"propulsorempresasneq.online", // ALIVE
 }
 
 func attempt(base string) {

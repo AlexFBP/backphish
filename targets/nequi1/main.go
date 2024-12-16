@@ -51,7 +51,7 @@ var mirrors = []string{
 	`nqicolmbia.com/NEQUI`,              // REPORTED (*1)
 	`nqipr0pulsor.com`,                  // NO DNS REPLY (*1)
 	`nqprepropulso.com`,                 // CATCHED (*1)
-	`nqpropulsa.com`,                    // CATCHED
+	`nqpropulsa.com`,                    // CATCHED (*1)
 	`nqpropulsando.com`,                 // CATCHED (*1)
 	`nuevopropulsor.com`,                // REPORTED (*2)
 	`onlineparati.com`,                  // REPORTED (*1)
