@@ -12,6 +12,10 @@ import (
 var target *common.Target
 
 func init() {
+	if len(mirrors) != len(mirrorDetails) {
+		panic("inconsistent mirror settings")
+	}
+
 	target = &common.Target{
 		Prefix:      "nq7",
 		Description: "attack fake nequi7",
@@ -25,35 +29,53 @@ func GetAllCmds() []menu.CommandOption {
 	return target.GetAllCmds()
 }
 
+// Mirrors. The comment depending on last checked state:
+//   - (*1): Apparently Down by host provider
 var mirrors = []string{
-	`cops.blob.core.windows.net/nequitepresta`,            // ALIVE
-	`nequicop.blob.core.windows.net/listo`,                // ALIVE
-	`nequitepresta.blob.core.windows.net/nequisalvavidas`, // ALIVE
-	`propulsor.blob.core.windows.net/nequicop`,            // Reported
-	`propulsornequi.blob.core.windows.net/prestamonequi`,  // ALIVE
-	`propulsornequi.blob.core.windows.net/nequi10`,        // ALIVE
-	`tunequi.blob.core.windows.net/propulsor`,             // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas10`,     // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas11`,     // ALIVE
-	`nequisoluciones.blob.core.windows.net/prestamo2`,     // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas4`,      // ALIVE
-	`nequisoluciones.blob.core.windows.net/prestamo3`,     // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas8`,      // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas2`,      // ALIVE
-	`nequisolventa.blob.core.windows.net/nequipass3`,      // ALIVE
-	`beneficiosnequi.blob.core.windows.net/personas`,      // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas7`,      // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas6`,      // ALIVE
-	`nequisolventa.blob.core.windows.net/nequipass1`,      // ALIVE
-	`nequionline.blob.core.windows.net/prestamo`,          // ALIVE
-	`nequisolventa.blob.core.windows.net/nequipass`,       // ALIVE
-	`beneficiosnequi.blob.core.windows.net/person`,        // ALIVE
-	`nequisoluciones.blob.core.windows.net/nequi`,         // ALIVE
-	`prestamosnequi.blob.core.windows.net/personas9`,      // ALIVE
+	`cops.blob.core.windows.net/nequitepresta`,            // (*1??)
+	`nequicop.blob.core.windows.net/listo`,                // (*1??)
+	`nequitepresta.blob.core.windows.net/nequisalvavidas`, // (*1??)
+	`propulsor.blob.core.windows.net/nequicop`,            // Reported (*1??)
+	`propulsornequi.blob.core.windows.net/prestamonequi`,  // (*1??)
+	`propulsornequi.blob.core.windows.net/nequi10`,        // (*1??)
+	`tunequi.blob.core.windows.net/propulsor`,             // (*1??)
+	`prestamosnequi.blob.core.windows.net/personas10`,     // (*1)
+	`prestamosnequi.blob.core.windows.net/personas11`,     // (*1)
+	`nequisoluciones.blob.core.windows.net/prestamo2`,     // (*1)
+	`prestamosnequi.blob.core.windows.net/personas4`,      // (*1)
+	`nequisoluciones.blob.core.windows.net/prestamo3`,     // (*1)
+	`prestamosnequi.blob.core.windows.net/personas8`,      // (*1)
+	`prestamosnequi.blob.core.windows.net/personas2`,      // (*1)
+	`nequisolventa.blob.core.windows.net/nequipass3`,      // (*1)
+	`beneficiosnequi.blob.core.windows.net/personas`,      // (*1)
+	`prestamosnequi.blob.core.windows.net/personas7`,      // (*1)
+	`prestamosnequi.blob.core.windows.net/personas6`,      // (*1)
+	`nequisolventa.blob.core.windows.net/nequipass1`,      // (*1)
+	`nequionline.blob.core.windows.net/prestamo`,          // (*1)
+	`nequisolventa.blob.core.windows.net/nequipass`,       // (*1)
+	`beneficiosnequi.blob.core.windows.net/person`,        // (*1)
+	`nequisoluciones.blob.core.windows.net/nequi`,         // (*1)
+	`prestamosnequi.blob.core.windows.net/personas9`,      // (*1)
+	`nequisolucion.blob.core.windows.net/admins`,          // Reported
+	`nequi.blob.core.windows.net/propulsores`,             // Reported
+	`nequi.blob.core.windows.net/nequipropulsores`,        // Reported
+	`nequi.blob.core.windows.net/nequi`,                   // Reported
+	`nequiaplicacion.blob.core.windows.net/prestamo7`,     // Reported
+	`nequiaplicacion.blob.core.windows.net/prestamo8`,     // Reported
+	`equiponequi.blob.core.windows.net/cops`,              // Reported
+	`nequipropulsor.blob.core.windows.net/cops`,           // Reported
+	`nequipropulsores.blob.core.windows.net/nequi`,        // Reported
+	`nequipropulsores.blob.core.windows.net/nequis`,       // Reported
+	`nequi.blob.core.windows.net/actividades`,             // Reported
+	`nequisolucion.blob.core.windows.net/admin`,           // Reported
+	`nequipropulsores.blob.core.windows.net/colo`,         // Reported
+	`nequipropulsores.blob.core.windows.net/cops`,         // Reported
+	`nequisolucion.blob.core.windows.net/newapp`,          // Reported
+	`nequipropulsores.blob.core.windows.net/col`,          // Reported
 	// ``, // ALIVE
 }
 
-var mirrorDetails = [][3]string{
+var mirrorDetails = [][]string{
 	{"-1002484241220", "7709093911:AAHlo3XrnsIV6hKcAHhijHLFdSnnLVkXIsY", "short"},
 	{"-1002177027036", "7974637279:AAE9xaNbLyWeaXFViW7aav77EmUhFJr0r9s", "short"},
 	{"-1002282106001", "7200967568:AAFJtTq9WBZ2Ayu0IAQ0BaXjsEH1heXTW00", "long"},
@@ -78,6 +100,22 @@ var mirrorDetails = [][3]string{
 	{"-1002410326093", "7783373587:AAF0x_KnI8JXczJq_83kkIBU9zxx4Hck7do", "alt2"},
 	{"-1002001733552", "6837930538:AAGXkOZtNHOdY_t6NunPKL_Ch-YgwMnObTw", "alt2"},
 	{"-1002362805954", "7851607767:AAEuAHYLfRoxNi8WYn3d1ICzmbPFmL5UuGU", "alt2"},
+	{"-1002436596397", "7970385783:AAHXBPnt6RzDi0Hhf4W7XtlG1VZuuMMfVyw", "alt2"},
+	{"-1002313093398", "7353581823:AAEoXWONcGo4Afr7eXDn8cDQHwiXukNmbMo", "alt2"},
+	{"-1002152992408", "7287252560:AAGi6eBp509QR-PWMdPx3hkojoifzw6ddpU", "alt2"},
+	{"-1002314729656", "8053719754:AAHksyrsJsKpH9fA7CxFN1grD85sWyAIAjk", "alt2"},
+	{"-1002305342766", "8189972648:AAEbAXhsouCatLUDAA3q316If4eDExR6n6E", "alt2"},
+	{"-1002393796118", "7884031460:AAFDXx6nn8YQ8ZPAjcuH89qJNkLS-EcnJBQ", "alt2"},
+	{"-1002348169138", "6377789175:AAFvwG062q6raYYagisTTk3yV34ahzkzz_A", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002426206600", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002480614709", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002393280382", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002264456092", "7660727941:AAGtaApnHXMijI56fINjBx4n5uj_ykh6LJM", "alt2"},
+	{"-1002374516758", "8102808415:AAGyZ_bwz6ohRwyqqIDZIlkx9vLejHMY5Vw", "alt2"},
+	{"-1002475294234", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002427872991", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
+	{"-1002429872948", "7767432535:AAFCVM1Gy2fa1zl-1ehPVUoVsleNdjb5flg", "alt2"},
+	{"-1002365397330", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
 	// {"", "", ""},
 }
 
@@ -119,7 +157,6 @@ func attempt(mirror string) {
 	emoji1 := ""
 	loc := ""
 	if det[2] == "alt1" {
-		tfa = common.GeneraPin(6)
 		tfa = fmt.Sprintf("⭐️Dinamica1: %s\n", common.GeneraPin(6))
 		loc = fmt.Sprintf("🇨🇴Ubicación: %s", city)
 		emoji1 = "🤠"

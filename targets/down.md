@@ -16,6 +16,7 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://adelantosneq.online/credit/
 - https://bvflnanc.com/
 - credialinstante.com
+- https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
 - https://inf.daviv1enda.online/libre.php - ???
@@ -32,6 +33,7 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
 - https://pree-aprobadooparaatii.website/agil.html?
+- https://preparati.website/agil.html
 - https://prepropulsornequi.online/Activa.php
 - https://prepropulsornequsimulador.website/Activa.php - ???
 - https://prepropulsornew.online/?p&
@@ -41,6 +43,8 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://propulsornequi.blob.core.windows.net/nequi15/ini.html - Apparently down
 - https://propulsornequi.blob.core.windows.net/nequi5/ini.html - Apparently down
 - https://propulsorpreta.online/?p& - ???
+- https://prosperareee.website/index.html - Apparently down? - TBC!
+- https://prosperarr.website/agil.html - Apparently down
 - https://saludyprosperidadnq.com/ - login?
 - https://salvavida.shop/propulsor/ - down?
 - https://solicitudesvirtuales.online/lux/lux/
