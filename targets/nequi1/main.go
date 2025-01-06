@@ -37,13 +37,13 @@ var mirrors = []string{
 	`colmbianeq.website`,                // REPORTED (*1)
 	`credialinstante.com/prestamo`,      // CATCHED (*1)
 	`finanzasaturitmo.com`,              // NO DNS REPLY (*1)
-	`impuestoscol.com`,                  // DOWN BY PROVIDER (*??)
+	`impuestoscol.com`,                  // DOWN BY PROVIDER (*2)
 	`impulsatunq.com`,                   // REPORTED (*1)
 	`intelcore.online`,                  // REPORTED (*1)
 	`n.colmbianeq.website`,              // ALIVE (*1)
 	`n3quionline.com`,                   // REPORTED (*1)
 	`neq.n3quionline.com`,               // REPORTED (*1)
-	`neqwtx.com`,                        // CATCHED
+	`neqwtx.com`,                        // CATCHED (*1)
 	`newactivalo.com`,                   // CATCHED - NO DNS REPLY (*1)
 	`nq-col.website`,                    // REPORTED (*1)
 	`nq-colombiaonline.website`,         // NO DNS REPLY (*1)
@@ -76,7 +76,7 @@ var mirrors = []string{
 	`todoparati.website`,                // ALIVE (*1)
 	`tucredialinstante.com/propulsor`,   // ALIVE (*1)
 	`web.nqicolmbia.com`,                // REPORTED (*1)
-	`51.107.8.147`,                      // DNS CATCHED or DOWN? (*??)
+	`51.107.8.147`,                      // DOWN (*1)
 }
 
 func attempt(mirrorPath string) {

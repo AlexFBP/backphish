@@ -11,7 +11,7 @@ import (
 
 func init() {
 	common.MainMenu.Add(menu.CommandOption{
-		Command: "bdv1", Description: "attack fake banco de venezuela 1", Function: cmd, // ALIVE
+		Command: "bdv1", Description: "attack fake banco de venezuela 1", Function: cmd, // Apparently down
 	})
 }
 

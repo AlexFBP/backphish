@@ -25,10 +25,11 @@ func getAllCmds() []menu.CommandOption {
 // Mirrors. The comment depending on last checked state:
 //   - (*1): "no such host" - Down
 //   - (*2): Timeout?
+//   - (*3): "no such host" - Down, but domain still alive...
 var mirrors = []string{
-	"neqprepropul.online",         // ALIVE (*1)
-	"obtentupropulsivo.online",    // ALIVE (*2)
-	"propulsorempresasneq.online", // ALIVE
+	"neqprepropul.online",         // (*1)
+	"obtentupropulsivo.online",    // ALIVE (*3)
+	"propulsorempresasneq.online", // Down? (*3)
 }
 
 func attempt(base string) {
