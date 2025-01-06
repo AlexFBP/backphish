@@ -1,7 +1,18 @@
 package nequi7
 
+import (
+	"github.com/AlexFBP/backphish/common"
+)
+
 type mirrorData struct {
 	Chat, Tok, Type string
+}
+
+func (m *mirrorData) sendToTelegram(h *common.ReqHandler, msg string) {
+	h.SendJSON("https://api.telegram.org/bot"+m.Tok+"/sendMessage", common.TgMsg{
+		ChatID: m.Chat,
+		Text:   msg,
+	}, nil, nil)
 }
 
 func mirrData(name string) (d mirrorData) {
