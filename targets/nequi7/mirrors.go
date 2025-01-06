@@ -1,5 +1,19 @@
 package nequi7
 
+type mirrorData struct {
+	Chat, Tok, Type string
+}
+
+func mirrData(name string) (d mirrorData) {
+	for _, v := range mirrors {
+		if name == v[0] {
+			d.Chat, d.Tok, d.Type = v[1], v[2], v[3]
+			break
+		}
+	}
+	return
+}
+
 func getMirrorNames() (names []string) {
 	for _, v := range mirrors {
 		names = append(names, v[0])

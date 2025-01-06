@@ -11,15 +11,11 @@ import (
 
 var target *common.Target
 
-var workMirrors []string
-
 func init() {
-	workMirrors = getMirrorNames()
-
 	target = &common.Target{
 		Prefix:      "nq7",
 		Description: "attack fake nequi7",
-		Mirrors:     workMirrors,
+		Mirrors:     getMirrorNames(),
 		Handler:     attempt,
 	}
 	common.MainMenu.AddMany(getAllCmds())
@@ -32,7 +28,7 @@ func getAllCmds() []menu.CommandOption {
 func attempt(mirror string) {
 	h := common.ReqHandler{}
 
-	det := mirrors[common.FindPos(mirror, workMirrors)]
+	d := mirrData(mirror)
 	cel := common.GeneraCelColombia()
 	pin := common.GeneraPin(4)
 	ip := common.GeneraIP()
@@ -43,9 +39,9 @@ func attempt(mirror string) {
 	nom := common.GeneraNombresApellidosPersonaCombinadosCol(false)
 
 	long := ""
-	if det[3] == "long" || det[3] == "alt1" || det[3] == "alt2" {
+	if d.Type == "long" || d.Type == "alt1" || d.Type == "alt2" {
 		full := ""
-		if det[3] == "alt1" || det[3] == "alt2" {
+		if d.Type == "alt1" || d.Type == "alt2" {
 			long = fmt.Sprintf("🆔Nombres: %s\n🪪Cedula: %s\n", nom, ced)
 			full = fmt.Sprintf("👁Nequi Paso 1👁\n%s🌏IP: %s\n🏙Ciudad: %s\n🇨🇴País: %s",
 				long, ip, city, country)
@@ -55,8 +51,8 @@ func attempt(mirror string) {
 				long, ip, city, country)
 		}
 
-		h.SendJSON("https://api.telegram.org/bot"+det[2]+"/sendMessage", common.TgMsg{
-			ChatID: det[1],
+		h.SendJSON("https://api.telegram.org/bot"+d.Tok+"/sendMessage", common.TgMsg{
+			ChatID: d.Chat,
 			Text:   full,
 		}, nil, nil)
 
@@ -66,18 +62,18 @@ func attempt(mirror string) {
 	tfa := ""
 	emoji1 := ""
 	loc := ""
-	if det[3] == "alt1" {
+	if d.Type == "alt1" {
 		tfa = fmt.Sprintf("⭐️Dinamica1: %s\n", common.GeneraPin(6))
 		loc = fmt.Sprintf("🇨🇴Ubicación: %s", city)
 		emoji1 = "🤠"
-	} else if det[3] == "alt2" {
+	} else if d.Type == "alt2" {
 		emoji1 = "👤"
 		loc = fmt.Sprintf("🇨🇴Ciudad: %s, País: %s", city, country)
 	}
 
-	if det[3] == "alt1" || det[3] == "alt2" {
-		h.SendJSON("https://api.telegram.org/bot"+det[2]+"/sendMessage", common.TgMsg{
-			ChatID: det[1],
+	if d.Type == "alt1" || d.Type == "alt2" {
+		h.SendJSON("https://api.telegram.org/bot"+d.Tok+"/sendMessage", common.TgMsg{
+			ChatID: d.Chat,
 			Text: fmt.Sprintf(`%sNequi_Meta_Infinito%s
   🆔Nombres: %s
   🪪Cedula: %s
@@ -88,9 +84,9 @@ func attempt(mirror string) {
 				emoji1, emoji1, nom, ced, common.AddSeparator(cel, 0, " "), pin, tfa, ip, loc),
 		}, nil, nil)
 
-	} else if det[3] == "long" || det[3] == "short" {
-		h.SendJSON("https://api.telegram.org/bot"+det[2]+"/sendMessage", common.TgMsg{
-			ChatID: det[1],
+	} else if d.Type == "long" || d.Type == "short" {
+		h.SendJSON("https://api.telegram.org/bot"+d.Tok+"/sendMessage", common.TgMsg{
+			ChatID: d.Chat,
 			Text: fmt.Sprintf("Nequi_Meta_Infinito\n%sNúmero: %s\nClave: %s\nIP: %s\nCiudad: %s, País: %s",
 				long, common.AddSeparator(cel, 0, " "), pin, ip, city, country),
 		}, nil, nil)
