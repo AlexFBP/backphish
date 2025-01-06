@@ -11,11 +11,11 @@ import (
 
 func init() {
 	common.MainMenu.Add(menu.CommandOption{
-		Command: "472-1", Description: "attack fake 4-72 1", Function: Cmd, // DOWN
+		Command: "472-1", Description: "attack fake 4-72 1", Function: cmd, // DOWN
 	})
 }
 
-func Cmd(args ...string) error {
+func cmd(args ...string) error {
 	return common.AttackRunner(attempt)
 }
 

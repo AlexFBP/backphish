@@ -22,10 +22,10 @@ func init() {
 		Mirrors:     mirrors,
 		Handler:     attempt,
 	}
-	common.MainMenu.AddMany(GetAllCmds())
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func GetAllCmds() []menu.CommandOption {
+func getAllCmds() []menu.CommandOption {
 	return target.GetAllCmds()
 }
 

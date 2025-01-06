@@ -11,11 +11,11 @@ import (
 
 func init() {
 	common.MainMenu.Add(menu.CommandOption{
-		Command: "dp1", Description: "attack fake daviplata 1", Function: Cmd1, // Partially down? still spamable?
+		Command: "dp1", Description: "attack fake daviplata 1", Function: cmd, // Partially down? still spamable?
 	})
 }
 
-func Cmd1(args ...string) error {
+func cmd(args ...string) error {
 	return common.AttackRunner(attempt)
 }
 

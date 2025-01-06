@@ -8,11 +8,11 @@ import (
 
 func init() {
 	common.MainMenu.Add(menu.CommandOption{
-		Command: "bc2", Description: "attack fake bancolombia 2", Function: Cmd, // DOWN
+		Command: "bc2", Description: "attack fake bancolombia 2", Function: cmd, // DOWN
 	})
 }
 
-func Cmd(args ...string) error {
+func cmd(args ...string) error {
 	return common.AttackRunner(attempt)
 }
 

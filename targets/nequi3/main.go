@@ -17,7 +17,7 @@ func init() {
 		Mirrors:     mirrors,
 		Handler:     attempt,
 	}
-	common.MainMenu.AddMany(GetAllCmds())
+	common.MainMenu.AddMany(getAllCmds())
 }
 
 // Mirrors. The comment depending on last checked state:
@@ -33,7 +33,7 @@ var mirrors = []string{
 	`tucredirapido.com`,     // REPORTED (*1)
 }
 
-func GetAllCmds() []menu.CommandOption {
+func getAllCmds() []menu.CommandOption {
 	return target.GetAllCmds()
 }
 
