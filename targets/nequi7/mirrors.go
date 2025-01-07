@@ -115,6 +115,22 @@ var mirrors = [][]string{
 		"-1002429872948", "7767432535:AAFCVM1Gy2fa1zl-1ehPVUoVsleNdjb5flg", "alt2"},
 	{`nequipropulsores.blob.core.windows.net/col`, // Reported
 		"-1002365397330", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", "alt2"}, // "Encrypted"... sure hahaha
+	{`nequipropulsor.blob.core.windows.net/nequi`, // Reported
+		"-1002306266613", "6634297645:AAEKwmfXidaya-E-v7aJtfbpUotJ2VlCu4s", ""},
+	{`nequipropulsor.blob.core.windows.net/cop`, // Reported
+		"-1002398860222", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA", ""}, // "Encrypted"... sure hahaha
+	{`nequisolucion.blob.core.windows.net/app4`, // Reported
+		"-1002357449097", "7901233529:AAFUXg-7j3p_WayRZIUxbzhhR8gdYkOKizo", ""},
+	{`nequiaplicacion.blob.core.windows.net/promo`, // Reported
+		"-1002397456533", "7001646923:AAE7nNoBS-TpDEDX_Fbhdh0tOvLTjyMyFC0", ""}, // "Encrypted"... sure hahaha
+	{`nequisolucion.blob.core.windows.net/prestamonequi`, // Reported
+		"-1002389802747", "8149293119:AAGdu6a1GZSolzrpReEgoQFp6jnU0jn9Ep0", ""},
+	{`nequipropulsor.blob.core.windows.net/company`, // Reported
+		"-1002367929542", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA", ""}, // "Encrypted"... sure hahaha
+	{`nequiaplicacion.blob.core.windows.net/nequicolombia`, // Reported
+		"-1002293172819", "7229207986:AAH1_DUTvhUdJiEC0w9AJlQ8-yCqymt1oUU", ""}, // "Encrypted"... sure hahaha
+	{`nequipropulsores.blob.core.windows.net/nequiss`, // Reported
+		"-1002381013958", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs", ""}, // "Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", "", ""},
 }
