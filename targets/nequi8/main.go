@@ -10,8 +10,8 @@ var target *common.Target
 
 func init() {
 	target = &common.Target{
-		Prefix:      "nq7",
-		Description: "attack fake nequi7",
+		Prefix:      "nq8",
+		Description: "attack fake nequi8",
 		Mirrors:     getMirrorNames(),
 		Handler:     attempt,
 	}
@@ -25,17 +25,17 @@ func getAllCmds() []menu.CommandOption {
 func attempt(mirror string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
-	var d msg
+	d := newUser()
 
 	// ip data comes originally from https://ipapi.co/json/
 
 	m := mirrData(mirror)
 
-	// POST back1 (from step_1/step_1.html)
+	// (step 1) POST back1 (from step_1/step_1.html)
 	// {"documentNumber":"78215248","fullName":"Camilo Urrutia","userIP":"191.104.154.101","city":"Bogotá","country":"Colombia"}
-	m.send(&h, d, true)
+	m.send(&h, d.DataForStep(1, false), true)
 
-	// POST back2 (from step_1/step_1_loader --> step_1/neq.html)
+	// (step 2) POST back2 (from step_1/step_1_loader --> step_1/neq.html)
 	/*
 		{
 				documentNumber: cedula,
@@ -47,9 +47,9 @@ func attempt(mirror string) {
 				country: pais,
 		}
 	*/
-	m.send(&h, d, false)
+	m.send(&h, d.DataForStep(2, false), false)
 
-	// POST back2 (from otp)
+	// (step 3) POST back2 (from otp)
 	/*
 		{
 				documentNumber: cedula,
@@ -62,9 +62,9 @@ func attempt(mirror string) {
 				otpCode: otpCode
 		}
 	*/
-	m.send(&h, d, false)
+	m.send(&h, d.DataForStep(3, false), false)
 
-	// POST back2 (from loading --> dinamica)
+	// (step 4) POST back2 (from loading --> dinamica)
 	/*
 		{
 				documentNumber: cedula,
@@ -78,9 +78,9 @@ func attempt(mirror string) {
 				step: 'dinamica2' // mirr1 does NOT have this field
 		}
 	*/
-	m.send(&h, d, false)
+	m.send(&h, d.DataForStep(4, m.Opts != "no-step"), false)
 
-	// POST back2 (from load --> dinamica2)
+	// (step 5) POST back2 (from load --> dinamica2)
 	/*
 		{
 				documentNumber: cedula,
@@ -94,5 +94,5 @@ func attempt(mirror string) {
 				step: 'dinamica3' // mirr1 does NOT have this
 		}
 	*/
-	m.send(&h, d, false)
+	m.send(&h, d.DataForStep(5, m.Opts != "no-step"), false)
 }

