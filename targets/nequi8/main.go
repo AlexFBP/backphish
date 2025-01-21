@@ -1,6 +1,8 @@
 package nequi8
 
 import (
+	"time"
+
 	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
@@ -34,6 +36,7 @@ func attempt(mirror string) {
 	// (step 1) POST back1 (from step_1/step_1.html)
 	// {"documentNumber":"78215248","fullName":"Camilo Urrutia","userIP":"191.104.154.101","city":"Bogotá","country":"Colombia"}
 	m.send(&h, d.DataForStep(1, false), true)
+	common.RandDelayRange(10*time.Second, 30*time.Second)
 
 	// (step 2) POST back2 (from step_1/step_1_loader --> step_1/neq.html)
 	/*
@@ -48,6 +51,7 @@ func attempt(mirror string) {
 		}
 	*/
 	m.send(&h, d.DataForStep(2, false), false)
+	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 3) POST back2 (from otp)
 	/*
@@ -63,6 +67,7 @@ func attempt(mirror string) {
 		}
 	*/
 	m.send(&h, d.DataForStep(3, false), false)
+	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 4) POST back2 (from loading --> dinamica)
 	/*
@@ -79,6 +84,7 @@ func attempt(mirror string) {
 		}
 	*/
 	m.send(&h, d.DataForStep(4, m.Opts != "no-step"), false)
+	common.RandDelayRange(35*time.Second, 50*time.Second)
 
 	// (step 5) POST back2 (from load --> dinamica2)
 	/*
@@ -95,4 +101,5 @@ func attempt(mirror string) {
 		}
 	*/
 	m.send(&h, d.DataForStep(5, m.Opts != "no-step"), false)
+	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
