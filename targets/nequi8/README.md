@@ -1,0 +1,22 @@
+# Phishing sites impersonating Nequi (alternative 7)
+
+The entrypoint is in the form `https://MIRROR/prestamo.html`. Please refer [main.go](main.go) file, variable `mirrors`
+
+All mirrors seems to be just subdomains in MS Azure so it might be useless to get any whois information
+
+
+## Scam workflow
+
+The workflow seems to be going in the following order of *.html pages:
+
+```
+prestamo
+ini
+neq <-------+
+otp         |
+loading     |
+dinamica    |
+load        |
+dinamica2   |
+finish -----+
+```
