@@ -23,13 +23,16 @@ By domain/provider:
 
 Etc:
 - https://157lux.online/config/
+- https://2025tiquetesbaratos01.fly.dev/
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://activacionproductoss.shop/prestamo/
-- https://aumentatulimitetdc.glitch.me/ - bdv
 - https://adelantosneq.online/credit/
+- https://ahorroalamanoteayuda.tiiny.io/ bancolombia - Apparently down by provider
+- https://aumentatulimitetdc.glitch.me/ - bdv
 - https://bvflnanc.com/
 - credialinstante.com
 - https://col.inversion-personas.com/ - down?
+- https://coltrico.webcindario.com/simulate/index.php bancolombia - Apparently down by provider
 - https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
@@ -38,6 +41,8 @@ Etc:
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
 - https://latamavuelosprom.com/es-col
+- https://latampromocionaldto.com/comprar/ - Apparently down...
+- https://latampromoscol.com/Es/ - Apparently down...
 - https://mejoratueconomia.online/?p&
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
@@ -49,6 +54,7 @@ Etc:
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
 - https://pree-aprobadooparaatii.website/agil.html?
+- https://preepartii.website/agil.html
 - https://preparati.website/agil.html
 - https://prepropulsornequi.online/Activa.php
 - https://prepropulsornequsimulador.website/Activa.php
@@ -70,7 +76,10 @@ Etc:
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
 - https://tepresta.online/nequi
+- https://tiquetesbaratos-colombia.fly.dev/
 - https://tuplanneq.com/prestamo/index.html
 - https://tupropulsorhoy.shop/neq/
+- https://vivelaexperienciasmart.site/
+- https://vuelacondescuentoscolombia.online/
 - https://vuelosnacionales1.info/
 - https://zenithpro.pro/click.php - apparently down (domain alive)
