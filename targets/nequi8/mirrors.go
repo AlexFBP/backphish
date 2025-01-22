@@ -49,5 +49,6 @@ var mirrors = [][]string{
 	{"nequiapp.blob.core.windows.net/recurso", "verde-theta", "", ""},
 	{"nequiapp.blob.core.windows.net/personales", "aventura-kappa", "", ""},
 	{"nequiapp.blob.core.windows.net/inicio7", "como-eight", "", ""},
+	{"tuappnequi.blob.core.windows.net/salvavidas3", "sudao", "", ""},
 	// {"", "", "", ""},
 }

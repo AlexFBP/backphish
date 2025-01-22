@@ -38,6 +38,7 @@ Etc:
 - https://finanzasparaya.com/ - ???
 - https://inf.daviv1enda.online/libre.php - ???
 - https://jetssolucionalternas.site/prestamo-propulsor/
+- https://jetssmart.site/app/ - reported
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
 - https://latamavuelosprom.com/es-col
