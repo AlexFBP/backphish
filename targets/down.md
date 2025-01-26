@@ -37,19 +37,20 @@ Etc:
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
 - https://inf.daviv1enda.online/libre.php - ???
-- https://jetssolucionalternas.site/prestamo-propulsor/
 - https://jetssmart.site/app/ - reported
+- https://jetssolucionalternas.site/prestamo-propulsor/
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
 - https://latamavuelosprom.com/es-col
 - https://latampromocionaldto.com/comprar/ - Apparently down...
-- https://latampromoscol.com/Es/ - Apparently down...
 - https://mejoratueconomia.online/?p&
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
+- https://nequipropulsors.blob.core.windows.net/copnequi/ini.html
 - https://neqprepropul.online/?p
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
 - https://nq-col.website/
+- https://paratiipree.site/agil.html
 - https://pre-aprobadoparatiii.website/agil.html
 - https://preaprobadopropulssor.website/agil.html
 - https://preaprobdoparatii.website/agil.html
@@ -77,10 +78,12 @@ Etc:
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
 - https://tepresta.online/nequi
+- https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
 - https://tuplanneq.com/prestamo/index.html
 - https://tupropulsorhoy.shop/neq/
 - https://vivelaexperienciasmart.site/
 - https://vuelacondescuentoscolombia.online/
+- https://vuelosjetsmar.store/jet/
 - https://vuelosnacionales1.info/
 - https://zenithpro.pro/click.php - apparently down (domain alive)

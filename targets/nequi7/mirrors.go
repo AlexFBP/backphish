@@ -145,6 +145,12 @@ var mirrors = [][]string{
 		"-1002449941642", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
 	{`nequiapp.blob.core.windows.net/neq3`, // ALIVE
 		"-1002485074024", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps1`, // Reported
+		"-1002437725741", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps11`, // Reported
+		"-1002316491522", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps6`, // Reported
+		"-1002479593161", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", ""},
 }
