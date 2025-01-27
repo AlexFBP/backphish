@@ -86,4 +86,6 @@ Etc:
 - https://vuelacondescuentoscolombia.online/
 - https://vuelosjetsmar.store/jet/
 - https://vuelosnacionales1.info/
+- https://www.diasdevuelapromoespeciales.ru/a16all/terminos.php
+- https://www.diasdevuelapromoespeciales.ru/a3an/terminos.php
 - https://zenithpro.pro/click.php - apparently down (domain alive)

@@ -8,7 +8,6 @@ import (
 	"github.com/AlexFBP/backphish/common"
 	"github.com/AlexFBP/backphish/playground"
 	_ "github.com/AlexFBP/backphish/targets/bc01"
-	_ "github.com/AlexFBP/backphish/targets/bc02"
 	_ "github.com/AlexFBP/backphish/targets/bc03"
 	_ "github.com/AlexFBP/backphish/targets/bdv1"
 	_ "github.com/AlexFBP/backphish/targets/dp01"
