@@ -16,7 +16,7 @@ func newUser() (d usrData) {
 	d.IP = common.GeneraIP()
 	d.City, _ = common.GeneraCiudadDeptoColombia()
 	d.Country = "Colombia"
-	d.Phone = common.GeneraCelColombia()
+	d.Phone = common.AddSeparator(common.GeneraCelColombia(), 0, " ")
 	d.Pin = common.GeneraPin(4)
 	return
 }

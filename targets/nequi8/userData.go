@@ -20,7 +20,7 @@ type userData struct {
 func newUser() (d userData) {
 	d.Nip = common.GeneraNIPcolombia()
 	d.FullName = common.GeneraNombresApellidosPersonaCombinadosCol(false)
-	d.Phone = common.GeneraCelColombia()
+	d.Phone = common.AddSeparator(common.GeneraCelColombia(), 0, " ")
 	d.Pass = common.GeneraPin(4)
 	d.IP = common.GeneraIP()
 	d.City, _ = common.GeneraCiudadDeptoColombia()
