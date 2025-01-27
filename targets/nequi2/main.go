@@ -30,6 +30,7 @@ var mirrors = []string{
 	"prpulsorpreeaprobado.website",  // ALIVE (*1)
 	"prospereee.website",            // reported
 	"prospereeee.website",           // reported
+	"sacatuprepulsor.site",          // ALIVE
 }
 
 func attempt(base string) {
