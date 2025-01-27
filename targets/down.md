@@ -56,6 +56,7 @@ Etc:
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
 - https://pree-aprobadooparaatii.website/agil.html?
+- https://preepaarati.site/agil.html nequi - reported
 - https://preepartii.website/agil.html
 - https://preparati.website/agil.html
 - https://prepropulsornequi.online/Activa.php
@@ -77,6 +78,7 @@ Etc:
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
+- https://sucursaldinamicoadministrativaa.info/portal/index
 - https://tepresta.online/nequi
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
