@@ -41,15 +41,17 @@ func getMirrorNames() (names []string) {
 }
 
 var mirrors = [][]string{
-	{"tuappnequi.blob.core.windows.net/app1", "mijo-one", "pricles", ""},
-	{"tuappnequi.blob.core.windows.net/admin5", "server5-flame", "", "no-step"},
-	{"nequiapp.blob.core.windows.net/admin", "sooooooes", "", ""},
-	{"tuappnequi.blob.core.windows.net/app3", "pepsi-zeta-eight", "", ""},
-	{"nequiapp.blob.core.windows.net/inicio8", "bebesssa", "", ""},
-	{"nequiapp.blob.core.windows.net/recurso", "verde-theta", "", ""},
-	{"nequiapp.blob.core.windows.net/personales", "aventura-kappa", "", ""},
-	{"nequiapp.blob.core.windows.net/inicio7", "como-eight", "", ""},
-	{"tuappnequi.blob.core.windows.net/salvavidas3", "sudao", "", ""},   // reported
-	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""}, // reported
+	{"tuappnequi.blob.core.windows.net/app1", "mijo-one", "pricles", ""},        // reported
+	{"tuappnequi.blob.core.windows.net/admin5", "server5-flame", "", "no-step"}, // reported
+	{"nequiapp.blob.core.windows.net/admin", "sooooooes", "", ""},               // reported
+	{"tuappnequi.blob.core.windows.net/app3", "pepsi-zeta-eight", "", ""},       // reported
+	{"nequiapp.blob.core.windows.net/inicio8", "bebesssa", "", ""},              // reported
+	{"nequiapp.blob.core.windows.net/recurso", "verde-theta", "", ""},           // not found?
+	{"nequiapp.blob.core.windows.net/personales", "aventura-kappa", "", ""},     // reported
+	{"nequiapp.blob.core.windows.net/inicio7", "como-eight", "", ""},            // reported
+	{"tuappnequi.blob.core.windows.net/salvavidas3", "sudao", "", ""},           // reported
+	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""},         // reported
+	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},     // reported
+	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},          // reported
 	// {"", "", "", ""},
 }

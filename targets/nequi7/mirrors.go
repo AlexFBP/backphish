@@ -143,7 +143,7 @@ var mirrors = [][]string{
 		"-1002230908332", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
 	{`nequiapp.blob.core.windows.net/neq`, // Reported
 		"-1002449941642", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
-	{`nequiapp.blob.core.windows.net/neq3`, // ALIVE
+	{`nequiapp.blob.core.windows.net/neq3`, // Reported
 		"-1002485074024", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
 	{`tuappnequi.blob.core.windows.net/apps1`, // Reported
 		"-1002437725741", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
@@ -151,6 +151,16 @@ var mirrors = [][]string{
 		"-1002316491522", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
 	{`tuappnequi.blob.core.windows.net/apps6`, // Reported
 		"-1002479593161", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps8`, // Reported
+		"-1002291237067", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps2`, // Reported
+		"-1002322450297", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps12`, // Reported
+		"-1002420827524", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`tuappnequi.blob.core.windows.net/apps18`, // Reported
+		"-1002337338043", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
+	{`nequiprepropulsor.blob.core.windows.net/neq`, // Reported
+		"-1002455200156", "8020269665:AAGGCs-wc9L91g6w24_pUgvfxOrdYEPvv-c"}, // "Ultra Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", ""},
 }
