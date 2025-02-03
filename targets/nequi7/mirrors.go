@@ -83,81 +83,81 @@ var mirrors = [][]string{
 		"-1002001733552", "6837930538:AAGXkOZtNHOdY_t6NunPKL_Ch-YgwMnObTw"},
 	{`prestamosnequi.blob.core.windows.net/personas9`, // (*1)
 		"-1002362805954", "7851607767:AAEuAHYLfRoxNi8WYn3d1ICzmbPFmL5UuGU"},
-	{`nequisolucion.blob.core.windows.net/admins`, // Reported
+	{`nequisolucion.blob.core.windows.net/admins`, // (*1)
 		"-1002436596397", "7970385783:AAHXBPnt6RzDi0Hhf4W7XtlG1VZuuMMfVyw"},
-	{`nequi.blob.core.windows.net/propulsores`, // Reported
+	{`nequi.blob.core.windows.net/propulsores`, // (*1)
 		"-1002313093398", "7353581823:AAEoXWONcGo4Afr7eXDn8cDQHwiXukNmbMo"},
-	{`nequi.blob.core.windows.net/nequipropulsores`, // Reported
+	{`nequi.blob.core.windows.net/nequipropulsores`, // (*1)
 		"-1002152992408", "7287252560:AAGi6eBp509QR-PWMdPx3hkojoifzw6ddpU"},
-	{`nequi.blob.core.windows.net/nequi`, // Reported
+	{`nequi.blob.core.windows.net/nequi`, // (*1)
 		"-1002314729656", "8053719754:AAHksyrsJsKpH9fA7CxFN1grD85sWyAIAjk"},
-	{`nequiaplicacion.blob.core.windows.net/prestamo7`, // Reported
+	{`nequiaplicacion.blob.core.windows.net/prestamo7`, // (*1)
 		"-1002305342766", "8189972648:AAEbAXhsouCatLUDAA3q316If4eDExR6n6E"},
-	{`nequiaplicacion.blob.core.windows.net/prestamo8`, // Reported
+	{`nequiaplicacion.blob.core.windows.net/prestamo8`, // (*1)
 		"-1002393796118", "7884031460:AAFDXx6nn8YQ8ZPAjcuH89qJNkLS-EcnJBQ"},
-	{`equiponequi.blob.core.windows.net/cops`, // Reported
+	{`equiponequi.blob.core.windows.net/cops`, // (*1)
 		"-1002348169138", "6377789175:AAFvwG062q6raYYagisTTk3yV34ahzkzz_A"}, // "Encrypted"... sure hahaha
-	{`nequipropulsor.blob.core.windows.net/cops`, // Reported
+	{`nequipropulsor.blob.core.windows.net/cops`, // (*1)
 		"-1002426206600", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA"}, // "Encrypted"... sure hahaha
-	{`nequipropulsores.blob.core.windows.net/nequi`, // Reported
+	{`nequipropulsores.blob.core.windows.net/nequi`, // (*1)
 		"-1002480614709", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`nequipropulsores.blob.core.windows.net/nequis`, // Reported
+	{`nequipropulsores.blob.core.windows.net/nequis`, // (*1)
 		"-1002393280382", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`nequi.blob.core.windows.net/actividades`, // Reported
+	{`nequi.blob.core.windows.net/actividades`, // (*1)
 		"-1002264456092", "7660727941:AAGtaApnHXMijI56fINjBx4n5uj_ykh6LJM"},
-	{`nequisolucion.blob.core.windows.net/admin`, // Reported
+	{`nequisolucion.blob.core.windows.net/admin`, // (*1)
 		"-1002374516758", "8102808415:AAGyZ_bwz6ohRwyqqIDZIlkx9vLejHMY5Vw"},
-	{`nequipropulsores.blob.core.windows.net/colo`, // Reported
+	{`nequipropulsores.blob.core.windows.net/colo`, // (*1)
 		"-1002475294234", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`nequipropulsores.blob.core.windows.net/cops`, // Reported
+	{`nequipropulsores.blob.core.windows.net/cops`, // (*1)
 		"-1002427872991", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`nequisolucion.blob.core.windows.net/newapp`, // Reported
+	{`nequisolucion.blob.core.windows.net/newapp`, // (*1)
 		"-1002429872948", "7767432535:AAFCVM1Gy2fa1zl-1ehPVUoVsleNdjb5flg"},
-	{`nequipropulsores.blob.core.windows.net/col`, // Reported
+	{`nequipropulsores.blob.core.windows.net/col`, // (*1)
 		"-1002365397330", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`nequipropulsor.blob.core.windows.net/nequi`, // Reported
+	{`nequipropulsor.blob.core.windows.net/nequi`, // (*1)
 		"-1002306266613", "6634297645:AAEKwmfXidaya-E-v7aJtfbpUotJ2VlCu4s"},
-	{`nequipropulsor.blob.core.windows.net/cop`, // Reported
+	{`nequipropulsor.blob.core.windows.net/cop`, // (*1)
 		"-1002398860222", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA"}, // "Encrypted"... sure hahaha
-	{`nequisolucion.blob.core.windows.net/app4`, // Reported
+	{`nequisolucion.blob.core.windows.net/app4`, // (*1)
 		"-1002357449097", "7901233529:AAFUXg-7j3p_WayRZIUxbzhhR8gdYkOKizo"},
-	{`nequiaplicacion.blob.core.windows.net/promo`, // Reported
+	{`nequiaplicacion.blob.core.windows.net/promo`, // (*1)
 		"-1002397456533", "7001646923:AAE7nNoBS-TpDEDX_Fbhdh0tOvLTjyMyFC0"}, // "Encrypted"... sure hahaha
-	{`nequisolucion.blob.core.windows.net/prestamonequi`, // Reported
+	{`nequisolucion.blob.core.windows.net/prestamonequi`, // (*1)
 		"-1002389802747", "8149293119:AAGdu6a1GZSolzrpReEgoQFp6jnU0jn9Ep0"},
-	{`nequipropulsor.blob.core.windows.net/company`, // Reported
+	{`nequipropulsor.blob.core.windows.net/company`, // (*1)
 		"-1002367929542", "6656456134:AAGx7giD07Ier3ZqyVcVp8PQq8Q89e8qNZA"}, // "Encrypted"... sure hahaha
-	{`nequiaplicacion.blob.core.windows.net/nequicolombia`, // Reported
+	{`nequiaplicacion.blob.core.windows.net/nequicolombia`, // (*1)
 		"-1002293172819", "7229207986:AAH1_DUTvhUdJiEC0w9AJlQ8-yCqymt1oUU"}, // "Encrypted"... sure hahaha
-	{`nequipropulsores.blob.core.windows.net/nequiss`, // Reported
+	{`nequipropulsores.blob.core.windows.net/nequiss`, // (*1)
 		"-1002381013958", "7069977751:AAHd9fcmrgN4_GBORSQTsrXSAa1xv9U0nXs"}, // "Encrypted"... sure hahaha
-	{`equiponequi.blob.core.windows.net/nequis`, // Reported
+	{`equiponequi.blob.core.windows.net/nequis`, // (*1)
 		"-1002439624246", "7525007091:AAGRCYm-_lz0xhV4N_MGSKx3FfDmHGowwbc"}, // "Encrypted"... sure hahaha
-	{`nequiapp.blob.core.windows.net/salvavidas2`, // Reported
+	{`nequiapp.blob.core.windows.net/salvavidas2`, // (*1)
 		"-1002430384625", "7874725327:AAG32fTFa-89-zCClta2930n55LlYM1xWEA"}, // "Encrypted"... sure hahaha
-	{`nequipropulsors.blob.core.windows.net/nequiplus`, // Reported
+	{`nequipropulsors.blob.core.windows.net/nequiplus`, // (*1)
 		"-1002304685402", "8141847441:AAGCTjvs3qgEgikFa1laUTOX4eqR6Il1EhE"}, // "Encrypted"... sure hahaha
-	{`nequipropulsors.blob.core.windows.net/nequipres`, // Reported
+	{`nequipropulsors.blob.core.windows.net/nequipres`, // (*1)
 		"-1002434807569", "8141847441:AAGCTjvs3qgEgikFa1laUTOX4eqR6Il1EhE ini.html:255:13"}, // "Encrypted"... sure hahaha
-	{`nequiapp.blob.core.windows.net/neq5`, // Reported
+	{`nequiapp.blob.core.windows.net/neq5`, // (*1)
 		"-1002230908332", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
-	{`nequiapp.blob.core.windows.net/neq`, // Reported
+	{`nequiapp.blob.core.windows.net/neq`, // (*1)
 		"-1002449941642", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
-	{`nequiapp.blob.core.windows.net/neq3`, // Reported
+	{`nequiapp.blob.core.windows.net/neq3`, // (*1)
 		"-1002485074024", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps1`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps1`, // (*1)
 		"-1002437725741", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps11`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps11`, // (*1)
 		"-1002316491522", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps6`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps6`, // (*1)
 		"-1002479593161", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps8`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps8`, // (*1)
 		"-1002291237067", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps2`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps2`, // (*1)
 		"-1002322450297", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps12`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps12`, // (*1)
 		"-1002420827524", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`tuappnequi.blob.core.windows.net/apps18`, // Reported
+	{`tuappnequi.blob.core.windows.net/apps18`, // (*1)
 		"-1002337338043", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
 	{`nequiprepropulsor.blob.core.windows.net/neq`, // Reported
 		"-1002455200156", "8020269665:AAGGCs-wc9L91g6w24_pUgvfxOrdYEPvv-c"}, // "Ultra Encrypted"... sure hahaha

@@ -23,3 +23,5 @@ The following domains used to have the same scam structure:
 - `preaprobado.site`
 - `propulsores-aprobados.website`
 - `propulsorpreaprobado.website`
+- `prospereee.website`
+- `prospereeee.website`

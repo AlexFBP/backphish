@@ -6,6 +6,9 @@ By domain/provider:
 - https://nequicolombia.blob.core.windows.net/nequi1/ini.html - Apparently down
 - https://propulsornequi.blob.core.windows.net/nequi15/ini.html - Apparently down
 - https://propulsornequi.blob.core.windows.net/nequi5/ini.html - Apparently down
+- https://nequicolombia.blob.core.windows.net/col/ini.html - Apparently down
+- https://tuappnequi.blob.core.windows.net/neqprestamo/ini.html - Apparently down
+- https://nequico.blob.core.windows.net/plus7/ini.html - Apparently down
 - https://jetsmarrtco.site/co-es/
 - https://jetsmarrtco.site/fly/? - reported
 - https://jetsmarrtco.site/ES/ - reported
@@ -29,6 +32,7 @@ Etc:
 - https://adelantosneq.online/credit/
 - https://ahorroalamanoteayuda.tiiny.io/ bancolombia - Apparently down by provider
 - https://aumentatulimitetdc.glitch.me/ - bdv
+- https://asesoriaprpulsor.site/agil.html
 - https://bvflnanc.com/
 - credialinstante.com
 - https://col.inversion-personas.com/ - down?
@@ -37,8 +41,11 @@ Etc:
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
 - https://inf.daviv1enda.online/libre.php - ???
+- https://jetsmart.works/
+- https://jetsmart.digital/
 - https://jetssmart.site/app/ - reported
 - https://jetssolucionalternas.site/prestamo-propulsor/
+- https://latam-vuelosrutas.vercel.app/
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
 - https://latamavuelosprom.com/es-col
@@ -46,6 +53,7 @@ Etc:
 - https://mejoratueconomia.online/?p&
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
+- https://nequiisolucion-propulsor.in/app/
 - https://nequipropulsors.blob.core.windows.net/copnequi/ini.html
 - https://neqprepropul.online/?p
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
@@ -73,8 +81,10 @@ Etc:
 - https://prosperarass.website/agil.html
 - https://prosperarasss.website/agil.html
 - https://prosperarr.website/agil.html - Apparently down
+- https://prospereyaa.website/agil.html
 - https://saludyprosperidadnq.com/
 - https://salvavida.shop/propulsor/
+- http://solicitudcol.site/inicio.html
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
@@ -90,4 +100,6 @@ Etc:
 - https://vuelosnacionales1.info/
 - https://www.diasdevuelapromoespeciales.ru/a16all/terminos.php
 - https://www.diasdevuelapromoespeciales.ru/a3an/terminos.php
+- https://www.prestamopropulsorpersona.ru/sites/nq/manager/3
+- https://www.tufinanciamientoya.website/
 - https://zenithpro.pro/click.php - apparently down (domain alive)

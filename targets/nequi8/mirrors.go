@@ -40,18 +40,21 @@ func getMirrorNames() (names []string) {
 	return
 }
 
+// Mirrors. The comment depending on last checked state:
+//   - (*1): Apparently Down by host provider
 var mirrors = [][]string{
-	{"tuappnequi.blob.core.windows.net/app1", "mijo-one", "pricles", ""},        // reported
-	{"tuappnequi.blob.core.windows.net/admin5", "server5-flame", "", "no-step"}, // reported
-	{"nequiapp.blob.core.windows.net/admin", "sooooooes", "", ""},               // reported
-	{"tuappnequi.blob.core.windows.net/app3", "pepsi-zeta-eight", "", ""},       // reported
-	{"nequiapp.blob.core.windows.net/inicio8", "bebesssa", "", ""},              // reported
-	{"nequiapp.blob.core.windows.net/recurso", "verde-theta", "", ""},           // not found?
-	{"nequiapp.blob.core.windows.net/personales", "aventura-kappa", "", ""},     // reported
-	{"nequiapp.blob.core.windows.net/inicio7", "como-eight", "", ""},            // reported
-	{"tuappnequi.blob.core.windows.net/salvavidas3", "sudao", "", ""},           // reported
-	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""},         // reported
-	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},     // reported
-	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},          // reported
+	{"tuappnequi.blob.core.windows.net/app1", "mijo-one", "pricles", ""},          // (*1)
+	{"tuappnequi.blob.core.windows.net/admin5", "server5-flame", "", "no-step"},   // (*1)
+	{"nequiapp.blob.core.windows.net/admin", "sooooooes", "", ""},                 // (*1)
+	{"tuappnequi.blob.core.windows.net/app3", "pepsi-zeta-eight", "", ""},         // (*1)
+	{"nequiapp.blob.core.windows.net/inicio8", "bebesssa", "", ""},                // (*1)
+	{"nequiapp.blob.core.windows.net/recurso", "verde-theta", "", ""},             // (*1)
+	{"nequiapp.blob.core.windows.net/personales", "aventura-kappa", "", ""},       // (*1)
+	{"nequiapp.blob.core.windows.net/inicio7", "como-eight", "", ""},              // (*1)
+	{"tuappnequi.blob.core.windows.net/salvavidas3", "sudao", "", ""},             // (*1)
+	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""},           // (*1)
+	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},       // (*1)
+	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},            // (*1)
+	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""}, // reported
 	// {"", "", "", ""},
 }

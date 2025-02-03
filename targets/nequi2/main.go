@@ -23,14 +23,15 @@ func getAllCmds() []menu.CommandOption {
 }
 
 // (*1): "no such host" - Down
+// (*2): Apparently down (by provider)
 var mirrors = []string{
 	"activatupropulsor.store",       // (*1)
 	"aprobados-neq.site",            // ALIVE (*1)
 	"propulsores-aprobados.website", // (*1)
 	"prpulsorpreeaprobado.website",  // ALIVE (*1)
-	"prospereee.website",            // reported
-	"prospereeee.website",           // reported
-	"sacatuprepulsor.site",          // ALIVE
+	"prospereee.website",            // (*1)
+	"prospereeee.website",           // (*1)
+	"sacatuprepulsor.site",          // (*2)
 }
 
 func attempt(base string) {
