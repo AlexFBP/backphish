@@ -1,17 +1,21 @@
 package nequi8
 
 import (
+	"strings"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
 type mirrorData struct {
-	Back1, Back2, Opts string
+	Back1, Back2 string
+	Opts         []string
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
-			d.Back1, d.Opts = v[1], v[3]
+			d.Back1 = v[1]
+			d.Opts = strings.Split(v[3], ",")
 			if v[2] == "" {
 				d.Back2 = v[1]
 			} else {
@@ -21,6 +25,15 @@ func mirrData(name string) (d mirrorData) {
 		}
 	}
 	return
+}
+
+func (m *mirrorData) hasOption(opt string) bool {
+	for _, v := range m.Opts {
+		if strings.TrimSpace(v) == strings.TrimSpace(opt) {
+			return true
+		}
+	}
+	return false
 }
 
 func (m *mirrorData) send(h *common.ReqHandler, data userData, one bool) {
@@ -56,5 +69,6 @@ var mirrors = [][]string{
 	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},       // (*1)
 	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},            // (*1)
 	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""}, // reported
+	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},     // reported
 	// {"", "", "", ""},
 }

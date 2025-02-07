@@ -40,11 +40,15 @@ func (d *userData) DataForStep(step uint8, includeStep bool) (nd userData) {
 	if step >= 4 {
 		nd.DynCode = common.GeneraPin(6)
 	}
-	if includeStep && step >= 4 {
-		if step == 4 {
+	if includeStep {
+		switch step {
+		case 1:
+			nd.Step = "ini"
+		case 4:
 			nd.Step = "dinamica2"
-		} else {
+		case 5:
 			nd.Step = "dinamica3"
+		default:
 		}
 	}
 	return
