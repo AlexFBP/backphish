@@ -70,5 +70,8 @@ var mirrors = [][]string{
 	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},            // (*1)
 	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""}, // reported
 	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},     // reported
+	{"sucursalnequi.blob.core.windows.net/base002", "git7", "", "step1"},          // reported
+	{"sucursalnequi.blob.core.windows.net/base013", "git2-sigma", "", "step1"},    // reported
+	{"sucursalnequi.blob.core.windows.net/base026", "git20", "", "step1"},         // reported
 	// {"", "", "", ""},
 }

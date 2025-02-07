@@ -35,11 +35,14 @@ Etc:
 - https://asesoriaprpulsor.site/agil.html
 - https://bvflnanc.com/
 - credialinstante.com
+- https://credito-virtual.weebly.com/
 - https://col.inversion-personas.com/ - down?
 - https://coltrico.webcindario.com/simulate/index.php bancolombia - Apparently down by provider
 - https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://finanzasparaya.com/ - ???
+- https://formulario-solicitud-propulsor.website/agil.html
+- http://formulario-solicitud-propulsorr.website/agil.html
 - https://inf.daviv1enda.online/libre.php - ???
 - https://jetsmart.works/
 - https://jetsmart.digital/
@@ -59,6 +62,7 @@ Etc:
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
 - https://nq-col.website/
 - https://paratiipree.site/agil.html
+- https://personasvirtualsuc.com/co-es/credito
 - https://pre-aprobadoparatiii.website/agil.html
 - https://preaprobadopropulssor.website/agil.html
 - https://preaprobdoparatii.website/agil.html
@@ -89,6 +93,7 @@ Etc:
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
 - https://sucursaldinamicoadministrativaa.info/portal/index
+- http://sucursalvirtual09.space/
 - https://tepresta.online/nequi
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
