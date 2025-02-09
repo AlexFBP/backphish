@@ -39,8 +39,8 @@ Avianca:
 - https://61www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
 - https://63www.vivetuaventurasinlimitespromo.com/ avianca - reported
 - https://65www.vivetuaventurasinlimitespromo.com/terminos - reported
-- https://66www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE ??
-- https://67www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE?
+- https://66www.vivetuaventurasinlimitespromo.com/terminos - reported
+- https://67www.vivetuaventurasinlimitespromo.com/terminos - reported
 - https://68www.vivetuaventurasinlimitespromo.com/terminos - reported
 - https://70www.vivetuaventurasinlimitespromo.com/terminos - reported
 - https://72www.vivetuaventurasinlimitespromo.com/terminos - reported
@@ -63,12 +63,14 @@ Bancolombia:
 - https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
 - https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
 - https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
+- https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
 - https://finanzasahorroalamano.tiiny.io/ bancolombia - reported
 - https://multiservicsonlinepse.shop/libredestino/ - reported
 - https://solicitudbc.space/a/login.php - reported
+- https://virtualsuctransaccional.ru/MUA-VIRTUAL/credito - reported
 
 Latam:
 - https://latamnacionalespromos.com/ - CF catched!
@@ -81,6 +83,10 @@ Latam:
 - https://latam-falwin.vercel.app/ - reported
 - https://latamairlines.me/col-web - reported
 - https://latamairlinez.com/ - reported
+- https://latamavuelosprom.co/ES-COL/ - 403 forbidden?
+- https://latamavuelosprom.co/flying/ - reported
+- https://latamavuelosprom.co/Promos/ - reported
+- https://latamavuelosprom.co/web-col/ - 403 forbidden?
 - https://latamdescuento.vercel.app/ - reported
 - https://latampromocionalco.com/ - reported
 - https://latampromocionalco.com/informacion_accion - reported
@@ -91,14 +97,12 @@ Latam:
 - https://latampromoscol.com/web/ - reported - apparently down?
 - https://latampromoscol.com/oferta/ - reported
 - https://latampromovuelos.com/es-co/ - reported
-- https://latamavuelosprom.co/ES-COL/ - 403 forbidden?
-- https://latamavuelosprom.co/flying/ - reported
-- https://latamavuelosprom.co/Promos/ - reported
-- https://latamavuelosprom.co/web-col/ - 403 forbidden?
+- https://latamtravelcolombia.com/ - reported
 - https://viajerospromocionales.info/informacion/ - reported
 - https://vuelosbarats.com/index.php latam - reported
 
 Nequi:
+- https://activacionpropulsor.site/process/index.php - reported
 - https://nequiisolucion-propulsor.in/app/ - reported
 - https://nequisolucion-propulsor.in/app/ - reported
 - https://nequisolucion-propulsor-activa.in/app/ - reported

@@ -40,6 +40,7 @@ Etc:
 - https://coltrico.webcindario.com/simulate/index.php bancolombia - Apparently down by provider
 - https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
+- https://explora-hoy-colombia.shop/
 - https://finanzasparaya.com/ - ???
 - https://formulario-solicitud-propulsor.website/agil.html
 - http://formulario-solicitud-propulsorr.website/agil.html
