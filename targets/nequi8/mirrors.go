@@ -75,5 +75,6 @@ var mirrors = [][]string{
 	{"sucursalnequi.blob.core.windows.net/base026", "git20", "", "step1"},         // reported
 	{"prestamopropulsor.blob.core.windows.net/salvavidas", "git10", "", ""},       // reported
 	{"prestamopropulsor.blob.core.windows.net/propulsor1", "git15", "", "step1"},  // reported
+	{"prestamopropulsor.blob.core.windows.net/salvavidas5", "git12", "", ""},      // reported
 	// {"", "", "", ""},
 }

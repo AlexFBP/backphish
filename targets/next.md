@@ -97,6 +97,7 @@ Latam:
 - https://latampromoscol.com/web/ - reported - apparently down?
 - https://latampromoscol.com/oferta/ - reported
 - https://latampromovuelos.com/es-co/ - reported
+- https://latampromovuelos.com/web/ - reported
 - https://latamtravelcolombia.com/ - reported
 - https://viajerospromocionales.info/informacion/ - reported
 - https://vuelosbarats.com/index.php latam - reported
@@ -108,6 +109,7 @@ Nequi:
 - https://nequisolucion-propulsor-activa.in/app/ - reported
 - https://nequisolucion-propulsor-activar.in/app/ - reported
 - https://nequisolucion-propulsoronapp.in/app/ - reported
+- https://paratiyaa.site/agil.html - reported
 - https://personapropulsor.shop/colombia.php - reported
 - https://prepulsorperso.shop/colombia.php nequi - reported - alive?
 - https://prepulsorplata.online/personas.php nequi - reported
@@ -121,6 +123,7 @@ Nequi:
   https://sucursalnequi.blob.core.windows.net/base020/ini.html - reported
 
 JetSmart:
+- https://aereojetsco.shop/web3/ - reported
 - https://airviajajtmrs.site/ - reported
 - https://airline.hotsaleprimeplanet.space/ jetsmart - reported
 - https://jetsmartcol.hotsaleprimeplanet.space/ jetsmart - reported
