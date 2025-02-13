@@ -49,6 +49,7 @@ Etc:
 - https://jetsmart.digital/
 - https://jetssmart.site/app/ - reported
 - https://jetssolucionalternas.site/prestamo-propulsor/
+- https://jt.hotsaleairviaja.com/ - Login required? Alive or bypass?
 - https://latam-vuelosrutas.vercel.app/
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
@@ -93,6 +94,7 @@ Etc:
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
+- https://sucpersonasvirtual.com/web-co - 403 or bypassed?
 - https://sucursaldinamicoadministrativaa.info/portal/index
 - http://sucursalvirtual09.space/
 - https://tepresta.online/nequi

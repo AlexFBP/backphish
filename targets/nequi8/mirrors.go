@@ -55,6 +55,7 @@ func getMirrorNames() (names []string) {
 
 // Mirrors. The comment depending on last checked state:
 //   - (*1): Apparently Down by host provider
+//   - (*10): Backend changed!
 var mirrors = [][]string{
 	{"tuappnequi.blob.core.windows.net/app1", "mijo-one", "pricles", ""},          // (*1)
 	{"tuappnequi.blob.core.windows.net/admin5", "server5-flame", "", "no-step"},   // (*1)
@@ -68,13 +69,13 @@ var mirrors = [][]string{
 	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""},           // (*1)
 	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},       // (*1)
 	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},            // (*1)
-	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""}, // reported
-	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},     // reported
-	{"sucursalnequi.blob.core.windows.net/base002", "git7", "", "step1"},          // reported
-	{"sucursalnequi.blob.core.windows.net/base013", "git2-sigma", "", "step1"},    // reported
-	{"sucursalnequi.blob.core.windows.net/base026", "git20", "", "step1"},         // reported
-	{"prestamopropulsor.blob.core.windows.net/salvavidas", "git10", "", ""},       // reported
-	{"prestamopropulsor.blob.core.windows.net/propulsor1", "git15", "", "step1"},  // reported
-	{"prestamopropulsor.blob.core.windows.net/salvavidas5", "git12", "", ""},      // reported
+	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""}, // reported (*10 - nq7)
+	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},     // reported (*10)
+	{"sucursalnequi.blob.core.windows.net/base002", "git7", "", "step1"},          // reported (*10)
+	{"sucursalnequi.blob.core.windows.net/base013", "git2-sigma", "", "step1"},    // reported (*10)
+	{"sucursalnequi.blob.core.windows.net/base026", "git20", "", "step1"},         // reported (*1)
+	{"prestamopropulsor.blob.core.windows.net/salvavidas", "git10", "", ""},       // reported (*1)
+	{"prestamopropulsor.blob.core.windows.net/propulsor1", "git15", "", "step1"},  // reported (*1)
+	{"prestamopropulsor.blob.core.windows.net/salvavidas5", "git12", "", ""},      // reported (*1)
 	// {"", "", "", ""},
 }

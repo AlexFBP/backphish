@@ -159,14 +159,18 @@ var mirrors = [][]string{
 		"-1002420827524", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
 	{`tuappnequi.blob.core.windows.net/apps18`, // (*1)
 		"-1002337338043", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
-	{`nequiprepropulsor.blob.core.windows.net/neq`, // Reported
+	{`nequiprepropulsor.blob.core.windows.net/neq`, // (*1)
 		"-1002455200156", "8020269665:AAGGCs-wc9L91g6w24_pUgvfxOrdYEPvv-c"}, // "Ultra Encrypted"... sure hahaha
 	{`neq.blob.core.windows.net/nqui`, // Reported
 		"-4081527724", "6564238774:AAGE60CsOG6Yn4-kHFRVqzY2MUHag5Uda3A"}, // "Ultra Encrypted"... sure hahaha
-	{`neqcolmbia.blob.core.windows.net/neq`, // Reported
+	{`neqcolmbia.blob.core.windows.net/neq`, // (*1)
 		"-4698512807", "7538925344:AAFVcN0B0elQ_W3BEWEYIcrpX8laRxghEs4"}, // "Ultra Encrypted"... sure hahaha
-	{`neqcolmbia.blob.core.windows.net/neq1`, // Reported
+	{`neqcolmbia.blob.core.windows.net/neq1`, // (*1)
 		"-4668697183", "7118131600:AAG0-5w2v5ii7x_uPVLjokMCtJvBujqyKKA"}, // "Ultra Encrypted"... sure hahaha
+	{`neqcolmbia.blob.core.windows.net/colombia`, // ALIVE
+		"-4602927457", "7625581943:AAEcP4xg_kUtxp2_v0BcLKAatvj71qA133c"}, // "Ultra Encrypted"... sure hahaha
+	{`prestamopropulsor.blob.core.windows.net/salvavida`, // ALIVE
+		"-1002302069556", "7874725327:AAG32fTFa-89-zCClta2930n55LlYM1xWEA"}, // "Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", ""},
 }
