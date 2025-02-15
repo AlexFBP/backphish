@@ -27,7 +27,7 @@ var mirrors = []string{
 	`creatusahorros.com`,    // REPORTED (*1)
 	`impulsadorahorros.com`, // REPORTED (*1)
 	`neqpropulsaya.com`,     // CATCHED (*1)
-	`neqpronet.online`,      // ALIVE (*1)
+	`neqpronet.online`,      // (*1)
 	`prestadecision.com`,    // REPORTED (*1)
 	`propuladmin.com`,       // REPORTED (*1)
 	`tucredirapido.com`,     // REPORTED (*1)

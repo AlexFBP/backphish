@@ -26,9 +26,9 @@ func getAllCmds() []menu.CommandOption {
 // (*2): Apparently down (by provider)
 var mirrors = []string{
 	"activatupropulsor.store",       // (*1)
-	"aprobados-neq.site",            // ALIVE (*1)
+	"aprobados-neq.site",            // (*1)
 	"propulsores-aprobados.website", // (*1)
-	"prpulsorpreeaprobado.website",  // ALIVE (*1)
+	"prpulsorpreeaprobado.website",  // (*1)
 	"prospereee.website",            // (*1)
 	"prospereeee.website",           // (*1)
 	"sacatuprepulsor.site",          // (*2)

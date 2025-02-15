@@ -62,6 +62,7 @@ Avianca:
 Bancolombia:
 - https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
 - https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
+- https://creditoseguroalamano.tiiny.io/ - reported
 - https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
 - https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
@@ -81,24 +82,27 @@ Latam:
 - https://latam-vuelosrutas.vercel.app/ - reported
 - https://lat.latvuelosporcolombiahoy.co.uk/ latam - reported
 - https://latam-falwin.vercel.app/ - reported
+- https://latamvuelaconpromos.com/ES-CO/ - ~~403 forbidden?~~ - reported
 - https://latamairlines.me/col-web - reported
 - https://latamairlinez.com/ - reported
-- https://latamavuelosprom.co/ES-COL/ - 403 forbidden?
+- https://latamavuelosprom.co/ES-COL/ - ~~403 forbidden?~~ - reported
 - https://latamavuelosprom.co/flying/ - reported
 - https://latamavuelosprom.co/Promos/ - reported
-- https://latamavuelosprom.co/web-col/ - 403 forbidden?
+- https://latamavuelosprom.co/travel-web-nacionales/ - ~~403 forbidden?~~ - reported
+- https://latamavuelosprom.co/web-col/ - ~~403 forbidden?~~ - reported
 - https://latamdescuento.vercel.app/ - reported
 - https://latampromocionalco.com/ - reported
 - https://latampromocionalco.com/informacion_accion - reported
 - https://latampromocionesco.com/es-co/ - reported
 - https://latampromosco.com/es-co/ - reported
 - https://latampromosco.com/co-es/ - reported
-- https://latampromoscol.com/Es/ - 403 Forbidden?
+- https://latampromoscol.com/Es/ - ~~403 Forbidden?~~ - reported
 - https://latampromoscol.com/web/ - reported - apparently down?
 - https://latampromoscol.com/oferta/ - reported
 - https://latampromovuelos.com/es-co/ - reported
 - https://latampromovuelos.com/web/ - reported
 - https://latamtravelcolombia.com/ - reported
+- https://viajerospromocionales.info/consultar/ - ~~HTTP 403?? Alive or bypass?~~ - reported
 - https://viajerospromocionales.info/informacion/ - reported
 - https://vuelosbarats.com/index.php latam - reported
 
@@ -116,28 +120,6 @@ Nequi:
 - https://prepulsorplata.online/personas.php nequi - reported
 - https://sacatuprepulsor.site/personas.php nequi
 - https://tu-nequisolucion-propulsor.site/app/ - reported
-- Adds an additional step to nequi7, plus saves data in sheetbest.com (+telegram)
-  https://sucursalnequi.blob.core.windows.net/base016/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base017/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base018/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base019/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base020/ini.html - reported - down?
-- Adds an additional step to nequi7, plus sends data to (discord+telegram)
-  https://sucursalnequi.blob.core.windows.net/base001/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base002/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base003/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base004/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base005/ini.html - reported
-  https://sucursalnequi.blob.core.windows.net/base006/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base007/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base008/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base009/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base010/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base011/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base012/ini.html - ALIVE
-  https://sucursalnequi.blob.core.windows.net/base013/ini.html - reported
-  https://sucursalnequi.blob.core.windows.net/base014/ini.html - reported
-  https://sucursalnequi.blob.core.windows.net/base015/ini.html - ALIVE
 
 JetSmart:
 - https://aereojetsco.shop/web3/ - reported
@@ -189,19 +171,16 @@ TiquetesBaratos
 - https://tiquetesbaratos.co.com/ - reported
 - https://tiquetesbaratos.fly.dev/ - reported
 - https://tiquetesbaratos-promos.com/web/ - reported
-- https://tiquetesbaratos-promoweb.com/web/ - down?
+- https://tiquetesbaratos-promoweb.com/web/ - 403 or bypassed?
 - https://tiquetesbaratospromos.com/web - reported
 - https://tiquetesbaratoswebpromo.com/ - reported
 - https://tiqutesbarats.com/opciones/ - reported
 
 Etc
-- https://airviajajtmrs.xyz/ - HTTP 403 or bypassed?
 - https://bancabcr.webcindario.com/ banco costa rica - reported
 - https://bronze-thorn-box.glitch.me/ BdB
 - https://nuevaversion-popu-lar.online/ b.popular - reported
 - https://seagreen-hare-240258.hostingersite.com/inicio.html - Down?
-- https://tiquetesbaratos-promoweb.com/web/ - 403 or bypassed?
-- https://viajerospromocionales.info/consultar/ - HTTP 403?? Alive or bypass?
 - https://darkslategray-chicken-814283.hostingersite.com/libre.php davivienda - ALIVE
 
 ## Falsos positivos? / False positives?

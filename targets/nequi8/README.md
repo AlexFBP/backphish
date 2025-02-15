@@ -1,4 +1,4 @@
-# Phishing sites impersonating Nequi (alternative 7)
+# Phishing sites impersonating Nequi (alternative 8)
 
 The entrypoint is in the form `https://MIRROR/prestamo.html`. Please refer [mirrors.go](mirrors.go) file, variable `mirrors`
 

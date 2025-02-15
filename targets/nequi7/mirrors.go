@@ -167,10 +167,12 @@ var mirrors = [][]string{
 		"-4698512807", "7538925344:AAFVcN0B0elQ_W3BEWEYIcrpX8laRxghEs4"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolmbia.blob.core.windows.net/neq1`, // (*1)
 		"-4668697183", "7118131600:AAG0-5w2v5ii7x_uPVLjokMCtJvBujqyKKA"}, // "Ultra Encrypted"... sure hahaha
-	{`neqcolmbia.blob.core.windows.net/colombia`, // ALIVE
+	{`neqcolmbia.blob.core.windows.net/colombia`, // Reported
 		"-4602927457", "7625581943:AAEcP4xg_kUtxp2_v0BcLKAatvj71qA133c"}, // "Ultra Encrypted"... sure hahaha
-	{`prestamopropulsor.blob.core.windows.net/salvavida`, // ALIVE
+	{`prestamopropulsor.blob.core.windows.net/salvavida`, // (*1)
 		"-1002302069556", "7874725327:AAG32fTFa-89-zCClta2930n55LlYM1xWEA"}, // "Encrypted"... sure hahaha
+	{`nequcolmbia.blob.core.windows.net/adquierelo`, // Reported
+		"-4682972807", "8034307210:AAHvI_YoL2K60sUzTz7vhg-Nuk40gqAkork"}, // "Ultra Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", ""},
 }

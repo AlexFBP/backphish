@@ -31,6 +31,7 @@ Etc:
 - https://activacionproductoss.shop/prestamo/
 - https://adelantosneq.online/credit/
 - https://ahorroalamanoteayuda.tiiny.io/ bancolombia - Apparently down by provider
+- https://airviajajtmrs.xyz/
 - https://aumentatulimitetdc.glitch.me/ - bdv
 - https://asesoriaprpulsor.site/agil.html
 - https://bvflnanc.com/
@@ -94,8 +95,31 @@ Etc:
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
 - https://solictal0ahora.website/NEQUI/3d/propulsor/nequi/n.html
-- https://sucpersonasvirtual.com/web-co - 403 or bypassed?
+- https://sucpersonasvirtual.com/web-co - ~~403 or bypassed?~~
 - https://sucursaldinamicoadministrativaa.info/portal/index
+- https://sucursalnequi.blob.core.windows.net/base0001/ini.html
+- Adds an additional step to nequi7, plus saves data in sheetbest.com (+telegram)
+  https://sucursalnequi.blob.core.windows.net/base016/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base017/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base018/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base019/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base020/ini.html - reported - down?
+- Adds an additional step to nequi7, plus sends data to (discord+telegram)
+  https://sucursalnequi.blob.core.windows.net/base001/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base002/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base003/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base004/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base005/ini.html - reported
+  https://sucursalnequi.blob.core.windows.net/base006/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base007/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base008/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base009/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base010/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base011/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base012/ini.html - ~~ALIVE~~
+  https://sucursalnequi.blob.core.windows.net/base013/ini.html - reported
+  https://sucursalnequi.blob.core.windows.net/base014/ini.html - reported
+  https://sucursalnequi.blob.core.windows.net/base015/ini.html - ~~ALIVE~~
 - http://sucursalvirtual09.space/
 - https://tepresta.online/nequi
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
