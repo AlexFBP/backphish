@@ -23,29 +23,39 @@ By domain/provider:
 - https://dc5b98c0-ec6f-4ca9-8d31-b12ce0396354-00-2miau9f2nejda.spock.replit.dev/ - Down? (bancolombia a la mano)
 - https://dd60d5a0-da2e-4342-89e9-39efb26ca51e-00-10bl6ka3q7d9k.riker.replit.dev/ - Apparently down
 - https://f92663ac-e471-4911-973b-5d95183c2926-00-250s5lhzv97cq.spock.replit.dev/ - Apparently down
+  https://9ca9bbfe-7e8c-44f3-b9dc-9b81577eb79b-00-3qq958oxy8li1.picard.replit.dev/ - Apparently down
 
 Etc:
 - https://157lux.online/config/
 - https://2025tiquetesbaratos01.fly.dev/
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://activacionproductoss.shop/prestamo/
+- https://activarpropulsor.site/process/index.php
 - https://adelantosneq.online/credit/
+- https://aeroboletosenoferta.vercel.app/ofertas/ - Apparently down by provider
 - https://ahorroalamanoteayuda.tiiny.io/ bancolombia - Apparently down by provider
 - https://airviajajtmrs.xyz/
 - https://aumentatulimitetdc.glitch.me/ - bdv
+- https://aseoriaprepulsorenlinea.site/personas.php
+- https://asesoriaenlinea.online/personas.php
+- https://asesoriaensegundos.site/personas.php
 - https://asesoriaprpulsor.site/agil.html
 - https://bvflnanc.com/
 - credialinstante.com
 - https://credito-virtual.weebly.com/
+- https://creditosonlinesucursal.site/inicio.html
 - https://col.inversion-personas.com/ - down?
 - https://coltrico.webcindario.com/simulate/index.php bancolombia - Apparently down by provider
 - https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://explora-hoy-colombia.shop/
+- http://explora-en-colombia.shop/
 - https://finanzasparaya.com/ - ???
 - https://formulario-solicitud-propulsor.website/agil.html
 - http://formulario-solicitud-propulsorr.website/agil.html
+- https://iinformacionparati.site/agil.html
 - https://inf.daviv1enda.online/libre.php - ???
+- http://impulsando.shop/agil.html - reported
 - https://jetsmart.works/
 - https://jetsmart.digital/
 - https://jetssmart.site/app/ - reported
@@ -64,12 +74,14 @@ Etc:
 - https://neqprepropul.online/?p
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
 - https://nq-col.website/
+- https://obtenlooyaparati.site/agil.html
 - https://paratiipree.site/agil.html
 - https://personasvirtualsuc.com/co-es/credito
 - https://pre-aprobadoparatiii.website/agil.html
 - https://preaprobadopropulssor.website/agil.html
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
+- https://pre-solicituddd.website/agil.html
 - https://pree-aprobadooparaatii.website/agil.html?
 - https://preepaarati.site/agil.html nequi - reported
 - https://preepartii.website/agil.html
@@ -77,6 +89,9 @@ Etc:
 - https://prepropulsornequi.online/Activa.php
 - https://prepropulsornequsimulador.website/Activa.php
 - https://prepropulsornew.online/?p&
+- https://pro-impulsando-col.website/agil.html
+- http://pro-impulsando-colo.website/agil.html
+- https://pro-solicitud.website/agil.html?f
 - https://projetporcolombia.com/2col/
 - https://promobet.website/propulsor/ - catched!
 - https://promotiquetesbaratosweb.com/ - Apparently down (domain alive)
@@ -89,6 +104,7 @@ Etc:
 - https://prosperarasss.website/agil.html
 - https://prosperarr.website/agil.html - Apparently down
 - https://prospereyaa.website/agil.html
+- https://salejetsmartair.space/
 - https://saludyprosperidadnq.com/
 - https://salvavida.shop/propulsor/
 - http://solicitudcol.site/inicio.html
@@ -124,6 +140,7 @@ Etc:
 - https://tepresta.online/nequi
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
+- https://tucupo360bc.space/imagi
 - https://tuplanneq.com/prestamo/index.html
 - https://tupropulsorhoy.shop/neq/
 - https://vivelaexperienciasmart.site/

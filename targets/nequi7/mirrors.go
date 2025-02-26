@@ -173,6 +173,10 @@ var mirrors = [][]string{
 		"-1002302069556", "7874725327:AAG32fTFa-89-zCClta2930n55LlYM1xWEA"}, // "Encrypted"... sure hahaha
 	{`nequcolmbia.blob.core.windows.net/adquierelo`, // Reported
 		"-4682972807", "8034307210:AAHvI_YoL2K60sUzTz7vhg-Nuk40gqAkork"}, // "Ultra Encrypted"... sure hahaha
+	{`neqcolmbia.blob.core.windows.net/nqui`, // Reported
+		"-4784878857", "7711970244:AAFGt3jgMJuRx8bEMXj0PfCs2uDj8H88KvQ"}, // "Ultra Encrypted"... sure hahaha
+	{`neqcolmbia.blob.core.windows.net/colmbia`, // ALIVE
+		"-4600038441", "7954837062:AAFwHw8mBToEwIjICz_sVeSqXGOYC295Foo"}, // "Ultra Encrypted"... sure hahaha
 	// {``, // ALIVE
 	// 	"", ""},
 }
