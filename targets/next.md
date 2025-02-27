@@ -152,22 +152,6 @@ Nequi:
 - https://tu-nequisolucion-propulsor.site/app/ - reported
 - https://tucreditoensegundosnequi.in/app/ - reported
 - https://tusalvavidasaunclic.in/app/ - reported
-- Adds an additional step to nequi7, plus sends data to (discord+telegram)
-  https://sucursalvirtuall.blob.core.windows.net/nequi001/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi002/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi003/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi004/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi005/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi008/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi009/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi015/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi016/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi017/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi018/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi019/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi020/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi022/ini.html - reported
-  https://sucursalvirtuall.blob.core.windows.net/nequi026/ini.html - reported
 
 JetSmart:
 - https://aereojetsco.shop/web3/ - reported
