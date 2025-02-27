@@ -26,7 +26,7 @@ func newUser() (d userData) {
 	return
 }
 
-func (d *userData) DataForStep(step uint8, includeStep bool) (hd hookData) {
+func (d *userData) DataForStep(step uint8) (hd hookData) {
 	switch step {
 	case 1:
 		hd.User = "Consulta de Crédito"
