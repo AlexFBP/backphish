@@ -22,6 +22,7 @@ import (
 	_ "github.com/AlexFBP/backphish/targets/nequi6"
 	_ "github.com/AlexFBP/backphish/targets/nequi7"
 	_ "github.com/AlexFBP/backphish/targets/nequi8"
+	_ "github.com/AlexFBP/backphish/targets/nequi9"
 	_ "github.com/AlexFBP/backphish/targets/netflix1"
 )
 
