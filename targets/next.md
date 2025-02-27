@@ -89,6 +89,7 @@ Latam:
 - https://2www.diasespecialesuniprom360.com/terminos.php latam - reported
   https://4www.diasespecialesuniprom360.com/terminos.php - reported
   https://iwwww.diasespecialesuniprom360.com/terminos.php - reported
+  https://lwwww.diasespecialesuniprom360.com/terminos.php - reported
 - https://latamnacionalespromos.com/ - CF catched!
 - https://latampromocionaldto.com/ - reported
   https://latampromocionaldto.com/informacion_accion/ - reported

@@ -107,6 +107,7 @@ Etc:
 - https://salejetsmartair.space/
 - https://saludyprosperidadnq.com/
 - https://salvavida.shop/propulsor/
+- https://simuladorensegundos.site/personas.php
 - http://solicitudcol.site/inicio.html
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
@@ -147,6 +148,7 @@ Etc:
 - https://vuelacondescuentoscolombia.online/
 - https://vuelosjetsmar.store/jet/
 - https://vuelosnacionales1.info/
+- https://vuelosbaratosjet.space/
 - https://www.diasdevuelapromoespeciales.ru/a16all/terminos.php
 - https://www.diasdevuelapromoespeciales.ru/a3an/terminos.php
 - https://www.prestamopropulsorpersona.ru/sites/nq/manager/3
