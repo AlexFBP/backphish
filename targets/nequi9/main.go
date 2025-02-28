@@ -29,6 +29,10 @@ func attempt(mirror string) {
 	d := newUser()
 	m := mirrData(mirror)
 
+	if m.Tk != "" && m.Chat != "" {
+		m.sendToTelegram(&h, d.DataForStep(0).Content)
+		common.RandDelayRange(10*time.Second, 30*time.Second)
+	}
 	// (step 1) POST application/json webhook (from ini.html)
 	m.sendDiscord(&h, d.DataForStep(1))
 	common.RandDelayRange(10*time.Second, 30*time.Second)
