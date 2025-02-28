@@ -43,3 +43,42 @@ function bp-single() {
   aditional_args=$2
   ./backphish -l 0 -q 1 -n ${target} $(echo "$2")
 }
+
+function bp-retrieve() {
+  if [ "$#" -lt 2 ]; then
+    echo 'It is required at least the URL and a single pattern'
+    return 1
+  fi
+
+  target=""
+  count=0
+  for arg in "$@"; do
+    if [ -z "$target" ]; then
+      target=$arg
+      result=$(curl -s "$target")
+      # echo "$result"
+      last_status=$?
+      if [ $last_status -ne 0 ]; then
+        echo "Error while retrieving URL, code: ${last_status}"
+        return 2
+      fi
+    else
+      ((count++))
+      echo "pattern [${count}] - \"${arg}\" - results:"
+      echo "$result" | grep -oP "${arg}"
+    fi
+  done
+}
+
+function bp-retrieve-tokens() {
+  if [ -z $1 ]; then
+    echo 'Unspecified target'
+    return 1
+  fi
+
+  target="$1"
+  bp-retrieve "${target}" \
+    "'https://discord.com/api/webhooks/\K[0-9]+/[a-zA-Z0-9_-]+" \
+    "\"\K[0-9]+:[a-zA-Z0-9_-]+" \
+    "\"\K-[0-9]+" \
+}
