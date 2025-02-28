@@ -82,3 +82,16 @@ function bp-retrieve-tokens() {
     "\"\K[0-9]+:[a-zA-Z0-9_-]+" \
     "\"\K-[0-9]+" \
 }
+
+function bp-retrieve-tokens-nq9() {
+  if [ -z $1 ]; then
+    echo 'Unspecified base'
+    return 1
+  fi
+
+  base="$1"
+  pages=("ini" "otp" "dinamica" "dinamica2")
+  for page in "${pages[@]}"; do
+    bp-retrieve-tokens "${base}/${page}.html"
+  done
+}
