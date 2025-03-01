@@ -37,6 +37,7 @@ Etc:
 - https://airviajajtmrs.xyz/
 - https://aumentatulimitetdc.glitch.me/ - bdv
 - https://aseoriaprepulsorenlinea.site/personas.php
+- https://asesordigital.space/personas.php
 - https://asesoriaenlinea.online/personas.php
 - https://asesoriaensegundos.site/personas.php
 - https://asesoriaprpulsor.site/agil.html

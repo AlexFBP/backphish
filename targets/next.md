@@ -146,6 +146,7 @@ Nequi:
 - https://prestamosalinstanteneq.in/app/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
+- https://recibeensegundos.site/personas.php - reported
 - https://sacatuprepulsor.site/personas.php nequi - LIVE
 - https://salvavidasya.in/app/ - reported
 - https://simulatuprepulsor.online/libreinversion.php - reported
@@ -176,6 +177,7 @@ JetSmart:
 - https://jetsmart-col.com/ - CF catched!
 - https://jetsmart-eta.vercel.app/ - reported
   https://jetsmartravel.vercel.app/ - LIVE (Low profile)
+  https://tiquetesendescuentoonline.vercel.app/ofertas/ - reported
   https://vuelosjetsmart-sudamerica.vercel.app/ - reported
 - https://jetsmartcol.replit.app/ - reported
 - https://jetssmart.com/ - reported

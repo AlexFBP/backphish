@@ -69,15 +69,15 @@ var mirrors = [][]string{
 	{"tuappnequi.blob.core.windows.net/salvavidas4", "dosdias", "", ""},             // (*1)
 	{"nequiapp.blob.core.windows.net/inicio9", "calleperoelegante", "", ""},         // (*1)
 	{"nequico.blob.core.windows.net/prestamo", "owners-livid", "", ""},              // (*1)
-	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""},   // reported (*10 - nq7)
-	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},       // reported (*10)
-	{"sucursalnequi.blob.core.windows.net/base002", "git7", "", "step1"},            // reported (*10)
-	{"sucursalnequi.blob.core.windows.net/base013", "git2-sigma", "", "step1"},      // reported (*10)
+	{"prestamopropulsor.blob.core.windows.net/salvavida", "inlove-kappa", "", ""},   // reported (*1)
+	{"sucursalnequi.blob.core.windows.net/base003", "git3-sand", "", "step1"},       // reported (*1)
+	{"sucursalnequi.blob.core.windows.net/base002", "git7", "", "step1"},            // reported (*1)
+	{"sucursalnequi.blob.core.windows.net/base013", "git2-sigma", "", "step1"},      // reported (*1)
 	{"sucursalnequi.blob.core.windows.net/base026", "git20", "", "step1"},           // reported (*1)
 	{"prestamopropulsor.blob.core.windows.net/salvavidas", "git10", "", ""},         // reported (*1)
 	{"prestamopropulsor.blob.core.windows.net/propulsor1", "git15", "", "step1"},    // reported (*1)
 	{"prestamopropulsor.blob.core.windows.net/salvavidas5", "git12", "", ""},        // reported (*1)
-	{"sucursalvirtuall.blob.core.windows.net/admin1", "sabores-two", "", "step1"},   // reported
-	{"sucursalvirtuall.blob.core.windows.net/admin2", "purobolillllo", "", "step1"}, // reported
+	{"sucursalvirtuall.blob.core.windows.net/admin1", "sabores-two", "", "step1"},   // reported (*1)
+	{"sucursalvirtuall.blob.core.windows.net/admin2", "purobolillllo", "", "step1"}, // reported (*1)
 	// {"", "", "", ""},
 }
