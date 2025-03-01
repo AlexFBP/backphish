@@ -1,38 +1,6 @@
-# TODO
+# To Do
 
-## Load new targets
-
-**If you find a new target, please DO NOT OPEN a issue nor a pull request!**. Please report it (with, if any, mirrors you identified)
-[as a Security Vulnerability](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability) instead. This allows to not only track new phishing pages and their  specific measure, but also if you want to collaborate in source code, you can start a temporary private fork with it.
-
-Once identified a **"phishing/scam/fraud page"** (hereinafter **"target"**), no matter if it came in a SMS message, email, ads in any social network, etc.
-
-1. If in smartphone, please write down the URL of the target and/or copy it, so you can continue in a PC.
-   - As example, if you use Whatsapp web, you can "share" it to yourself to your private/personal "me" chat.
-   - Or save it in a OneNote with a list of any target you found.
-   - If the target appeared in a integrated browser, still the same: "share" it to your chat or another place that you can easily open on a PC.
-2. On your PC, please open a private session of your browser. Alternatively, you can use Tor browser if it makes you feel comfortable.
-3. Please DO NOT OPEN IT YET, first [report it to Google Safe Browsing](https://safebrowsing.google.com/safebrowsing/report_phish/) (if your browser does not have an option to report a fraud/phising site) - It will take some time for that report to be a big red full screen warning in browsers that integrates it, Firefox or Chrome as example.
-4. In your browser (private session or Tor), paste the URL and try to just open it and see if it loads normally.
-
-   Note: Some targets are focused on iPhone/Android/...smartphone users and/or viceversa, focused only to PC users. Due to that, please do not discard if when opening the target, you end forwarded to Google or another site way different to the scam page you saw.
-
-5. Open a new tab and then, open DevTools (If not sure how to do this, it all depends on your browser, so please "google" `how to open devtools in BROWSER` with the `BROWSER` you use instead)
-6. In the DevTools, go to "Network" tab. Things to check:
-   - If there is not a message like "Perform a request or reload", there is some traffic. Please clear it, typically with some icon at top-left (bin in Firefox, forbidden sign in Chrome)
-   - Please mark the checkbox "Disable Cache"
-   - Please mark the checkbox "Preserve Log" (On Firefox, you might need first to open "Settings icon" at top right)
-7. Paste again the URL and browse the target the most you can, "safely": When asked, use random but coherent names, addresses, PO codes (Suggestion: use nearest Police department contact data :v haha). As long as you browse the target, the Network traffic will be recorded in the Network tab.
-
-   Note: Similarly as on point 4, some targets detect when DevTools is open, inhibits its loading, or in case you had previously open it, the target attempts to redirect you to another page or rollback your history, so please do not discard those targets, is still possible to work with them.
-
-8. Once finished (target struck in "loading" or ended redirecting you to the real page or another page not directly related to the scam), save all that traffic as a HAR file. As example, something like
-   - Chrome: Icon "Export HAR..." (a tray with an arrow down)
-   - Firefox: Settings --> Save all as HAR
-
-The purpose is to get a HAR file in which it will be recorded all pertinent HTTP requests made to whatever backend they're using, replicating the same phishing schema but with random data, reduce the quantity of requests need to be made
-
-## Source Code Improvements
+**NOTE:** _If you found a new scam site and/or mirror, please read [CONTRIBUTE.md](CONTRIBUTE.md)_
 
 All pending improvements have a rating (Priority-Difficulty)
 
