@@ -16,7 +16,9 @@ func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
 			d.Webhook, d.Token, d.Chat = v[1], v[2], v[3]
-			d.Opts = strings.Split(v[4], ",")
+			if v[4] != "" {
+				d.Opts = strings.Split(v[4], ",")
+			}
 			break
 		}
 	}

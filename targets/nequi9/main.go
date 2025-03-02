@@ -26,6 +26,7 @@ func getAllCmds() []menu.CommandOption {
 
 func attempt(mirror string) {
 	h := common.ReqHandler{}
+	h.UseJar(true)
 	d := newUser()
 	m := mirrData(mirror)
 
