@@ -1,8 +1,9 @@
-package nequi9
+package common
 
-import (
-	"github.com/AlexFBP/backphish/common"
-)
+type hookData struct {
+	User    string `json:"username"`
+	Content string `json:"content"`
+}
 
 func (m *mirrorData) sendDiscord(h *common.ReqHandler, data hookData) {
 	h.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
