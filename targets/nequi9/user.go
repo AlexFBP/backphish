@@ -8,11 +8,6 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
-type hookData struct {
-	User    string `json:"username"`
-	Content string `json:"content"`
-}
-
 type userData struct {
 	Nip      string
 	FullName string
