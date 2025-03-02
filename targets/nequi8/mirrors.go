@@ -1,23 +1,19 @@
 package nequi8
 
 import (
-	"strings"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
 type mirrorData struct {
+	common.MirrorOptions
 	Back1, Back2 string
-	Opts         []string
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
 			d.Back1 = v[1]
-			if v[3] != "" {
-				d.Opts = strings.Split(v[3], ",")
-			}
+			d.ParseOptions(v[3])
 			if v[2] == "" {
 				d.Back2 = v[1]
 			} else {
@@ -27,15 +23,6 @@ func mirrData(name string) (d mirrorData) {
 		}
 	}
 	return
-}
-
-func (m *mirrorData) hasOption(opt string) bool {
-	for _, v := range m.Opts {
-		if strings.TrimSpace(v) == strings.TrimSpace(opt) {
-			return true
-		}
-	}
-	return false
 }
 
 func (m *mirrorData) send(h *common.ReqHandler, data userData, one bool) {

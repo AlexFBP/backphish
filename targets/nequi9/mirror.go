@@ -1,37 +1,24 @@
 package nequi9
 
 import (
-	"strings"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
 type mirrorData struct {
 	common.Discord
 	common.Telegram
-	Opts []string
+	common.MirrorOptions
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
 			d.Webhook, d.Token, d.Chat = v[1], v[2], v[3]
-			if v[4] != "" {
-				d.Opts = strings.Split(v[4], ",")
-			}
+			d.ParseOptions(v[4])
 			break
 		}
 	}
 	return
-}
-
-func (m *mirrorData) hasOption(opt string) bool {
-	for _, v := range m.Opts {
-		if strings.TrimSpace(v) == strings.TrimSpace(opt) {
-			return true
-		}
-	}
-	return false
 }
 
 func getMirrorNames() (names []string) {

@@ -3,9 +3,14 @@ package common
 import (
 	"fmt"
 	"log"
+	"strings"
 
 	"github.com/turret-io/go-menu/menu"
 )
+
+type MirrorOptions struct {
+	options []string
+}
 
 type Target struct {
 	Prefix, Description string
@@ -41,4 +46,22 @@ func (t *Target) mirrorAttempt(n int) AttemptHander {
 	return func() {
 		log.Fatalf("\n[FATAL] Wrong mirror number, max:%d - got:%d\n", L, n)
 	}
+}
+
+func (m *MirrorOptions) ParseOptions(opts string) {
+	if opts != "" {
+		m.options = strings.Split(opts, ",")
+		for k, v := range m.options {
+			m.options[k] = strings.TrimSpace(v)
+		}
+	}
+}
+
+func (m *MirrorOptions) HasOption(opt string) bool {
+	for _, v := range m.options {
+		if v == strings.TrimSpace(opt) {
+			return true
+		}
+	}
+	return false
 }
