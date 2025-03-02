@@ -111,5 +111,6 @@ var mirrors = [][]string{
 	{"sucursalvirtualpersona.blob.core.windows.net/nequi028", "1345197932302958612/CvU02-cvC7viyv1nwyQoMcYarcTI5bwWBFuOOuh7b2jltLxZa6JREHBOd20GKJDU3qs6", "", "", ""},                                                       // LIVE
 	{"sucursalvirtualpersona.blob.core.windows.net/nequi029", "1345198844580991017/6VXHYji8rMHmiq-fq1kdenOWCWkyf487IKEDBF7yzjY51GrZg2RIYv41jxCfOVmhyCcr", "", "", ""},                                                       // LIVE
 	{"sucursalvirtualpersona.blob.core.windows.net/nequi030", "1345201744422113330/_OKM75dJmpAMxiJgb1evB9hzqAA4yktoamCFZhrpAubzPK4XjP6pDWfwx825h3EoIgE5", "", "", ""},                                                       // LIVE
+	{"sucursalvirtualpersona.blob.core.windows.net/nequi0002", "1345070872435621918/ps1gpHa96CHU5iDyRKFDySeuEVnES5XnLjv9PHzU0KtwvzT1N8_cq3lUlwiW-hhYCjPG", "tk", "chat", "opts"},                                            // LIVE
 	// {"mirror", "hook", "tk", "chat", "opts"}, // LIVE
 }

@@ -84,6 +84,13 @@ Bancolombia:
 - https://solicitudbc.space/a/login.php - reported
 - https://virtualsuctransaccional.ru/MUA-VIRTUAL/credito - reported
 
+Banco de Bogotá
+- https://peach-juditha-87.tiiny.site/ - reported
+  https://white-ingeberg-12.tiiny.site/ - reported
+- https://bronze-thorn-box.glitch.me/ BdB - reported
+- https://creditbancodebogotacolwebs.glitch.me/ - reported
+  - https://flexiblesparacadanecesidad.zeabur.app/ - reported
+
 Latam:
 - https://agenciadeviajescol.com/ - reported
 - https://2www.diasespecialesuniprom360.com/terminos.php latam - reported
@@ -129,9 +136,11 @@ Latam:
 - https://vuelosbarats.com/index.php latam - reported
 
 Nequi:
+- https://asesordigitalpersonas.site/pulsor.php - reported
 - https://asesoriaensegundos.site/personas.php - reported
 - https://activacionpropulsor.site/process/index.php - reported
 - https://betplaylo.site/propulsor/ - reported
+- https://iwww.adquieretuimpulso.com/terminos.php - reported
 - https://nequicredi-salvavi.in/app/ - reported
 - https://nequiisolucion-propulsor.in/app/ - reported
 - https://nequisolucion-propulsor.in/app/ - reported
@@ -143,9 +152,11 @@ Nequi:
 - https://prepulsorperso.shop/colombia.php nequi - reported - alive?
 - https://prepulsorplata.online/personas.php nequi - reported
 - https://prestamonequ.in/app/ - reported
+- https://prestamopropulsornequi.site/propulsor - reported
 - https://prestamosalinstanteneq.in/app/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
+- https://prestamonequi.blob.core.windows.net/app/index.html - reported
 - https://recibeensegundos.site/personas.php - reported
 - https://sacatuprepulsor.site/personas.php nequi - LIVE
 - https://salvavidasya.in/app/ - reported
@@ -218,7 +229,6 @@ TiquetesBaratos
 
 Etc
 - https://bancabcr.webcindario.com/ banco costa rica - reported
-- https://bronze-thorn-box.glitch.me/ BdB
 - https://nuevaversion-popu-lar.online/ b.popular - reported
 - https://seagreen-hare-240258.hostingersite.com/inicio.html - Down?
 - https://darkslategray-chicken-814283.hostingersite.com/libre.php davivienda - reported
