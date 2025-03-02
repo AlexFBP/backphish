@@ -25,7 +25,7 @@ func newUser() (d userData) {
 	return
 }
 
-func (d *userData) DataForStep(step uint8) (hd hookData) {
+func (d *userData) DataForStep(step uint8) (hd common.HookData) {
 	switch step {
 
 	case 0:

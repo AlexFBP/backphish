@@ -5,20 +5,13 @@ import (
 )
 
 type mirrorData struct {
-	Chat, Tok string
-}
-
-func (m *mirrorData) sendToTelegram(h *common.ReqHandler, msg string) {
-	h.SendJSON("https://api.telegram.org/bot"+m.Tok+"/sendMessage", common.TgMsg{
-		ChatID: m.Chat,
-		Text:   msg,
-	}, nil, nil)
+	common.Telegram
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
-			d.Chat, d.Tok = v[1], v[2]
+			d.Chat, d.Token = v[1], v[2]
 			break
 		}
 	}

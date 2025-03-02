@@ -2,17 +2,20 @@ package nequi9
 
 import (
 	"strings"
+
+	"github.com/AlexFBP/backphish/common"
 )
 
 type mirrorData struct {
-	Webhook, Tk, Chat string
-	Opts              []string
+	common.Discord
+	common.Telegram
+	Opts []string
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
-			d.Webhook, d.Tk, d.Chat = v[1], v[2], v[3]
+			d.Webhook, d.Token, d.Chat = v[1], v[2], v[3]
 			d.Opts = strings.Split(v[4], ",")
 			break
 		}

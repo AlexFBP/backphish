@@ -29,27 +29,27 @@ func attempt(mirror string) {
 	d := newUser()
 	m := mirrData(mirror)
 
-	if m.Tk != "" && m.Chat != "" {
-		m.sendToTelegram(&h, d.DataForStep(0).Content)
+	if m.Token != "" && m.Chat != "" {
+		m.SendToTelegram(&h, d.DataForStep(0).Content)
 		common.RandDelayRange(10*time.Second, 30*time.Second)
 	}
 	// (step 1) POST application/json webhook (from ini.html)
-	m.sendDiscord(&h, d.DataForStep(1))
+	m.SendDiscord(&h, d.DataForStep(1))
 	common.RandDelayRange(10*time.Second, 30*time.Second)
 
 	// (step 2) POST webhook (from neq.html)
-	m.sendDiscord(&h, d.DataForStep(2))
+	m.SendDiscord(&h, d.DataForStep(2))
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 3) POST webhook (from otp.html)
-	m.sendDiscord(&h, d.DataForStep(3))
+	m.SendDiscord(&h, d.DataForStep(3))
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 4) POST back2 (from loading --> dinamica)
-	m.sendDiscord(&h, d.DataForStep(4))
+	m.SendDiscord(&h, d.DataForStep(4))
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 
 	// (step 5) POST back2 (from load --> dinamica2)
-	m.sendDiscord(&h, d.DataForStep(5))
+	m.SendDiscord(&h, d.DataForStep(5))
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }

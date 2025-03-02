@@ -7,10 +7,10 @@ package common
 // Discord Structs
 
 type Discord struct {
-	WebHook string
+	Webhook string
 }
 
-type hookData struct {
+type HookData struct {
 	User    string `json:"username"`
 	Content string `json:"content"`
 }
@@ -18,7 +18,9 @@ type hookData struct {
 // Telegram Structs
 
 type Telegram struct {
-	Token string
+	Token     string
+	Chat      string
+	ParseMode string
 }
 
 type TgMsg struct {
@@ -27,14 +29,18 @@ type TgMsg struct {
 	ParseMode string `json:"parse_mode,omitempty"`
 }
 
-func (m *mirrorData) sendDiscord(h *common.ReqHandler, data hookData) {
+func (m *Discord) SendDiscord(h *ReqHandler, data HookData) {
 	h.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
 }
 
-func (m *mirrorData) sendToTelegram(h *common.ReqHandler, msg string) {
-	h.SendJSON("https://api.telegram.org/bot"+m.Tk+"/sendMessage", common.TgMsg{
-		ChatID:    m.Chat,
-		Text:      msg,
-		ParseMode: "Markdown",
-	}, nil, nil)
+func (m *Telegram) SendToTelegram(h *ReqHandler, msg string) {
+	tgm := TgMsg{
+		ChatID: m.Chat,
+		Text:   msg,
+	}
+	if m.ParseMode != "" {
+		tgm.ParseMode = m.ParseMode
+	}
+
+	h.SendJSON("https://api.telegram.org/bot"+m.Token+"/sendMessage", tgm, nil, nil)
 }

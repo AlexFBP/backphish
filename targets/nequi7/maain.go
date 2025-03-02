@@ -30,26 +30,26 @@ func attempt(mirror string) {
 	u := newUser()
 
 	// ini.html form message
-	d.sendToTelegram(&h, u.template1())
+	d.SendToTelegram(&h, u.template1())
 	common.RandDelayRange(10*time.Second, 30*time.Second)
 
 	// neq.html form message
-	d.sendToTelegram(&h, u.template2(0))
+	d.SendToTelegram(&h, u.template2(0))
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// otp.html form message
-	d.sendToTelegram(&h, u.template2(1))
+	d.SendToTelegram(&h, u.template2(1))
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// loading.html has no form data
 
 	// dinamica.html form message
-	d.sendToTelegram(&h, u.template2(2))
+	d.SendToTelegram(&h, u.template2(2))
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 
 	// load.html has no form data
 
 	// dinamica2.html form message
-	d.sendToTelegram(&h, u.template2(3))
+	d.SendToTelegram(&h, u.template2(3))
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
