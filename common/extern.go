@@ -33,6 +33,11 @@ func (m *Discord) SendDiscord(h *ReqHandler, data HookData) {
 	h.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
 }
 
+// Send Message to a Telegram Chat
+//
+// Please take care of not exceeding Telegram fair usage:
+// - https://rollout.com/integration-guides/telegram-bot-api/api-essentials
+// - https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this
 func (m *Telegram) SendToTelegram(h *ReqHandler, msg string) {
 	tgm := TgMsg{
 		ChatID: m.Chat,
