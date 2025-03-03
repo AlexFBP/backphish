@@ -9,18 +9,23 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "nq4", Description: "attack fake nequi4", Function: cmd, // DOWN
-	})
+	target = &common.Target{
+		Prefix:      "nq4",
+		Description: "attack fake nequi4",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
-	const base = "prestamos.website" // DOWN
+func attempt(base string) {
 
 	h := common.ReqHandler{}
 	h.UseJar(true)
@@ -70,4 +75,8 @@ func attempt() {
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/prueba-autenti.html"},
 	}...), nil)
+}
+
+var mirrors = []string{
+	"prestamos.website", // DOWN
 }

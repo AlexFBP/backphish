@@ -9,24 +9,27 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "bdv1", Description: "attack fake banco de venezuela 1", Function: cmd, // Apparently down
-	})
+	target = &common.Target{
+		Prefix:      "bdv1",
+		Description: "attack fake banco de venezuela 1",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
 func del() {
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 }
 
-func attempt() {
-
-	const mirror = "victorr2-e98cda745618.herokuapp.com"
-
+func attempt(mirror string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
@@ -51,4 +54,8 @@ func attempt() {
 		del()
 	}
 
+}
+
+var mirrors = []string{
+	"victorr2-e98cda745618.herokuapp.com", // Apparently down
 }

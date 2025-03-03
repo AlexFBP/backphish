@@ -41,7 +41,7 @@ All pending improvements have a rating (Priority-Difficulty):
       - It could be a row per each status code, like: `Status: NNN - Qty: NN`
       - show a matrix/table of running attacks (maybe with something like an array of -status- chans... maybe with last status code)
 - [ ] **16.** (L-H) When using menu (and no target selected in CLI), create a sub-menu that allows to save custom defaults in a [.ini file](https://ini.unknwon.io/docs/intro/getting_started), so if the .ini is available, any default values there will take precedence. Also, it must be an option to restore defaults. (Might reuse **11.**)
-- [ ] **17.** (H-M) Debug/Devel - Normalize all attacks: Make all of them to work with mirrors, at least 1 per target
+- [x] **17.** ~~(H-M) Debug/Devel - Normalize all attacks: Make all of them to work with mirrors, at least 1 per target~~
 - [ ] **18.** (M-M) Metrics/Maintenance - Once attack finished, return metrics like: status after each attack, and ellapsed time on success of all queries of the attack
 - [ ] **19.** (L-E) Debug/Devel/Behavior - In verbose mode, restrict a single runner. If any value given to "-p" flag, bypass and warn
 - [ ] **20.** Once detected Ctrl+C or attacks finished, update [.ini file](https://ini.unknwon.io/docs/intro/getting_started) (depends on **11.** or **12.**):

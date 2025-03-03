@@ -9,17 +9,23 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "472-1", Description: "attack fake 4-72 1", Function: cmd, // DOWN
-	})
+	target = &common.Target{
+		Prefix:      "472",
+		Description: "attack fake 472",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
+func attempt(base string) {
 	h := common.ReqHandler{}
 	// GET https://guianacional4-72.com/inicio.php
 
@@ -30,7 +36,7 @@ func attempt() {
 	pers := gofakeit.Person()
 	// common.RandDelay(60, 60*5)
 	h.SendPostEncoded(
-		"https://guianacional4-72.com/informacion_pago.php",
+		"https://"+base+"/informacion_pago.php",
 		[]common.SimpleTerm{
 			{K: "nombre", V: pers.FirstName},
 			{K: "apellido", V: pers.LastName},
@@ -42,15 +48,15 @@ func attempt() {
 			{K: "actualizar_datos", V: "Continuar"},
 		},
 		[]common.SimpleTerm{
-			{K: "Origin", V: "https://guianacional4-72.com"},
-			{K: "Referer", V: "https://guianacional4-72.com/actualizar_datos.php"},
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/actualizar_datos.php"},
 		},
 		nil,
 	)
 
 	// common.RandDelay(30, 80)
 	h.SendPostEncoded(
-		"https://guianacional4-72.com/comprobando.php",
+		"https://"+base+"/comprobando.php",
 		[]common.SimpleTerm{
 			{K: "codigo", V: fmt.Sprint(pers.CreditCard.Number)},
 			{K: "fecha", V: pers.CreditCard.Exp},
@@ -58,9 +64,13 @@ func attempt() {
 			{K: "enviar", V: "Pagar Servicio"},
 		},
 		[]common.SimpleTerm{
-			{K: "Origin", V: "https://guianacional4-72.com"},
-			{K: "Referer", V: "https://guianacional4-72.com/informacion_pago.php"},
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/informacion_pago.php"},
 		},
 		nil,
 	)
+}
+
+var mirrors = []string{
+	"guianacional4-72.com", // DOWN
 }

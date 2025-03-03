@@ -11,54 +11,84 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "bc1", Description: "attack fake bancolombia 1", Function: cmd, // Half down? still spamable?
-	})
+	target = &common.Target{
+		Prefix:      "bc1",
+		Description: "attack fake bancolombia 1",
+		Mirrors:     getMirrorNames(),
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getMirrorNames() (names []string) {
+	for _, v := range mirrors {
+		names = append(names, v[0])
+	}
+	return
 }
 
-func attempt() {
+var mirrors = [][]string{
+	{
+		"branch1",                             // Half down? still spamable?
+		"desbloqueo--sucursalvirtua2.repl.co", // DOWN?
+		"activacion--vitualclave.repl.co",     // Opens web editor https://replit.com/@vitualclave/dinamica#index.html - Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
+		"dinamica.vitualclave.repl.co",        // Opens web editor https://replit.com/@vitualclave/dinamica#index.html - Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
+		"oblongmajorblocks--mamiamia.repl.co", // DOWN?
+	},
+}
+
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
+}
+
+func getMirrorData(name string) (steps []string) {
+	for _, v := range mirrors {
+		if name == v[0] {
+			steps = v[1:len(mirrors)]
+			break
+		}
+	}
+	return
+}
+
+func attempt(branch string) {
 	h := common.ReqHandler{}
+	m := getMirrorData(branch)
 	// common.RandDelay(3, 10)
 	h.SendPostEncoded(
-		"https://desbloqueo--sucursalvirtua2.repl.co/finish9.php",
+		"https://"+m[0]+"/finish9.php",
 		[]common.SimpleTerm{{K: "cedula", V: fmt.Sprint(common.GeneraNIPcolombia())}},
 		[]common.SimpleTerm{
-			{K: "Host", V: "desbloqueo--sucursalvirtua2.repl.co"},
-			{K: "Origin", V: "https://desbloqueo--sucursalvirtua2.repl.co"},
-			{K: "Referer", V: "https://desbloqueo--sucursalvirtua2.repl.co/index.html"}, // DOWN?
+			{K: "Host", V: "" + m[0]},
+			{K: "Origin", V: "https://" + m[0]},
+			{K: "Referer", V: "https://" + m[0] + "/index.html"},
 		},
 		nil,
 	)
 
 	// common.RandDelay(2, 5)
 	h.SendPostEncoded(
-		"https://activacion--vitualclave.repl.co/finish9.php",
+		"https://"+m[1]+"/finish9.php",
 		[]common.SimpleTerm{{K: "clave", V: common.GeneraPin(4)}},
 		[]common.SimpleTerm{
-			{K: "Host", V: "activacion--vitualclave.repl.co"},
-			{K: "Origin", V: "https://activacion--vitualclave.repl.co"},
-			{K: "Referer", V: "https://activacion--vitualclave.repl.co/index.html"},
-			// Opens web editor: https://replit.com/@vitualclave/activacion#index.html
-			// Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
+			{K: "Host", V: "" + m[1]},
+			{K: "Origin", V: "https://" + m[1]},
+			{K: "Referer", V: "https://" + m[1] + "/index.html"},
 		},
 		nil,
 	)
 
 	// common.RandDelay(12, 51)
 	h.SendPostEncoded(
-		"https://dinamica.vitualclave.repl.co/finish9.php",
+		"https://"+m[2]+"/finish9.php",
 		[]common.SimpleTerm{{K: "clave", V: common.GeneraPin(6)}},
 		[]common.SimpleTerm{
-			{K: "Host", V: "dinamica.vitualclave.repl.co"},
-			{K: "Origin", V: "https://dinamica.vitualclave.repl.co"},
-			{K: "Referer", V: "https://dinamica.vitualclave.repl.co/index.html"},
-			// Opens web editor https://replit.com/@vitualclave/dinamica#index.html
-			// Found tg token & chat! 6527691794:AAF599l03u2LDqzEGvLJxLPmTn5hOel0eY0 5786097476
+			{K: "Host", V: "" + m[2]},
+			{K: "Origin", V: "https://" + m[2]},
+			{K: "Referer", V: "https://" + m[2] + "/index.html"},
 		},
 		nil,
 	)
@@ -84,7 +114,7 @@ func attempt() {
 	year, _ = strconv.Atoi(exp[1])
 	year += 2000
 	h.SendPostEncoded(
-		"https://oblongmajorblocks--mamiamia.repl.co/finish.php",
+		"https://"+m[3]+"/finish.php",
 		[]common.SimpleTerm{
 			{K: "tipoCC", V: cardtype},
 			{K: "codigo", V: strconv.Itoa(c.Number)},
@@ -97,9 +127,9 @@ func attempt() {
 			{K: "tel", V: ""},
 		},
 		[]common.SimpleTerm{
-			{K: "Host", V: "oblongmajorblocks--mamiamia.repl.co"},
-			{K: "Origin", V: "https://oblongmajorblocks--mamiamia.repl.co"},
-			{K: "Referer", V: "https://oblongmajorblocks--mamiamia.repl.co/pagar.php"}, // DOWN?
+			{K: "Host", V: "" + m[3]},
+			{K: "Origin", V: "https://" + m[3]},
+			{K: "Referer", V: "https://" + m[3] + "/pagar.php"},
 		},
 		nil,
 	)

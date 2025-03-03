@@ -13,35 +13,41 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "nf1", Description: "attack fake netflix 1", Function: Cmd, // DOWN? (Domain still alive)
-	})
+	target = &common.Target{
+		Prefix:      "nf1",
+		Description: "attack fake netflix 1",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func Cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
+func attempt(base string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
 	h.SendGet(
-		"https://mi-cuentasuscripcionflix.com/",
+		"https://"+base+"/",
 		[]common.SimpleTerm{}, []common.SimpleTerm{}, nil,
 	)
 
 	// Maybe all the following is not needed
-	u, _ := url.Parse("https://mi-cuentasuscripcionflix.com")
+	u, _ := url.Parse("https://" + base)
 	h.PrintCookies(u)
 
 	h.SendPostEncoded(
-		"https://mi-cuentasuscripcionflix.com/captcha/set_captcha_session.php",
+		"https://"+base+"/captcha/set_captcha_session.php",
 		[]common.SimpleTerm{{K: "captcha", V: "true"}},
 		[]common.SimpleTerm{
-			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
-			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/captcha/captcha.php"},
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/captcha/captcha.php"},
 		}, nil,
 	)
 
@@ -56,21 +62,21 @@ func attempt() {
 	}
 
 	h.SendPostEncoded(
-		"https://mi-cuentasuscripcionflix.com/send.php",
+		"https://"+base+"/send.php",
 		[]common.SimpleTerm{
 			{K: "username", V: p.Contact.Email},
 			{K: "password", V: pass},
 		},
 		[]common.SimpleTerm{
-			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
-			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/index.php"},
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/index.php"},
 		}, nil,
 	)
 
 	h.SendGet(
-		"https://mi-cuentasuscripcionflix.com/includes/get_setup.php",
+		"https://"+base+"/includes/get_setup.php",
 		[]common.SimpleTerm{{K: "auth", V: "FREELIVE"}},
-		[]common.SimpleTerm{{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/billing.php"}}, nil,
+		[]common.SimpleTerm{{K: "Referer", V: "https://" + base + "/billing.php"}}, nil,
 	)
 
 	n := time.Now()
@@ -81,7 +87,7 @@ func attempt() {
 		fmt.Println("cardNum:", cc)
 	}
 	h.SendPostEncoded(
-		"https://mi-cuentasuscripcionflix.com/send.php",
+		"https://"+base+"/send.php",
 		[]common.SimpleTerm{
 			{K: "name", V: p.FirstName + " " + p.LastName},
 			{K: "adresse", V: p.Address.Street},
@@ -95,8 +101,12 @@ func attempt() {
 			{K: "titulaire", V: p.FirstName + " " + p.LastName},
 		},
 		[]common.SimpleTerm{
-			{K: "Origin", V: "https://mi-cuentasuscripcionflix.com"},
-			{K: "Referer", V: "https://mi-cuentasuscripcionflix.com/billing.php"},
+			{K: "Origin", V: "https://" + base},
+			{K: "Referer", V: "https://" + base + "/billing.php"},
 		}, nil,
 	)
+}
+
+var mirrors = []string{
+	"mi-cuentasuscripcionflix.com", // DOWN? (Domain still alive)
 }

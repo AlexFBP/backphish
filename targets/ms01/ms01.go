@@ -10,17 +10,23 @@ import (
 	"github.com/AlexFBP/backphish/common"
 )
 
+var target *common.Target
+
 func init() {
-	common.MainMenu.Add(menu.CommandOption{
-		Command: "ms1", Description: "attack fake MS login 1", Function: cmd, // DOWN
-	})
+	target = &common.Target{
+		Prefix:      "ms1",
+		Description: "attack fake MS login",
+		Mirrors:     mirrors,
+		Handler:     attempt,
+	}
+	common.MainMenu.AddMany(getAllCmds())
 }
 
-func cmd(args ...string) error {
-	return common.AttackRunner(attempt)
+func getAllCmds() []menu.CommandOption {
+	return target.GetAllCmds()
 }
 
-func attempt() {
+func attempt(base string) {
 	h := common.ReqHandler{}
 	// common.RandDelay(20, 60)
 	domains := []string{
@@ -42,13 +48,17 @@ func attempt() {
 	if gofakeit.Bool() {
 		form = append(form, common.SimpleTerm{K: "KMSI", V: "on"})
 	}
-	h.SendPostEncoded("http://recuperacion004.0hi.me/next.php",
+	h.SendPostEncoded("http://"+base+"/next.php",
 		form,
 		[]common.SimpleTerm{
-			{K: "Host", V: "recuperacion004.0hi.me"},
-			{K: "Origin", V: "http://recuperacion004.0hi.me"},
-			{K: "Referer", V: "http://recuperacion004.0hi.me/Iniciar%20Sesi%C3%B3n.html"},
+			{K: "Host", V: "" + base + ""},
+			{K: "Origin", V: "http://" + base + ""},
+			{K: "Referer", V: "http://" + base + "/Iniciar%20Sesi%C3%B3n.html"},
 		},
 		nil,
 	)
+}
+
+var mirrors = []string{
+	"recuperacion004.0hi.me", // DOWN
 }
