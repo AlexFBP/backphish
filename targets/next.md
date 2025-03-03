@@ -61,6 +61,8 @@ Avianca:
   https://avvi.vuelocoombia.co.uk/ avianca - reported
 - http://avi.tiquetbaratoscol.top/ - reported
 - https://aira.hotsalesiempre.space/web/ avianca - reported
+- https://34www.ahorrasinlimitespromo.com/terminos - reported
+  https://80www.ahorrasinlimitespromo.com/terminos - reported
 - https://co-avolarnacional.com/ - reported
 - https://cyberdays.vercel.app/ avianca - reported
 - https://earlycol-traa.com/ avianca - reported
@@ -164,6 +166,7 @@ Nequi:
 - https://tu-nequisolucion-propulsor.site/app/ - reported
 - https://tucreditoensegundosnequi.in/app/ - reported
 - https://tusalvavidasaunclic.in/app/ - reported
+- https://tusprestamopropulsor.com/Nequi/ - reported
 
 JetSmart:
 - https://aereojetsco.shop/web3/ - reported
@@ -171,15 +174,16 @@ JetSmart:
 - https://airline.hotsaleprimeplanet.space/ jetsmart - reported
 - https://jetsmartcol.hotsaleprimeplanet.space/ jetsmart - reported
 - https://airjetcol.com/smart1/ - reported
-- https://airjetcol.com/smart3/ - reported
+  https://airjetcol.com/smart3/ - reported
+  https://airjetcol.com/smart4/ - reported
 - https://alistatumaletaprojt.shop/3co/ - Cloudflare catched!
-- https://alistatumaletaprojt.shop/co/ jetsmart - reported
+  https://alistatumaletaprojt.shop/co/ jetsmart - reported
 - https://hotsaletodovueloprime.space/ jetsmart - reported
 - https://hotsalevuelosprime.space/ jetsmart - reported
 - http://hotsalejettssmartt.space/ - reported
 - https://jetsmart.club/ - reported
 - https://jetsmartwebpromo.com/viajes/ - reported
-- https://jetsmartwebpromo.com/web/ - reported
+  https://jetsmartwebpromo.com/web/ - reported
 - http://jetcolombiatravel.com/ - reported
 - https://jetmarcolombia.com/ - reported
 - https://jetsmarcolombia.store/ - reported
