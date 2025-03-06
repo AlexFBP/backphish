@@ -72,26 +72,34 @@ Avianca:
 - https://tuviajesseguroscondescuentostravelcolombia.site/ - reported
 
 Bancolombia:
-- https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
-- https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
-- https://creditoseguroalamano.tiiny.io/ - reported
 - https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
 - https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
-- https://finanzasahorroalamano.tiiny.io/ bancolombia - reported
-- https://grupobcolombia00.webcindario.com/
 - https://multiservicsonlinepse.shop/libredestino/ - reported
 - https://solicitudbc.space/a/login.php - reported
+- https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
+  https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
+  https://creditoseguroalamano.tiiny.io/ - reported
+  https://finanzasahorroalamano.tiiny.io/ bancolombia - reported
 - https://virtualsuctransaccional.ru/MUA-VIRTUAL/credito - reported
+- https://colprecol.webcindario.com/celindex.html - reported
+  https://colprecol.webcindario.com/crid.html - reported <-- from http://colwebpre.xyz/, also reported
+  https://grupobcolombia00.webcindario.com/ - reported
 
 Banco de Bogotá
+- https://creditos-bancodebogota.glitch.me/ - reported
+  - https://bluestarinsurance.co.nz/bancusp/index.html - reported
 - https://peach-juditha-87.tiiny.site/ - reported
   https://white-ingeberg-12.tiiny.site/ - reported
 - https://bronze-thorn-box.glitch.me/ BdB - reported
-- https://creditbancodebogotacolwebs.glitch.me/ - reported
+  https://creditbancodebogotacolwebs.glitch.me/ - reported
   - https://flexiblesparacadanecesidad.zeabur.app/ - reported
+
+Banco de Venezuela
+- https://bdvparapersonas.blob.core.windows.net/financiaminetosbdv/index.html - reported
+- https://doccompany.com.br/ - reported
 
 Latam:
 - https://agenciadeviajescol.com/ - reported
@@ -157,6 +165,7 @@ Nequi:
 - https://prestamopropulsornequi.site/propulsor - reported
 - https://prestamosalinstanteneq.in/app/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
+  https://pretsamosalvavidas.azurewebsites.net/2/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
 - https://prestamonequi.blob.core.windows.net/app/index.html - reported
 - https://recibeensegundos.site/personas.php - reported
@@ -182,6 +191,7 @@ JetSmart:
 - https://hotsalevuelosprime.space/ jetsmart - reported
 - http://hotsalejettssmartt.space/ - reported
 - https://jetsmart.club/ - reported
+- https://jetsmartcolombia.space/ - reported
 - https://jetsmartwebpromo.com/viajes/ - reported
   https://jetsmartwebpromo.com/web/ - reported
 - http://jetcolombiatravel.com/ - reported
@@ -215,12 +225,12 @@ JetSmart:
 - https://vuelaconjetsmart.onrender.com/ - reported
 
 TiquetesBaratos
-- https://tiketesbaratoscol.com/web/ - reported
-- https://tiketesbaratoscol.com/promociones/ - reported
 - https://losvuelos-economicos.com/ tiquetesbaratos - reported
 - https://ofertasvueloseconomicos.com/ tiquetesbaratos - reported
 - https://reservade-vuelos.com/ tiquetesbaratos - reported
 - https://reservasyvuelos.com/ tiquetesbaratos - reported
+- https://tiketesbaratoscol.com/web/ - reported
+  https://tiketesbaratoscol.com/promociones/ - reported
 - https://tiquetes25baratos.controlrefer52.shop/ - reported
 - https://tiquetesbaratos.co.com/ - reported
 - https://tiquetesbaratos.fly.dev/ - reported
@@ -229,6 +239,7 @@ TiquetesBaratos
 - https://tiquetesbaratospromos.com/web - reported
   https://tiquetesbaratospromos.com/web-promociones - reported (down?)
 - https://tiquetesbaratoswebpromo.com/ - reported
+- https://tiqusbaratoscol.store/inicio/ - reported
 - https://tiqutesbarats.com/opciones/ - reported
 
 Etc
