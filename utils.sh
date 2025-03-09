@@ -62,6 +62,7 @@ function bp-retrieve() {
         echo "Error while retrieving URL, code: ${last_status}"
         return 2
       fi
+      echo "Body size: ${#result}"
     else
       ((count++))
       echo "pattern [${count}] - \"${arg}\" - results:"
