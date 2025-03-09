@@ -70,10 +70,18 @@ Avianca:
 - https://promo.co-avolarnacional.com/ - reported
 - https://transcol-early.online/ avianca - reported
 - https://tuviajesseguroscondescuentostravelcolombia.site/ - reported
+- https://www.vuelabaratosinlimite.com/ - reported
+  - https://77www.vivetuaventuraal100.ru/terminos - reported
+    https://34www.vivetuaventuraal100.ru/terminos - reported
+    https://l1www.vivetuaventuraal100.ru/terminos - reported
+    https://74www.vivetuaventuraal100.ru/ - reported
+    https://1www.vivetuaventuraal100.ru/terminos - reported
 
 Bancolombia:
 - https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
 - https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
+- https://solicitarya-2025.glitch.me/ - reported
+  - https://e84fc409-3259-4497-9c92-35b8bf32b8d4-00-7j1lrn2or2mu.worf.replit.dev/ - reported
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
@@ -107,6 +115,7 @@ Latam:
   https://4www.diasespecialesuniprom360.com/terminos.php - reported
   https://iwwww.diasespecialesuniprom360.com/terminos.php - reported
   https://lwwww.diasespecialesuniprom360.com/terminos.php - reported
+  https://12wwww.diasespecialesuniprom360.com/terminos.php - reported
 - https://latamnacionalespromos.com/ - CF catched!
 - https://latampromocionaldto.com/ - reported
   https://latampromocionaldto.com/informacion_accion/ - reported
@@ -127,6 +136,7 @@ Latam:
 - https://latamnacionalespromo.com/web/ - reported
   https://latamnacionalestravel.com/promociones-nacionales - reported
   https://latamcolpromos.com/portal-vuelos - down? (domain still alive)
+- https://latamnacionalestravel.com/baratos-co/ - reported
 - https://latampromocionalco.com/ - reported
   https://latampromocionalco.com/informacion_accion - reported
 - https://latampromocionaldescuento.in/ - reported
@@ -148,8 +158,10 @@ Latam:
 Nequi:
 - https://asesordigitalpersonas.site/pulsor.php - reported
 - https://asesoriaensegundos.site/personas.php - reported
+- https://asesorneq.site/pulsor.php - reported
 - https://activacionpropulsor.site/process/index.php - reported
 - https://betplaylo.site/propulsor/ - reported
+- https://deinmediatobenloya.site/agil.html - reported
 - https://iwww.adquieretuimpulso.com/terminos.php - reported
 - https://nequicredi-salvavi.in/app/ - reported
 - https://nequiisolucion-propulsor.in/app/ - reported
@@ -167,11 +179,13 @@ Nequi:
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/2/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
+  https://pretsamosalvavidas.azurewebsites.net/4/ - reported
 - https://prestamonequi.blob.core.windows.net/app/index.html - reported
 - https://recibeensegundos.site/personas.php - reported
 - https://sacatuprepulsor.site/personas.php nequi - LIVE
 - https://salvavidasya.in/app/ - reported
 - https://simulatuprepulsor.online/libreinversion.php - reported
+- https://solicitaaa.website/agil.html - reported
 - https://tu-nequisolucion-propulsor.site/app/ - reported
 - https://tucreditoensegundosnequi.in/app/ - reported
 - https://tusalvavidasaunclic.in/app/ - reported
@@ -187,11 +201,13 @@ JetSmart:
   https://airjetcol.com/smart4/ - reported
 - https://alistatumaletaprojt.shop/3co/ - Cloudflare catched!
   https://alistatumaletaprojt.shop/co/ jetsmart - reported
+- https://buscar.destinossmart.com/ - reported
 - https://hotsaletodovueloprime.space/ jetsmart - reported
 - https://hotsalevuelosprime.space/ jetsmart - reported
 - http://hotsalejettssmartt.space/ - reported
 - https://jetsmart.club/ - reported
 - https://jetsmartcolombia.space/ - reported
+- https://jetsmartcomprasweb.com/reservas/ - reported
 - https://jetsmartwebpromo.com/viajes/ - reported
   https://jetsmartwebpromo.com/web/ - reported
 - http://jetcolombiatravel.com/ - reported
@@ -216,6 +232,7 @@ JetSmart:
 - https://sale.hotsalejtmrsprime.space/ jetsmart - reported
 - https://sale.tiquetesmart.com/ jetsmart - reported
 - https://travelcolombiasale.com/ jetsmart - reported
+- https://tujetsmartcol.com/reservas/nacionales/ - reported
 - https://viajajtmrs.space/ - reported
 - https://viveprojetsco.com/co1/ - reported
   https://viveprojetsco.com/pro1/ - CF Warn
@@ -226,7 +243,9 @@ JetSmart:
 
 TiquetesBaratos
 - https://losvuelos-economicos.com/ tiquetesbaratos - reported
+- https://lostiquetesmasbaratos.vercel.app/ - reported
 - https://ofertasvueloseconomicos.com/ tiquetesbaratos - reported
+- https://promos-tiquetebaratocol.com/reservas/ - reported
 - https://reservade-vuelos.com/ tiquetesbaratos - reported
 - https://reservasyvuelos.com/ tiquetesbaratos - reported
 - https://tiketesbaratoscol.com/web/ - reported
@@ -236,6 +255,9 @@ TiquetesBaratos
 - https://tiquetesbaratos.fly.dev/ - reported
 - https://tiquetesbaratos-promos.com/web/ - reported
 - https://tiquetesbaratos-promoweb.com/web/ - 403 or bypassed?
+- https://tiquetesbaratoscol.com.co/ - reported
+- https://tiquetesbaratosnetpromo.com/ - reported
+- https://tiquetesbaratosnetpromos.com/portal-flys/ - reported
 - https://tiquetesbaratospromos.com/web - reported
   https://tiquetesbaratospromos.com/web-promociones - reported (down?)
 - https://tiquetesbaratoswebpromo.com/ - reported

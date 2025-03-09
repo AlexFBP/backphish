@@ -79,6 +79,7 @@ function bp-retrieve-tokens() {
   target="$1"
   bp-retrieve "${target}" \
     "'https://discord.com/api/webhooks/\K[0-9]+/[a-zA-Z0-9_-]+" \
+    "'https://discordapp.com/api/webhooks/\K[0-9]+/[a-zA-Z0-9_-]+" \
     "\"\K[0-9]+:[a-zA-Z0-9_-]+" \
     "\"\K-[0-9]+" \
 }

@@ -10,19 +10,21 @@ By domain/provider:
 - https://tuappnequi.blob.core.windows.net/neqprestamo/ini.html - Apparently down
 - https://nequico.blob.core.windows.net/plus7/ini.html - Apparently down
 - https://jetsmarrtco.site/co-es/
-- https://jetsmarrtco.site/fly/? - reported
-- https://jetsmarrtco.site/ES/ - reported
-- https://jetsmarrtco.site/GO/ - reported
-- https://jetsmarrtco.site/main/ - reported
+  https://jetsmarrtco.site/fly/? - reported
+  https://jetsmarrtco.site/ES/ - reported
+  https://jetsmarrtco.site/GO/ - reported
+  https://jetsmarrtco.site/main/ - reported
 - https://34c7b76e-a328-453f-872f-b41af70d7f1b-00-gi6ejuv8gyil.kirk.replit.dev/ - Apparently down
-- https://39bf8c27-119a-46fe-a023-cf8052cf0d76-00-3i85dhwcgdy5j.janeway.replit.dev/ - Down? (bancolombia a la mano)
-- https://507e0627-814f-47b1-a078-cd2895f9c1ed-00-1weg3cdj0xd24.riker.replit.dev/ - Apparently down
-- https://6365ff1b-f93f-490b-9d34-a2d91b7eaba9-00-2cfgh31txzz01.spock.replit.dev/
-- https://6cd75a9e-eb92-414b-9ee7-fddda1e7fe21-00-1vgczid0789kt.janeway.replit.dev/ - Apparently down
-- https://cca09bb7-f195-4a89-9418-c43b13e7a9db-00-21bqpgzw7ip55.riker.replit.dev/
-- https://dc5b98c0-ec6f-4ca9-8d31-b12ce0396354-00-2miau9f2nejda.spock.replit.dev/ - Down? (bancolombia a la mano)
-- https://dd60d5a0-da2e-4342-89e9-39efb26ca51e-00-10bl6ka3q7d9k.riker.replit.dev/ - Apparently down
-- https://f92663ac-e471-4911-973b-5d95183c2926-00-250s5lhzv97cq.spock.replit.dev/ - Apparently down
+  https://39bf8c27-119a-46fe-a023-cf8052cf0d76-00-3i85dhwcgdy5j.janeway.replit.dev/ - Down? (bancolombia a la mano)
+  https://507e0627-814f-47b1-a078-cd2895f9c1ed-00-1weg3cdj0xd24.riker.replit.dev/ - Apparently down
+  https://6365ff1b-f93f-490b-9d34-a2d91b7eaba9-00-2cfgh31txzz01.spock.replit.dev/
+  https://654df1c1-ad81-4e7c-9441-d88d6d3c6947-00-32bxokncyr9dl.riker.replit.dev/
+  https://6cd75a9e-eb92-414b-9ee7-fddda1e7fe21-00-1vgczid0789kt.janeway.replit.dev/ - Apparently down
+  https://cca09bb7-f195-4a89-9418-c43b13e7a9db-00-21bqpgzw7ip55.riker.replit.dev/
+  https://dc5b98c0-ec6f-4ca9-8d31-b12ce0396354-00-2miau9f2nejda.spock.replit.dev/ - Down? (bancolombia a la mano)
+  https://dd60d5a0-da2e-4342-89e9-39efb26ca51e-00-10bl6ka3q7d9k.riker.replit.dev/ - Apparently down
+  https://fc686a3d-46ce-4c08-a42a-c5c3d558c9d9-00-2xm1wmo2h6q1s.spock.replit.dev/
+  https://f92663ac-e471-4911-973b-5d95183c2926-00-250s5lhzv97cq.spock.replit.dev/ - Apparently down
   https://9ca9bbfe-7e8c-44f3-b9dc-9b81577eb79b-00-3qq958oxy8li1.picard.replit.dev/ - Apparently down
 
 Etc:
@@ -142,6 +144,7 @@ Etc:
 - https://tepresta.online/nequi
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
+- https://tiquetsbaratospromos.com/inicio/
 - https://tucupo360bc.space/imagi
 - https://tuplanneq.com/prestamo/index.html
 - https://tupropulsorhoy.shop/neq/

@@ -131,7 +131,7 @@ var mirrors = [][]string{
 	{`nequipropulsors.blob.core.windows.net/nequiplus`, // (*1)
 		"-1002304685402", "8141847441:AAGCTjvs3qgEgikFa1laUTOX4eqR6Il1EhE"}, // "Encrypted"... sure hahaha
 	{`nequipropulsors.blob.core.windows.net/nequipres`, // (*1)
-		"-1002434807569", "8141847441:AAGCTjvs3qgEgikFa1laUTOX4eqR6Il1EhE ini.html:255:13"}, // "Encrypted"... sure hahaha
+		"-1002434807569", "8141847441:AAGCTjvs3qgEgikFa1laUTOX4eqR6Il1EhE"}, // "Encrypted"... sure hahaha
 	{`nequiapp.blob.core.windows.net/neq5`, // (*1)
 		"-1002230908332", "7702964113:AAHKU83E6Gjj4714YGNhNozD0AoZbJDLvIQ"}, // "Encrypted"... sure hahaha
 	{`nequiapp.blob.core.windows.net/neq`, // (*1)
@@ -182,6 +182,8 @@ var mirrors = [][]string{
 		"-4645962315", "7727869629:AAEx4ZRGia34LDr6mJbISIHUkJmqW__YdaE"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolmbia.blob.core.windows.net/solictaahora`, // Reported
 		"-4720837131", "6881434228:AAEgBp4Z6mDAvS-gM09Pw6AOfqLFamZ4cg0"}, // "Ultra Encrypted"... sure hahaha
+	{`nequiprepropulsor.blob.core.windows.net/neq2`, // Reported
+		"-4704093414", "7653580677:AAHpfKX_uvUBJ8FbJkOfqAzVE3lhAe9KGAo"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

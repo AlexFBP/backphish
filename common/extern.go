@@ -31,6 +31,8 @@ type TgMsg struct {
 
 func (m *Discord) SendDiscord(h *ReqHandler, data HookData) {
 	h.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
+	// use discord instead of discordapp:
+	// https://github.com/discord/discord-api-docs/issues/1878
 }
 
 // Send Message to a Telegram Chat
