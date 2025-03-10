@@ -32,6 +32,7 @@ Etc:
 - https://2025tiquetesbaratos01.fly.dev/
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://activacionproductoss.shop/prestamo/
+- https://activacionpropulsor.site/process/index.php - reported
 - https://activarpropulsor.site/process/index.php
 - https://adelantosneq.online/credit/
 - https://aeroboletosenoferta.vercel.app/ofertas/ - Apparently down by provider
@@ -40,6 +41,7 @@ Etc:
 - https://aumentatulimitetdc.glitch.me/ - bdv
 - https://aseoriaprepulsorenlinea.site/personas.php
 - https://asesordigital.space/personas.php
+- https://asesordigitalpersonas.site/pulsor.php - reported
 - https://asesoriaenlinea.online/personas.php
 - https://asesoriaensegundos.site/personas.php
 - https://asesoriaprpulsor.site/agil.html
@@ -72,19 +74,27 @@ Etc:
 - https://mejoratueconomia.online/?p&
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
+- https://nequi-online.site/transaction/clientes/index.html (down by provider?) <-- https://hab.me/BO6ZhLs
+- https://nequicredi-salvavi.in/app/ - reported
 - https://nequiisolucion-propulsor.in/app/
 - https://nequipropulsors.blob.core.windows.net/copnequi/ini.html
+- https://nequisolucion-propulsor-activa.in/app/ - reported
+- https://nequisolucion-propulsor-activar.in/app/ - reported
+- https://nequisolucion-propulsor.in/app/ - reported
+- https://nequisolucion-propulsoronapp.in/app/ - reported
 - https://neqprepropul.online/?p
 - https://new.express.adobe.com/webpage/5CnY19dz6LJ7u - Reported
 - https://nq-col.website/
 - https://obtenlooyaparati.site/agil.html
 - https://paratiipree.site/agil.html
+- https://paratiyaa.site/agil.html - reported
+- https://personapropulsor.shop/colombia.php - reported
 - https://personasvirtualsuc.com/co-es/credito
 - https://pre-aprobadoparatiii.website/agil.html
+- https://pre-solicituddd.website/agil.html
 - https://preaprobadopropulssor.website/agil.html
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
-- https://pre-solicituddd.website/agil.html
 - https://pree-aprobadooparaatii.website/agil.html?
 - https://preepaarati.site/agil.html nequi - reported
 - https://preepartii.website/agil.html
@@ -92,6 +102,11 @@ Etc:
 - https://prepropulsornequi.online/Activa.php
 - https://prepropulsornequsimulador.website/Activa.php
 - https://prepropulsornew.online/?p&
+- https://prepulsorperso.shop/colombia.php nequi - reported - (domain still alive)
+- https://prepulsorplata.online/personas.php nequi - reported
+- https://prestamonequ.in/app/ - reported
+- https://prestamonequi.blob.core.windows.net/app/index.html - reported
+- https://prestamopropulsornequi.site/propulsor - reported
 - https://pro-impulsando-col.website/agil.html
 - http://pro-impulsando-colo.website/agil.html
 - https://pro-solicitud.website/agil.html?f
@@ -107,10 +122,15 @@ Etc:
 - https://prosperarasss.website/agil.html
 - https://prosperarr.website/agil.html - Apparently down
 - https://prospereyaa.website/agil.html
+- https://recibeensegundos.site/personas.php - reported
+- https://sacatuprepulsor.site/personas.php nequi (domain still alive)
 - https://salejetsmartair.space/
 - https://saludyprosperidadnq.com/
 - https://salvavida.shop/propulsor/
+- https://salvavidasya.in/app/ - reported
 - https://simuladorensegundos.site/personas.php
+- https://simulatuprepulsor.online/libreinversion.php - reported
+- https://solicitaaa.website/agil.html - reported
 - http://solicitudcol.site/inicio.html
 - https://solicitudesvirtuales.online/lux/lux/
 - https://solucionanqya.com/prestamo/index.html
@@ -145,9 +165,11 @@ Etc:
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
 - https://tiquetsbaratospromos.com/inicio/
+- https://tu-nequisolucion-propulsor.site/app/ - reported
 - https://tucupo360bc.space/imagi
 - https://tuplanneq.com/prestamo/index.html
 - https://tupropulsorhoy.shop/neq/
+- https://tusprestamopropulsor.com/Nequi/ - reported
 - https://vivelaexperienciasmart.site/
 - https://vuelacondescuentoscolombia.online/
 - https://vuelosjetsmar.store/jet/

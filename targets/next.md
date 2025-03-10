@@ -54,6 +54,7 @@ Avianca:
   https://72www.vivetuaventurasinlimitespromo.com/terminos - reported
   https://lwww.vivetuaventurasinlimitespromo.com/terminos avianca - reported
   https://www3.vivetuaventurasinlimitespromo.com/terminos.php avianca - reported + CF abuse
+- https://aereocolxp.shop/av1/web/ - reported
 - https://avianca-promo.fly.dev/ reported
 - https://vuelaconavianca.fly.dev/ - reported
 - http://av.vuelocoombia.co.uk/ avianca - reported
@@ -76,17 +77,24 @@ Avianca:
     https://l1www.vivetuaventuraal100.ru/terminos - reported
     https://74www.vivetuaventuraal100.ru/ - reported
     https://1www.vivetuaventuraal100.ru/terminos - reported
+    https://16www.vivetuaventuraal100.ru/terminos - reported
+    http://80www.vivetuaventuraal100.ru/terminos - reported
 
 Bancolombia:
 - https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
 - https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
 - https://solicitarya-2025.glitch.me/ - reported
-  - https://e84fc409-3259-4497-9c92-35b8bf32b8d4-00-7j1lrn2or2mu.worf.replit.dev/ - reported
+  - https://e84fc409-3259-4497-9c92-35b8bf32b8d4-00-7j1lrn2or2mu.worf.replit.dev/ - reported - Apparently down
+- https://solicitar-2025.glitch.me/ - reported
+  - https://5ac1ced5-984d-40bc-aac9-7a03de99fd28-00-2sv04ww9vrycy.kirk.replit.dev/ - reported
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
 - https://multiservicsonlinepse.shop/libredestino/ - reported
 - https://solicitudbc.space/a/login.php - reported
+- https://sucursualesvirtuales.blob.core.windows.net/login/imagi.html - reported
+  https://sucursualesvirtuales.blob.core.windows.net/persona/imagi.html - reported
+- https://svpersonas-apps.portaldebugsflow.com/ - reported - (from https://n9.cl/1bn8uz)
 - https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
   https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
   https://creditoseguroalamano.tiiny.io/ - reported
@@ -132,11 +140,12 @@ Latam:
   https://latamavuelosprom.co/Promos/ - reported
   https://latamavuelosprom.co/travel-web-nacionales/ - ~~403 forbidden?~~ - reported
   https://latamavuelosprom.co/web-col/ - ~~403 forbidden?~~ - reported
+- https://latamcolpromos.com/portal-vuelos - down? (domain still alive)
 - https://latamdescuento.vercel.app/ - reported
 - https://latamnacionalespromo.com/web/ - reported
-  https://latamnacionalestravel.com/promociones-nacionales - reported
-  https://latamcolpromos.com/portal-vuelos - down? (domain still alive)
 - https://latamnacionalestravel.com/baratos-co/ - reported
+  https://latamnacionalestravel.com/promociones-nacionales - reported
+  https://latamnacionalestravel.com/travel-web-nacionales/ - reported
 - https://latampromocionalco.com/ - reported
   https://latampromocionalco.com/informacion_accion - reported
 - https://latampromocionaldescuento.in/ - reported
@@ -156,40 +165,25 @@ Latam:
 - https://vuelosbarats.com/index.php latam - reported
 
 Nequi:
-- https://asesordigitalpersonas.site/pulsor.php - reported
-- https://asesoriaensegundos.site/personas.php - reported
-- https://asesorneq.site/pulsor.php - reported
-- https://activacionpropulsor.site/process/index.php - reported
+- (nq2?)
+  https://asesordigitalneq.site/personas.php - reported
+  https://asesorneq.site/pulsor.php - reported
+  https://deinmediatobenloya.site/agil.html - reported
+  https://preasesorneq.site/pulsor.php - reported
+  https://nequi-online.site/transaction/clientes/index.html - reported
+  - (from) https://hab.me/BO6ZhLs
 - https://betplaylo.site/propulsor/ - reported
-- https://deinmediatobenloya.site/agil.html - reported
-- https://iwww.adquieretuimpulso.com/terminos.php - reported
-- https://nequicredi-salvavi.in/app/ - reported
-- https://nequiisolucion-propulsor.in/app/ - reported
-- https://nequisolucion-propulsor.in/app/ - reported
-- https://nequisolucion-propulsor-activa.in/app/ - reported
-- https://nequisolucion-propulsor-activar.in/app/ - reported
-- https://nequisolucion-propulsoronapp.in/app/ - reported
-- https://paratiyaa.site/agil.html - reported
-- https://personapropulsor.shop/colombia.php - reported
-- https://prepulsorperso.shop/colombia.php nequi - reported - alive?
-- https://prepulsorplata.online/personas.php nequi - reported
-- https://prestamonequ.in/app/ - reported
-- https://prestamopropulsornequi.site/propulsor - reported
+- https://iwww.adquieretuimpulso.com/terminos.php - CF catched
 - https://prestamosalinstanteneq.in/app/ - reported
+  https://tucreditoensegundosnequi.in/app/ - reported
+  https://tusalvavidasaunclic.in/app/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/2/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
   https://pretsamosalvavidas.azurewebsites.net/4/ - reported
-- https://prestamonequi.blob.core.windows.net/app/index.html - reported
-- https://recibeensegundos.site/personas.php - reported
-- https://sacatuprepulsor.site/personas.php nequi - LIVE
-- https://salvavidasya.in/app/ - reported
-- https://simulatuprepulsor.online/libreinversion.php - reported
-- https://solicitaaa.website/agil.html - reported
-- https://tu-nequisolucion-propulsor.site/app/ - reported
-- https://tucreditoensegundosnequi.in/app/ - reported
-- https://tusalvavidasaunclic.in/app/ - reported
-- https://tusprestamopropulsor.com/Nequi/ - reported
+- https://propulsornequi.azurewebsites.net/ne/ - reported
+  https://propulsornequi.azurewebsites.net/nq/ - reported
+  https://propulsornequi.azurewebsites.net/co/ - reported
 
 JetSmart:
 - https://aereojetsco.shop/web3/ - reported
@@ -221,6 +215,7 @@ JetSmart:
   https://tiquetesendescuentoonline.vercel.app/ofertas/ - reported
   https://vuelosjetsmart-sudamerica.vercel.app/ - reported
 - https://jetsmartcol.replit.app/ - reported
+- https://jetsmartlys.com/ - reported
 - https://jetssmart.com/ - reported
 - https://jetssmartt.site/co-es/ - reported
 - https://jettsmarrt.site/go/ - reported
