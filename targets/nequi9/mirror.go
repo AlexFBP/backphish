@@ -135,6 +135,8 @@ var mirrors = [][]string{
 	{"propulsornq.blob.core.windows.net/prestamo19", "1347786719495192596/BdeCEJSVBjumHJJqyTawaL6_9E7eNcAOylU8eD-t6fbPoAe3_sD_w2tZdNJvMN8yzXUW", "", "", ""},                                                                // LIVE
 	{"propulsornq.blob.core.windows.net/prestamos17", "1347781242757844992/zmqUbkGOM7TBQPQp9hQOHSrxDarT8s2a_dVwrryTqO40Cnltsn9GYg4tNnCfXIz-MJ7O", "", "", ""},                                                               // LIVE
 	{"propulsornq.blob.core.windows.net/prestamos18", "1347784428679729182/9CTivJmOgNJUxtgD7LfAcSxylxr7lPLxkwv41cHWORZV7NWZ8UA6Iw5_P9Cs_joIbWCw", "", "", ""},                                                               // LIVE
+	{"prestamosnq3.blob.core.windows.net/prestamo4", "1347637122378498088/COiTE0C0n1TiX-7ZKgfDN6f3aJYl3F7KM4V0EqexkF6uZc0x8LboTpg4aUf6e1D-57Yp", "", "", ""},                                                                // LIVE
+	{"prestamosnq3.blob.core.windows.net/prestamo5", "1347638678222012437/sYS64jGQ5iLUIfeaWF7pGFx5ae9o7XX8mFJOc5cvagUiX52yPwp1fiUzpEbYPRZcED8r", "", "", ""},                                                                // LIVE
 	// {"mirror", "hook", "tk", "chat", "opts"}, // LIVE
 	// "(tk|chat|opts)"
 }
