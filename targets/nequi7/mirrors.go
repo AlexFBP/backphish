@@ -184,7 +184,7 @@ var mirrors = [][]string{
 		"-4720837131", "6881434228:AAEgBp4Z6mDAvS-gM09Pw6AOfqLFamZ4cg0"}, // "Ultra Encrypted"... sure hahaha
 	{`nequiprepropulsor.blob.core.windows.net/neq2`, // Reported
 		"-4704093414", "7653580677:AAHpfKX_uvUBJ8FbJkOfqAzVE3lhAe9KGAo"}, // "Ultra Encrypted"... sure hahaha
-	{`solicita.blob.core.windows.net/propul`, // ALIVE
+	{`solicita.blob.core.windows.net/propul`, // Reported
 		"-4696337158", "7483762073:AAFg7eXymySTgb2Ja7AtSYU5IX2QAyUlXyg"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},

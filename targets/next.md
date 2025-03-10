@@ -90,6 +90,7 @@ Bancolombia:
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
+- http://libreinvcol.webcindario.com/celindex.html - reported
 - https://multiservicsonlinepse.shop/libredestino/ - reported
 - https://solicitudbc.space/a/login.php - reported
 - https://sucursualesvirtuales.blob.core.windows.net/login/imagi.html - reported
@@ -258,6 +259,7 @@ TiquetesBaratos
 - https://tiquetesbaratoswebpromo.com/ - reported
 - https://tiqusbaratoscol.store/inicio/ - reported
 - https://tiqutesbarats.com/opciones/ - reported
+- https://tiquteserconomics.com/inicio/ - reported
 
 Etc
 - https://bancabcr.webcindario.com/ banco costa rica - reported
