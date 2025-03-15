@@ -90,12 +90,16 @@ Bancolombia:
 - https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
 - https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
+- https://iguana6c410e7d.temporary-demo.site/ - reported
+  - (from https://ingresocolbanc.blogspot.com/?m=0&) - reported
 - http://libreinvcol.webcindario.com/celindex.html - reported
 - https://multiservicsonlinepse.shop/libredestino/ - reported
 - https://solicitudbc.space/a/login.php - reported
 - https://sucursualesvirtuales.blob.core.windows.net/login/imagi.html - reported
   https://sucursualesvirtuales.blob.core.windows.net/persona/imagi.html - reported
-- https://svpersonas-apps.portaldebugsflow.com/ - reported - (from https://n9.cl/1bn8uz)
+- https://svpersonas-apps.portaldebugsflow.com/ - reported
+  - (from https://n9.cl/1bn8uz)
+  - (from https://goo.su/w1E8J)
 - https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
   https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
   https://creditoseguroalamano.tiiny.io/ - reported
@@ -124,6 +128,7 @@ Latam:
   https://4www.diasespecialesuniprom360.com/terminos.php - reported
   https://iwwww.diasespecialesuniprom360.com/terminos.php - reported
   https://lwwww.diasespecialesuniprom360.com/terminos.php - reported
+  https://11wwww.diasespecialesuniprom360.com/terminos.php - reported
   https://12wwww.diasespecialesuniprom360.com/terminos.php - reported
 - https://latamnacionalespromos.com/ - CF catched!
 - https://latampromocionaldto.com/ - reported
@@ -178,6 +183,11 @@ Nequi:
 - https://prestamosalinstanteneq.in/app/ - reported
   https://tucreditoensegundosnequi.in/app/ - reported
   https://tusalvavidasaunclic.in/app/ - reported
+  https://tuprestamopropulsorr.com/Nequi/ - reported
+- https://prestamopropulsor.azurewebsites.net/1/ - reported
+  https://prestamopropulsor.azurewebsites.net/2/ - reported
+  https://prestamopropulsor.azurewebsites.net/3/ - reported
+  https://prestamopropulsor.azurewebsites.net/5/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/2/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
@@ -187,6 +197,7 @@ Nequi:
   https://propulsornequi.azurewebsites.net/co/ - reported
 
 JetSmart:
+- https://aereajetcol.com/col/ - reported
 - https://aereojetsco.shop/web3/ - reported
 - https://airviajajtmrs.site/ - reported
 - https://airline.hotsaleprimeplanet.space/ jetsmart - reported
