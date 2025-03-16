@@ -154,7 +154,7 @@ var mirrors = [][]string{
 		"-1002337338043", "7349424091:AAFJc5GIQapRF6Ar4AfrfLVGsmlAPvWu4qQ"}, // "Encrypted"... sure hahaha
 	{`nequiprepropulsor.blob.core.windows.net/neq`, // (*1)
 		"-1002455200156", "8020269665:AAGGCs-wc9L91g6w24_pUgvfxOrdYEPvv-c"}, // "Ultra Encrypted"... sure hahaha
-	{`neq.blob.core.windows.net/nqui`, // Reported
+	{`neq.blob.core.windows.net/nqui`, // (*1)
 		"-4622242335", "7595290252:AAHrBUFb83YYa2PqxN4bKm4Jobp2L77wDzg"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolmbia.blob.core.windows.net/neq`, // (*1)
 		"-4698512807", "7538925344:AAFVcN0B0elQ_W3BEWEYIcrpX8laRxghEs4"}, // "Ultra Encrypted"... sure hahaha
@@ -170,13 +170,13 @@ var mirrors = [][]string{
 		"-4784878857", "7711970244:AAFGt3jgMJuRx8bEMXj0PfCs2uDj8H88KvQ"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolmbia.blob.core.windows.net/colmbia`, // (*1)
 		"-4088574570", "6881434228:AAEgBp4Z6mDAvS-gM09Pw6AOfqLFamZ4cg0"}, // "Ultra Encrypted"... sure hahaha
-	{`neq.blob.core.windows.net/app1`, // Reported
+	{`neq.blob.core.windows.net/app1`, // (*1)
 		"-4603941167", "7818061361:AAHooeHbmULNtqbo6NkPrqLf3bpijPIeNYQ"}, // "Ultra Encrypted"... sure hahaha
-	{`neq.blob.core.windows.net/app2`, // Reported
+	{`neq.blob.core.windows.net/app2`, // (*1)
 		"-4604118641", "7584387742:AAHwnxFRLbGLrKlB1XEdT6fAqbAdBhndhlE"}, // "Ultra Encrypted"... sure hahaha
 	{`nequcolmbia.blob.core.windows.net/hazlotuyo`, // Reported
 		"-4722879433", "7911604690:AAHMh8BZcTMG9RCU1sJGeClYTfoeBa-vj-0"}, // "Ultra Encrypted"... sure hahaha
-	{`neq.blob.core.windows.net/online`, // Reported
+	{`neq.blob.core.windows.net/online`, // (*1)
 		"-4630723922", "7504782701:AAFIe24PdmMuihd5CTiTUq3Rcq53Q-qg7_0"}, // "Ultra Encrypted"... sure hahaha
 	{`activalo.blob.core.windows.net/ahora`, // (*1)
 		"-4727218549", "7815234358:AAGsf5LdPN7TGa5m8tRvFt3L4rNnRnyUaDU"}, // "Ultra Encrypted"... sure hahaha
@@ -186,8 +186,10 @@ var mirrors = [][]string{
 		"-4704093414", "7653580677:AAHpfKX_uvUBJ8FbJkOfqAzVE3lhAe9KGAo"}, // "Ultra Encrypted"... sure hahaha
 	{`solicita.blob.core.windows.net/propul`, // (*1)
 		"-4696337158", "7483762073:AAFg7eXymySTgb2Ja7AtSYU5IX2QAyUlXyg"}, // "Ultra Encrypted"... sure hahaha
-	{`nequlcolmbia.blob.core.windows.net/neqcolmbia`, // Reported
+	{`nequlcolmbia.blob.core.windows.net/neqcolmbia`, // (*1??)
 		"-4655813641", "7875683996:AAGqLPUiS449GkvU7-QKMNQPBSsajp_-RIY"}, // "Ultra Encrypted"... sure hahaha
+	{`propul.blob.core.windows.net/ahora`, // Reported
+		"-4645962315", "7815234358:AAGsf5LdPN7TGa5m8tRvFt3L4rNnRnyUaDU"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
