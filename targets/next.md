@@ -18,42 +18,6 @@ Avianca:
   https://75www.vivetuaventurasinlimitepromo.com/terminos - CF banner
   https://1lwww.vivetuaventurasinlimitepromo.com/tap3 - CF banner
   https://l1www.vivetuaventurasinlimitepromo.com/terminos - CF banner
-- https://0www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://1www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://4www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://5www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://8www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://9www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://13www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://17www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://24www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://28www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE ??
-  https://29www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://32www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://33www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://36www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://37www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://38www.vivetuaventurasinlimitespromo.com/ avianca - reported
-  https://40www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://43www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://44www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://47www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://48www.vivetuaventurasinlimitespromo.com/ avianca - reported
-  https://50www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE?
-  https://51www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://53www.vivetuaventurasinlimitespromo.com/ avianca - reported
-  https://54www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
-  https://57www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://61www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://63www.vivetuaventurasinlimitespromo.com/ avianca - reported
-  https://65www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://66www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://67www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://68www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://70www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://72www.vivetuaventurasinlimitespromo.com/terminos - reported
-  https://lwww.vivetuaventurasinlimitespromo.com/terminos avianca - reported
-  https://www3.vivetuaventurasinlimitespromo.com/terminos.php avianca - reported + CF abuse
 - https://aereocolxp.shop/av1/web/ - reported
 - https://avianca-promo.fly.dev/ reported
 - https://vuelaconavianca.fly.dev/ - reported
@@ -76,10 +40,12 @@ Avianca:
     https://8wwww.vivetuaventuraal100.ru/terminos - reported
     https://16www.vivetuaventuraal100.ru/terminos - reported
     https://34www.vivetuaventuraal100.ru/terminos - reported
-    https://73www.vivetuaventuraal100.ru/
+    https://57www.vivetuaventuraal100.ru/terminos - reported
+    https://73www.vivetuaventuraal100.ru/ - reported
     https://74www.vivetuaventuraal100.ru/ - reported
     https://77www.vivetuaventuraal100.ru/terminos - reported
     http://80www.vivetuaventuraal100.ru/terminos - reported
+    http://83www.vivetuaventuraal100.ru/terminos - reported
     https://l1www.vivetuaventuraal100.ru/terminos - reported
 
 Bancolombia:
@@ -134,8 +100,7 @@ Latam:
   https://11wwww.diasespecialesuniprom360.com/terminos.php - reported
   https://12wwww.diasespecialesuniprom360.com/terminos.php - reported
 - https://latamnacionalespromos.com/ - CF catched!
-- https://latampromocionaldto.com/ - reported
-  https://latampromocionaldto.com/informacion_accion/ - reported
+- https://latamnacionalpromos.com/Es-Promos/ - reported
 - https://latamvuelos-five.vercel.app/ - reported
 - https://latam-vuelosrutas.vercel.app/ - reported
 - https://lat.latvuelosporcolombiahoy.co.uk/ latam - reported
@@ -181,13 +146,15 @@ Nequi:
   https://preasesorneq.site/pulsor.php - reported
   https://nequi-online.site/transaction/clientes/index.html - reported
   - (from) https://hab.me/BO6ZhLs
+- https://capitalpulsor.site/personas.php - reported
 - https://betplaylo.site/propulsor/ - reported
 - https://iwww.adquieretuimpulso.com/terminos.php - CF catched
 - https://prestamosalinstanteneq.in/app/ - reported
   https://tucreditoensegundosnequi.in/app/ - reported
   https://tusalvavidasaunclic.in/app/ - reported
-  https://tuprestamopropulsorr.com/Nequi/ - reported
   https://nequisoluciones-salvavidas-activar.in/app/ - reported
+- https://tuprestamopropulsornequi.com/Nequi/ - reported
+  https://tuprestamopropulsorr.com/Nequi/ - reported
 - https://prestamopropulsor.azurewebsites.net/1/ - reported
   https://prestamopropulsor.azurewebsites.net/2/ - reported
   https://prestamopropulsor.azurewebsites.net/3/ - reported
@@ -204,6 +171,7 @@ Nequi:
 JetSmart:
 - https://aereajetcol.com/col/ - reported
 - https://aereocolxp.shop/smart - reported
+  https://aereocolxp.shop/smart3/ - reported
 - https://aereojetsco.shop/web3/ - reported
 - https://airviajajtmrs.site/ - reported
 - https://airline.hotsaleprimeplanet.space/ jetsmart - reported
@@ -256,6 +224,7 @@ JetSmart:
   https://viveprojetsco.com/pro3/ - reported
 - https://vivetuexperienciasmartcol.com/ jetsmart - reported
 - https://vuelaconjetsmart.onrender.com/ - reported
+- https://vuelaporcolombiajetmart.com/1/ - reported
 
 TiquetesBaratos
 - https://losvuelos-economicos.com/ tiquetesbaratos - reported
@@ -281,6 +250,7 @@ TiquetesBaratos
 - https://tiqusbaratoscol.store/inicio/ - reported
 - https://tiqutesbarats.com/opciones/ - reported
 - https://tiquteserconomics.com/inicio/ - reported
+- https://travelconsupersale.com/reservas/ - reported
 
 Etc
 - https://bancabcr.webcindario.com/ banco costa rica - reported

@@ -53,6 +53,7 @@ Etc:
 - https://coltrico.webcindario.com/simulate/index.php bancolombia - Apparently down by provider
 - https://deepskyblue-sardine-154842.hostingersite.com/app.php - Apparently down
 - https://evaluandoempresa.online/mercadolibre/respuesta/
+- https://eviar-solicitud-ya.website/agil.html
 - https://explora-hoy-colombia.shop/
 - http://explora-en-colombia.shop/
 - https://finanzasparaya.com/ - ???
@@ -63,6 +64,7 @@ Etc:
 - http://impulsando.shop/agil.html - reported
 - https://jetsmart.works/
 - https://jetsmart.digital/
+- https://jetspromosmart.com/reservas/smart9/
 - https://jetssmart.site/app/ - reported
 - https://jetssolucionalternas.site/prestamo-propulsor/
 - https://jt.hotsaleairviaja.com/ - Login required? Alive or bypass?
@@ -70,7 +72,9 @@ Etc:
 - https://latamairlines.me/col-web - apparently down
 - https://latamarilines.com/
 - https://latamavuelosprom.com/es-col
-- https://latampromocionaldto.com/comprar/ - Apparently down...
+- https://latampromocionaldto.com/ - reported
+  https://latampromocionaldto.com/comprar/ - Apparently down...
+  https://latampromocionaldto.com/informacion_accion/ - reported
 - https://mejoratueconomia.online/?p&
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
@@ -162,6 +166,7 @@ Etc:
   https://sucursalnequi.blob.core.windows.net/base015/ini.html - ~~ALIVE~~
 - http://sucursalvirtual09.space/
 - https://tepresta.online/nequi
+- https://transacionesenelportal.blob.core.windows.net/pep/mua1/index.html
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down
 - https://tiquetesbaratos-colombia.fly.dev/
 - https://tiquetsbaratospromos.com/inicio/
@@ -171,6 +176,42 @@ Etc:
 - https://tupropulsorhoy.shop/neq/
 - https://tusprestamopropulsor.com/Nequi/ - reported
 - https://vivelaexperienciasmart.site/
+- https://0www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://1www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://4www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://5www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://8www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://9www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://13www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://17www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://24www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://28www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE ??
+  https://29www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://32www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://33www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://36www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://37www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://38www.vivetuaventurasinlimitespromo.com/ avianca - reported
+  https://40www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://43www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://44www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://47www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://48www.vivetuaventurasinlimitespromo.com/ avianca - reported
+  https://50www.vivetuaventurasinlimitespromo.com/terminos avianca - ALIVE?
+  https://51www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://53www.vivetuaventurasinlimitespromo.com/ avianca - reported
+  https://54www.vivetuaventurasinlimitespromo.com/terminos avianca - reported + CF abuse
+  https://57www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://61www.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://63www.vivetuaventurasinlimitespromo.com/ avianca - reported
+  https://65www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://66www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://67www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://68www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://70www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://72www.vivetuaventurasinlimitespromo.com/terminos - reported
+  https://lwww.vivetuaventurasinlimitespromo.com/terminos avianca - reported
+  https://www3.vivetuaventurasinlimitespromo.com/terminos.php avianca - reported + CF abuse
 - https://vuelacondescuentoscolombia.online/
 - https://vuelosjetsmar.store/jet/
 - https://vuelosnacionales1.info/
