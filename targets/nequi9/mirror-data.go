@@ -606,10 +606,10 @@ var mirrors = [][]string{
 		""},
 
 	{"propulsornq.blob.core.windows.net/prestamo19", // LIVE
+		"1351012147009818644/VCeuOGzCvXrRkVYPpksksFTYWhzg_UitrcBlgX7hSc8XyruKgNC60Es9rC3_71WOWy1Z",
 		"1350560718881296435/G8H-PBisTxc3dbM2U3KcuO6jHYIp3RTo91Dqj0jDQfPZGCDgCEPxuLacgHGP5GsJe2kU",
 		"",
-		"",
-		""},
+		"wh-bypass-3"},
 
 	{"propulsornq.blob.core.windows.net/prestamos17", // LIVE
 		"1350556996918706218/Fatv_amaaOJCrSxWFGEYwf2xjg3sToEDX_YXL7cn0n0U262ltPL4N8kJpHzSTdbJ71ib",

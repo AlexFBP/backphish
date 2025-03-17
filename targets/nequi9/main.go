@@ -43,7 +43,15 @@ func attempt(mirror string) {
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 3) POST webhook (from otp.html)
+	back_hook := ""
+	if m.HasOption("wh-bypass-3") && m.Token != "" {
+		back_hook = m.Webhook
+		m.Webhook = m.Token
+	}
 	m.SendDiscord(&h, d.DataForStep(3))
+	if back_hook != "" {
+		m.Webhook = back_hook
+	}
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 4) POST back2 (from loading --> dinamica)
