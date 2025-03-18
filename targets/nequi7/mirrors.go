@@ -6,12 +6,27 @@ import (
 
 type mirrorData struct {
 	common.Telegram
+	common.MirrorOptions
+}
+
+func (m *mirrorData) selectTemplate(d *usrData, step uint8) string {
+	if m.HasOption("templ-2") {
+		return d.template2(step)
+	} else {
+		if step == 1 {
+			return d.template1()
+		}
+		return d.template1b(step - 2)
+	}
 }
 
 func mirrData(name string) (d mirrorData) {
 	for _, v := range mirrors {
 		if name == v[0] {
 			d.Chat, d.Token = v[1], v[2]
+			if len(v) >= 4 {
+				d.ParseOptions(v[len(v)-1])
+			}
 			break
 		}
 	}
