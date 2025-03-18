@@ -42,10 +42,13 @@ Etc:
 - https://aseoriaprepulsorenlinea.site/personas.php
 - https://asesordigital.space/personas.php
 - https://asesordigitalpersonas.site/pulsor.php - reported
+  https://asesordigitalneq.site/personas.php - reported
 - https://asesoriaenlinea.online/personas.php
 - https://asesoriaensegundos.site/personas.php
 - https://asesoriaprpulsor.site/agil.html
+- https://asesorneq.site/pulsor.php
 - https://bvflnanc.com/
+- https://capitalpulsor.site/personas.php - reported
 - credialinstante.com
 - https://credito-virtual.weebly.com/
 - https://creditosonlinesucursal.site/inicio.html
@@ -99,6 +102,7 @@ Etc:
 - https://preaprobadopropulssor.website/agil.html
 - https://preaprobdoparatii.website/agil.html
 - https://preaprobdoprati.website/agil.html
+- https://preasesorneq.site/pulsor.php - reported
 - https://pree-aprobadooparaatii.website/agil.html?
 - https://preepaarati.site/agil.html nequi - reported
 - https://preepartii.website/agil.html
@@ -120,12 +124,16 @@ Etc:
 - https://propulnq.com/?p&
 - https://propulsor-prestamo.com/
 - https://propulsores-pre-aprobadoss.website/agil.html
+- https://propulsornequi.azurewebsites.net/ne/ - reported
+  https://propulsornequi.azurewebsites.net/nq/ - reported
+  https://propulsornequi.azurewebsites.net/co/ - reported
 - https://propulsorpreta.online/?p& - ???
 - https://prosperareee.website/index.html - Apparently down (domain alive)
 - https://prosperarass.website/agil.html
 - https://prosperarasss.website/agil.html
 - https://prosperarr.website/agil.html - Apparently down
 - https://prospereyaa.website/agil.html
+- https://pulsor-capital.site/personas.php - reported
 - https://recibeensegundos.site/personas.php - reported
 - https://sacatuprepulsor.site/personas.php nequi (domain still alive)
 - https://salejetsmartair.space/

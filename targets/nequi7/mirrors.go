@@ -209,6 +209,16 @@ var mirrors = [][]string{
 		"-4691758121", "7876986121:AAEQdg5e807cJt2JGEqZm4qkEOzxoa54nrU"}, // "Ultra Encrypted"... sure hahaha
 	{`activarlo.blob.core.windows.net/ahora`, // (*1)
 		"-4727218549", "7508531817:AAHZ3fUKc5qDQfgLcfArog5zpdxrskgxr44"}, // "Ultra Encrypted"... sure hahaha
+	{`prestamopropulsor.azurewebsites.net/1`, // ALIVE
+		"-1002434742761", "7744324212:AAH3JG06PS_R-zL7mbJjKvaPN6isHziYGds", "templ-2"},
+	{`prestamopropulsor.azurewebsites.net/2`, // ALIVE
+		"-1002291996649", "7632258850:AAFwRZ_F4M4BXE6ZX-GtAXwMV_7YgwlFDKo", "templ-2"},
+	{`prestamopropulsor.azurewebsites.net/3`, // ALIVE
+		"-1002433049571", "7913024891:AAFhyESRZwfC-ukfLWKHne8rTAR5psOARXU", "templ-2"},
+	{`prestamopropulsor.azurewebsites.net/5`, // ALIVE
+		"-1002445233950", "7628962436:AAGWtX7H6G2o3I1m_WMyU9GQuP6bS9o4RbM", "templ-2"},
+	{`pretsamosalvavidas.azurewebsites.net/4`, // ALIVE
+		"-4779367448", "7528963935:AAHdxaETPEWm0uP3Q0LBIhTwJnvLQZn5BX4", "templ-2"},
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

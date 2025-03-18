@@ -140,13 +140,7 @@ Latam:
 
 Nequi:
 - (nq2?)
-  https://asesordigitalneq.site/personas.php - reported
-  https://asesorneq.site/pulsor.php - reported
   https://deinmediatobenloya.site/agil.html - reported
-  https://preasesorneq.site/pulsor.php - reported
-  https://nequi-online.site/transaction/clientes/index.html - reported
-  - (from) https://hab.me/BO6ZhLs
-- https://capitalpulsor.site/personas.php - reported
 - https://betplaylo.site/propulsor/ - reported
 - https://iwww.adquieretuimpulso.com/terminos.php - CF catched
 - https://prestamosalinstanteneq.in/app/ - reported
@@ -155,18 +149,9 @@ Nequi:
   https://nequisoluciones-salvavidas-activar.in/app/ - reported
 - https://tuprestamopropulsornequi.com/Nequi/ - reported
   https://tuprestamopropulsorr.com/Nequi/ - reported
-- https://prestamopropulsor.azurewebsites.net/1/ - reported
-  https://prestamopropulsor.azurewebsites.net/2/ - reported
-  https://prestamopropulsor.azurewebsites.net/3/ - reported
-  https://prestamopropulsor.azurewebsites.net/5/ - reported
 - https://pretsamosalvavidas.azurewebsites.net/1/ - reported
   https://pretsamosalvavidas.azurewebsites.net/2/ - reported
   https://pretsamosalvavidas.azurewebsites.net/3/index.php - reported
-  https://pretsamosalvavidas.azurewebsites.net/4/ - reported
-- https://propulsornequi.azurewebsites.net/ne/ - reported
-  https://propulsornequi.azurewebsites.net/nq/ - reported
-  https://propulsornequi.azurewebsites.net/co/ - reported
-- https://pulsor-capital.site/personas.php - reported
 
 JetSmart:
 - https://aereajetcol.com/col/ - reported
