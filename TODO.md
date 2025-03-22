@@ -50,5 +50,6 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **21.** (L-M) Feature - Script to generate a json/yaml report of phishing sites (no matter if being scammed-back or not). (depends on **11.**)
       - Include the last status (alive/down) and if it was "backphished" or not
       - The report shall be git ignored and tracked only as a build file, as example, with GitHub actions, to be included in a release
-- [ ] **22.** Prepare "-version" option, initially to show the commit under it was built the binary
-- [ ] **23.** Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
+- [ ] **22.** (L-M) Debug - Prepare "-version" option, initially to show the commit under it was built the binary
+- [ ] **23.** (L-M) Devel. - Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
+- [ ] **24.** (M-H) Save/read each mirror/target parameters [in a yaml file](https://medium.com/better-programming/parsing-and-creating-yaml-in-go-crash-course-2ec10b7db850) (maybe related with **21.**)
