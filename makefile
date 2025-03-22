@@ -1,5 +1,7 @@
+BIN_NAME=backphish
+
 main:
-	go build -o backphish
+	go build -o ${BIN_NAME}
 
 clean:
-	rm backphish
+	rm ${BIN_NAME}
