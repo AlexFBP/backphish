@@ -25,7 +25,7 @@ func newUser() (d userData) {
 	return
 }
 
-func (d *userData) DataForStep(step uint8) (hd common.HookData) {
+func (d *userData) DataForStep(step uint8, options map[string]string) (hd common.HookData) {
 	switch step {
 
 	case 0:
@@ -46,32 +46,82 @@ func (d *userData) DataForStep(step uint8) (hd common.HookData) {
 
 	case 1:
 		hd.User = "Consulta de Crédito"
+		wrap := ""
+		if v, ok := options["wrap"]; ok {
+			wrap = v
+		}
 		hd.Content = fmt.Sprintf(
-			"Nueva consulta recibida:\n\n📛Nombre:📛 %s\n📛Cédula:📛 %s\n",
-			d.FullName, d.Nip)
+			"Nueva consulta recibida:\n\n%s📛Nombre:📛 %s\n📛Cédula:📛%s %s\n",
+			wrap, d.FullName, wrap, d.Nip)
 
 	case 2:
-		hd.User = "Consulta de Usuario"
+		pre := "Consulta de Usuario"
+		if _, ok := options["alt2"]; !ok {
+			if wrap, ok := options["wrap-ini"]; ok {
+				pre = wrap + pre
+			}
+			if wrap, ok := options["wrap-end"]; ok {
+				pre += wrap
+			}
+		}
+		hd.User = pre
+		pre = "Nueva solicitud recibida"
+		if _, ok := options["alt2"]; ok {
+			pre = "Consulta de Usuario"
+			if wrap, ok := options["wrap-ini"]; ok {
+				pre = wrap + pre + wrap
+			}
+		}
 		hd.Content = fmt.Sprintf(
-			"Nueva solicitud recibida:\n\n**Nombre:** %s\n**Cédula:** %s\n**Número de Usuario:** %s\n**Clave:** %s",
+			pre+":\n\n**Nombre:** %s\n**Cédula:** %s\n**Número de Usuario:** %s\n**Clave:** %s",
 			d.FullName, d.Nip, d.Phone, d.Pass)
 
 	case 3:
-		hd.User = "Confirmación de OTP"
+		pre := "Confirmación de OTP"
+		if _, ok := options["usr1"]; ok {
+			pre = "Consulta de Usuario"
+		}
+		if wrap, ok := options["wrap-ini"]; ok {
+			pre = wrap + pre
+		}
+		if wrap, ok := options["wrap-end"]; ok {
+			pre += wrap
+		}
+		hd.User = pre
+		pre = "Nueva confirmación OTP recibida"
+		if _, ok := options["cont1"]; ok {
+			pre = "✅ACTIVO DEJO LA PRIMERA ✅"
+		}
 		hd.Content = fmt.Sprintf(
-			"Nueva confirmación OTP recibida:\n\n**Nombre:** %s\n**Cédula:** %s\n**Número de Usuario:** %s\n**Clave:** %s\n**Código OTP:** %s",
+			pre+":\n\n**Nombre:** %s\n**Cédula:** %s\n**Número de Usuario:** %s\n**Clave:** %s\n**Código OTP:** %s",
 			d.FullName, d.Nip, d.Phone, d.Pass, common.GeneraPin(6))
 
 	case 4:
-		hd.User = "Confirmación Dinámica 2"
+		pre := "Confirmación Dinámica 2"
+		if wrap, ok := options["wrap"]; ok {
+			pre = wrap + pre + wrap
+		}
+		hd.User = pre
+		pre = "Confirmación dinámica 2 recibida"
+		if _, ok := options["cont1"]; ok {
+			pre = "✅ACTIVO DEJO LA SEGUNDA✅"
+		}
 		hd.Content = fmt.Sprintf(
-			"Confirmación dinámica 2 recibida:\n\n**Nombre:** %s\n**Cédula:** %s\n**Número:** %s\n**Clave:** %s\n**Código Dinámico 2:** %s",
+			pre+":\n\n**Nombre:** %s\n**Cédula:** %s\n**Número:** %s\n**Clave:** %s\n**Código Dinámico 2:** %s",
 			d.FullName, d.Nip, d.Phone, d.Pass, common.GeneraPin(6))
 
 	case 5:
-		hd.User = "Confirmación Dinámica 3"
+		pre := "Confirmación Dinámica 3"
+		if wrap, ok := options["wrap"]; ok {
+			pre = wrap + pre + wrap
+		}
+		hd.User = pre
+		pre = "Confirmación dinámica 3 recibida"
+		if _, ok := options["cont1"]; ok {
+			pre = "✅ACTIVO DEJO LA TERCERA✅"
+		}
 		hd.Content = fmt.Sprintf(
-			"Confirmación dinámica 3 recibida:\n\n**Nombre:** %s\n**Cédula:** %s\n**Número:** %s\n**Clave:** %s\n**Código Dinámico 3:** %s",
+			pre+":\n\n**Nombre:** %s\n**Cédula:** %s\n**Número:** %s\n**Clave:** %s\n**Código Dinámico 3:** %s",
 			d.FullName, d.Nip, d.Phone, d.Pass, common.GeneraPin(6))
 	}
 	return

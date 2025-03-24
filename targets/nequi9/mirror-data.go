@@ -510,7 +510,7 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo6", // LIVE
-		"1352650629675352136/X60qQN-Zwrxd8rzu74IZ9QPJTL-0PlkZGx1cKyTXIBYGTWk7suRMP5aivgEGb103pa_N",
+		"1353001405266399374/SVmji_WTkjFBUhK3fisZLxUuhBZadQ9yIXceP_e7JO6KtjH41Vb1jpaDfB7ii4iNHzwu",
 		"",
 		"",
 		""},
@@ -528,19 +528,19 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo9", // LIVE
-		"1352652161636503627/QYV_d8UuC1ngQVB60VHBoPCWj9QFk_M2SicEBnj3O40sPh2AIAZ7q84x-Nj42KxSV-nE",
+		"1353403985133830336/2wT0FAsGH6_pXEe5lYKDhvHRqfYE8OQGGjeIaDwy3HZP0BRm4TvHowifAGan9GlJKQE5",
 		"",
 		"",
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo10", // reported
-		"1352652766958452747/TfQkSus0mkuqUiWfBJCt8i4A8n7OjDy5ooqK-nNCLyNvUqax5H-s6km9l5d8US6iCSPy",
+		"1353398246793543721/EHcrOnywJqIZ2r2lFzVV5tVMCKfc-F0enQSww9_vk1uBqNmijXKKOTwDGS0_SKpNBBQX",
 		"",
 		"",
 		""},
 
 	{"propulsoresnq0.blob.core.windows.net/propulsor1", // reported
-		"1352660415456346114/iSioChB32wW4fg8f9eOKim-v2Izd2AMbnux44xGKMHeU8Xka9aFdrozZtZTY8GylnDKZ",
+		"1353402925778600067/VsIlfh8bm2703FQxMsNklgWXugfLIqHRTHXTTuq7-zZZjG-3n5bDXN_hD2PWd0ZhKyo_",
 		"",
 		"",
 		""},
@@ -552,25 +552,25 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq11.blob.core.windows.net/prestamo12", // reported
-		"1352658199987228805/h-ADY9xnEFyjf83QpfyTKz0jdbP5BzcYcxQsnC0IgW-A3mtQOMOOMYuthN66M0cJkx1R",
+		"1353078665214296066/kG1D7NL1wkC-UPtcSTfErTSaKII8Wul-_IvYbtu3b98tPjFttHCLm_ucVzNSmHPPThyk",
 		"",
 		"",
 		""},
 
 	{"prestamonq11.blob.core.windows.net/prestamo13", // LIVE
-		"1351365327992258591/1ANuy2dChL5Nt8L2iLjV2syOp7YERdQrfK5UMW-9dkzzMH91FYJ7xC-fx-iKpRZcEfvO",
+		"1353541144402984960/j9JC664sNb0AzfkbxyhD3B-P5OEdqlB6YXBnXeV5LsnwjhU8LH79G7twjivRury-V6eM",
 		"",
 		"",
-		""},
+		"alt1"},
 
 	{"prestamonq11.blob.core.windows.net/prestamo14", // LIVE
-		"1352653892982411304/nQIjZrH153-CC2FyyLxMd8xQvUFGLmigWGF5ChH_FO8oJXmOx0InIAwaTSpNtPHpMcAt",
+		"1353454692222369953/SoRZDbz6287QHcHubX8EauSpm80GZCO_zhaxUQLy_DV-599OHt9Hc_4lwrCfjKk_-e2W",
 		"",
 		"",
 		""},
 
 	{"prestamonq11.blob.core.windows.net/prestamo15", // LIVE
-		"1352653379222110261/BY99Zvim5R35TyjxUTvyfr-bzPjknMiVLpwEX69bB3pyIug8u6ndmzXe71B4gVJyEwMa",
+		"1353396095887212604/oHPcIHmawAEomaUXRL1NBjiEA4DroT6OZnA-v2BB1_-lS_vHBxftBXs9NM7wgqPYmttu",
 		"",
 		"",
 		""},
@@ -582,61 +582,67 @@ var mirrors = [][]string{
 		""},
 
 	{"propulsandoideas.blob.core.windows.net/dd1", // reported
-		"1352664357733011557/VHGttm2f6yqOln5Yb0Gc0Tg9ctvOESxfPbuzkdPsjRTKWkXjnRUTdr9qcY_1NBT7oUN4",
+		"1353069809121755207/urvwob-qXwBmqfPYVIaVJe797LLrvYxtVb33pVq_SU4JmFHyEIOjSCiypPPm4mfxnEWs",
 		"",
 		"",
 		""},
 
 	{"propulsandoideas.blob.core.windows.net/dd2", // LIVE
-		"1352663972678991892/QZxHetq1pEENKCEsg-b4SPrWvPpx5p5LQXYgQTfQVmXNU6GWkzR7N6Xupgjc5Jj07YQm",
+		"1353070312673251328/7VTjrfyofn3eUQYIoM8phDvc3JomMoSeaLEZ5OnLoOrENXtrL7JHe-K54mjGOKVymiUR",
 		"",
 		"",
 		""},
 
 	{"propulsandoideas.blob.core.windows.net/dd3", // LIVE
-		"1352663510873542847/V8QP34ZafYCaW0uNxNWY9xvqcFe5sv652ogoAiA0s0vOJJjbBQ9aUycxyFizmIceL2WE",
+		"1353071032797364354/7_blf_86pqKYzEdCAlxT2fLE6S5R5eeH2ye1ebNMoFFUtoZfC2I3xpYxS4ghNM8JsCtU",
 		"",
 		"",
 		""},
 
 	{"propulsornq.blob.core.windows.net/prestamo16", // LIVE
-		"1352654402506330213/iCTTmRdwAUiVM8xBtj4qAghWHMrKrtCPBu6yM4UbqtaO7NhT18X_EWlMYONiBKhoELyI",
+		"1353004142343229552/USesXzZCl9liq_rCJ_zRn1Lr-kVrlponNII8jNM-qR00UTpqzvGNAMPbE8rgd6hxcOnh",
 		"",
 		"",
 		""},
 
 	{"propulsornq.blob.core.windows.net/prestamo19", // LIVE
-		"1352728873007190056/e6INUqbqNwMDvNe2cLKulyuLN58VDVNgHch5qgtna0wIWOLxZiBwufwC3AymtfTqf_gF",
+		"1353538845102051478/wtwqQsvy3CFDk-QlWX2PhIAsxxzaXgehekPRHXq7BeKmkOMgUmkb8VVyfE3nrcNVSnk8",
 		"",
 		"",
 		""},
 
 	{"propulsornq.blob.core.windows.net/prestamos17", // LIVE
-		"1352656475595608185/jv-LeQhHot1eii9TGne2LaHc3HMnRXg1bpGYiszLiiRq1xLCL4WFp5oty-ixzkYGlp3i",
+		"1353404713831235745/UA1Q-it2-Io7VDzlLmnR5sPTAggX4BtJz0DPris8GaRpbHG408pvFb6-O98ZC5LGhICR",
 		"",
 		"",
-		""},
+		"alt1,alt2"},
 
 	{"propulsornq.blob.core.windows.net/prestamos18", // LIVE
 		"1352656928102416546/YGHKLhCzM2Kyvi6h9zEKeEWn6aWpFUnj_m-tq7yQaUqjb78tryZQzxUz3ls1F7A4HvZt",
 		"",
 		"",
-		""},
+		"alt1,alt3"},
 
 	{"prestamosnq3.blob.core.windows.net/prestamo4", // LIVE
-		"1352649540745822250/euivd276Deq8I78aUY-gklBVYMohwN_kq9ocEnJr2uei73Bfi4maS2m6r4kHaSy7gn_I",
+		"1353396711325958266/gM9GF2mBTERb97g3habCBKRazNww1SnxoobEEiYnwYhCxIQnzLBC7jtcbRtB0VZ-k9tO",
 		"",
 		"",
 		""},
 
 	{"prestamosnq3.blob.core.windows.net/prestamo5", // LIVE
-		"1352651416988287046/vPt47yh5Ddpj3iSbuD-kuRhnsQoaa54jQEZyMRkT1GvELEKsWEYXtrMa9jihRclWqswd",
+		"1353421117217439816/Lr1JBsWXXBaO74QIR-O_6VoJZHW9LYAqQ_IWcc2ezovtki-2U14NG9oJlwAc9-az9Jhx",
 		"",
 		"",
 		""},
 
 	{"tumejoropcion.blob.core.windows.net/dd4", // LIVE
-		"1352662787268022374/lY9Nzp_GjavDaI4ARq72QSvbSZti6l2MRAfVqobFsN-Vd38seMct39Fm2pi5xUbjgVAW",
+		"1353071502727057420/qVzQqddN5ejtyRP0prn3JPGEqgVGB8ChLG8tvptcHFZGH7k_Fue8khVDrgzCOneXEXT-",
+		"",
+		"",
+		""},
+
+	{"propulsoresnq.blob.core.windows.net/prestamo1", // LIVE
+		"1351224153696370820/EKj_lK6tbkPumROJIx8SZo9C-G_Aoc_mF5w4JphrWd_67YTAgRsGysRrLv4ZiTNFTLw1",
 		"",
 		"",
 		""},
@@ -646,5 +652,6 @@ var mirrors = [][]string{
 	// 	"tk",
 	// 	"chat",
 	// 	"opts"},
+
 	// "(tk|chat|opts)"
 }
