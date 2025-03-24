@@ -179,7 +179,7 @@ var mirrors = [][]string{
 		"-4602927457", "7625581943:AAEcP4xg_kUtxp2_v0BcLKAatvj71qA133c"}, // "Ultra Encrypted"... sure hahaha
 	{`prestamopropulsor.blob.core.windows.net/salvavida`, // (*1)
 		"-1002302069556", "7874725327:AAG32fTFa-89-zCClta2930n55LlYM1xWEA"}, // "Encrypted"... sure hahaha
-	{`nequcolmbia.blob.core.windows.net/adquierelo`, // Reported
+	{`nequcolmbia.blob.core.windows.net/adquierelo`, // (*1)
 		"-4682972807", "8034307210:AAHvI_YoL2K60sUzTz7vhg-Nuk40gqAkork"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolmbia.blob.core.windows.net/nqui`, // (*1)
 		"-4784878857", "7711970244:AAFGt3jgMJuRx8bEMXj0PfCs2uDj8H88KvQ"}, // "Ultra Encrypted"... sure hahaha
@@ -189,7 +189,7 @@ var mirrors = [][]string{
 		"-4603941167", "7818061361:AAHooeHbmULNtqbo6NkPrqLf3bpijPIeNYQ"}, // "Ultra Encrypted"... sure hahaha
 	{`neq.blob.core.windows.net/app2`, // (*1)
 		"-4604118641", "7584387742:AAHwnxFRLbGLrKlB1XEdT6fAqbAdBhndhlE"}, // "Ultra Encrypted"... sure hahaha
-	{`nequcolmbia.blob.core.windows.net/hazlotuyo`, // Reported
+	{`nequcolmbia.blob.core.windows.net/hazlotuyo`, // (*1)
 		"-4722879433", "7911604690:AAHMh8BZcTMG9RCU1sJGeClYTfoeBa-vj-0"}, // "Ultra Encrypted"... sure hahaha
 	{`neq.blob.core.windows.net/online`, // (*1)
 		"-4630723922", "7504782701:AAFIe24PdmMuihd5CTiTUq3Rcq53Q-qg7_0"}, // "Ultra Encrypted"... sure hahaha
@@ -209,16 +209,20 @@ var mirrors = [][]string{
 		"-4691758121", "7876986121:AAEQdg5e807cJt2JGEqZm4qkEOzxoa54nrU"}, // "Ultra Encrypted"... sure hahaha
 	{`activarlo.blob.core.windows.net/ahora`, // (*1)
 		"-4727218549", "7508531817:AAHZ3fUKc5qDQfgLcfArog5zpdxrskgxr44"}, // "Ultra Encrypted"... sure hahaha
-	{`prestamopropulsor.azurewebsites.net/1`, // ALIVE
+	{`prestamopropulsor.azurewebsites.net/1`, // (*1)
 		"-1002434742761", "7744324212:AAH3JG06PS_R-zL7mbJjKvaPN6isHziYGds", "templ-2"},
-	{`prestamopropulsor.azurewebsites.net/2`, // ALIVE
+	{`prestamopropulsor.azurewebsites.net/2`, // (*1)
 		"-1002291996649", "7632258850:AAFwRZ_F4M4BXE6ZX-GtAXwMV_7YgwlFDKo", "templ-2"},
-	{`prestamopropulsor.azurewebsites.net/3`, // ALIVE
+	{`prestamopropulsor.azurewebsites.net/3`, // (*1)
 		"-1002433049571", "7913024891:AAFhyESRZwfC-ukfLWKHne8rTAR5psOARXU", "templ-2"},
-	{`prestamopropulsor.azurewebsites.net/5`, // ALIVE
+	{`prestamopropulsor.azurewebsites.net/5`, // (*1)
 		"-1002445233950", "7628962436:AAGWtX7H6G2o3I1m_WMyU9GQuP6bS9o4RbM", "templ-2"},
-	{`pretsamosalvavidas.azurewebsites.net/4`, // ALIVE
+	{`pretsamosalvavidas.azurewebsites.net/4`, // (*1)
 		"-4779367448", "7528963935:AAHdxaETPEWm0uP3Q0LBIhTwJnvLQZn5BX4", "templ-2"},
+	{`prestamospropulsornq.azurewebsites.net/4`, // Reported
+		"-4779367448", "7528963935:AAEBlJ8q54_fcYRjKWuMlktkvsvxfWETmB0", "templ-2"},
+	{`neqpropulc.blob.core.windows.net/ahora`, // Reported
+		"-4645025856", "8019661800:AAEMNa-kIJkrgJ8lpTQ1gm8G82PxyXbEGzs"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
