@@ -221,7 +221,7 @@ var mirrors = [][]string{
 		"-4779367448", "7528963935:AAHdxaETPEWm0uP3Q0LBIhTwJnvLQZn5BX4", "templ-2"},
 	{`prestamospropulsornq.azurewebsites.net/4`, // Reported
 		"-4779367448", "7528963935:AAEBlJ8q54_fcYRjKWuMlktkvsvxfWETmB0", "templ-2"},
-	{`neqpropulc.blob.core.windows.net/ahora`, // Reported
+	{`neqpropulc.blob.core.windows.net/ahora`, // (*1)
 		"-4645025856", "8019661800:AAEMNa-kIJkrgJ8lpTQ1gm8G82PxyXbEGzs"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
