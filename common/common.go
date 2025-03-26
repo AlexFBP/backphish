@@ -19,7 +19,7 @@ var (
 
 func init() {
 	rand.Seed(time.Now().UnixMilli())
-	SetMockServer("")
+	mockServer = ""
 }
 
 func CheckURI(testUrl string) (err error) {
@@ -33,13 +33,15 @@ func CheckURL(testUrl string) (err error) {
 }
 
 func SetMockServer(serverUrl string) (err error) {
-	if serverUrl != "" {
-		if err = CheckURI(serverUrl); err != nil {
-			return
-		}
+	if serverUrl == "" {
+		mockServer = DEFAULT_MOCK
+	} else if err = CheckURL(serverUrl); err == nil {
+		mockServer = serverUrl
+	} else {
+		return
 	}
-	mockServer = serverUrl
-	if mockServer != "" && CanLog(LOG_NORMAL) {
+
+	if CanLog(LOG_NORMAL) {
 		fmt.Printf("Using mockServer: %s\n", mockServer)
 	}
 	return

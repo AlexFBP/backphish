@@ -52,10 +52,19 @@ If no options (as above), will list the available phishing targets.
 Available CLI options:
 
 ```
--t TARGET       Use a listed TARGET - Bypass the menu if specified
--n TIMES        Quantity of attacks, 0 means unlimited - Default: 4
--m              Use mock server (helpful while developing)
+  -l int
+        Log Level. Values: 0-Verbose/Debug 1-Normal 2-Quiet/Severe (default 1)
+  -m value
+        Use mock server in HTTP requests. Must be a valid URL or empty string "" to take default. ("http://localhost:1080")
+  -n string
+        Attack name
+  -p int
+        Simultaneous processes/threads (default 1)
+  -q int
+        Total quantity of attacks. Set 0 for unlimited (default 4)
 ```
+
+Note: `--help` option returns the above list of options
 
 ### (Miscellaneous)
 

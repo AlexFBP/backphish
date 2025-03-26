@@ -8,7 +8,6 @@ import (
 type Config struct {
 	target    string
 	times     int
-	mock      bool
 	threadQty int
 	logLevel  int
 }
@@ -44,7 +43,6 @@ const (
 func (c *Config) ClearFlags() {
 	c.target = ""
 	c.times = DEFAULT_TIMES
-	c.mock = false
 	c.threadQty = DEFAULT_PROCESSES
 }
 
@@ -53,18 +51,13 @@ func (c *Config) ParseFlags() {
 
 	targetPtr := flag.String("n", "", "Attack name")
 	timesPtr := flag.Int("q", DEFAULT_TIMES, "Total quantity of attacks. Set 0 for unlimited")
-	mockPtr := flag.Bool("m", false, "Use mock server in HTTP requests")
+	flag.Func("m", "Use mock server in HTTP requests. Must be a valid URL or empty string \"\" to take default. (\""+DEFAULT_MOCK+"\")", SetMockServer)
 	threadQtyPtr := flag.Int("p", DEFAULT_PROCESSES, "Simultaneous processes/threads")
 	logLevelPtr := flag.Int("l", DEFAULT_LOGLEVEL, fmt.Sprintf("Log Level. Values:%s", LogLevelsHelp()))
 
 	flag.Parse()
 	c.target = *targetPtr
 	c.times = *timesPtr
-	c.mock = *mockPtr
 	c.threadQty = *threadQtyPtr
 	c.logLevel = *logLevelPtr
-
-	if c.mock {
-		SetMockServer(DEFAULT_MOCK)
-	}
 }

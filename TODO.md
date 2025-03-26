@@ -7,7 +7,7 @@ All pending improvements have a rating (Priority-Difficulty):
 - Difficulty or Quantity-of-lines-to-be-changed: (E)asy-few / (M)edium-moderate / (H)ard-huge
 
 - [ ] **1.** (L-H) Network - Add huge useless payload (when no body required or as additional params in body) - In other words, allow a DDoS with all frontend objects (html, css, js, ...) - maybe with help of a scapper like [colly](https://github.com/gocolly/colly)
-- [ ] **2.** (L-E) Create CLI arg to pass alternative mock server (Implies `-m`)
+- [x] **2.** ~~(L-E) Create CLI arg to pass alternative mock server (Implies `-m`)~~
 - [ ] **3.** (M-L) Logging - Pass attempt number to goroutines (attackRunner?)
 - [ ] **4.** Logging - Create a statistics record. Ideas:
       - 4.1 It shall allow to record last state returned by a goroutine
@@ -53,3 +53,4 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **22.** (L-M) Debug - Prepare "-version" option, initially to show the commit under it was built the binary
 - [ ] **23.** (L-M) Devel. - Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
 - [ ] **24.** (M-H) Save/read each mirror/target parameters [in a yaml file](https://medium.com/better-programming/parsing-and-creating-yaml-in-go-crash-course-2ec10b7db850) (maybe related with **21.**)
+- [ ] **25.** Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)
