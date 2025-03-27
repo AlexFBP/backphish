@@ -32,6 +32,7 @@ By domain/provider:
 Etc:
 - https://157lux.online/config/
 - https://2025tiquetesbaratos01.fly.dev/
+- https://acelerapido.site/redirect.php
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://activacionproductoss.shop/prestamo/
 - https://activacionpropulsor.site/process/index.php - reported
@@ -83,6 +84,7 @@ Etc:
   https://latampromocionaldto.com/comprar/ - Apparently down...
   https://latampromocionaldto.com/informacion_accion/ - reported
 - https://mejoratueconomia.online/?p&
+- https://mibancolombia1.blogspot.com/ <-- https://t.ly/ZCPW-
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
 - https://nequi-online.site/transaction/clientes/index.html (down by provider?) <-- https://hab.me/BO6ZhLs
@@ -144,6 +146,8 @@ Etc:
 - https://prospereyaa.website/agil.html
 - https://pulsor-capital.site/personas.php - reported
 - http://pulsor-pro.online/redirect.php
+- https://pulsordirecto.site/redirect.php
+- https://rapidoasesor.site/prepulsor.php - Apparently down
 - https://recibeensegundos.site/personas.php - reported
 - https://sacatuprepulsor.site/personas.php nequi (domain still alive)
 - https://salejetsmartair.space/

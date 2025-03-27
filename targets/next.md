@@ -64,7 +64,9 @@ Bancolombia:
 - https://iguana6c410e7d.temporary-demo.site/ - reported
   - (from https://ingresocolbanc.blogspot.com/?m=0&) - reported
 - http://libreinvcol.webcindario.com/celindex.html - reported
+- https://miregistroapp.w3spaces.com/ - reported
 - https://multiservicsonlinepse.shop/libredestino/ - reported
+- https://personasapp.blob.core.windows.net/col/imagi.html bancolombia - reported
 - https://solicitudbc.space/a/login.php - reported
 - https://sucursualesvirtuales.blob.core.windows.net/login/imagi.html - reported
   https://sucursualesvirtuales.blob.core.windows.net/persona/imagi.html - reported
@@ -148,6 +150,9 @@ Nequi:
 - https://betplaylo.site/propulsor/ - reported
 - (nq2?)
   https://deinmediatobenloya.site/agil.html - reported
+  https://deinmediatobtenlloya.site/agil.html - reported
+  https://planparatiobtenloya.site/agil.html - reported
+  https://propulsnequi.online/propulsor.php - reported
 - https://dorezil.click/ - reported
 - https://prestamosalinstanteneq.in/app/ - reported
   https://tucreditoensegundosnequi.in/app/ - reported
