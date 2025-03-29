@@ -101,6 +101,9 @@ func attempt(mirror string) {
 		op["wrap"] = "🥳"
 		op["cont1"] = ""
 	}
+	if m.HasOption("wh-bypass-4") {
+		alt_hook()
+	}
 	m.SendDiscord(&h, d.DataForStep(4, op))
 	reset()
 	common.RandDelayRange(35*time.Second, 50*time.Second)
