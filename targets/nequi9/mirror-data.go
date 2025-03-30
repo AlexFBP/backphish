@@ -510,13 +510,13 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo6", // LIVE
-		"1355396450695123164/0pu8M2TRpEkjkaL01x6VHjL4X1Wb9L9I0AT4OwQSpimzmY7g6fJ_BS1l-8sGMkeJ4z9n",
+		"1355648545276952766/SgjtofbI2IzQAMspDtcY-u00f_1Aq1jbSx_2puwme5nGcS3yG4xQNEtdTC6fyrmEk7x2",
 		"",
 		"",
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo7", // LIVE
-		"1355358174202298378/B9ZGANA0Mix1ZJlkYVhl_ibICjkz0HRbIc5WHeTMyUZ78otNrFXVRNC7j4UE0tL-Fbor",
+		"1355634466093269234/WWNk0pdDUzlgbtI-Crh3T6JF88p0q3Otcl5x3rvf9_sY6bYdKHbcOGjZ8UaFjbzjS1qh",
 		"",
 		"",
 		""},
@@ -528,19 +528,19 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo9", // LIVE
-		"1355359614111322221/v3C-uVNtZ08r0pYZUrvkjAJM9pd2ufkS_5BqUIclvx_-chLr7YykMuLWjUtZkrSNo7DH",
+		"1355674678043082824/vkqKIx0zU5u40H33OXUgFW2fOhLdxxVAAPHJBRF_aE4EXziInN-Jo3HIuBiquuZxtAzY",
 		"",
 		"",
 		""},
 
 	{"prestamonq5.blob.core.windows.net/prestamo10", // reported
-		"1355562795071963298/xPrtTMpODDQRVhNF_ZSvmBp0Fi3Mvhpq6KwAIeskg84mSW5hs9hqZR0Wr2rOjrPnek6s",
-		"1355191467852697660/DhsboS_JJFN8_smE8QSRA4JR-YZFAe--vquRzjGs1WqPsiCiolbtm8dwX5xCdeumSu42",
+		"1355638462006427839/KA9hwTdcPfEucinqJ3vTHfuDwDzxE0qFky6dU7BvmyQB7yyrN-rjOOx3zNj0dPRNLcsp",
+		"1355639123859476640/IeqCQIfRqNyZhlkgYNb-rLyPL72CzZkv8SdXGAJs5rgdXh9-ghwpzQCbpb3tWiDwIAYm",
 		"",
-		"wh-bypass-4"},
+		"wh-bypass-4,wh-bypass-5"},
 
 	{"propulsoresnq0.blob.core.windows.net/propulsor1", // reported
-		"1355562024951877775/F7d14BJT4Tht9PsZ2B0lQwtHkR9lAxBzVrjc1mZMfUM4yOIpyLswV2h_6jR9IB8O_dvv",
+		"1355630705106751699/gNjx5Abgw5QtpoyveReeRT4INEf-21a55kpEZW6tpP0XpOrR57uX1QJVLWApgtECConS",
 		"",
 		"",
 		""},
@@ -558,25 +558,25 @@ var mirrors = [][]string{
 		""},
 
 	{"prestamonq11.blob.core.windows.net/prestamo13", // LIVE
-		"1355603179647013094/hsfvpJavHUA0-DhDQucrD-Ze_vMq5XdcUxU2-8MINW3NhiJRg2JV4_rhbNaiJqAewIFi",
+		"1355631262169174047/pdnUXk2DhAQPuVAXMmTXUzmpExS014wfbGZErbnyuRITt92QYw_Azhqz6TqnWeMayya7",
 		"",
 		"",
 		"alt1"},
 
 	{"prestamonq11.blob.core.windows.net/prestamo14", // LIVE
-		"1355357079740874863/LtnKcxH33NT__06VJfYsgMaHMyIIVasiIVLcq841S8Pg54QMuxFRsq2zNRaTcA2E2WpM",
+		"1355632723607158866/70vIkVlngbAL4Yo7jQWwbxnfPczTw1xLwqc7ie0_tn77JiB41wf5IkpuRzEpFriWD1bd",
 		"",
 		"",
 		""},
 
 	{"prestamonq11.blob.core.windows.net/prestamo15", // LIVE
-		"1355625609878835323/nExmfpsTugTKNfpS5VtN82lWw6sAY-O3t7KTkie3NiWTFo04glKvT8-AuoPyvNjHXGqG",
+		"1355649262544883915/DNoEVVb-o8xZ32avdh9NUBnnRKACRi9ijt1ZhN5GYOcKBKjitVOY3ysbTGqV7g1LWhFL",
 		"",
 		"",
 		""},
 
 	{"prestamosnq3.blob.core.windows.net/prestamos3", // reported
-		"1355372154358595664/z62JG9mx-1yQIqhMirbK956xoWpil3ANFhJHbj7TSr26WGqeBsh2WLg8xbk4tPV3j82i",
+		"1355632266620960788/J4ttimaXJQjxtQiZZl4Dk-iP0muWRAT44xIAB60EABwnYIsARsZ9b4qmpJsumiYBWRdg",
 		"",
 		"",
 		""},
@@ -600,7 +600,7 @@ var mirrors = [][]string{
 		""},
 
 	{"propulsornq.blob.core.windows.net/prestamo16", // LIVE
-		"1355166090958868561/Gho1lP7vWCNYXIhWwBvyPDykDu5v95rD40RebLCk2boRl1ppOGmQpjGVccv25-0aEj7L",
+		"1355628637491040518/25Iw47hovcVp6O8mfMGw89P2E1wpWiOSIYZyWbj_pZtjlLEGGVjEcIAdWVaVfOgxXpAv",
 		"",
 		"",
 		""},
@@ -618,19 +618,19 @@ var mirrors = [][]string{
 		"alt1,alt2"},
 
 	{"propulsornq.blob.core.windows.net/prestamos18", // LIVE
-		"1355360268246323281/yse5eRhyH5dMHb-IdaKhYxL9XiQqwZT9fQ4YnL7-sSvZ6CIhqshBNpsW0j04aQ2qbZKh",
+		"1355637707681960078/BbDQEm_hBFiz0Vsgg_ijxRdHn3YYB_wpXvKctAgxQxptYcYq_iFiPrJeyx8TddyoF8kV",
 		"",
 		"",
 		"alt1,alt3"},
 
 	{"prestamosnq3.blob.core.windows.net/prestamo4", // LIVE
-		"1355362132430163978/pTVCerzP-T_N6HhzVG3ZktcavqDtE-uNWHmZR0nN9ZvXltz886np9hqa_GTw6jLkd7f6",
+		"1355632967422054441/9usIER8mVDIPcrWpcVWQrdT2QeNz2Ai1rl81hKyanP0aquJh6lg8cYnsjIxoGyQ2cExa",
 		"",
 		"",
 		""},
 
 	{"prestamosnq3.blob.core.windows.net/prestamo5", // LIVE
-		"1355359060819710114/6rU_FO1Ttgvj0ZCGRakT-GVJv3EgaB0ZVRZr-omzdG88SPFIbLnDlxJVYUv9ulZWQk7m",
+		"1355633533514809464/wkcvIZC3K_K6OJOjHmhdcq7IUNE3Dz-dKq-8m9VH1Z2KTFfu46bF2Fpiqz5hNQ8_e_BN",
 		"",
 		"",
 		""},
@@ -642,7 +642,19 @@ var mirrors = [][]string{
 		""},
 
 	{"propulsoresnq.blob.core.windows.net/prestamo1", // LIVE
-		"1355385031899615387/O3lqOvYmTciBGVQNINyXHYz1fkWloqRfB-x9dQwoaXOcwX1IWruyJAk6dZzawedfwXEL",
+		"1355654036870791339/Fsvx2EfJlEqFy0tuz3eSw2ShkW_OIeTc6aELdYiJ59PXeyB48JlN3q-jDbkUYCVFRIkT",
+		"",
+		"",
+		""},
+
+	{"tumejoropcion.blob.core.windows.net/neq", // LIVE
+		"1351221138855825458/drU5oKdXg797BeQNiK6m0s3osEVJwxSn2hWtfbd6mCnW7K6cU75GuwtozyXySxqxmfat",
+		"",
+		"",
+		""},
+
+	{"sitioneq.blob.core.windows.net/log", // LIVE
+		"1354502477151731825/ZMUH7M5r-1IhwCSlngNJPUZELOO9l3SOP255R6XLhWL8OZJ3zq29xxaE2EJ7IC6Bdu6l",
 		"",
 		"",
 		""},

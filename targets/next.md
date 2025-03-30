@@ -36,6 +36,8 @@ Avianca:
 - https://promo.co-avolarnacional.com/ - reported
 - https://transcol-early.online/ avianca - reported
 - https://tuviajesseguroscondescuentostravelcolombia.site/ - reported
+- https://vivetudescuentoonline2025.vercel.app/ofertas/ - reported
+- https://www.avianfly.shop/ - reported
 - https://www.vuelabaratosinlimite.com/ - reported
   - https://1www.vivetuaventuraal100.ru/terminos - reported
     https://8wwww.vivetuaventuraal100.ru/terminos - reported
@@ -123,6 +125,7 @@ Latam:
   https://latamnacionalestravel.com/Promos/ - reported
   https://latamnacionalestravel.com/ES-CO/ - reported
   https://latamnacionalestravel.com/baratos-co/ - reported
+  https://latamnacionalestravel.com/baratos-web-co/ - reported
   https://latamnacionalestravel.com/promociones-nacionales - reported
   https://latamnacionalestravel.com/travel-web-nacionales/ - reported
 - https://latampromocionalco.com/ - reported
@@ -151,8 +154,12 @@ Nequi:
 - (nq2?)
   https://deinmediatobenloya.site/agil.html - reported
   https://deinmediatobtenlloya.site/agil.html - reported
+  https://haz-tu-solicitud.website/agil.html - reported
+  https://haz-tu-solicitudd.website/agil.html - reported
   https://planparatiobtenloya.site/agil.html - reported
   https://propulsnequi.online/propulsor.php - reported
+  https://pulsor-pre.site/personas.php - reported
+  https://pulsorpre.site/personas.php - reported
 - https://dorezil.click/ - reported
 - https://prestamosalinstanteneq.in/app/ - reported
   https://tucreditoensegundosnequi.in/app/ - reported
@@ -205,6 +212,7 @@ JetSmart:
 - https://jettsmarrt.site/go/ - reported
   https://jettsmarrt.site/web/ - reported
 - https://latamair.lat/ - reported
+- https://lightyellow-bat-773455.hostingersite.com/ - reported
 - https://offer.hotsalejtmrsprime.space/ jetsmart - reported
 - https://projetcolsmrt.com.co/1/ jetsmart - reported
 - https://promojestmart.com/ - reported
@@ -240,6 +248,7 @@ TiquetesBaratos
 - https://tiquetesbaratos-promoweb.com/web/ - 403 or bypassed?
 - https://tiquetesbaratoscol.com.co/ - reported
 - https://tiquetesbaratosnetpromo.com/ - reported
+  https://tiquetesbaratosnetpromo.com/web/ - 403 or bypassed?
 - https://tiquetesbaratosnetpromos.com/portal-flys/ - reported
 - https://tiquetesbaratospromos.com/web - reported
   https://tiquetesbaratospromos.com/web-promociones - reported (down?)
@@ -252,6 +261,8 @@ TiquetesBaratos
 
 Etc
 - https://bancabcr.webcindario.com/ banco costa rica - reported
+- https://krosmopack-evenements.shop/es/mmorpg/actualidad/noticias/krosmopack-2025/# dofus - reported
+- https://jetsproxy.onrender.com/ - Down?
 - https://nuevaversion-popu-lar.online/ b.popular - reported
 - https://seagreen-hare-240258.hostingersite.com/inicio.html - Down?
 - https://darkslategray-chicken-814283.hostingersite.com/libre.php davivienda - reported

@@ -32,7 +32,9 @@ By domain/provider:
 Etc:
 - https://157lux.online/config/
 - https://2025tiquetesbaratos01.fly.dev/
+- http://83www.vivirvolareconomico.com/
 - https://acelerapido.site/redirect.php
+- https://acelerapulsor.site/personas.php
 - https://activa.tuplataquiensegundos.site/zaes.php
 - https://activacionproductoss.shop/prestamo/
 - https://activacionpropulsor.site/process/index.php - reported
@@ -85,6 +87,8 @@ Etc:
   https://latampromocionaldto.com/informacion_accion/ - reported
 - https://mejoratueconomia.online/?p&
 - https://mibancolombia1.blogspot.com/ <-- https://t.ly/ZCPW-
+- https://miregistroapp.w3spaces.com/ <-- https://mibancolombia1.blogspot.com/
+  https://registro-mi-app.w3spaces.com/
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
 - https://nequi-online.site/transaction/clientes/index.html (down by provider?) <-- https://hab.me/BO6ZhLs
@@ -187,6 +191,7 @@ Etc:
   https://sucursalnequi.blob.core.windows.net/base014/ini.html - reported
   https://sucursalnequi.blob.core.windows.net/base015/ini.html - ~~ALIVE~~
 - http://sucursalvirtual09.space/
+- https://t.ly/ZCPW-
 - https://tepresta.online/nequi
 - https://transacionesenelportal.blob.core.windows.net/pep/mua1/index.html
 - https://tiquetesbaratos.productosoferta38.shop/ - Apparently down

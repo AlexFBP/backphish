@@ -223,8 +223,18 @@ var mirrors = [][]string{
 		"-4779367448", "7528963935:AAEBlJ8q54_fcYRjKWuMlktkvsvxfWETmB0", "templ-2"},
 	{`neqpropulc.blob.core.windows.net/ahora`, // (*1)
 		"-4645025856", "8019661800:AAEMNa-kIJkrgJ8lpTQ1gm8G82PxyXbEGzs"}, // "Ultra Encrypted"... sure hahaha
+	{`prestampropulsor.azurewebsites.net/1`, // Reported
+		"-1002434742761", "7744324212:AAHIWuvxTUwSpzT4vn1Qa1GN5bq6dYLK0FU", "templ-2"},
+	{`prestampropulsor.azurewebsites.net/2`, // ALIVE
+		"-1002291996649", "7632258850:AAGaC64CWmthUHGXQwAmPhVt5RrlqB0zRDU", "templ-2"},
 	{`prestampropulsor.azurewebsites.net/3`, // Reported
-		"-1002433049571", "7913024891:AAF-09kKs0DGLR3mdIv0IdnqKUHmG9A7hWw", "templ-2"},
+		"-1002433049571", "7913024891:AAFko1f0dGjtPkXB9dkjgWMjvFO4ysT-VU8", "templ-2"},
+	{`prestampropulsor.azurewebsites.net/6`, // Reported
+		"-1002544855225", "7082292759:AAHSLhFsYUASd0DJrFAXSGo8QDna93XFM1w", "templ-2"},
+	{`prestampropulsor.azurewebsites.net/7`, // ALIVE
+		"-1002661514871", "8167813074:AAH3lSUfyGe3EAjxCKWjjTvpd-gC7XevnlE", "templ-2"},
+	{`preopulso.blob.core.windows.net/ahora`, // Reported
+		"-4701397367", "8149360843:AAGJJSGCmYzwH8CsRozY4EWknfKI9uValA8"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
