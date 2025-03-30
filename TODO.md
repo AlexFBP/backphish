@@ -8,8 +8,8 @@ All pending improvements have a rating (Priority-Difficulty):
 
 - [ ] **1.** (L-H) Network - Add huge useless payload (when no body required or as additional params in body) - In other words, allow a DDoS with all frontend objects (html, css, js, ...) - maybe with help of a scapper like [colly](https://github.com/gocolly/colly)
 - [x] **2.** ~~(L-E) Create CLI arg to pass alternative mock server (Implies `-m`)~~
-- [ ] **3.** (M-L) Logging - Pass attempt number to goroutines (attackRunner?)
-- [ ] **4.** Logging - Create a statistics record. Ideas:
+- [ ] **3.** (M-E) Logging - Pass attempt number to goroutines (attackRunner?)
+- [ ] **4.** (L-M) Logging - Create a statistics record. Ideas:
       - 4.1 It shall allow to record last state returned by a goroutine
       - maybe a fixed lenght array with mutex.
       - It shall have a statistics of last statuses
@@ -19,7 +19,7 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **7.** (L-H) Behavior - With concurrency, improve the spread time between attacks according to consequent goroutines
       - implement calculus of `totalShift` in `AttackRunner()`
       - Possibly a **refactor** in which each mirror has a way to calculate the average attack time
-- [ ] **8.** (L-L) Performance - [Discard body reply](https://www.google.com/search?q=golang+http+client+%22discard+OR+drop%22+reply+body) when not passed an object to be filled with that reply
+- [ ] **8.** (L-E) Performance - [Discard body reply](https://www.google.com/search?q=golang+http+client+%22discard+OR+drop%22+reply+body) when not passed an object to be filled with that reply
 - [ ] **9.** (L-L) Debug/Devel - [Build and restart on change](https://www.reddit.com/r/golang/comments/6yap3o/how_do_you_rebuildrestart_your_app_on_file_changes/)
 - [ ] **10.** (H-M) Performance - Allow to test that a target/mirror is still alive
       - It might be by adding a feature to all mirrors/targets to test HTTP 2xx on each entry point
@@ -53,7 +53,7 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **22.** (L-M) Debug - Prepare "-version" option, initially to show the commit under it was built the binary
 - [ ] **23.** (L-M) Devel. - Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
 - [ ] **24.** (M-H) Save/read each mirror/target parameters [in a yaml file](https://medium.com/better-programming/parsing-and-creating-yaml-in-go-crash-course-2ec10b7db850) (maybe related with **21.**)
-- [ ] **25.** Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)
+- [ ] **25.** (H-M) Performance - Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)
 - [ ] **26.** (L-M) UI - On the first line of an attack, include also the full mirror name
 - [ ] **27.** (M-M) Performance - Read parameter [on file changes](https://github.com/fsnotify/fsnotify). If change is detected, evaluate first if content changed (by calculating/comparating a hash) - Requires **24.**
 - [ ] **28.** (L-H) UI - [Allow translations](https://lokalise.com/blog/go-internationalization-using-go-i18n/)
