@@ -54,3 +54,6 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **23.** (L-M) Devel. - Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
 - [ ] **24.** (M-H) Save/read each mirror/target parameters [in a yaml file](https://medium.com/better-programming/parsing-and-creating-yaml-in-go-crash-course-2ec10b7db850) (maybe related with **21.**)
 - [ ] **25.** Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)
+- [ ] **26.** (L-M) UI - On the first line of an attack, include also the full mirror name
+- [ ] **27.** (M-M) Performance - Read parameter [on file changes](https://github.com/fsnotify/fsnotify). If change is detected, evaluate first if content changed (by calculating/comparating a hash) - Requires **24.**
+- [ ] **28.** (L-H) UI - [Allow translations](https://lokalise.com/blog/go-internationalization-using-go-i18n/)
