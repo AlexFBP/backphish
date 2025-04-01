@@ -167,6 +167,7 @@ Nequi:
   https://nequisoluciones-salvavidas-activar.in/app/ - reported
 - https://prestamoprosulsorhoy.com/Nequi/ - reported
   https://tuprestamopropulsorr.com/Nequi/ - reported
+- https://tuprestamopropulsor.azurewebsites.net/ag/ - reported
 - https://neqlcolmbiasas.azurewebsites.net/ - reported
 - https://neqpropulsor.azurewebsites.net/neq/ - reported
 

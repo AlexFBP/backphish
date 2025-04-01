@@ -43,6 +43,7 @@ Etc:
 - https://aeroboletosenoferta.vercel.app/ofertas/ - Apparently down by provider
 - https://ahorroalamanoteayuda.tiiny.io/ bancolombia - Apparently down by provider
 - https://airviajajtmrs.xyz/
+- https://8wwww.arribaporloaltosiempre.com/terminos
 - https://aumentatulimitetdc.glitch.me/ - bdv
 - https://aseoriaprepulsorenlinea.site/personas.php
 - https://asesordigital.space/personas.php
@@ -240,6 +241,7 @@ Etc:
   https://72www.vivetuaventurasinlimitespromo.com/terminos - reported
   https://lwww.vivetuaventurasinlimitespromo.com/terminos avianca - reported
   https://www3.vivetuaventurasinlimitespromo.com/terminos.php avianca - reported + CF abuse
+  https://74www.vivirenelairesiempre.com/terminos
 - https://vuelacondescuentoscolombia.online/
 - https://vuelosjetsmar.store/jet/
 - https://vuelosnacionales1.info/
