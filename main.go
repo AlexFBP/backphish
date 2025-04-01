@@ -28,13 +28,7 @@ import (
 
 func main() {
 	conf := common.GetConfig()
-	commandOptions := common.JoinSlices(
-		common.MainMenu.GetAll(),
-		[]menu.CommandOption{
-			// Playground - Please keep this one at the end
-			{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
-		},
-	)
+	commandOptions := getCommandOptions()
 
 	target, times, threads := conf.GetTarget(), conf.GetTimes(), conf.GetThreads()
 	if target == "" {
@@ -42,29 +36,45 @@ func main() {
 		menu := menu.NewMenu(commandOptions, menuOptions)
 		menu.Start()
 	} else {
-		var command *menu.CommandOption
-		for _, v := range commandOptions {
-			if v.Command == target {
-				command = &v
-				break
-			}
+		executeTarget(commandOptions, target, times, threads)
+	}
+}
+
+// getCommandOptions returns the list of command options.
+func getCommandOptions() []menu.CommandOption {
+	return common.JoinSlices(
+		common.MainMenu.GetAll(),
+		[]menu.CommandOption{
+			// Playground - Please keep this one at the end
+			{Command: "test", Description: "playground (not a real attack)", Function: playground.Cmd},
+		},
+	)
+}
+
+// executeTarget executes the specified target with the given parameters.
+func executeTarget(commandOptions []menu.CommandOption, target string, times, threads int) {
+	var command *menu.CommandOption
+	for _, v := range commandOptions {
+		if v.Command == target {
+			command = &v
+			break
 		}
-		if command != nil {
-			if common.CanLog(common.LOG_NORMAL) {
-				fmt.Printf("Using target \"%s\"", target)
-				if times > 0 {
-					fmt.Printf(", only \"%d\" times", times)
-				} else {
-					fmt.Print(", no limit")
-				}
-				fmt.Printf(" in %d threads", threads)
-				fmt.Println()
+	}
+	if command != nil {
+		if common.CanLog(common.LOG_NORMAL) {
+			fmt.Printf("Using target \"%s\"", target)
+			if times > 0 {
+				fmt.Printf(", only \"%d\" times", times)
+			} else {
+				fmt.Print(", no limit")
 			}
-			command.Function()
-		} else {
-			if common.CanLog(common.LOG_QUIET) {
-				fmt.Printf("\"%s\" is not a valid target\n", target)
-			}
+			fmt.Printf(" in %d threads", threads)
+			fmt.Println()
+		}
+		command.Function()
+	} else {
+		if common.CanLog(common.LOG_QUIET) {
+			fmt.Printf("\"%s\" is not a valid target\n", target)
 		}
 	}
 }
