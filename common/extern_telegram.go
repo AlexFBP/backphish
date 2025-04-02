@@ -4,20 +4,6 @@
 
 package common
 
-// Discord Structs
-
-type Discord struct {
-	ReqHandler
-	Webhook string
-}
-
-type HookData struct {
-	User    string `json:"username"`
-	Content string `json:"content"`
-}
-
-// Telegram Structs
-
 type Telegram struct {
 	ReqHandler
 	Token     string
@@ -29,12 +15,6 @@ type TgMsg struct {
 	ChatID    string `json:"chat_id"`
 	Text      string `json:"text"`
 	ParseMode string `json:"parse_mode,omitempty"`
-}
-
-func (m *Discord) SendDiscord(data HookData) {
-	m.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
-	// use discord instead of discordapp:
-	// https://github.com/discord/discord-api-docs/issues/1878
 }
 
 // Send Message to a Telegram Chat
