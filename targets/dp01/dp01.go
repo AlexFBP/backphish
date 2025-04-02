@@ -32,7 +32,6 @@ func getAllCmds() []menu.CommandOption {
 func attempt(base string) {
 	// Entrypoint from https://ingressar1davidd.sayo1296.repl.co
 
-	h := common.ReqHandler{}
 	m := mirrData(base)
 
 	tiposDocumento := []string{
@@ -43,7 +42,7 @@ func attempt(base string) {
 	randIp := common.GeneraIP()
 	location := "Bogotá, CO"
 
-	m.SendToTelegram(&h, fmt.Sprintf(`DATOS DAVPLAT
+	m.SendToTelegram(fmt.Sprintf(`DATOS DAVPLAT
 TipoDoc: %s
 NumDoc: %s
 Clave: %s
@@ -56,7 +55,7 @@ IP: %s
 
 	common.RandDelayRange(30*time.Second, 60*time.Second)
 
-	m.SendToTelegram(&h, fmt.Sprintf(`DATOS DAVPLAT
+	m.SendToTelegram(fmt.Sprintf(`DATOS DAVPLAT
 Cod1: %s
 IP: %s
 %s`, common.GeneraPin(6), randIp, location))

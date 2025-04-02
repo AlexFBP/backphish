@@ -7,6 +7,7 @@ package common
 // Discord Structs
 
 type Discord struct {
+	ReqHandler
 	Webhook string
 }
 
@@ -18,6 +19,7 @@ type HookData struct {
 // Telegram Structs
 
 type Telegram struct {
+	ReqHandler
 	Token     string
 	Chat      string
 	ParseMode string
@@ -29,8 +31,8 @@ type TgMsg struct {
 	ParseMode string `json:"parse_mode,omitempty"`
 }
 
-func (m *Discord) SendDiscord(h *ReqHandler, data HookData) {
-	h.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
+func (m *Discord) SendDiscord(data HookData) {
+	m.SendJSON("https://discord.com/api/webhooks/"+m.Webhook, data, nil, nil)
 	// use discord instead of discordapp:
 	// https://github.com/discord/discord-api-docs/issues/1878
 }
@@ -40,7 +42,7 @@ func (m *Discord) SendDiscord(h *ReqHandler, data HookData) {
 // Please take care of not exceeding Telegram fair usage:
 // - https://rollout.com/integration-guides/telegram-bot-api/api-essentials
 // - https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this
-func (m *Telegram) SendToTelegram(h *ReqHandler, msg string) {
+func (m *Telegram) SendToTelegram(msg string) {
 	tgm := TgMsg{
 		ChatID: m.Chat,
 		Text:   msg,
@@ -49,5 +51,5 @@ func (m *Telegram) SendToTelegram(h *ReqHandler, msg string) {
 		tgm.ParseMode = m.ParseMode
 	}
 
-	h.SendJSON("https://api.telegram.org/bot"+m.Token+"/sendMessage", tgm, nil, nil)
+	m.SendJSON("https://api.telegram.org/bot"+m.Token+"/sendMessage", tgm, nil, nil)
 }
