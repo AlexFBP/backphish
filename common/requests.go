@@ -85,7 +85,7 @@ func (r *ReqHandler) checkClient() {
 	}
 }
 
-func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders []SimpleTerm, filler interface{}) {
+func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders []SimpleTerm, filler interface{}) (err error, lastStep uint8) {
 	data := url.Values{}
 	for _, v := range params {
 		data.Add(v.K, v.V)
@@ -95,25 +95,25 @@ func (r *ReqHandler) SendPostEncoded(postUrl string, params, additionalHeaders [
 		reqHeaders = append(reqHeaders, SimpleTerm{"Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"})
 	}
 	reqHeaders = append(reqHeaders, additionalHeaders...)
-	r.doRequest("POST", postUrl, strings.NewReader(data.Encode()), reqHeaders, filler)
+	return r.doRequest("POST", postUrl, strings.NewReader(data.Encode()), reqHeaders, filler)
 }
 
-func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders []SimpleTerm, filler interface{}) {
+func (r *ReqHandler) SendJSON(target string, payload interface{}, additionalHeaders []SimpleTerm, filler interface{}) (err error, lastStep uint8) {
 	b := new(bytes.Buffer)
 	if payload != nil {
-		err := json.NewEncoder(b).Encode(payload)
+		err = json.NewEncoder(b).Encode(payload)
 		if err != nil {
-			log.Fatalf("\n[FATAL] Data couldn't be JSON serialized: %+v\n", payload)
+			return
 		}
 	}
 	reqHeaders := []SimpleTerm{
 		{"Content-Type", "application/json"},
 	}
 	reqHeaders = append(reqHeaders, additionalHeaders...)
-	r.doRequest("POST", target, b, reqHeaders, filler)
+	return r.doRequest("POST", target, b, reqHeaders, filler)
 }
 
-func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []SimpleTerm, filler interface{}) {
+func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []SimpleTerm, filler interface{}) (err error, lastStep uint8) {
 	data := url.Values{}
 	for _, v := range urlParams {
 		data.Add(v.K, v.V)
@@ -123,11 +123,11 @@ func (r *ReqHandler) SendGet(getUrl string, urlParams, additionalHeaders []Simpl
 		fmt.Println(coded, ":")
 	}
 	getUrl += "?" + coded
-	r.doRequest("GET", getUrl, nil, additionalHeaders, filler)
+	return r.doRequest("GET", getUrl, nil, additionalHeaders, filler)
 }
 
 // To send multipart/form-data
-func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader, additionalHeaders []SimpleTerm, filler interface{}) (err error) {
+func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader, additionalHeaders []SimpleTerm, filler interface{}) (err error, lastStep uint8) {
 	// Based on https://stackoverflow.com/a/20397167/3180052
 
 	// Prepare a form that you will submit to that URL.
@@ -165,13 +165,11 @@ func (r *ReqHandler) SendMultipart(targetURL string, values map[string]io.Reader
 	}
 
 	additionalHeaders = append(additionalHeaders, SimpleTerm{"Content-Type", w.FormDataContentType()})
-	r.doRequest("POST", targetURL, b, additionalHeaders, filler)
-	return
+	return r.doRequest("POST", targetURL, b, additionalHeaders, filler)
 }
 
-func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHeaders []SimpleTerm, filler interface{}) {
+func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHeaders []SimpleTerm, filler interface{}) (err error, lastStep uint8) {
 	r.checkClient()
-	var err error
 	var finalUrl string
 
 	if mockServer != "" {
@@ -182,14 +180,17 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 
 	// Validate URL to be used
 	if err = CheckURL(finalUrl); err != nil {
-		log.Fatalf("\n[FATAL] Malformed/Wrong URL: '%s'\nError: %v\n", finalUrl, err)
+		// err = &CustErr{fmt.Sprintf("Malformed/Wrong URL: '%s'", finalUrl), err}
+		return
 	}
+	lastStep++
 
 	// Prepare request
 	r.Request, err = http.NewRequest(method, finalUrl, body)
 	if err != nil {
-		log.Fatalln(err)
+		return
 	}
+	lastStep++
 
 	// Add request headers
 	for _, h := range reqHeaders {
@@ -206,6 +207,7 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 	if mockServer != "" {
 		r.Request.Header.Add("Mocked-Address", urlRequest)
 	}
+	lastStep++
 
 	// Do request. Retry at most MAX_RETRIES
 	retries := uint8(0)
@@ -216,7 +218,8 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 			break
 		}
 		if retries == MAX_RETRIES {
-			log.Fatalln("Request failed after", MAX_RETRIES, "retries. Error:", err)
+			// err = &CustErr{fmt.Sprint("Request failed after", MAX_RETRIES, "retries"), err}
+			return
 		}
 		retries++
 		if CanLog(LOG_VERBOSE) {
@@ -226,15 +229,17 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 		RandDelayWindowed(time.Second, time.Second)
 	}
 	defer r.Response.Body.Close()
+	lastStep++
 
 	// Fill supplied response object (if any)
 	if filler != nil {
 		// _, err = io.ReadAll(resp.Body)
 		switch t := filler.(type) {
 		case *string:
-			b, err := io.ReadAll(r.Response.Body)
+			var b []byte
+			b, err = io.ReadAll(r.Response.Body)
 			if err != nil {
-				log.Fatalln(err)
+				return
 			}
 			*t = string(b)
 			// for len(b) > 0 {
@@ -248,14 +253,16 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 				log.Printf("plain:%s - quoted:%+q\n", b, b)
 			}
 		default:
-			err := json.NewDecoder(r.Response.Body).Decode(filler)
+			err = json.NewDecoder(r.Response.Body).Decode(filler)
 			if err != nil {
-				log.Fatalf("\n[decode] Not a JSON response or unhandled filler type '%T' - Error: %v\n", t, err)
+				return
 			}
 		}
 	}
+	lastStep++
 
 	if CanLog(LOG_VERBOSE) {
 		fmt.Println("(", r.Response.Status, ")")
 	}
+	return
 }
