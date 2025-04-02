@@ -32,11 +32,14 @@ func attempt(mirror string) {
 
 	back_hook := ""
 	var op map[string]string
-	alt_hook := func() {
-		if m.Token != "" {
+	cust_hook := func(hook string) {
+		if hook != "" {
 			back_hook = m.Webhook
-			m.Webhook = m.Token
+			m.Webhook = hook
 		}
+	}
+	alt_hook := func() {
+		cust_hook(m.Token)
 	}
 	reset := func() {
 		op = map[string]string{}
