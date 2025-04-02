@@ -1,6 +1,7 @@
 package nequi9
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/turret-io/go-menu/menu"
@@ -25,28 +26,16 @@ func getAllCmds() []menu.CommandOption {
 }
 
 func attempt(mirror string) {
-	h := common.ReqHandler{}
-	h.UseJar(true)
 	d := newUser()
 	m := mirrData(mirror)
+	m.Discord.UseJar(true)
 
-	back_hook := ""
 	var op map[string]string
-	cust_hook := func(hook string) {
-		if hook != "" {
-			back_hook = m.Webhook
-			m.Webhook = hook
-		}
-	}
 	alt_hook := func() {
-		cust_hook(m.Token)
+		m.SetAltHook(m.Token)
 	}
 	reset := func() {
 		op = map[string]string{}
-		if back_hook != "" {
-			m.Webhook = back_hook
-			back_hook = ""
-		}
 	}
 	reset()
 
@@ -59,6 +48,7 @@ func attempt(mirror string) {
 	if m.HasOption("alt1") {
 		op["wrap"] = "😎😎"
 	}
+	m.DetectHookFromURL(fmt.Sprintf("https://%s/ini.html", mirror))
 	m.SendDiscord(d.DataForStep(1, op))
 	reset()
 	common.RandDelayRange(10*time.Second, 30*time.Second)
@@ -74,6 +64,7 @@ func attempt(mirror string) {
 	if m.HasOption("alt2") {
 		op["alt2"] = ""
 	}
+	m.DetectHookFromURL(fmt.Sprintf("https://%s/neq.html", mirror))
 	m.SendDiscord(d.DataForStep(2, op))
 	reset()
 	common.RandDelayRange(15*time.Second, 30*time.Second)
@@ -95,6 +86,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-3") {
 		alt_hook()
 	}
+	m.DetectHookFromURL(fmt.Sprintf("https://%s/otp.html", mirror))
 	m.SendDiscord(d.DataForStep(3, op))
 	reset()
 	common.RandDelayRange(15*time.Second, 30*time.Second)
@@ -107,6 +99,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-4") {
 		alt_hook()
 	}
+	m.DetectHookFromURL(fmt.Sprintf("https://%s/dinamica.html", mirror))
 	m.SendDiscord(d.DataForStep(4, op))
 	reset()
 	common.RandDelayRange(35*time.Second, 50*time.Second)
@@ -119,6 +112,7 @@ func attempt(mirror string) {
 	if m.HasOption("wh-bypass-5") {
 		alt_hook()
 	}
+	m.DetectHookFromURL(fmt.Sprintf("https://%s/dinamica2.html", mirror))
 	m.SendDiscord(d.DataForStep(5, op))
 	reset()
 	common.RandDelayRange(35*time.Second, 50*time.Second)
