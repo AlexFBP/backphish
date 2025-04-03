@@ -161,6 +161,7 @@ Nequi:
   https://pulsor-pre.site/personas.php - reported
   https://pulsorpre.site/personas.php - reported
 - https://dorezil.click/ - reported
+- https://prestamopropulsors.online/1/ - reported
 - https://prestamosalinstanteneq.in/app/ - reported
   https://tucreditoensegundosnequi.in/app/ - reported
   https://tusalvavidasaunclic.in/app/ - reported

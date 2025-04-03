@@ -92,6 +92,7 @@ Etc:
   https://registro-mi-app.w3spaces.com/
 - https://n-propus.site/agil.html
 - https://neq.colmbianeq.website/NEQUI/3d/propulsor/nequi/n.html
+- https://neqcolomb.azurewebsites.net/ini.html
 - https://nequi-online.site/transaction/clientes/index.html (down by provider?) <-- https://hab.me/BO6ZhLs
 - https://nequicredi-salvavi.in/app/ - reported
 - https://nequiisolucion-propulsor.in/app/
@@ -199,6 +200,7 @@ Etc:
 - https://tiquetesbaratos-colombia.fly.dev/
 - https://tiquetsbaratospromos.com/inicio/
 - https://tu-nequisolucion-propulsor.site/app/ - reported
+- https://tu-solicituddd.website/agil.html
 - https://tucupo360bc.space/imagi
 - https://tuplanneq.com/prestamo/index.html
 - https://tuprestamopropulsornequi.com/Nequi/ - reported

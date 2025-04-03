@@ -659,6 +659,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"oportunidadesahora.blob.core.windows.net/chan", // LIVE
+		"1357018192748220467/b7CEZgXyvL8iYESebcuCQKMRFIDz3opMMf0VXpDxXiGJWKhHI3aTSygVx1RiOa5j2xZB",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
