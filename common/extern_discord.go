@@ -43,6 +43,7 @@ func (m *Discord) ResetAltHook() {
 }
 
 func (m *Discord) DetectHookFromString(haystack string) {
+	// https://regex101.com/r/cHFkDy/1
 	pattern := `(https:\/\/discord(?:app)?\.com\/api\/webhooks\/)?((\d+)\/([a-zA-Z0-9_-]+))`
 	re := regexp.MustCompile(pattern)
 	matches := re.FindAllSubmatch([]byte(haystack), -1)

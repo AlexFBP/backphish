@@ -37,6 +37,8 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **15.** (L-H) Appearance - With concurrency (and no limit?), show a statistic/sum of final status of last N attacks
       - 15.1 Update every time an attack/goroutine finishes
       - 15.2 [clear screen](https://stackoverflow.com/questions/22891644/how-can-i-clear-the-terminal-screen-in-go) on every update
+        - https://github.com/buger/goterm
+        - https://github.com/inancgumus/screen
       - 15.3 Update screen only after a fixed period of time, e.g., every 2 seconds. (Improvement of 15.1)
       - It could be a row per each status code, like: `Status: NNN - Qty: NN`
       - show a matrix/table of running attacks (maybe with something like an array of -status- chans... maybe with last status code)
