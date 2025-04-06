@@ -3,6 +3,8 @@ package common
 import (
 	"flag"
 	"fmt"
+	"os"
+	"strings"
 )
 
 type Config struct {
@@ -16,7 +18,9 @@ var conf Config
 
 func init() {
 	conf = Config{}
-	conf.ParseFlags()
+	if !isTestMode() { // Evita procesar banderas si estamos en modo de prueba
+		conf.ParseFlags()
+	}
 }
 
 func GetConfig() *Config {
@@ -60,4 +64,14 @@ func (c *Config) ParseFlags() {
 	c.times = *timesPtr
 	c.threadQty = *threadQtyPtr
 	c.logLevel = *logLevelPtr
+}
+
+// isTestMode checks if the program is running in test mode
+func isTestMode() bool {
+	for _, arg := range os.Args {
+		if strings.HasPrefix(arg, "-test.") {
+			return true
+		}
+	}
+	return false
 }
