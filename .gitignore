@@ -5,6 +5,7 @@ backphish
 *~
 
 ## Logs and dump files
+coverage.*
 
 # Web Inspector network traffic log file
 *.har
