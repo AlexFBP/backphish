@@ -243,6 +243,8 @@ var mirrors = [][]string{
 		"-4712560048", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
 	{`nequlcolmbia.blob.core.windows.net/nqui`, // Reported
 		"-4691937617", "8094124283:AAGFLW6M3YNeOEL3drNKjX4Xb6gMsksxQHg"}, // "Ultra Encrypted"... sure hahaha
+	{`prestampropulsornq.azurewebsites.net/5`, // Reported
+		"-1002445233950", "7628962436:AAEmcjAPOL_Pjqvqk_Yag_BN87ig_tmTMJ0", "templ-2"},
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

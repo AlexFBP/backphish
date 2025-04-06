@@ -34,7 +34,9 @@ Bancolombia:
   https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
   https://personasapp.blob.core.windows.net/col/imagi.html bancolombia - reported
 - webcindario
+  https://cupoaprobado.blob.core.windows.net/col/imagi.html - reported
   https://grupobcolombia00.webcindario.com/ - reported
+  https://libreinverc.webcindario.com/celindex.html - reported
 
 Banco de Bogotá
 - https://bronze-thorn-box.glitch.me/ BdB - reported
