@@ -1,29 +1,50 @@
 package common
 
 import (
-	"errors"
+	"fmt"
+	"os"
+	"path/filepath"
+
+	"gopkg.in/yaml.v3"
 )
 
 func FileRead(filePath string) (data []byte, err error) {
-	return nil, errors.New("FileRead: not implemented")
+	return os.ReadFile(filePath)
 }
 
 func FileWrite(filePath string, data []byte) (err error) {
-	return errors.New("FileWrite: not implemented")
+	if err = os.MkdirAll(filepath.Dir(filePath), 0755); err != nil {
+		return
+	}
+	return os.WriteFile(filePath, data, 0644)
 }
 
 func YamlParse(data []byte, v any) error {
-	return errors.New("YamlParse: not implemented")
+	return yaml.Unmarshal(data, v)
 }
 
 func YamlSerialize(v any) (out []byte, err error) {
-	return nil, errors.New("YamlSerialize: not implemented")
+	defer func() {
+		if r := recover(); r != nil {
+			err = fmt.Errorf("failed to serialize YAML: %v", r)
+		}
+	}()
+	out, err = yaml.Marshal(v)
+	return
 }
 
 func ReadYamlFile(filePath string, v any) (err error) {
-	return errors.New("ReadYamlFile: not implemented")
+	var data []byte
+	if data, err = FileRead(filePath); err == nil {
+		err = YamlParse(data, v)
+	}
+	return
 }
 
 func WriteYamlFile(filePath string, v any) (err error) {
-	return errors.New("WriteYamlFile: not implemented")
+	var data []byte
+	if data, err = YamlSerialize(v); err != nil {
+		return
+	}
+	return FileWrite(filePath, data)
 }

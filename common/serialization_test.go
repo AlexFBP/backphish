@@ -106,7 +106,7 @@ func TestYamlParse(t *testing.T) {
 key1: value1
 key2: value2
 nested:
-	key3: value3
+  key3: value3
 `)
 
 	var result map[string]any
@@ -155,7 +155,7 @@ func TestYamlSerialize(t *testing.T) {
 	expectedYaml := `key1: value1
 key2: value2
 nested:
-	key3: value3
+    key3: value3
 `
 
 	// Test YamlSerialize
@@ -166,7 +166,7 @@ nested:
 
 	// Verify the serialized content
 	if string(output) != expectedYaml {
-		t.Errorf("YamlSerialize returned incorrect data. Got: %s, Want: %s", output, expectedYaml)
+		t.Errorf("YamlSerialize returned incorrect data.\nGot:\n%s\nWant:\n%s", output, expectedYaml)
 	}
 
 	// Test YamlSerialize with invalid input (e.g., a channel, which cannot be serialized)
@@ -191,7 +191,7 @@ func TestReadYamlFile(t *testing.T) {
 key1: value1
 key2: value2
 nested:
-	key3: value3
+  key3: value3
 `)
 	if _, err := tempFile.Write(yamlContent); err != nil {
 		t.Fatalf("Failed to write to temporary file: %v", err)
@@ -278,11 +278,11 @@ func TestWriteYamlFile(t *testing.T) {
 	expectedYaml := `key1: value1
 key2: value2
 nested:
-	key3: value3
+    key3: value3
 `
 
 	if string(data) != expectedYaml {
-		t.Errorf("WriteYamlFile wrote incorrect data. Got: %s, Want: %s", data, expectedYaml)
+		t.Errorf("WriteYamlFile wrote incorrect data.\nGot:\n%s\nWant:\n%s", data, expectedYaml)
 	}
 
 	// Test WriteYamlFile with invalid input (e.g., a channel, which cannot be serialized)
