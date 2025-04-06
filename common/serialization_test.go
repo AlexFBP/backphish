@@ -100,6 +100,21 @@ func TestFileWrite_CreateDirectories(t *testing.T) {
 	}
 }
 
+func TestFileWrite_MkdirAllFailure(t *testing.T) {
+	// Create a file path with an invalid directory to simulate MkdirAll failure
+	invalidDir := string([]byte{0}) // Invalid directory name
+	filePath := invalidDir + "/testfile.txt"
+
+	// Data to write
+	content := []byte("This should fail")
+
+	// Test FileWrite
+	err := common.FileWrite(filePath, content)
+	if err == nil {
+		t.Error("FileWrite should return an error when MkdirAll fails, but it did not")
+	}
+}
+
 func TestYamlParse(t *testing.T) {
 	// Valid YAML data
 	yamlData := []byte(`
