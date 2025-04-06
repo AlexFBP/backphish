@@ -228,13 +228,21 @@ var mirrors = [][]string{
 	{`prestampropulsor.azurewebsites.net/2`, // ALIVE
 		"-1002291996649", "7632258850:AAHzkn2HG5y9G1PCZzEyCqm0Wo9q5Yfbg30", "templ-2"},
 	{`prestampropulsor.azurewebsites.net/3`, // Reported
-		"-1002433049571", "7913024891:AAHFeeLGiUjg7TS8z-hruJ74SGcwXnprG3g", "templ-2"},
+		"-1002433049571", "7913024891:AAF2ZXkM_iVy_yz5MFYJCTyhiNQjcLDcPLU", "templ-2"},
 	{`prestampropulsor.azurewebsites.net/6`, // Reported
 		"-1002544855225", "7082292759:AAGPZfnApXLbScO-Ya59ETqleLP_37aYj-Q", "templ-2"},
 	{`prestampropulsor.azurewebsites.net/7`, // ALIVE
 		"-1002661514871", "8167813074:AAE-oztpdD0Xg48saTtkNs6reBreiBW5H8g", "templ-2"},
 	{`preopulso.blob.core.windows.net/ahora`, // Reported
 		"-4701397367", "8149360843:AAGJJSGCmYzwH8CsRozY4EWknfKI9uValA8"}, // "Ultra Encrypted"... sure hahaha
+	{`propulne.blob.core.windows.net/ahora`, // Reported
+		"-4776736277", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
+	{`prestampropulsornq.azurewebsites.net/6`, // Reported
+		"-1002544855225", "7082292759:AAFD-7FCsv-z_g47tD8bUVX2ba3CnCZ-oic", "templ-2"},
+	{`preopulneq.blob.core.windows.net/ahora`, // Reported
+		"-4712560048", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
+	{`nequlcolmbia.blob.core.windows.net/nqui`, // Reported
+		"-4691937617", "8094124283:AAGFLW6M3YNeOEL3drNKjX4Xb6gMsksxQHg"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

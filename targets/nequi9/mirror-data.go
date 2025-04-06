@@ -665,6 +665,48 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"propulsoresnq0.blob.core.windows.net/propulsor", // LIVE
+		"1351227057237131306/jwtR0Snk9UMEPwDmv_mQgsQ7rjQ4h7mH94SGJTXfRpgp95gK32NAJdJhX6OQalV8XJRa",
+		"",
+		"",
+		""},
+
+	{"propulosr5.blob.core.windows.net/neq", // LIVE
+		"1357019667256049855/M_kaNjKAS53u0PB28ZkDC9wV1Ho9osYotH0CviWfXH5w878M39bphmK9jszPfj3sBuLh",
+		"",
+		"",
+		""},
+
+	{"impulsandoideasnq1.blob.core.windows.net/dd1", // LIVE
+		"1357423754590032057/7KAUcLkIVhmEHcFqcv2tiG7yNWMBNDshaL-aW8GSl-S_1HcZTsjxf3xhtONWhAX9gjhr",
+		"",
+		"",
+		""},
+
+	{"propulsor8.blob.core.windows.net/001", // LIVE
+		"1357021150659739917/aeWfoGoawMID5EnEgE59bHsg4mHRAZdhpahXhN_62LjvBd27WUENY2LLT1DVEdoQa9F6",
+		"",
+		"",
+		""},
+
+	{"propulsando.blob.core.windows.net/jc1", // LIVE
+		"1356986167853060286/G883RbV4hvQY6oQ-YsWMEdnImewfmUlzbR_bmqKALtBT59G0d7V5GuVT1EdgmJRDS6th",
+		"",
+		"",
+		""},
+
+	{"propulsandoideasya.blob.core.windows.net/cab1", // reported
+		"1357025966987284571/Y3HBvsYxXFiBGbs9PUfQ2Bkdtx63ps4byzlFisZo15LMBRkJD2Pr_Hb8ITtMuaMLbaeH",
+		"",
+		"",
+		""},
+
+	{"propulsor10.blob.core.windows.net/cab2", // LIVE
+		"1357027704993611786/zoufWVu9MPX7_5W8mkEwy_7BppABZ1jHVzNjO23nxZf3Vw9_biUEaRCIL2Dyyo5yPl61",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

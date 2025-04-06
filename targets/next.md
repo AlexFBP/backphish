@@ -10,88 +10,34 @@
 ## By target
 
 Avianca:
-- https://38www.aventurapromoporunsuenomascumplido.ru/terminos - reported
-- https://19www.vivetuaventurasinlimitepromo.com/terminos - CF Banner
-  https://32www.vivetuaventurasinlimitepromo.com/terminos - CF Banner
-  https://22www.vivetuaventurasinlimitepromo.com/terminos - CF Banner
-  https://38www.vivetuaventurasinlimitepromo.com/terminos - CF Banner
-  https://43www.vivetuaventurasinlimitepromo.com/terminos - CF Banner
-  https://75www.vivetuaventurasinlimitepromo.com/terminos - CF banner
-  https://1lwww.vivetuaventurasinlimitepromo.com/tap3 - CF banner
-  https://l1www.vivetuaventurasinlimitepromo.com/terminos - CF banner
-- https://aereocolxp.shop/av1/web/ - reported
-- https://avianca-promo.fly.dev/ reported
-- https://vuelaconavianca.fly.dev/ - reported
-- http://av.vuelocoombia.co.uk/ avianca - reported
-  http://avi.vuelocoombia.co.uk/ avianca - reported
-  https://avvi.vuelocoombia.co.uk/ avianca - reported
-- http://avi.tiquetbaratoscol.top/ - reported
-- https://aira.hotsalesiempre.space/web/ avianca - reported
+- https://www.aereocolombiana.com/ - reported
 - https://34www.ahorrasinlimitespromo.com/terminos - reported
   https://80www.ahorrasinlimitespromo.com/terminos - reported
-- https://co-avolarnacional.com/ - reported
-- https://cyberdays.vercel.app/ avianca - reported
-- https://earlycol-traa.com/ avianca - reported
-- https://offeravianca.space/web/ - reported
 - https://promo.co-avolarnacional.com/ - reported
-- https://transcol-early.online/ avianca - reported
-- https://tuviajesseguroscondescuentostravelcolombia.site/ - reported
-- https://vivetudescuentoonline2025.vercel.app/ofertas/ - reported
-- https://www.avianfly.shop/ - reported
+- https://www.aerocolombianos.com/ - reported
+- https://www.avianfly.shop/ - reported - 403 forbidden?
 - https://www.vuelabaratosinlimite.com/ - reported
-  - https://1www.vivetuaventuraal100.ru/terminos - reported
-    https://8wwww.vivetuaventuraal100.ru/terminos - reported
-    https://16www.vivetuaventuraal100.ru/terminos - reported
-    https://34www.vivetuaventuraal100.ru/terminos - reported
-    https://57www.vivetuaventuraal100.ru/terminos - reported
-    https://73www.vivetuaventuraal100.ru/ - reported
-    https://74www.vivetuaventuraal100.ru/ - reported
-    https://77www.vivetuaventuraal100.ru/terminos - reported
-    http://80www.vivetuaventuraal100.ru/terminos - reported
-    http://83www.vivetuaventuraal100.ru/terminos - reported
-    https://l1www.vivetuaventuraal100.ru/terminos - reported
+- Vercel:
+  https://vivetudescuentoonline2025.vercel.app/ofertas/ - reported
 
 Bancolombia:
-- https://77105977-c145-4035-b274-202da7cd2aec-00-1pwob1xqw39w7.spock.replit.dev/ bancolombia - reported - down?
-  https://401dcbb5-d12c-41e0-8635-aa1a3b99522d-00-39l43wz2cfl5j.kirk.replit.dev/Prestamo.html - reported
-  https://solicitarya-2025.glitch.me/ - reported
-  - https://e84fc409-3259-4497-9c92-35b8bf32b8d4-00-7j1lrn2or2mu.worf.replit.dev/ - reported - Apparently down
-  https://solicitar-2025.glitch.me/ - reported
-  - https://5ac1ced5-984d-40bc-aac9-7a03de99fd28-00-2sv04ww9vrycy.kirk.replit.dev/ - reported
-  - https://9d366a11-90d8-4c16-b26e-bb5089bbc17b-00-1rv7ol4xa5dt4.janeway.replit.dev/ - reported
-- https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
-- https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
-- https://banclmbiappersonas.azurewebsites.net/inicio.html - reported
 - https://dodgerblue-viper-142764.hostingersite.com/inicio.html bancolombia - reported
 - https://iguana6c410e7d.temporary-demo.site/ - reported
   - (from https://ingresocolbanc.blogspot.com/?m=0&) - reported
-- http://libreinvcol.webcindario.com/celindex.html - reported
-- https://miregistroapp.w3spaces.com/ - reported
-- https://multiservicsonlinepse.shop/libredestino/ - reported
-- https://personasapp.blob.core.windows.net/col/imagi.html bancolombia - reported
-- https://solicitudbc.space/a/login.php - reported
-- https://sucursualesvirtuales.blob.core.windows.net/login/imagi.html - reported
-  https://sucursualesvirtuales.blob.core.windows.net/persona/imagi.html - reported
-- https://svpersonas-apps.portaldebugsflow.com/ - reported
-  - (from https://n9.cl/1bn8uz)
-  - (from https://goo.su/w1E8J)
-- https://evauluartucreditoalamano.tiiny.io/ bancolombia - reported
-  https://creditobancolombialamanoo.tiiny.io/ bancolombia - reported
-  https://creditoseguroalamano.tiiny.io/ - reported
-  https://finanzasahorroalamano.tiiny.io/ bancolombia - reported
-- https://virtualsuctransaccional.ru/MUA-VIRTUAL/credito - reported
-- https://colprecol.webcindario.com/celindex.html - reported
-  https://colprecol.webcindario.com/crid.html - reported <-- from http://colwebpre.xyz/, also reported
+- https://www.juntosporunmejormanana360.ru/terminos.php
+- https://virtualsuctransaccional.ru/MUA-VIRTUAL/credito - reported - CF catched
+- azure
+  https://banclombiapersonasfast.azurewebsites.net/inicio.html - reported
+- vercel
+  https://authv02-sec-f40f6c71-ff97-42f3-b698-e2c559d6902d.vercel.app/ - reported
+- windows.net
+  https://adosaneji1n.blob.core.windows.net/mua1/mpowe/aaa/index.html bancolombia - reported
+  https://personasapp.blob.core.windows.net/col/imagi.html bancolombia - reported
+- webcindario
   https://grupobcolombia00.webcindario.com/ - reported
 
 Banco de Bogotá
-- https://creditos-bancodebogota.glitch.me/ - reported
-  - https://bluestarinsurance.co.nz/bancusp/index.html - reported
-- https://peach-juditha-87.tiiny.site/ - reported
-  https://white-ingeberg-12.tiiny.site/ - reported
 - https://bronze-thorn-box.glitch.me/ BdB - reported
-  https://creditbancodebogotacolwebs.glitch.me/ - reported
-  - https://flexiblesparacadanecesidad.zeabur.app/ - reported
 
 Banco de Venezuela
 - https://bdvparapersonas.blob.core.windows.net/financiaminetosbdv/index.html - reported
@@ -99,28 +45,16 @@ Banco de Venezuela
 
 Latam:
 - https://agenciadeviajescol.com/ - reported
-- https://2www.diasespecialesuniprom360.com/terminos.php latam - reported
+- https://2www.diasespecialesuniprom360.com/terminos.php latam - CF catched!
   https://4www.diasespecialesuniprom360.com/terminos.php - reported
   https://iwwww.diasespecialesuniprom360.com/terminos.php - reported
   https://lwwww.diasespecialesuniprom360.com/terminos.php - reported
   https://11wwww.diasespecialesuniprom360.com/terminos.php - reported
   https://12wwww.diasespecialesuniprom360.com/terminos.php - reported
-- https://lat.latvuelosporcolombiahoy.co.uk/ latam - reported
-- https://latam-vuelosrutas.vercel.app/ - reported
-- https://latam-falwin.vercel.app/ - reported
 - https://latamairlines.me/col-web - reported
-- https://latamairlinez.com/ - reported
-- https://latamavuelosprom.co/ES-COL/ - ~~403 forbidden?~~ - reported
-  https://latamavuelosprom.co/flying/ - reported
-  https://latamavuelosprom.co/Promos/ - reported
-  https://latamavuelosprom.co/travel-web-nacionales/ - ~~403 forbidden?~~ - reported
-  https://latamavuelosprom.co/web-col/ - ~~403 forbidden?~~ - reported
-- https://latamcolpromos.com/portal-vuelos - down? (domain still alive)
-- https://latamdescuento.vercel.app/ - reported
-- https://latamnacionalespromos.com/ - CF catched!
 - https://latamnacionalpromos.com/Es-Promos/ - reported
+  https://latamnacionalpromos.com/web-col-es/ - reported
   https://latamnacionalpromos.com/Web-Ofertas-Col/ - reported
-- https://latamnacionalespromo.com/web/ - reported
 - https://latamnacionalestravel.com/ - 403 forbidden?
   https://latamnacionalestravel.com/Promos/ - reported
   https://latamnacionalestravel.com/ES-CO/ - reported
@@ -128,146 +62,68 @@ Latam:
   https://latamnacionalestravel.com/baratos-web-co/ - reported
   https://latamnacionalestravel.com/promociones-nacionales - reported
   https://latamnacionalestravel.com/travel-web-nacionales/ - reported
-- https://latampromocionalco.com/ - reported
-  https://latampromocionalco.com/informacion_accion - reported
-- https://latampromocionaldescuento.in/ - reported
-- https://latampromocionesco.com/es-co/ - reported
-- https://latampromosco.com/es-co/ - reported
-  https://latampromosco.com/co-es/ - reported
+- https://latampromocionaldescuento.in/ - CF catched!
 - https://latampromoscol.com/Es/ - ~~403 Forbidden?~~ - reported
   https://latampromoscol.com/web/ - reported - apparently down?
   https://latampromoscol.com/oferta/ - reported
-- http://latampromosnacionales.com/Es/ - down? (domain still alive)
-- https://latampromovuelos.com/es-co/ - reported
-  https://latampromovuelos.com/web/ - reported
-- https://latamtravelcolombia.com/ - reported
-- https://latamvuelos-five.vercel.app/ - reported
+- https://latampromovuelos.com/es-co/ - 403 forbidden?
+  https://latampromovuelos.com/web/ - 403 forbidden?
+- https://latamvolarpromo.com/baratos-col-web/ - 403 forbidden?
 - https://latamvuelaconpromos.com/ES-CO/ - ~~403 forbidden?~~ - reported
-- http://s.id/vuelospromos - reported
 - https://viajerospromocionales.info/consultar/ - ~~HTTP 403?? Alive or bypass?~~ - reported
-  https://viajerospromocionales.info/informacion/ - reported
-- https://vuelosbarats.com/index.php latam - reported
+  https://viajerospromocionales.info/informacion/ - 403 forbidden? - reported
 
 Nequi:
 - https://iwww.adquieretuimpulso.com/terminos.php - CF catched
 - https://betplaylo.site/propulsor/ - reported
-- (nq2?)
-  https://deinmediatobenloya.site/agil.html - reported
-  https://deinmediatobtenlloya.site/agil.html - reported
-  https://haz-tu-solicitud.website/agil.html - reported
-  https://haz-tu-solicitudd.website/agil.html - reported
-  https://planparatiobtenloya.site/agil.html - reported
-  https://propulsnequi.online/propulsor.php - reported
-  https://pulsor-pre.site/personas.php - reported
-  https://pulsorpre.site/personas.php - reported
 - https://dorezil.click/ - reported
-- https://prestamopropulsors.online/1/ - reported
-- https://prestamosalinstanteneq.in/app/ - reported
-  https://tucreditoensegundosnequi.in/app/ - reported
-  https://tusalvavidasaunclic.in/app/ - reported
-  https://nequisoluciones-salvavidas-activar.in/app/ - reported
-- https://prestamoprosulsorhoy.com/Nequi/ - reported
-  https://tuprestamopropulsorr.com/Nequi/ - reported
-- https://tuprestamopropulsor.azurewebsites.net/ag/ - reported
-- https://neqlcolmbiasas.azurewebsites.net/ - reported
-- https://neqpropulsor.azurewebsites.net/neq/ - reported
+- js/.../telegram_sender.php
+  https://prestamopropulsorneq.azurewebsites.net/co/ - reported
+- js/.../send-message
+  https://prestamopropulsors.online/1/ - reported
+  https://prestamopropulsors.online/2/ - reported
+- no source?
+  https://solicitudes-col.lat/co/ - reported
+- https://nequ-propulsor.vercel.app/cedula - reported
+- nq1?
+  https://nquicolombiapropulsor.azurewebsites.net/ - reported
+- nq2?
+  https://solicitar-ya.website/agil.html - reported
 
 JetSmart:
-- https://aereajetcol.com/col/ - reported
-- https://aereocolxp.shop/smart - reported
-  https://aereocolxp.shop/smart3/ - reported
-- https://aereojetsco.shop/web3/ - reported
-- https://airviajajtmrs.site/ - reported
-- https://airline.hotsaleprimeplanet.space/ jetsmart - reported
-- https://bartospromstiqtes.com/inicio/ - reported
-- https://jetsmartcol.hotsaleprimeplanet.space/ jetsmart - reported
-- https://airjetcol.com/smart1/ - reported
-  https://airjetcol.com/smart3/ - reported
-  https://airjetcol.com/smart4/ - reported
-- https://alistatumaletaprojt.shop/3co/ - Cloudflare catched!
-  https://alistatumaletaprojt.shop/co/ jetsmart - reported
-- https://buscar.destinossmart.com/ - reported
-- https://hotsaletodovueloprime.space/ jetsmart - reported
-- https://hotsalevuelosprime.space/ jetsmart - reported
-- http://hotsalejettssmartt.space/ - reported
+- https://buscar.destinossmart.com/ - CF catched
 - https://jestboletos-smart.com/promo/ - reported
-- https://jetsmart.club/ - reported
-- https://jetsmartcolombia.space/ - reported
-- https://jetsmartcomprasweb.com/reservas/ - reported
 - https://jetsmartwebpromo.com/viajes/ - reported
   https://jetsmartwebpromo.com/web/ - reported
-- https://jetsmtofertas.com/ - reported
-- http://jetcolombiatravel.com/ - reported
 - https://jetmarcolombia.com/ - reported
-- https://jetsmarcolombia.store/ - reported
-- https://jetsmart.works/ - reported
-- https://jetsmart-airlines.com/ - reported
-- https://jetsmart-col.com/ - CF catched!
-- https://jetsmart-eta.vercel.app/ - reported
-  https://jetsmartravel.vercel.app/ - LIVE (Low profile)
-  https://tiquetesendescuentoonline.vercel.app/ofertas/ - reported
-  https://vuelosjetsmart-sudamerica.vercel.app/ - reported
-- https://jetsmartcol.replit.app/ - reported
-- https://jetsmartlys.com/ - reported
-- https://jetssmart.com/ - reported
-- https://jetssmartt.site/co-es/ - reported
-- https://jettsmarrt.site/go/ - reported
-  https://jettsmarrt.site/web/ - reported
-- https://latamair.lat/ - reported
-- https://lightyellow-bat-773455.hostingersite.com/ - reported
-- https://offer.hotsalejtmrsprime.space/ jetsmart - reported
-- https://projetcolsmrt.com.co/1/ jetsmart - reported
-- https://promojestmart.com/ - reported
-- https://reservascoljet.space/reservas/jetsmart/ - reported
-- https://sale.hotsalejtmrsprime.space/ jetsmart - reported
-- https://sale.tiquetesmart.com/ jetsmart - reported
-- https://todomodamx.site/ - reported
-- https://travelcolombiasale.com/ jetsmart - reported
-- https://tujetsmartcol.com/reservas/nacionales/ - reported
-- https://viajajtmrs.space/ - reported
-- https://viveprojetsco.com/co1/ - reported
-  https://viveprojetsco.com/pro1/ - CF Warn
-  https://viveprojetsco.com/pro2/ - reported
-  https://viveprojetsco.com/pro3/ - reported
-- https://vivetuexperienciasmartcol.com/ jetsmart - reported
-- https://vuelaconjetsmart.onrender.com/ - reported
+- https://smart-destinoscol.com/reservas/smart9/ - reported
 - https://vuelaporcolombiajetmart.com/1/ - reported
+- Hostinger
+  https://lightyellow-bat-773455.hostingersite.com/ - reported
+- (On) render.com
+  https://jetsproxy.onrender.com/ - Down?
+- Vercel:
+  https://vuelosjetsmart-sudamerica.vercel.app/ - reported
 
 TiquetesBaratos
-- https://losvuelos-economicos.com/ tiquetesbaratos - reported
+- https://bartospromstiqtes.com/inicio/ - reported
 - https://lostiquetesmasbaratos.vercel.app/ - reported
-- https://ofertasvueloseconomicos.com/ tiquetesbaratos - reported
 - https://promos-tiquetebaratocol.com/reservas/ - reported
-- https://promostiqustesbarats.com/inicio/ - reported
-- https://reservade-vuelos.com/ tiquetesbaratos - reported
-- https://reservasyvuelos.com/ tiquetesbaratos - reported
-- https://tiketesbaratoscol.com/web/ - reported
-  https://tiketesbaratoscol.com/promociones/ - reported
-- https://tiquetes25baratos.controlrefer52.shop/ - reported
-- https://tiquetesbaratos.co.com/ - reported
-- https://tiquetesbaratos.fly.dev/ - reported
 - https://tiquetesbaratos-promos.com/web/ - reported
 - https://tiquetesbaratos-promoweb.com/web/ - 403 or bypassed?
-- https://tiquetesbaratoscol.com.co/ - reported
-- https://tiquetesbaratosnetpromo.com/ - reported
-  https://tiquetesbaratosnetpromo.com/web/ - 403 or bypassed?
-- https://tiquetesbaratosnetpromos.com/portal-flys/ - reported
-- https://tiquetesbaratospromos.com/web - reported
-  https://tiquetesbaratospromos.com/web-promociones - reported (down?)
-- https://tiquetesbaratoswebpromo.com/ - reported
+- https://tiquetesbaratosnetpromo.com/ - CF catched
+  https://tiquetesbaratosnetpromo.com/web/ - reported
+- https://tiquetesbaratosnetpromos.com/portal-flys/ - 403 or bypassed? - reported
 - https://tiquetesecobarato.com/inicio/ - reported
 - https://tiqusbaratoscol.store/inicio/ - reported
-- https://tiqutesbarats.com/opciones/ - reported
 - https://tiquteserconomics.com/inicio/ - reported
 - https://travelconsupersale.com/reservas/ - reported
 
 Etc
 - https://bancabcr.webcindario.com/ banco costa rica - reported
 - https://krosmopack-evenements.shop/es/mmorpg/actualidad/noticias/krosmopack-2025/# dofus - reported
-- https://jetsproxy.onrender.com/ - Down?
-- https://nuevaversion-popu-lar.online/ b.popular - reported
 - https://seagreen-hare-240258.hostingersite.com/inicio.html - Down?
-- https://darkslategray-chicken-814283.hostingersite.com/libre.php davivienda - reported
+- https://darkslategray-chicken-814283.hostingersite.com/libre.php davivienda - reported - down?
 
 ## Falsos positivos? / False positives?
 - https://credirapido.info/credito-libre-inversion-bancolombia/
