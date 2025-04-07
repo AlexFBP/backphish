@@ -9,16 +9,18 @@ const (
 	HostUnknown
 )
 
+type TargetDict map[string](map[string]common.DummyType)
+
 func checkHosts() {
 	// Read host-up and host-down yml files
 	file_up := "playground/hostup.yml"
-	alive := map[string][]string{}
+	alive := TargetDict{}
 	err := common.ReadYamlFile(file_up, &alive)
 	if err != nil {
 		panic(err)
 	}
 	file_down := "playground/hostdown.yml"
-	down := map[string][]string{}
+	down := TargetDict{}
 	err = common.ReadYamlFile(file_down, &down)
 	if err != nil {
 		panic(err)
@@ -26,7 +28,7 @@ func checkHosts() {
 
 	// Test all hosts
 	for target, scams := range alive {
-		for _, scam := range scams {
+		for scam := range scams {
 			switch hostState(scam) {
 			case HostUp:
 				// do nothing
@@ -39,7 +41,7 @@ func checkHosts() {
 		}
 	}
 	for target, scams := range down {
-		for _, scam := range scams {
+		for scam := range scams {
 			switch hostState(scam) {
 			case HostUp:
 				// move to host-up

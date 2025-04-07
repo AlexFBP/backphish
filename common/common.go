@@ -58,7 +58,7 @@ func ArgsHaveTimes(args ...string) int {
 }
 
 type AttemptHander func()
-type dummyType struct{}
+type DummyType struct{}
 
 func AttackRunner(attemptHandle AttemptHander) error {
 	q := conf.GetTimes()
@@ -76,7 +76,7 @@ func AttackRunner(attemptHandle AttemptHander) error {
 		os.Exit(0)
 	}()
 
-	nextAttempt := func(done chan dummyType) {
+	nextAttempt := func(done chan DummyType) {
 		attempt := attempts.Add()
 		defer func() {
 			if CanLog(LOG_NORMAL) {
@@ -91,7 +91,7 @@ func AttackRunner(attemptHandle AttemptHander) error {
 	}
 
 	// Chan for ended routines
-	done := make(chan dummyType)
+	done := make(chan DummyType)
 
 	totalShift := 3 * time.Second
 	baseDelay := totalShift / time.Duration(maxGoRoutines)
