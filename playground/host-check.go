@@ -2,6 +2,7 @@ package playground
 
 import (
 	"fmt"
+	"net/http"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -37,7 +38,8 @@ func checkHosts() {
 	// Test all hosts
 	for target, scams := range allTargets {
 		for scam, state := range scams {
-			switch checkHostState(scam) {
+			code, httpStat := checkHostState(scam)
+			switch code {
 			case HostUp:
 				if !state { // if it was down
 					allTargets[target][scam] = true
@@ -55,7 +57,8 @@ func checkHosts() {
 			case HostUnknown:
 				// warn
 				if common.CanLog(common.LOG_NORMAL) {
-					fmt.Printf("Unknown state for host '%s'\n", scam)
+					fmt.Printf("Unknown state for host '%s' - HTTP Stat:%d - %s\n",
+						scam, httpStat, http.StatusText(httpStat))
 				}
 			}
 		}
@@ -74,10 +77,11 @@ func checkHosts() {
 	// Print the results
 }
 
-func checkHostState(url string) int {
+func checkHostState(url string) (state, httpCode int) {
 	err := common.CheckURL(url)
+	state = HostUnknown
 	if err != nil {
-		return HostUnknown
+		return
 	}
 	h := common.ReqHandler{}
 	var step uint8
@@ -86,15 +90,22 @@ func checkHostState(url string) int {
 		if common.CanLog(common.LOG_VERBOSE) {
 			fmt.Printf("Host %s seems to be down - lastStep: %d - err: %s\n", url, step, err)
 		}
-		return HostDown
+		return HostDown, 0
 	}
-	if h.Response.StatusCode >= 100 && h.Response.StatusCode < 300 {
-		if common.CanLog(common.LOG_VERBOSE) {
-			fmt.Printf("Host %s seems to be up - lastStep: %d\n", url, step)
+
+	httpCode = h.Response.StatusCode
+	switch httpCode {
+	case http.StatusUnavailableForLegalReasons:
+		state = HostDown
+	default:
+		if httpCode >= 100 && httpCode < 300 {
+			if common.CanLog(common.LOG_VERBOSE) {
+				fmt.Printf("Host %s seems to be up - lastStep: %d\n", url, step)
+			}
+			state = HostUp
 		}
-		return HostUp
 	}
-	return HostUnknown
+	return
 }
 
 // mergeDicts merges the source dictionary into the target dictionary, with a preset state for each entry.
