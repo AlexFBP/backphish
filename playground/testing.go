@@ -84,6 +84,7 @@ func Cmd(args ...string) (err error) {
 	fmt.Println("pruebaDefer().Explain:", valPrueba)
 
 	testDigits()
+	checkHosts()
 
 	return nil
 }
