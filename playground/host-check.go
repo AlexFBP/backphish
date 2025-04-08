@@ -40,6 +40,7 @@ func checkHosts() {
 	// Test all hosts
 	for target, scams := range allTargets {
 		for scam, state := range scams {
+			// TODO: Use goroutines here
 			code, httpStat := checkHostState(scam)
 			switch code {
 			case HostUp:
@@ -147,6 +148,9 @@ func splitDicts(dict TargetDict) (alive, down StorageDict) {
 }
 
 func sortMirrors(stDict StorageDict) {
+	// TODO: Sort by domain name, then by subdomain name, then by path
+	// For now, we will sort by the full URL
+	// This is a simple case-insensitive sort
 	cmp := func(a, b string) int {
 		return strings.Compare(strings.ToLower(a), strings.ToLower(b))
 	}
