@@ -3,6 +3,8 @@ package playground
 import (
 	"fmt"
 	"net/http"
+	"slices"
+	"strings"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -139,5 +141,17 @@ func splitDicts(dict TargetDict) (alive, down StorageDict) {
 			}
 		}
 	}
+	sortMirrors(alive)
+	sortMirrors(down)
 	return
+}
+
+func sortMirrors(stDict StorageDict) {
+	cmp := func(a, b string) int {
+		return strings.Compare(strings.ToLower(a), strings.ToLower(b))
+	}
+	for target, mirrors := range stDict {
+		slices.SortFunc(mirrors, cmp)
+		stDict[target] = mirrors
+	}
 }
