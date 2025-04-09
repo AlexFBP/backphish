@@ -2,6 +2,7 @@ package common
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -212,8 +213,19 @@ func (r *ReqHandler) doRequest(method, urlRequest string, body io.Reader, reqHea
 	// Do request. Retry at most MAX_RETRIES
 	retries := uint8(0)
 	const MAX_RETRIES = 10
+	const TIMEOUT = 30 * time.Second // 30 seconds timeout
 	for {
+		// Create a context with timeout
+		ctx, cancel := context.WithTimeout(context.Background(), TIMEOUT)
+		defer cancel()
+
+		// Associate the context with the request
+		r.Request = r.Request.WithContext(ctx)
+
 		r.Response, err = r.client.Do(r.Request)
+		if ctx.Err() == context.DeadlineExceeded {
+			err = fmt.Errorf("request timed out after %v", TIMEOUT)
+		}
 		if err == nil {
 			break
 		}
