@@ -62,7 +62,6 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://deinmediatobtenlloya.site/agil.html
 - https://www.diasdevuelapromoespeciales.ru/a16all/terminos.php
 - https://www.diasdevuelapromoespeciales.ru/a3an/terminos.php
-- https://earlycol-traa.com/ avianca - reported
 - https://evaluandoempresa.online/mercadolibre/respuesta/
 - https://eviar-solicitud-ya.website/agil.html
 - https://explora-hoy-colombia.shop/
@@ -161,7 +160,6 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://nuevaversion-popu-lar.online/ b.popular - reported
 - https://obtenlooyaparati.site/agil.html
 - https://ofertasvueloseconomicos.com/ tiquetesbaratos - reported
-- https://offeravianca.space/web/ - reported
 - (On) render.com
   https://vuelaconjetsmart.onrender.com/ - reported
 - https://paratiipree.site/agil.html
@@ -299,7 +297,6 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://tuviajesseguroscondescuentostravelcolombia.site/ - reported - Apparently down (domain alive)
 - Vercel:
   https://aeroboletosenoferta.vercel.app/ofertas/
-  https://cyberdays.vercel.app/ avianca - reported
   https://jetsmart-eta.vercel.app/ - reported
   https://jetsmartravel.vercel.app/ - LIVE (Low profile)
   https://latam-falwin.vercel.app/ - reported

@@ -719,6 +719,30 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"crececonnosotros.blob.core.windows.net/servicio", // LIVE
+		"1357348045553139754/KrgczStLtdDjgeEgD1L5AS3CV_xwK6ZvO-VwxoAh5sNPXyxDjywefVYip7dQkxQDVFyj",
+		"",
+		"",
+		""},
+
+	{"prestamoneq.blob.core.windows.net/resultado", // LIVE
+		"1357140431221293208/7llExTG6MzhDv77RClzGLMTsT0dG-ke5N9lhZHyCDsJsNAE4pxRG6R-qnopZ62KU-ZJl",
+		"",
+		"",
+		""},
+
+	{"propulsor9.blob.core.windows.net/ch2", // LIVE
+		"1357060460754636831/x65fHU8Q1jNDUuaRxeOwjtw2hwUxCYRHSSh5L30Qt9LSi_Q37Oeg7e_IvDvknejWsX1h",
+		"",
+		"",
+		""},
+
+	{"personasapp.blob.core.windows.net/neq001", // LIVE
+		"1350932137737457674/OlikcAuCeKLt3vg021JA7v8saZtXwtuVK-4LCziPYPA2nRY8aeuo_-zD8r__YHKrUds6",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

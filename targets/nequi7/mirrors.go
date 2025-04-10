@@ -205,7 +205,7 @@ var mirrors = [][]string{
 		"-4655813641", "7875683996:AAGqLPUiS449GkvU7-QKMNQPBSsajp_-RIY"}, // "Ultra Encrypted"... sure hahaha
 	{`propul.blob.core.windows.net/ahora`, // (*1)
 		"-4645962315", "7815234358:AAGsf5LdPN7TGa5m8tRvFt3L4rNnRnyUaDU"}, // "Ultra Encrypted"... sure hahaha
-	{`nequlcolmbia.blob.core.windows.net/nquicol`, // Reported
+	{`nequlcolmbia.blob.core.windows.net/nquicol`, // (*1)
 		"-4691758121", "7876986121:AAEQdg5e807cJt2JGEqZm4qkEOzxoa54nrU"}, // "Ultra Encrypted"... sure hahaha
 	{`activarlo.blob.core.windows.net/ahora`, // (*1)
 		"-4727218549", "7508531817:AAHZ3fUKc5qDQfgLcfArog5zpdxrskgxr44"}, // "Ultra Encrypted"... sure hahaha
@@ -223,28 +223,31 @@ var mirrors = [][]string{
 		"-4779367448", "7528963935:AAEBlJ8q54_fcYRjKWuMlktkvsvxfWETmB0", "templ-2"},
 	{`neqpropulc.blob.core.windows.net/ahora`, // (*1)
 		"-4645025856", "8019661800:AAEMNa-kIJkrgJ8lpTQ1gm8G82PxyXbEGzs"}, // "Ultra Encrypted"... sure hahaha
-	{`prestampropulsor.azurewebsites.net/1`, // Reported
+	{`prestampropulsor.azurewebsites.net/1`, // (*1)
 		"-1002434742761", "7744324212:AAGklL7GwvG4feW5aILibZunZz0qZB0CCIs", "templ-2"},
-	{`prestampropulsor.azurewebsites.net/2`, // ALIVE
+	{`prestampropulsor.azurewebsites.net/2`, // (*1)
 		"-1002291996649", "7632258850:AAHzkn2HG5y9G1PCZzEyCqm0Wo9q5Yfbg30", "templ-2"},
-	{`prestampropulsor.azurewebsites.net/3`, // Reported
+	{`prestampropulsor.azurewebsites.net/3`, // (*1)
 		"-1002433049571", "7913024891:AAF2ZXkM_iVy_yz5MFYJCTyhiNQjcLDcPLU", "templ-2"},
-	{`prestampropulsor.azurewebsites.net/6`, // Reported
+	{`prestampropulsor.azurewebsites.net/6`, // (*1)
 		"-1002544855225", "7082292759:AAGPZfnApXLbScO-Ya59ETqleLP_37aYj-Q", "templ-2"},
-	{`prestampropulsor.azurewebsites.net/7`, // ALIVE
+	{`prestampropulsor.azurewebsites.net/7`, // (*1)
 		"-1002661514871", "8167813074:AAE-oztpdD0Xg48saTtkNs6reBreiBW5H8g", "templ-2"},
-	{`preopulso.blob.core.windows.net/ahora`, // Reported
+	{`preopulso.blob.core.windows.net/ahora`, // (*1)
 		"-4701397367", "8149360843:AAGJJSGCmYzwH8CsRozY4EWknfKI9uValA8"}, // "Ultra Encrypted"... sure hahaha
 	{`propulne.blob.core.windows.net/ahora`, // Reported
 		"-4776736277", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
-	{`prestampropulsornq.azurewebsites.net/6`, // Reported
+	{`prestampropulsornq.azurewebsites.net/6`, // Reported - down?
 		"-1002544855225", "7082292759:AAFD-7FCsv-z_g47tD8bUVX2ba3CnCZ-oic", "templ-2"},
 	{`preopulneq.blob.core.windows.net/ahora`, // Reported
-		"-4712560048", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
-	{`nequlcolmbia.blob.core.windows.net/nqui`, // Reported
+		"-4788508619", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
+	{`nequlcolmbia.blob.core.windows.net/nqui`, // (*1)
 		"-4691937617", "8094124283:AAGFLW6M3YNeOEL3drNKjX4Xb6gMsksxQHg"}, // "Ultra Encrypted"... sure hahaha
-	{`prestampropulsornq.azurewebsites.net/5`, // Reported
+	{`prestampropulsornq.azurewebsites.net/5`, // Reported - down?
 		"-1002445233950", "7628962436:AAEmcjAPOL_Pjqvqk_Yag_BN87ig_tmTMJ0", "templ-2"},
+	{`neqpreopul.blob.core.windows.net/ahora`, // ALIVE
+		"-4754652599", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
+
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
