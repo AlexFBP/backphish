@@ -128,6 +128,7 @@ func FindPos[T string](needle T, haystack []T) int {
 	return -1
 }
 
+// Returns how many digits are in a number
 func Digits(n int) int {
 	return int(math.Log10(float64(n))) + 1
 }

@@ -83,20 +83,9 @@ func Cmd(args ...string) (err error) {
 	valPrueba := pruebaDefer().Explain
 	fmt.Println("pruebaDefer().Explain:", valPrueba)
 
-	testDigits()
-
 	// TODO: get bool from flag
 	// For now, testing only alive hosts
 	checkHosts(false)
 
 	return nil
-}
-
-func testDigits() {
-	numbers := []int{3, 10, 15, 99, 150, 200}
-	len := 4
-	for _, v := range numbers {
-		digits := common.Digits(v)
-		fmt.Printf("n:%d, digits:%d, fixed(len=%d):%0*d\n", v, digits, len, len, v)
-	}
 }
