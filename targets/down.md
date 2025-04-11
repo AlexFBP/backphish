@@ -140,6 +140,7 @@ Unless otherwise noted, the following targets were identified, but are currently
 - http://latampromosnacionales.com/Es/ - down? (domain still alive)
 - https://latamtravelcolombia.com/ - reported
 - https://lat.latvuelosporcolombiahoy.co.uk/ latam - reported
+- http://la-solicituddd.website/agil.html
 - https://losvuelos-economicos.com/ tiquetesbaratos - reported
 - https://mejoratueconomia.online/?p&
 - https://mibancolombia1.blogspot.com/ <-- https://t.ly/ZCPW-
@@ -167,6 +168,7 @@ Unless otherwise noted, the following targets were identified, but are currently
 - https://personapropulsor.shop/colombia.php - reported
 - https://personasvirtualsuc.com/co-es/credito
 - https://planparatiobtenloya.site/agil.html - reported
+- https://propulsorn.shop/prestamo-propulsor/
 - https://svpersonas-apps.portaldebugsflow.com/ - reported
   - (from https://n9.cl/1bn8uz)
   - (from https://goo.su/w1E8J)

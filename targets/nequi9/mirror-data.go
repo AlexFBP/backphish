@@ -761,6 +761,18 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"propulsor9.blob.core.windows.net/ch3", // LIVE
+		"1359599104417595524/Y0x4tmnxy5Deou6It0X2XpGrvx6qzrCCBpLZLleFtN4YesoRQcx2mrHXB2Mut0aX7JBQ",
+		"",
+		"",
+		""},
+
+	{"neqrecurso1.blob.core.windows.net/nesq", // LIVE
+		"1359233556358107206/d7DJiyVc_mNDtwF6ERbSOd7a1U7CA-AUoJsHHMBZ_eIUyoajeiyI7cFlm8uBRwVHHJJ9",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
