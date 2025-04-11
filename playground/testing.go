@@ -84,7 +84,10 @@ func Cmd(args ...string) (err error) {
 	fmt.Println("pruebaDefer().Explain:", valPrueba)
 
 	testDigits()
-	checkHosts()
+
+	// TODO: get bool from flag
+	// For now, testing only alive hosts
+	checkHosts(false)
 
 	return nil
 }

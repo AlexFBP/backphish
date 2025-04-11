@@ -14,21 +14,22 @@ const (
 	HostUp = iota
 	HostDown
 	HostUnknown
+
+	file_up   = "playground/hostup.yml"
+	file_down = "playground/hostdown.yml"
 )
 
 type TargetDict map[string](map[string]bool)
 type StorageDict map[string]([]string)
 
-func checkHosts() {
+func checkHosts(includeDown bool) {
 	allTargets := TargetDict{}
 	// Read host-up and host-down yml files
-	file_up := "playground/hostup.yml"
 	alive := StorageDict{}
 	err := common.ReadYamlFile(file_up, &alive)
 	if err != nil {
 		panic(err)
 	}
-	file_down := "playground/hostdown.yml"
 	down := StorageDict{}
 	err = common.ReadYamlFile(file_down, &down)
 	if err != nil {
@@ -40,11 +41,16 @@ func checkHosts() {
 	// Test all hosts
 	for target, scams := range allTargets {
 		for scam, state := range scams {
+			if !includeDown && !state {
+				continue
+			}
+			change := false
 			// TODO: Use goroutines here
 			code, httpStat := checkHostState(scam)
 			switch code {
 			case HostUp:
 				if !state { // if it was down
+					change = true
 					allTargets[target][scam] = true
 					if common.CanLog(common.LOG_NORMAL) {
 						fmt.Printf("Now it seems that '%s' is up\n", scam)
@@ -52,6 +58,7 @@ func checkHosts() {
 				}
 			case HostDown:
 				if state { // if it was up
+					change = true
 					allTargets[target][scam] = false
 					if common.CanLog(common.LOG_NORMAL) {
 						fmt.Printf("Now it seems that '%s' is down\n", scam)
@@ -64,10 +71,17 @@ func checkHosts() {
 						scam, httpStat, http.StatusText(httpStat))
 				}
 			}
+			if change {
+				updateHostFiles(allTargets)
+			}
 		}
 	}
+}
 
-	// Update the host-up and host-down files
+func updateHostFiles(allTargets TargetDict) {
+	var alive, down StorageDict
+	var err error
+
 	alive, down = splitDicts(allTargets)
 	err = common.WriteYamlFile(file_up, alive)
 	if err != nil {
@@ -77,7 +91,6 @@ func checkHosts() {
 	if err != nil {
 		panic(err)
 	}
-	// Print the results
 }
 
 func checkHostState(url string) (state, httpCode int) {
