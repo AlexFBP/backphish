@@ -247,7 +247,8 @@ var mirrors = [][]string{
 		"-1002445233950", "7628962436:AAEmcjAPOL_Pjqvqk_Yag_BN87ig_tmTMJ0", "templ-2"},
 	{`neqpreopul.blob.core.windows.net/ahora`, // ALIVE
 		"-4754652599", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
-
+	{`solicitarneq.blob.core.windows.net/ahora`, // ALIVE
+		"-4655974029", "7602932706:AAH5UzoWnuyZn3ZqH0W0Gcl-_JpWFPJWkU4"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

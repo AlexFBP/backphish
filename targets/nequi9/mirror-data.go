@@ -743,6 +743,24 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"usosyprivacidadneq1.blob.core.windows.net/presaves", // LIVE
+		"1359356136083685456/TKiBchfvQbtOfpOzlJHkkYrDxzlqQYt766dqOe3hz-IvmKO5OzflU-x8LI-PEOSMQIyA",
+		"",
+		"",
+		""},
+
+	{"sucursaldeprocesos.blob.core.windows.net/prestmo", // LIVE
+		"1358174649376178337/oJqXwpwGHRGBFzNvasQS_zqxJqy3TalPdIzz3mcSPkZnRNOPwWg5HbEy7EknM_W7KvlA",
+		"",
+		"",
+		""},
+
+	{"impulsatunegocio.blob.core.windows.net/d12", // LIVE
+		"1359687305714995276/1ArpHOaJeoFW64jIypZ78573GjsAxF1_gOBP_BftNGoiyEihO6i2XalV8IUlf8Eo1LJD",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
