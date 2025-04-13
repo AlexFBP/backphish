@@ -12,44 +12,55 @@ type MirrorOptions struct {
 	options []string
 }
 
-type Target struct {
-	Prefix, Description string
-	Mirrors             []string
-	Handler             func(mirror string)
+type TargetInterface interface {
+	GetMirrors() []string
+	GetProps() TargetBase
+	Handler(mirror string)
 }
 
-func (t *Target) GetAllCmds() (opts []menu.CommandOption) {
-	qty := len(t.Mirrors)
+type TargetBase struct {
+	Prefix, Description string
+}
+
+func (t *TargetBase) GetProps() TargetBase {
+	return *t
+}
+
+func GetAllCmds(t TargetInterface) (opts []menu.CommandOption) {
+	mirrors := t.GetMirrors()
+	props := t.GetProps()
+	qty := len(mirrors)
 	digits := Digits(qty)
-	for k, v := range t.Mirrors {
+	for k, v := range mirrors {
 		if qty == 1 {
 			opts = append(opts, menu.CommandOption{
-				Command:     t.Prefix,
-				Description: t.Description,
-				Function:    t.getCmd(k),
+				Command:     props.Prefix,
+				Description: props.Description,
+				Function:    getCmd(t, k),
 			})
 			break
 		}
 		opts = append(opts, menu.CommandOption{
-			Command:     fmt.Sprintf("%s-%0*d", t.Prefix, digits, k+1),
-			Description: fmt.Sprintf("%s, mirror %d (%s)", t.Description, k+1, v),
-			Function:    t.getCmd(k),
+			Command:     fmt.Sprintf("%s-%0*d", props.Prefix, digits, k+1),
+			Description: fmt.Sprintf("%s, mirror %d (%s)", props.Description, k+1, v),
+			Function:    getCmd(t, k),
 		})
 	}
 	return
 }
 
-func (t *Target) getCmd(k int) (f func(...string) error) {
+func getCmd(t TargetInterface, k int) (f func(...string) error) {
 	return func(args ...string) error {
-		return AttackRunner(t.mirrorAttempt(k))
+		return AttackRunner(mirrorAttempt(t, k))
 	}
 }
 
-func (t *Target) mirrorAttempt(n int) AttemptHander {
-	L := len(t.Mirrors)
+func mirrorAttempt(t TargetInterface, n int) AttemptHander {
+	mirrors := t.GetMirrors()
+	L := len(mirrors)
 	if 0 <= n && n < L {
 		return func() {
-			t.Handler(t.Mirrors[n])
+			t.Handler(mirrors[n])
 		}
 	}
 	return func() {

@@ -5,25 +5,21 @@ import (
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
-
-func init() {
-	target = &common.Target{
-		Prefix:      "bc3",
-		Description: "attack fake bancolombia 3",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+type mirrorTarget struct {
+	common.TargetBase
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
+var target *mirrorTarget
+
+func init() {
+	target = &mirrorTarget{}
+	target.Prefix = "bc3"
+	target.Description = "attack fake bancolombia 3"
+	common.MainMenu.Register(target)
 }
 
 type ValidaBody struct {
@@ -31,7 +27,7 @@ type ValidaBody struct {
 	Action   string `json:"action"`
 }
 
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 	h := common.ReqHandler{}
 	p := gofakeit.Person()
 	const BACK = "https://validaciones.uno/processing.php"
@@ -73,6 +69,10 @@ func attempt(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

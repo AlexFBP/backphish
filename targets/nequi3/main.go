@@ -3,21 +3,20 @@ package nequi3
 import (
 	"fmt"
 
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorTarget struct {
+	common.TargetBase
+}
+
+var target *mirrorTarget
 
 func init() {
-	target = &common.Target{
-		Prefix:      "nq3",
-		Description: "attack fake nequi3",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorTarget{}
+	target.Prefix = "nq3"
+	target.Description = "attack fake nequi3"
+	common.MainMenu.Register(target)
 }
 
 // Mirrors. The comment depending on last checked state:
@@ -33,11 +32,11 @@ var mirrors = []string{
 	`tucredirapido.com`,     // REPORTED (*1)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 

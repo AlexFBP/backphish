@@ -1,25 +1,24 @@
 package nequi5
 
 import (
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
-
-func init() {
-	target = &common.Target{
-		Prefix:      "nq5",
-		Description: "attack fake nequi5",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+type mirrorTarget struct {
+	common.TargetBase
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
+var target *mirrorTarget
+
+func init() {
+	target = &mirrorTarget{}
+	target.Prefix = "nq5"
+	target.Description = "attack fake nequi5"
+	common.MainMenu.Register(target)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 // Mirrors. The comment depending on last checked state:
@@ -32,7 +31,7 @@ var mirrors = []string{
 	"propulsorempresasneq.online", // Down? (*3)
 }
 
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 

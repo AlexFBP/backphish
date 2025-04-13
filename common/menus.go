@@ -19,7 +19,8 @@ func (mm *MenuManager_t) Add(entry menu.CommandOption) {
 	mm.menu = append(mm.menu, entry)
 }
 
-func (mm *MenuManager_t) AddMany(entries []menu.CommandOption) {
+func (mm *MenuManager_t) Register(target TargetInterface) {
+	entries := GetAllCmds(target)
 	for _, entry := range entries {
 		mm.Add(entry)
 	}

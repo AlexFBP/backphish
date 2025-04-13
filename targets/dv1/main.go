@@ -4,25 +4,24 @@ import (
 	"io"
 	"strings"
 
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
-
-func init() {
-	target = &common.Target{
-		Prefix:      "dv1",
-		Description: "attack fake davivienda 1",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+type mirrorTarget struct {
+	common.TargetBase
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
+var target *mirrorTarget
+
+func init() {
+	target = &mirrorTarget{}
+	target.Prefix = "dv1"
+	target.Description = "attack fake davivienda 1"
+	common.MainMenu.Register(target)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 // Mirrors. The comment depending on last checked state:
@@ -48,7 +47,7 @@ var mirrors = []string{
 	`web.davivendacol.website`,          // (*1)
 }
 
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 
 	h := common.ReqHandler{}
 	// h.UseJar(true)

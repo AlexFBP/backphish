@@ -4,28 +4,23 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorManager struct {
+	common.TargetBase
+}
+
+var target *mirrorManager
 
 func init() {
-	target = &common.Target{
-		Prefix:      "nq9",
-		Description: "attack fake nequi9",
-		Mirrors:     getMirrorNames(),
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorManager{}
+	target.Prefix = "nq9"
+	target.Description = "attack fake nequi9"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(mirror string) {
+func (t *mirrorManager) Handler(mirror string) {
 	d := newUser()
 	m := mirrData(mirror)
 	m.Discord.UseJar(true)

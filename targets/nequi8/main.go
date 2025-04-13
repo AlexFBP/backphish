@@ -3,28 +3,23 @@ package nequi8
 import (
 	"time"
 
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorManager struct {
+	common.TargetBase
+}
+
+var target *mirrorManager
 
 func init() {
-	target = &common.Target{
-		Prefix:      "nq8",
-		Description: "attack fake nequi8",
-		Mirrors:     getMirrorNames(),
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorManager{}
+	target.Prefix = "nq8"
+	target.Description = "attack fake nequi8"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(mirror string) {
+func (t *mirrorManager) Handler(mirror string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 	d := newUser()

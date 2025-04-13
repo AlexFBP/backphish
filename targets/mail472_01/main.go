@@ -4,28 +4,24 @@ import (
 	"fmt"
 
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorTarget struct {
+	common.TargetBase
+}
+
+var target *mirrorTarget
 
 func init() {
-	target = &common.Target{
-		Prefix:      "472",
-		Description: "attack fake 472",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorTarget{}
+	target.Prefix = "472"
+	target.Description = "attack fake 472"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 	h := common.ReqHandler{}
 	// GET https://guianacional4-72.com/inicio.php
 
@@ -69,6 +65,10 @@ func attempt(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

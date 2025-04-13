@@ -4,28 +4,24 @@ import (
 	"strconv"
 
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorTarget struct {
+	common.TargetBase
+}
+
+var target *mirrorTarget
 
 func init() {
-	target = &common.Target{
-		Prefix:      "nq4",
-		Description: "attack fake nequi4",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorTarget{}
+	target.Prefix = "nq4"
+	target.Description = "attack fake nequi4"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 
 	h := common.ReqHandler{}
 	h.UseJar(true)
@@ -75,6 +71,10 @@ func attempt(base string) {
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/prueba-autenti.html"},
 	}...), nil)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

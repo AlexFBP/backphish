@@ -35,7 +35,7 @@ func (m *mirrorData) send(h *common.ReqHandler, data userData, one bool) {
 	h.SendJSON("https://"+back+".vercel.app/api/send-message", data, nil, nil)
 }
 
-func getMirrorNames() (names []string) {
+func (t *mirrorManager) GetMirrors() (names []string) {
 	for _, v := range mirrors {
 		names = append(names, v[0])
 	}

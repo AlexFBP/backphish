@@ -4,32 +4,28 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
-
-func init() {
-	target = &common.Target{
-		Prefix:      "bdv1",
-		Description: "attack fake banco de venezuela 1",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+type mirrorTarget struct {
+	common.TargetBase
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
+var target *mirrorTarget
+
+func init() {
+	target = &mirrorTarget{}
+	target.Prefix = "bdv1"
+	target.Description = "attack fake banco de venezuela 1"
+	common.MainMenu.Register(target)
 }
 
 func del() {
 	common.RandDelayRange(15*time.Second, 30*time.Second)
 }
 
-func attempt(mirror string) {
+func (t *mirrorTarget) Handler(mirror string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
@@ -54,6 +50,10 @@ func attempt(mirror string) {
 		del()
 	}
 
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

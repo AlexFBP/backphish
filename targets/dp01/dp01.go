@@ -4,32 +4,27 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/turret-io/go-menu/menu"
-
 	"github.com/AlexFBP/backphish/common"
 )
+
+type mirrorManager struct {
+	common.TargetBase
+}
+
+var target *mirrorManager
 
 type mirror struct {
 	common.Telegram
 }
 
-var target *common.Target
-
 func init() {
-	target = &common.Target{
-		Prefix:      "dp1",
-		Description: "attack fake daviplata",
-		Mirrors:     getMirrorNames(),
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorManager{}
+	target.Prefix = "dp1"
+	target.Description = "attack fake daviplata"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(base string) {
+func (t *mirrorManager) Handler(base string) {
 	// Entrypoint from https://ingressar1davidd.sayo1296.repl.co
 
 	m := mirrData(base)
@@ -63,7 +58,7 @@ IP: %s
 	common.RandDelayRange(30*time.Second, 60*time.Second)
 }
 
-func getMirrorNames() (names []string) {
+func (t *mirrorManager) GetMirrors() (names []string) {
 	for _, v := range mirrors {
 		names = append(names, v[0])
 	}

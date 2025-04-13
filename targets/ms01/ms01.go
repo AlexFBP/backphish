@@ -5,28 +5,24 @@ import (
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorTarget struct {
+	common.TargetBase
+}
+
+var target *mirrorTarget
 
 func init() {
-	target = &common.Target{
-		Prefix:      "ms1",
-		Description: "attack fake MS login",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorTarget{}
+	target.Prefix = "ms1"
+	target.Description = "attack fake MS login"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(base string) {
+func (t *mirrorTarget) Handler(base string) {
 	h := common.ReqHandler{}
 	// common.RandDelay(20, 60)
 	domains := []string{
@@ -57,6 +53,10 @@ func attempt(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

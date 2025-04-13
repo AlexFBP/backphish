@@ -6,24 +6,25 @@ import (
 	"strings"
 
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
-
-func init() {
-	target = &common.Target{
-		Prefix:      "bc1",
-		Description: "attack fake bancolombia 1",
-		Mirrors:     getMirrorNames(),
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+type mirrorTarget struct {
+	common.TargetBase
 }
 
-func getMirrorNames() (names []string) {
+var target *mirrorTarget
+
+func init() {
+	target = &mirrorTarget{}
+	target.Prefix = "bc1"
+	target.Description = "attack fake bancolombia 1"
+	common.MainMenu.Register(target)
+}
+
+func (t *mirrorTarget) GetMirrors() (names []string) {
+	names = make([]string, 0)
 	for _, v := range mirrors {
 		names = append(names, v[0])
 	}
@@ -40,10 +41,6 @@ var mirrors = [][]string{
 	},
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
 func getMirrorData(name string) (steps []string) {
 	for _, v := range mirrors {
 		if name == v[0] {
@@ -54,7 +51,7 @@ func getMirrorData(name string) (steps []string) {
 	return
 }
 
-func attempt(branch string) {
+func (t *mirrorTarget) Handler(branch string) {
 	h := common.ReqHandler{}
 	m := getMirrorData(branch)
 	// common.RandDelay(3, 10)

@@ -8,28 +8,24 @@ import (
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
 	"github.com/brianvoe/gofakeit"
-	"github.com/turret-io/go-menu/menu"
 
 	"github.com/AlexFBP/backphish/common"
 )
 
-var target *common.Target
+type mirrorManager struct {
+	common.TargetBase
+}
+
+var target *mirrorManager
 
 func init() {
-	target = &common.Target{
-		Prefix:      "nf1",
-		Description: "attack fake netflix 1",
-		Mirrors:     mirrors,
-		Handler:     attempt,
-	}
-	common.MainMenu.AddMany(getAllCmds())
+	target = &mirrorManager{}
+	target.Prefix = "nf1"
+	target.Description = "attack fake netflix 1"
+	common.MainMenu.Register(target)
 }
 
-func getAllCmds() []menu.CommandOption {
-	return target.GetAllCmds()
-}
-
-func attempt(base string) {
+func (t *mirrorManager) Handler(base string) {
 	h := common.ReqHandler{}
 	h.UseJar(true)
 
@@ -105,6 +101,10 @@ func attempt(base string) {
 			{K: "Referer", V: "https://" + base + "/billing.php"},
 		}, nil,
 	)
+}
+
+func (t *mirrorManager) GetMirrors() []string {
+	return mirrors
 }
 
 var mirrors = []string{

@@ -21,7 +21,7 @@ func mirrData(name string) (d mirrorData) {
 	return
 }
 
-func getMirrorNames() (names []string) {
+func (t *mirrorManager) GetMirrors() (names []string) {
 	for _, v := range mirrors {
 		names = append(names, v[0])
 	}
