@@ -773,6 +773,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"produccionneq1.blob.core.windows.net/pressure", // LIVE
+		"1358921148896645333/Si4050orTLsZScZNLkust_xJfG4AAx_stqas3u8rlaJO_KBawjfc9Z5ZebS_nY8JsYVx",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
