@@ -3,6 +3,7 @@ package playground
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 	"slices"
 	"strings"
 
@@ -161,14 +162,61 @@ func splitDicts(dict TargetDict) (alive, down StorageDict) {
 }
 
 func sortMirrors(stDict StorageDict) {
-	// TODO: Sort by domain name, then by subdomain name, then by path
-	// For now, we will sort by the full URL
-	// This is a simple case-insensitive sort
 	cmp := func(a, b string) int {
+		a_parsed, err_a := url.Parse(a)
+		b_parsed, err_b := url.Parse(b)
+
+		// Compare validness of URLs
+		if err_a != nil && err_b != nil {
+			return 0
+		} else if err_a != nil {
+			return -1
+		} else if err_b != nil {
+			return 1
+		}
+
+		// Compare hostnames
+		if sub := compareSubdomains(a_parsed.Hostname(), b_parsed.Hostname()); sub != 0 {
+			return sub
+		}
+
+		// Compare paths
+		a_path := strings.ToLower(a_parsed.Path)
+		b_path := strings.ToLower(b_parsed.Path)
+		if a_path != b_path {
+			return strings.Compare(a_path, b_path)
+		}
+
+		// Default to comparing the full URL
 		return strings.Compare(strings.ToLower(a), strings.ToLower(b))
 	}
 	for target, mirrors := range stDict {
 		slices.SortFunc(mirrors, cmp)
 		stDict[target] = mirrors
 	}
+}
+
+func compareSubdomains(a, b string) int {
+	a_parts := strings.Split(a, ".")
+	b_parts := strings.Split(b, ".")
+	a_len := len(a_parts)
+	b_len := len(b_parts)
+	common := minInt(a_len, b_len)
+
+	// Compare each equivalent part
+	for i := 1; i <= common; i++ {
+		test_a := strings.ToLower(a_parts[a_len-i])
+		test_b := strings.ToLower(b_parts[b_len-i])
+		if test_a != test_b {
+			return strings.Compare(test_a, test_b)
+		}
+	}
+	return 0
+}
+
+func minInt(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
 }
