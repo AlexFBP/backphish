@@ -13,7 +13,7 @@ import (
 )
 
 type mirrorManager struct {
-	common.TargetBase
+	common.TargetSimple
 }
 
 var target *mirrorManager
@@ -22,6 +22,7 @@ func init() {
 	target = &mirrorManager{}
 	target.Prefix = "nf1"
 	target.Description = "attack fake netflix 1"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 
@@ -101,10 +102,6 @@ func (t *mirrorManager) Handler(base string) {
 			{K: "Referer", V: "https://" + base + "/billing.php"},
 		}, nil,
 	)
-}
-
-func (t *mirrorManager) GetMirrors() []string {
-	return mirrors
 }
 
 var mirrors = []string{

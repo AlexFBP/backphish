@@ -5,7 +5,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetSimple
 }
 
 var target *mirrorTarget
@@ -14,11 +14,8 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "nq2"
 	target.Description = "attack fake nequi2"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
-}
-
-func (t *mirrorTarget) GetMirrors() []string {
-	return mirrors
 }
 
 // (*1): "no such host" - Down

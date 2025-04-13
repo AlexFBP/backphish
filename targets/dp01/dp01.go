@@ -8,7 +8,7 @@ import (
 )
 
 type mirrorManager struct {
-	common.TargetBase
+	common.TargetWithParams
 }
 
 var target *mirrorManager
@@ -21,6 +21,7 @@ func init() {
 	target = &mirrorManager{}
 	target.Prefix = "dp1"
 	target.Description = "attack fake daviplata"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 
@@ -58,20 +59,12 @@ IP: %s
 	common.RandDelayRange(30*time.Second, 60*time.Second)
 }
 
-func (t *mirrorManager) GetMirrors() (names []string) {
-	for _, v := range mirrors {
-		names = append(names, v[0])
-	}
-	return
-}
-
 func mirrData(name string) (d mirror) {
-	for _, v := range mirrors {
-		if name == v[0] {
-			d.Token, d.Chat = v[1], v[2]
-			break
-		}
+	v := target.GetMirrorParams(name)
+	if len(v) < 2 {
+		return
 	}
+	d.Token, d.Chat = v[0], v[1]
 	return
 }
 

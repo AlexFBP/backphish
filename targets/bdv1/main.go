@@ -9,7 +9,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetSimple
 }
 
 var target *mirrorTarget
@@ -18,6 +18,7 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "bdv1"
 	target.Description = "attack fake banco de venezuela 1"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 
@@ -50,10 +51,6 @@ func (t *mirrorTarget) Handler(mirror string) {
 		del()
 	}
 
-}
-
-func (t *mirrorTarget) GetMirrors() []string {
-	return mirrors
 }
 
 var mirrors = []string{

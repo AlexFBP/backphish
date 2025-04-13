@@ -7,7 +7,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetSimple
 }
 
 var target *mirrorTarget
@@ -16,6 +16,7 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "nq3"
 	target.Description = "attack fake nequi3"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 
@@ -30,10 +31,6 @@ var mirrors = []string{
 	`prestadecision.com`,    // REPORTED (*1)
 	`propuladmin.com`,       // REPORTED (*1)
 	`tucredirapido.com`,     // REPORTED (*1)
-}
-
-func (t *mirrorTarget) GetMirrors() []string {
-	return mirrors
 }
 
 func (t *mirrorTarget) Handler(base string) {

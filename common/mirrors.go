@@ -85,3 +85,50 @@ func (m *MirrorOptions) HasOption(opt string) bool {
 	}
 	return false
 }
+
+type TargetSimple struct {
+	TargetBase
+	mirrors *[]string
+}
+
+func (t *TargetSimple) SetMirrors(m *[]string) {
+	t.mirrors = m
+}
+
+func (t *TargetSimple) GetMirrors() []string {
+	return *t.mirrors
+}
+
+type TargetWithParams struct {
+	TargetBase
+
+	// mirrors is a slice of slices, where each inner slice contains the mirror and its parameters.
+	// The quantity of parameters is not fixed.
+	mirrors *[][]string
+}
+
+func (t *TargetWithParams) SetMirrors(m *[][]string) {
+	t.mirrors = m
+}
+
+func (t *TargetWithParams) GetMirrors() (names []string) {
+	if t.mirrors == nil {
+		return
+	}
+	for _, v := range *t.mirrors {
+		names = append(names, v[0])
+	}
+	return names
+}
+
+func (t *TargetWithParams) GetMirrorParams(mirror string) []string {
+	if t.mirrors == nil {
+		return []string{}
+	}
+	for _, v := range *t.mirrors {
+		if mirror == v[0] {
+			return v[1:]
+		}
+	}
+	return []string{}
+}

@@ -7,7 +7,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetWithParams
 }
 
 var target *mirrorTarget
@@ -16,6 +16,7 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "nq7"
 	target.Description = "attack fake nequi7"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 

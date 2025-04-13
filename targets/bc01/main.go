@@ -11,7 +11,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetWithParams
 }
 
 var target *mirrorTarget
@@ -20,15 +20,8 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "bc1"
 	target.Description = "attack fake bancolombia 1"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
-}
-
-func (t *mirrorTarget) GetMirrors() (names []string) {
-	names = make([]string, 0)
-	for _, v := range mirrors {
-		names = append(names, v[0])
-	}
-	return
 }
 
 var mirrors = [][]string{
@@ -41,19 +34,9 @@ var mirrors = [][]string{
 	},
 }
 
-func getMirrorData(name string) (steps []string) {
-	for _, v := range mirrors {
-		if name == v[0] {
-			steps = v[1:len(mirrors)]
-			break
-		}
-	}
-	return
-}
-
 func (t *mirrorTarget) Handler(branch string) {
 	h := common.ReqHandler{}
-	m := getMirrorData(branch)
+	m := t.GetMirrorParams(branch)
 	// common.RandDelay(3, 10)
 	h.SendPostEncoded(
 		"https://"+m[0]+"/finish9.php",

@@ -10,7 +10,7 @@ import (
 )
 
 type mirrorTarget struct {
-	common.TargetBase
+	common.TargetSimple
 }
 
 var target *mirrorTarget
@@ -19,6 +19,7 @@ func init() {
 	target = &mirrorTarget{}
 	target.Prefix = "ms1"
 	target.Description = "attack fake MS login"
+	target.SetMirrors(&mirrors)
 	common.MainMenu.Register(target)
 }
 
@@ -53,10 +54,6 @@ func (t *mirrorTarget) Handler(base string) {
 		},
 		nil,
 	)
-}
-
-func (t *mirrorTarget) GetMirrors() []string {
-	return mirrors
 }
 
 var mirrors = []string{

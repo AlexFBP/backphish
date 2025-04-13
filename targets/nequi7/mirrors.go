@@ -21,21 +21,10 @@ func (m *mirrorData) selectTemplate(d *usrData, step uint8) string {
 }
 
 func mirrData(name string) (d mirrorData) {
-	for _, v := range mirrors {
-		if name == v[0] {
-			d.Chat, d.Token = v[1], v[2]
-			if len(v) >= 4 {
-				d.ParseOptions(v[len(v)-1])
-			}
-			break
-		}
-	}
-	return
-}
-
-func (t *mirrorTarget) GetMirrors() (names []string) {
-	for _, v := range mirrors {
-		names = append(names, v[0])
+	v := target.GetMirrorParams(name)
+	d.Chat, d.Token = v[0], v[1]
+	if len(v) >= 3 {
+		d.ParseOptions(v[len(v)-1])
 	}
 	return
 }

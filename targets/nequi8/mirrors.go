@@ -10,18 +10,14 @@ type mirrorData struct {
 }
 
 func mirrData(name string) (d mirrorData) {
-	for _, v := range mirrors {
-		if name == v[0] {
-			d.Back1 = v[1]
-			d.ParseOptions(v[3])
-			if v[2] == "" {
-				d.Back2 = v[1]
-			} else {
-				d.Back2 = v[2]
-			}
-			break
-		}
+	v := target.GetMirrorParams(name)
+	d.Back1 = v[0]
+	if v[1] == "" {
+		d.Back2 = v[0]
+	} else {
+		d.Back2 = v[1]
 	}
+	d.ParseOptions(v[2])
 	return
 }
 
@@ -33,13 +29,6 @@ func (m *mirrorData) send(h *common.ReqHandler, data userData, one bool) {
 		back = m.Back2
 	}
 	h.SendJSON("https://"+back+".vercel.app/api/send-message", data, nil, nil)
-}
-
-func (t *mirrorManager) GetMirrors() (names []string) {
-	for _, v := range mirrors {
-		names = append(names, v[0])
-	}
-	return
 }
 
 // Mirrors. The comment depending on last checked state:

@@ -11,19 +11,8 @@ type mirrorData struct {
 }
 
 func mirrData(name string) (d mirrorData) {
-	for _, v := range mirrors {
-		if name == v[0] {
-			d.Webhook, d.Token, d.Chat = v[1], v[2], v[3]
-			d.ParseOptions(v[4])
-			break
-		}
-	}
-	return
-}
-
-func (t *mirrorManager) GetMirrors() (names []string) {
-	for _, v := range mirrors {
-		names = append(names, v[0])
-	}
+	v := target.GetMirrorParams(name)
+	d.Webhook, d.Token, d.Chat = v[0], v[1], v[2]
+	d.ParseOptions(v[3])
 	return
 }
