@@ -228,7 +228,7 @@ var mirrors = [][]string{
 		"-4776736277", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
 	{`prestampropulsornq.azurewebsites.net/6`, // Reported - down?
 		"-1002544855225", "7082292759:AAFD-7FCsv-z_g47tD8bUVX2ba3CnCZ-oic", "templ-2"},
-	{`preopulneq.blob.core.windows.net/ahora`, // Reported
+	{`preopulneq.blob.core.windows.net/ahora`, // (*1)
 		"-4788508619", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
 	{`nequlcolmbia.blob.core.windows.net/nqui`, // (*1)
 		"-4691937617", "8094124283:AAGFLW6M3YNeOEL3drNKjX4Xb6gMsksxQHg"}, // "Ultra Encrypted"... sure hahaha

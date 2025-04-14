@@ -509,151 +509,151 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"prestamonq5.blob.core.windows.net/prestamo6", // LIVE
+	{"prestamonq5.blob.core.windows.net/prestamo6", // (*1)
 		"1356634342520000742/a7EYBtJJ2LSIdPkdT1RvMCiqFTn-mkqG4mYqmpdSZpib1eBMRJ3glVqJy2KWaLK0R82R",
 		"",
 		"",
 		""},
 
-	{"prestamonq5.blob.core.windows.net/prestamo7", // LIVE
+	{"prestamonq5.blob.core.windows.net/prestamo7", // (*1)
 		"1356464830294265886/pdx3GPFlr-9YTPanWIjDvsLrMGvMl0gu84Q-Y7vJzu37JzG_XlHWbYBWmct1umDTKnIA",
 		"",
 		"",
 		""},
 
-	{"prestamonq5.blob.core.windows.net/prestamo8", // LIVE
+	{"prestamonq5.blob.core.windows.net/prestamo8", // (*1)
 		"1350507834126635008/edjOQXsjj5pCyh00Jv3mZ9TPjvbyLBi-EBZuvcVKWiWnPM0l5Ne_SMkDmhV-acjXhh-N",
 		"",
 		"",
 		""},
 
-	{"prestamonq5.blob.core.windows.net/prestamo9", // LIVE
+	{"prestamonq5.blob.core.windows.net/prestamo9", // (*1)
 		"1356465710066569216/QUQuv5BuAoq9vIjh7q5lTuvW5zx0RNu5xVmUQ9saYFlKfh_C2vNei1oZSrWqVEaUCkph",
 		"",
 		"",
 		""},
 
-	{"prestamonq5.blob.core.windows.net/prestamo10", // reported
+	{"prestamonq5.blob.core.windows.net/prestamo10", // (*1)
 		"1356635991271669830/VSQ0aHIm3kZyK7tzuNCIHJR656u9SecCg2_xTGvs6a2JX-0nnPOuO1PF-lSHhLxGVNr5",
 		"",
 		"",
 		""},
 
-	{"propulsoresnq0.blob.core.windows.net/propulsor1", // reported
+	{"propulsoresnq0.blob.core.windows.net/propulsor1", // (*1)
 		"1356603532932812861/aD4quERQGJc3C8nA6KQgJAfG_-fWZDIxX8RBLKo9SFvgrNry3CNG1D9tgRTmmX8y6Huo",
 		"",
 		"",
 		""},
 
-	{"prestamonq11.blob.core.windows.net/prestamo11", // LIVE
+	{"prestamonq11.blob.core.windows.net/prestamo11", // (*1)
 		"1352655319872045147/bBF7Y8mjzJq8DkvAFAisu_R9yYNZd5VR37ymq6ad4fvg5LcxO6AyMbEzrf8N2HjOpfcL",
 		"",
 		"",
 		""},
 
-	{"prestamonq11.blob.core.windows.net/prestamo12", // reported
+	{"prestamonq11.blob.core.windows.net/prestamo12", // (*1)
 		"1353078665214296066/kG1D7NL1wkC-UPtcSTfErTSaKII8Wul-_IvYbtu3b98tPjFttHCLm_ucVzNSmHPPThyk",
 		"",
 		"",
 		""},
 
-	{"prestamonq11.blob.core.windows.net/prestamo13", // LIVE
+	{"prestamonq11.blob.core.windows.net/prestamo13", // (*1)
 		"1356639588344659968/_0vMOPOD_UsEUvvQ6ZCcy_uL3lwW-0ESNm6wLi3QR0Zw5YdWs1zQqrAWNyE3shhl_XUw",
 		"",
 		"",
 		"alt1"},
 
-	{"prestamonq11.blob.core.windows.net/prestamo14", // LIVE
+	{"prestamonq11.blob.core.windows.net/prestamo14", // (*1)
 		"1356638896967913583/gaXYNd4Qvt9spJ_4Wn9eK48qoS_8jDdlWZZp9UoR91bGvJj3junuP2lPV80tON64RQG7",
 		"",
 		"",
 		""},
 
-	{"prestamonq11.blob.core.windows.net/prestamo15", // LIVE
+	{"prestamonq11.blob.core.windows.net/prestamo15", // (*1)
 		"1356471335949303818/vi4wje_t8108l8Ec7J2P3hcK0rjmContnNPzE1_ki4DJyx3JME4q61ocMcNiRqLrbYwU",
 		"",
 		"",
 		""},
 
-	{"prestamosnq3.blob.core.windows.net/prestamos3", // reported
+	{"prestamosnq3.blob.core.windows.net/prestamos3", // (*1)
 		"1356463539547668540/BjlyBHdfCZDu7mx7AjcBP9UWf9mgt5BNAr89s5Dyh3HWATbSR7SNqFqObdFgPJEMPjit",
 		"",
 		"",
 		""},
 
-	{"propulsandoideas.blob.core.windows.net/dd1", // reported
+	{"propulsandoideas.blob.core.windows.net/dd1", // (*1)
 		"1354842107705168055/qbkMw1jJrHWk-LC85z_UdVER52ksjLxe15KHqj4PtYlID2hC1AWwJLdlhzD_e4xN7DDK",
 		"",
 		"",
 		""},
 
-	{"propulsandoideas.blob.core.windows.net/dd2", // LIVE
+	{"propulsandoideas.blob.core.windows.net/dd2", // (*1)
 		"1354842708857979030/URzzgzaE2qkiqpbIHWJMFvCnenPoz0CQ4-GQwrotx2zpvXssU9qXPUgZaz5lF71KVmcP",
 		"1354511375786967100/UUuazoAXBDaoPHaphuP2RpFxXpQQER4z38HH0gYcRIynioNdY1kymcXYKFpE15U5fRXG",
 		"",
 		"wh-bypass-5"},
 
-	{"propulsandoideas.blob.core.windows.net/dd3", // LIVE
+	{"propulsandoideas.blob.core.windows.net/dd3", // (*1)
 		"1354845578571546929/j82J-cDeEvZru9kvIkHBVVFxatgpI00M1sxhJM3eyFggEXvwRnvTVyDGQXwSJvkYBMtE",
 		"",
 		"",
 		""},
 
-	{"propulsornq.blob.core.windows.net/prestamo16", // LIVE
+	{"propulsornq.blob.core.windows.net/prestamo16", // (*1)
 		"1356690459681882152/9xyg5aGlbUjiZZdx0B5a-J6SNkC0LgKavgEh8mYYLP9st5SW1x1_cFjvYw70HChg_llm",
 		"",
 		"",
 		""},
 
-	{"propulsornq.blob.core.windows.net/prestamo19", // LIVE
+	{"propulsornq.blob.core.windows.net/prestamo19", // (*1)
 		"1356760039590858823/b_-hYwB25kDkxh3Peu7e_ZzfRJSButXDFouYksSyt6pbyKD18T_KfNFo-4CpvXDNfh_v",
 		"",
 		"",
 		""},
 
-	{"propulsornq.blob.core.windows.net/prestamos17", // LIVE
+	{"propulsornq.blob.core.windows.net/prestamos17", // (*1)
 		"1356732534825816084/dMuGJqKBFvE9NP1mWUQ5yHVobIuZJRx--9ICGiol3eNw5uHn1KeVMPE5fe8g7gG36L1U",
 		"",
 		"",
 		"alt1,alt2"},
 
-	{"propulsornq.blob.core.windows.net/prestamos18", // LIVE
+	{"propulsornq.blob.core.windows.net/prestamos18", // (*1)
 		"1356731680878100686/vca0uFQ0CGRqWMCoNP3UXWa0xXwLb-k3KX5eg9LZJPpd539vDF2DaO5Jyd4xdAdWrZ0b",
 		"",
 		"",
 		"alt1,alt3"},
 
-	{"prestamosnq3.blob.core.windows.net/prestamo4", // LIVE
+	{"prestamosnq3.blob.core.windows.net/prestamo4", // (*1)
 		"1356646032175272116/nZE5ID4j7FbdwRjjp1ZJ2MmnYd7HKGygNnmwrgZPunOwLZ_7AkP4JZ0GeE6ph7LUV0-9",
 		"",
 		"",
 		""},
 
-	{"prestamosnq3.blob.core.windows.net/prestamo5", // LIVE
+	{"prestamosnq3.blob.core.windows.net/prestamo5", // (*1)
 		"1356626815703318800/x2O6hH1qBZ9-qzcSa2DCxgIoICPTh23UcdAxGFx3k4pr2WtCywmdxBitGFQuPTGUz1Iv",
 		"",
 		"",
 		""},
 
-	{"tumejoropcion.blob.core.windows.net/dd4", // LIVE
+	{"tumejoropcion.blob.core.windows.net/dd4", // (*1)
 		"1354845578571546929/j82J-cDeEvZru9kvIkHBVVFxatgpI00M1sxhJM3eyFggEXvwRnvTVyDGQXwSJvkYBMtE",
 		"",
 		"",
 		""},
 
-	{"propulsoresnq.blob.core.windows.net/prestamo1", // LIVE
+	{"propulsoresnq.blob.core.windows.net/prestamo1", // (*1)
 		"1356470342838915256/NFAgC_ML9wpy_Vp_XN8l-eSMYsrR6bMRcO37wxCWifwwuw0Oe98O6VwMB4eE9o2SvOWF",
 		"",
 		"",
 		""},
 
-	{"tumejoropcion.blob.core.windows.net/neq", // LIVE
+	{"tumejoropcion.blob.core.windows.net/neq", // (*1)
 		"1356285910383071392/qmpsRNue9bat6Coj3s3durLtUF4B9Svi5GkaKqIxnKAm3uY64zSciLjF4m66rTGmxulG",
 		"",
 		"",
 		""},
 
-	{"sitioneq.blob.core.windows.net/log", // LIVE
+	{"sitioneq.blob.core.windows.net/log", // (*1)
 		"1354502477151731825/ZMUH7M5r-1IhwCSlngNJPUZELOO9l3SOP255R6XLhWL8OZJ3zq29xxaE2EJ7IC6Bdu6l",
 		"",
 		"",
@@ -665,7 +665,7 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"propulsoresnq0.blob.core.windows.net/propulsor", // LIVE
+	{"propulsoresnq0.blob.core.windows.net/propulsor", // (*1)
 		"1351227057237131306/jwtR0Snk9UMEPwDmv_mQgsQ7rjQ4h7mH94SGJTXfRpgp95gK32NAJdJhX6OQalV8XJRa",
 		"",
 		"",
@@ -689,7 +689,7 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"propulsando.blob.core.windows.net/jc1", // LIVE
+	{"propulsando.blob.core.windows.net/jc1", // (*1)
 		"1356986167853060286/G883RbV4hvQY6oQ-YsWMEdnImewfmUlzbR_bmqKALtBT59G0d7V5GuVT1EdgmJRDS6th",
 		"",
 		"",
@@ -737,7 +737,7 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"personasapp.blob.core.windows.net/neq001", // LIVE
+	{"personasapp.blob.core.windows.net/neq001", // (*1)
 		"1350932137737457674/OlikcAuCeKLt3vg021JA7v8saZtXwtuVK-4LCziPYPA2nRY8aeuo_-zD8r__YHKrUds6",
 		"",
 		"",
@@ -767,7 +767,7 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"neqrecurso1.blob.core.windows.net/nesq", // LIVE
+	{"neqrecurso1.blob.core.windows.net/nesq", // down?
 		"1359233556358107206/d7DJiyVc_mNDtwF6ERbSOd7a1U7CA-AUoJsHHMBZ_eIUyoajeiyI7cFlm8uBRwVHHJJ9",
 		"",
 		"",
