@@ -10,6 +10,7 @@ import (
 	"github.com/retgits/creditcard"
 
 	"github.com/AlexFBP/backphish/common"
+	"github.com/AlexFBP/backphish/targets/unclassified"
 )
 
 func init() {
@@ -83,9 +84,9 @@ func Cmd(args ...string) (err error) {
 	valPrueba := pruebaDefer().Explain
 	fmt.Println("pruebaDefer().Explain:", valPrueba)
 
-	// TODO: get bool from flag
+	// TODO: get bool from cli flag
 	// For now, testing only alive hosts
-	checkHosts(false)
+	unclassified.CheckHosts(false)
 
 	return nil
 }

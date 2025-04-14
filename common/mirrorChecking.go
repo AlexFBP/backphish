@@ -1,4 +1,4 @@
-package playground
+package common
 
 import (
 	"fmt"
@@ -6,8 +6,6 @@ import (
 	"net/url"
 	"slices"
 	"strings"
-
-	"github.com/AlexFBP/backphish/common"
 )
 
 const (
@@ -15,96 +13,22 @@ const (
 	HostUp = iota
 	HostDown
 	HostUnknown
-
-	file_up   = "playground/hostup.yml"
-	file_down = "playground/hostdown.yml"
 )
 
 type TargetDict map[string](map[string]bool)
 type StorageDict map[string]([]string)
 
-func checkHosts(includeDown bool) {
-	allTargets := TargetDict{}
-	// Read host-up and host-down yml files
-	alive := StorageDict{}
-	err := common.ReadYamlFile(file_up, &alive)
-	if err != nil {
-		panic(err)
-	}
-	down := StorageDict{}
-	err = common.ReadYamlFile(file_down, &down)
-	if err != nil {
-		panic(err)
-	}
-	mergeDicts(alive, allTargets, true)
-	mergeDicts(down, allTargets, false)
-
-	// Test all hosts
-	for target, scams := range allTargets {
-		for scam, state := range scams {
-			if !includeDown && !state {
-				continue
-			}
-			change := false
-			// TODO: Use goroutines here
-			code, httpStat := checkHostState(scam)
-			switch code {
-			case HostUp:
-				if !state { // if it was down
-					change = true
-					allTargets[target][scam] = true
-					if common.CanLog(common.LOG_NORMAL) {
-						fmt.Printf("Now it seems that '%s' is up\n", scam)
-					}
-				}
-			case HostDown:
-				if state { // if it was up
-					change = true
-					allTargets[target][scam] = false
-					if common.CanLog(common.LOG_NORMAL) {
-						fmt.Printf("Now it seems that '%s' is down\n", scam)
-					}
-				}
-			case HostUnknown:
-				// warn
-				if common.CanLog(common.LOG_NORMAL) {
-					fmt.Printf("Unknown state for host '%s' - HTTP Stat:%d - %s\n",
-						scam, httpStat, http.StatusText(httpStat))
-				}
-			}
-			if change {
-				updateHostFiles(allTargets)
-			}
-		}
-	}
-}
-
-func updateHostFiles(allTargets TargetDict) {
-	var alive, down StorageDict
-	var err error
-
-	alive, down = splitDicts(allTargets)
-	err = common.WriteYamlFile(file_up, alive)
-	if err != nil {
-		panic(err)
-	}
-	err = common.WriteYamlFile(file_down, down)
-	if err != nil {
-		panic(err)
-	}
-}
-
-func checkHostState(url string) (state, httpCode int) {
-	err := common.CheckURL(url)
+func CheckHostState(url string) (state, httpCode int) {
+	err := CheckURL(url)
 	state = HostUnknown
 	if err != nil {
 		return
 	}
-	h := common.ReqHandler{}
+	h := ReqHandler{}
 	var step uint8
 	err, step = h.SendGet(url, nil, nil, nil)
 	if err != nil {
-		if common.CanLog(common.LOG_VERBOSE) {
+		if CanLog(LOG_VERBOSE) {
 			fmt.Printf("Host %s seems to be down - lastStep: %d - err: %s\n", url, step, err)
 		}
 		return HostDown, 0
@@ -116,7 +40,7 @@ func checkHostState(url string) (state, httpCode int) {
 		state = HostDown
 	default:
 		if httpCode >= 100 && httpCode < 300 {
-			if common.CanLog(common.LOG_VERBOSE) {
+			if CanLog(LOG_VERBOSE) {
 				fmt.Printf("Host %s seems to be up - lastStep: %d\n", url, step)
 			}
 			state = HostUp
@@ -126,7 +50,7 @@ func checkHostState(url string) (state, httpCode int) {
 }
 
 // mergeDicts merges the source dictionary into the target dictionary, with a preset state for each entry.
-func mergeDicts(source StorageDict, target TargetDict, state bool) {
+func MergeDicts(source StorageDict, target TargetDict, state bool) {
 	for rawTarget, rawMirrors := range source {
 		for _, rawMirror := range rawMirrors {
 			if target[rawTarget] == nil {
@@ -138,7 +62,7 @@ func mergeDicts(source StorageDict, target TargetDict, state bool) {
 }
 
 // splitDicts splits the target dictionary into two separate dictionaries: one for alive hosts and one for down hosts.
-func splitDicts(dict TargetDict) (alive, down StorageDict) {
+func SplitDicts(dict TargetDict) (alive, down StorageDict) {
 	alive = StorageDict{}
 	down = StorageDict{}
 	for target, scams := range dict {
@@ -156,12 +80,12 @@ func splitDicts(dict TargetDict) (alive, down StorageDict) {
 			}
 		}
 	}
-	sortMirrors(alive)
-	sortMirrors(down)
+	SortMirrors(alive)
+	SortMirrors(down)
 	return
 }
 
-func sortMirrors(stDict StorageDict) {
+func SortMirrors(stDict StorageDict) {
 	cmp := func(a, b string) int {
 		a_parsed, err_a := url.Parse(a)
 		b_parsed, err_b := url.Parse(b)
@@ -176,7 +100,7 @@ func sortMirrors(stDict StorageDict) {
 		}
 
 		// Compare hostnames
-		if sub := compareSubdomains(a_parsed.Hostname(), b_parsed.Hostname()); sub != 0 {
+		if sub := CompareSubdomains(a_parsed.Hostname(), b_parsed.Hostname()); sub != 0 {
 			return sub
 		}
 
@@ -196,12 +120,12 @@ func sortMirrors(stDict StorageDict) {
 	}
 }
 
-func compareSubdomains(a, b string) int {
+func CompareSubdomains(a, b string) int {
 	a_parts := strings.Split(a, ".")
 	b_parts := strings.Split(b, ".")
 	a_len := len(a_parts)
 	b_len := len(b_parts)
-	common := minInt(a_len, b_len)
+	common := MinInt(a_len, b_len)
 
 	// Compare each equivalent part
 	for i := 1; i <= common; i++ {
@@ -214,7 +138,7 @@ func compareSubdomains(a, b string) int {
 	return 0
 }
 
-func minInt(a, b int) int {
+func MinInt(a, b int) int {
 	if a < b {
 		return a
 	}
