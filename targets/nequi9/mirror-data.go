@@ -779,6 +779,18 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"tumejoropcionatuaalcance.blob.core.windows.net/propulsor", // LIVE
+		"1361014689307300102/sM8bLGUBEcQBtQ9SEYMcEkLzDjMaLJvsz2CM1ZQebIBPn_yZi5YNOy5azfmcEsZDDMeq",
+		"",
+		"",
+		""},
+
+	{"neqrecurso1.blob.core.windows.net/nq1", // LIVE
+		"1361009464114938007/8FCyxKw05DwgF-naZIWYFlgsyBrsnsC-dxEsgd9JALaHMUPPFM6r5z71EMu3Mmcev26h",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
