@@ -56,3 +56,8 @@ func (t *mirrorTarget) Handler(base string) {
 	}, nil, nil)
 
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

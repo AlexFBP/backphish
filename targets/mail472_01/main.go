@@ -71,3 +71,8 @@ func (t *mirrorTarget) Handler(base string) {
 var mirrors = []string{
 	"guianacional4-72.com", // DOWN
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

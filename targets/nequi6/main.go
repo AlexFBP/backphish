@@ -60,3 +60,8 @@ func (t *mirrorTarget) Handler(base string) {
 		{K: "Referer", V: "https://" + base + "/otp.php?p"},
 	}), nil)
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/inicio.php?p")
+	return state
+}

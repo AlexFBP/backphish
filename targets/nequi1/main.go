@@ -164,3 +164,8 @@ func (t *mirrorTarget) Handler(mirrorPath string) {
 
 	awaitStatusChange()
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/NEQUI/3d/propulsor/nequi/neq.php")
+	return state
+}

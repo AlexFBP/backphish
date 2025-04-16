@@ -71,3 +71,8 @@ func mirrData(name string) (d mirror) {
 var mirrors = [][]string{
 	{"ingressar1davidd.sayo1296.repl.co", "6328508246:AAFU2THEk8nvxuzFLR5C6FfqQNuxmsiaFWk", "6332256769"}, // Partially down? still spamable?
 }
+
+func (t *mirrorManager) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

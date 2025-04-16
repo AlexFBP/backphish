@@ -75,3 +75,8 @@ func (t *mirrorTarget) Handler(base string) {
 var mirrors = []string{
 	"pineapple21108900.temporary-demo.site", // DOWN
 }
+
+func (m *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

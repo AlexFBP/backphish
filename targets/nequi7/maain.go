@@ -48,3 +48,8 @@ func (t *mirrorTarget) Handler(mirror string) {
 	d.SendToTelegram(d.selectTemplate(&u, 5))
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/ini.html")
+	return state
+}

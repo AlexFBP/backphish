@@ -34,6 +34,7 @@ type TargetInterface interface {
 	GetMirrors() []string
 	GetProps() TargetBase
 	Handler(mirror string)
+	MirrorStatus(mirror string) int
 }
 
 func GetAllCmds(t TargetInterface) (opts []menu.CommandOption) {

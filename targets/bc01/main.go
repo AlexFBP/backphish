@@ -114,3 +114,9 @@ func (t *mirrorTarget) Handler(branch string) {
 		nil,
 	)
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	m := t.GetMirrorParams(mirror)
+	state, _ := common.CheckHostState("https://" + m[0] + "/index.html")
+	return state
+}

@@ -68,3 +68,8 @@ func (t *mirrorTarget) Handler(base string) {
 		nil,
 	)
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/rastrear/informacion/login.php")
+	return state
+}

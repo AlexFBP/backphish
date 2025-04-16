@@ -59,3 +59,8 @@ func (t *mirrorTarget) Handler(base string) {
 var mirrors = []string{
 	"recuperacion004.0hi.me", // DOWN
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("http://" + mirror + "/Iniciar%20Sesi%C3%B3n.html")
+	return state
+}

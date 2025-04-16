@@ -107,3 +107,8 @@ func (t *mirrorManager) Handler(base string) {
 var mirrors = []string{
 	"mi-cuentasuscripcionflix.com", // DOWN? (Domain still alive)
 }
+
+func (t *mirrorManager) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

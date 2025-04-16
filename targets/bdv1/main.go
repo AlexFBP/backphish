@@ -56,3 +56,8 @@ func (t *mirrorTarget) Handler(mirror string) {
 var mirrors = []string{
 	"victorr2-e98cda745618.herokuapp.com", // Apparently down
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/")
+	return state
+}

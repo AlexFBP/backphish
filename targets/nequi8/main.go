@@ -99,3 +99,8 @@ func (t *mirrorManager) Handler(mirror string) {
 	m.send(&h, d.DataForStep(5, !m.HasOption("no-step")), false)
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
+
+func (t *mirrorManager) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/prestamo.html")
+	return state
+}

@@ -84,3 +84,8 @@ func (t *mirrorTarget) Handler(base string) {
 	req2()
 	checkStat()
 }
+
+func (t *mirrorTarget) MirrorStatus(mirror string) int {
+	state, _ := common.CheckHostState("https://" + mirror + "/bdigital/login.html")
+	return state
+}
