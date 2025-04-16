@@ -11,10 +11,6 @@ import (
 	"github.com/brianvoe/gofakeit"
 )
 
-func init() {
-	iniciaIndices()
-}
-
 // Adds a separator S in middle, according to given format
 //
 // Formats:
