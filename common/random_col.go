@@ -328,4 +328,3 @@ func GeneraCelColombia() string {
 	n, _ := generaCelValido(u)
 	return strconv.Itoa(n)
 }
-
