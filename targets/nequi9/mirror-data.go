@@ -791,6 +791,48 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"propulsor1.blob.core.windows.net/jp1", // LIVE
+		"1357008842260480131/sijDi-T60GHugJh2wsNyRWjjh4y_FTjYthsIVCsLUVYqdhPSQsPhfhK1jFPBACAfDEzC",
+		"",
+		"",
+		""},
+
+	{"clientesneq1.blob.core.windows.net/recurso1", // LIVE
+		"1361767735067152514/BIM5-YqD7yAjZFXrHS9PiVnDW2JW86RbPLzXBPetoENNGoE27hezf-m6x_ublDj9D9CK",
+		"",
+		"",
+		""},
+
+	{"impulsandoideasnq1.blob.core.windows.net/dd3", // LIVE
+		"1357431068310896891/umKaYYWMKVF7d6meNKZKB1p93Y5ix0VYtK9JNHJ2IPAap_leF37uaQtgHvtJypUA-Qf0",
+		"",
+		"",
+		""},
+
+	{"nequiparaclientes.blob.core.windows.net/solicitud", // LIVE
+		"1359574788691198033/--VymB9PWmp6RY2JfSxyRdICKcf6ElkPePhpLeuPr8WcPzLwQX8evA867c5XIwA3a48o",
+		"",
+		"",
+		""},
+
+	{"propulosr5.blob.core.windows.net/propulsor", // LIVE
+		"1361109866449600674/4Fo-rozX4ooX3kd2cFJwj3QNQRMVLmZhASim3axEOjMKYyAqyFUvJBtIQ4LekbuClTec",
+		"",
+		"",
+		""},
+
+	{"impulsandoideasnq1.blob.core.windows.net/dd2", // LIVE
+		"1357430237062889563/x6ibKGycPOdW11h7LNN3PIXmJYGx7PXaJDDTM4PhV35Gax4ewuKh3hQRbq0uUWcdd625",
+		"",
+		"",
+		""},
+
+	{"adquiereloyaprovecha.blob.core.windows.net/vv1", // LIVE
+		"1361008583994507264/GQO_aAAPlNttWUcHoJjmHkN4yRzi2UsanNTiEY4Dl6gmQdZtM5GOAb6GO8rw-dhJu5Ld",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

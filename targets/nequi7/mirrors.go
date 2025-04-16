@@ -238,6 +238,12 @@ var mirrors = [][]string{
 		"-4754652599", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
 	{`solicitarneq.blob.core.windows.net/ahora`, // ALIVE
 		"-4655974029", "7602932706:AAH5UzoWnuyZn3ZqH0W0Gcl-_JpWFPJWkU4"}, // "Ultra Encrypted"... sure hahaha
+	{`nequcolmbiaproplsor.blob.core.windows.net/nquicolombia`, // ALIVE
+		"-4088574570", "6760159749:AAFva2BwPCHJ7iuAjjyis-iZiYsR4N5ccmU"}, // "Ultra Encrypted"... sure hahaha
+	{`nequcolmbiaproplsor.blob.core.windows.net/colombianeq`, // ALIVE
+		"-4691937617", "8028105005:AAH0NEGopY3TdWgLNNTcE9BRPyrd9q4WwNg"}, // "Ultra Encrypted"... sure hahaha
+	{`propulnequl.blob.core.windows.net/ahora`, // ALIVE
+		"-4711138442", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
