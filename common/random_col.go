@@ -1,3 +1,7 @@
+/**
+ * Random Colombian data generation functions
+ */
+
 package common
 
 import (
