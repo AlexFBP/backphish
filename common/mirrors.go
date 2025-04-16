@@ -12,18 +12,28 @@ type MirrorOptions struct {
 	options []string
 }
 
+func (m *MirrorOptions) ParseOptions(opts string) {
+	if opts != "" {
+		m.options = strings.Split(opts, ",")
+		for k, v := range m.options {
+			m.options[k] = strings.TrimSpace(v)
+		}
+	}
+}
+
+func (m *MirrorOptions) HasOption(opt string) bool {
+	for _, v := range m.options {
+		if v == strings.TrimSpace(opt) {
+			return true
+		}
+	}
+	return false
+}
+
 type TargetInterface interface {
 	GetMirrors() []string
 	GetProps() TargetBase
 	Handler(mirror string)
-}
-
-type TargetBase struct {
-	Prefix, Description string
-}
-
-func (t *TargetBase) GetProps() TargetBase {
-	return *t
 }
 
 func GetAllCmds(t TargetInterface) (opts []menu.CommandOption) {
@@ -68,22 +78,12 @@ func mirrorAttempt(t TargetInterface, n int) AttemptHander {
 	}
 }
 
-func (m *MirrorOptions) ParseOptions(opts string) {
-	if opts != "" {
-		m.options = strings.Split(opts, ",")
-		for k, v := range m.options {
-			m.options[k] = strings.TrimSpace(v)
-		}
-	}
+type TargetBase struct {
+	Prefix, Description string
 }
 
-func (m *MirrorOptions) HasOption(opt string) bool {
-	for _, v := range m.options {
-		if v == strings.TrimSpace(opt) {
-			return true
-		}
-	}
-	return false
+func (t *TargetBase) GetProps() TargetBase {
+	return *t
 }
 
 type TargetSimple struct {
