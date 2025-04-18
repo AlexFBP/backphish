@@ -659,7 +659,7 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"oportunidadesahora.blob.core.windows.net/chan", // LIVE
+	{"oportunidadesahora.blob.core.windows.net/chan", // (*1)
 		"1357018192748220467/b7CEZgXyvL8iYESebcuCQKMRFIDz3opMMf0VXpDxXiGJWKhHI3aTSygVx1RiOa5j2xZB",
 		"",
 		"",
@@ -671,19 +671,19 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"propulosr5.blob.core.windows.net/neq", // LIVE
+	{"propulosr5.blob.core.windows.net/neq", // (*1)
 		"1357019667256049855/M_kaNjKAS53u0PB28ZkDC9wV1Ho9osYotH0CviWfXH5w878M39bphmK9jszPfj3sBuLh",
 		"",
 		"",
 		""},
 
-	{"impulsandoideasnq1.blob.core.windows.net/dd1", // LIVE
+	{"impulsandoideasnq1.blob.core.windows.net/dd1", // (*1)
 		"1357423754590032057/7KAUcLkIVhmEHcFqcv2tiG7yNWMBNDshaL-aW8GSl-S_1HcZTsjxf3xhtONWhAX9gjhr",
 		"",
 		"",
 		""},
 
-	{"propulsor8.blob.core.windows.net/001", // LIVE
+	{"propulsor8.blob.core.windows.net/001", // (*1)
 		"1357021150659739917/aeWfoGoawMID5EnEgE59bHsg4mHRAZdhpahXhN_62LjvBd27WUENY2LLT1DVEdoQa9F6",
 		"",
 		"",
@@ -695,43 +695,43 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"propulsandoideasya.blob.core.windows.net/cab1", // reported
+	{"propulsandoideasya.blob.core.windows.net/cab1", // (*1)
 		"1357025966987284571/Y3HBvsYxXFiBGbs9PUfQ2Bkdtx63ps4byzlFisZo15LMBRkJD2Pr_Hb8ITtMuaMLbaeH",
 		"",
 		"",
 		""},
 
-	{"propulsor10.blob.core.windows.net/cab2", // LIVE
+	{"propulsor10.blob.core.windows.net/cab2", // (*1)
 		"1357027704993611786/zoufWVu9MPX7_5W8mkEwy_7BppABZ1jHVzNjO23nxZf3Vw9_biUEaRCIL2Dyyo5yPl61",
 		"",
 		"",
 		""},
 
-	{"propulsor6.blob.core.windows.net/ideasymetas", // LIVE
+	{"propulsor6.blob.core.windows.net/ideasymetas", // (*1)
 		"1357072386322862211/UnQjOAFgl5aVVwz3RwKsDQnYDzWpcaxxO2b9qRJItVpvlR13hLnidiijwz_-q71dfFNH",
 		"",
 		"",
 		""},
 
-	{"propulsor3.blob.core.windows.net/vv1", // LIVE
+	{"propulsor3.blob.core.windows.net/vv1", // (*1)
 		"1357012373218787522/Fq1WpWxNh_RYCtoRDKKBJDR0_mqjLCnFErODKJdUqoK1p_wYLSMVzRhFKcIOajpQ7HtM",
 		"",
 		"",
 		""},
 
-	{"crececonnosotros.blob.core.windows.net/servicio", // LIVE
+	{"crececonnosotros.blob.core.windows.net/servicio", // (*1)
 		"1357348045553139754/KrgczStLtdDjgeEgD1L5AS3CV_xwK6ZvO-VwxoAh5sNPXyxDjywefVYip7dQkxQDVFyj",
 		"",
 		"",
 		""},
 
-	{"prestamoneq.blob.core.windows.net/resultado", // LIVE
+	{"prestamoneq.blob.core.windows.net/resultado", // (*1)
 		"1357140431221293208/7llExTG6MzhDv77RClzGLMTsT0dG-ke5N9lhZHyCDsJsNAE4pxRG6R-qnopZ62KU-ZJl",
 		"",
 		"",
 		""},
 
-	{"propulsor9.blob.core.windows.net/ch2", // LIVE
+	{"propulsor9.blob.core.windows.net/ch2", // (*1)
 		"1357060460754636831/x65fHU8Q1jNDUuaRxeOwjtw2hwUxCYRHSSh5L30Qt9LSi_Q37Oeg7e_IvDvknejWsX1h",
 		"",
 		"",
@@ -743,92 +743,98 @@ var mirrors = [][]string{
 		"",
 		""},
 
-	{"usosyprivacidadneq1.blob.core.windows.net/presaves", // LIVE
+	{"usosyprivacidadneq1.blob.core.windows.net/presaves", // (*1)
 		"1359356136083685456/TKiBchfvQbtOfpOzlJHkkYrDxzlqQYt766dqOe3hz-IvmKO5OzflU-x8LI-PEOSMQIyA",
 		"",
 		"",
 		""},
 
-	{"sucursaldeprocesos.blob.core.windows.net/prestmo", // LIVE
+	{"sucursaldeprocesos.blob.core.windows.net/prestmo", // (*1)
 		"1358174649376178337/oJqXwpwGHRGBFzNvasQS_zqxJqy3TalPdIzz3mcSPkZnRNOPwWg5HbEy7EknM_W7KvlA",
 		"",
 		"",
 		""},
 
-	{"impulsatunegocio.blob.core.windows.net/d12", // LIVE
+	{"impulsatunegocio.blob.core.windows.net/d12", // (*1)
 		"1359687305714995276/1ArpHOaJeoFW64jIypZ78573GjsAxF1_gOBP_BftNGoiyEihO6i2XalV8IUlf8Eo1LJD",
 		"",
 		"",
 		""},
 
-	{"propulsor9.blob.core.windows.net/ch3", // LIVE
+	{"propulsor9.blob.core.windows.net/ch3", // (*1)
 		"1359599104417595524/Y0x4tmnxy5Deou6It0X2XpGrvx6qzrCCBpLZLleFtN4YesoRQcx2mrHXB2Mut0aX7JBQ",
 		"",
 		"",
 		""},
 
-	{"neqrecurso1.blob.core.windows.net/nesq", // down?
+	{"neqrecurso1.blob.core.windows.net/nesq", // (*1)
 		"1359233556358107206/d7DJiyVc_mNDtwF6ERbSOd7a1U7CA-AUoJsHHMBZ_eIUyoajeiyI7cFlm8uBRwVHHJJ9",
 		"",
 		"",
 		""},
 
-	{"produccionneq1.blob.core.windows.net/pressure", // LIVE
+	{"produccionneq1.blob.core.windows.net/pressure", // (*1)
 		"1358921148896645333/Si4050orTLsZScZNLkust_xJfG4AAx_stqas3u8rlaJO_KBawjfc9Z5ZebS_nY8JsYVx",
 		"",
 		"",
 		""},
 
-	{"tumejoropcionatuaalcance.blob.core.windows.net/propulsor", // LIVE
+	{"tumejoropcionatuaalcance.blob.core.windows.net/propulsor", // (*1)
 		"1361014689307300102/sM8bLGUBEcQBtQ9SEYMcEkLzDjMaLJvsz2CM1ZQebIBPn_yZi5YNOy5azfmcEsZDDMeq",
 		"",
 		"",
 		""},
 
-	{"neqrecurso1.blob.core.windows.net/nq1", // LIVE
+	{"neqrecurso1.blob.core.windows.net/nq1", // (*1)
 		"1361009464114938007/8FCyxKw05DwgF-naZIWYFlgsyBrsnsC-dxEsgd9JALaHMUPPFM6r5z71EMu3Mmcev26h",
 		"",
 		"",
 		""},
 
-	{"propulsor1.blob.core.windows.net/jp1", // LIVE
+	{"propulsor1.blob.core.windows.net/jp1", // (*1)
 		"1357008842260480131/sijDi-T60GHugJh2wsNyRWjjh4y_FTjYthsIVCsLUVYqdhPSQsPhfhK1jFPBACAfDEzC",
 		"",
 		"",
 		""},
 
-	{"clientesneq1.blob.core.windows.net/recurso1", // LIVE
+	{"clientesneq1.blob.core.windows.net/recurso1", // (*1)
 		"1361767735067152514/BIM5-YqD7yAjZFXrHS9PiVnDW2JW86RbPLzXBPetoENNGoE27hezf-m6x_ublDj9D9CK",
 		"",
 		"",
 		""},
 
-	{"impulsandoideasnq1.blob.core.windows.net/dd3", // LIVE
+	{"impulsandoideasnq1.blob.core.windows.net/dd3", // (*1)
 		"1357431068310896891/umKaYYWMKVF7d6meNKZKB1p93Y5ix0VYtK9JNHJ2IPAap_leF37uaQtgHvtJypUA-Qf0",
 		"",
 		"",
 		""},
 
-	{"nequiparaclientes.blob.core.windows.net/solicitud", // LIVE
+	{"nequiparaclientes.blob.core.windows.net/solicitud", // (*1)
 		"1359574788691198033/--VymB9PWmp6RY2JfSxyRdICKcf6ElkPePhpLeuPr8WcPzLwQX8evA867c5XIwA3a48o",
 		"",
 		"",
 		""},
 
-	{"propulosr5.blob.core.windows.net/propulsor", // LIVE
+	{"propulosr5.blob.core.windows.net/propulsor", // (*1)
 		"1361109866449600674/4Fo-rozX4ooX3kd2cFJwj3QNQRMVLmZhASim3axEOjMKYyAqyFUvJBtIQ4LekbuClTec",
 		"",
 		"",
 		""},
 
-	{"impulsandoideasnq1.blob.core.windows.net/dd2", // LIVE
+	{"impulsandoideasnq1.blob.core.windows.net/dd2", // (*1)
 		"1357430237062889563/x6ibKGycPOdW11h7LNN3PIXmJYGx7PXaJDDTM4PhV35Gax4ewuKh3hQRbq0uUWcdd625",
 		"",
 		"",
 		""},
 
-	{"adquiereloyaprovecha.blob.core.windows.net/vv1", // LIVE
+	{"adquiereloyaprovecha.blob.core.windows.net/vv1", // (*1)
 		"1361008583994507264/GQO_aAAPlNttWUcHoJjmHkN4yRzi2UsanNTiEY4Dl6gmQdZtM5GOAb6GO8rw-dhJu5Ld",
+		"",
+		"",
+		""},
+
+	{"propulsorfinanciero.blob.core.windows.net/propulsando", // LIVE
+		"1362468584361820211/030AzVph7TTAfACGGhQbKaAn3rkaMuan_ndYJ5XO6IXDuy6F8u0HSvPj6P7-w9QTZgut",
 		"",
 		"",
 		""},
