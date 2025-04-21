@@ -839,6 +839,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"solucionneq.blob.core.windows.net/neq1", // LIVE
+		"1362462475269837022/qVY06x3V9CP6j4tuSpTG00QHfYkdVbFmYu1_rpyRIUx12XPnYQ8CMFDSh-YEVLFuhg12",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
