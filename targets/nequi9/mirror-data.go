@@ -845,6 +845,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"nequiclientes.blob.core.windows.net/produccion", // LIVE
+		"1362490589924298812/Dqcvauyhwf4gHxFjMv_-sDm6BPObELL7UDFvUyYekLmuzammZGgSoqqagvF7BvEvWsNr",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
