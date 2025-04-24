@@ -246,6 +246,8 @@ var mirrors = [][]string{
 		"-4711138442", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
 	{`solicitarneqprop.blob.core.windows.net/ahora`, // ALIVE
 		"-4707694228", "7968383500:AAFUlkAbkSAnfUTJBpPhHbq3p1nQlAjkYpo"}, // "Ultra Encrypted"... sure hahaha
+	{`necolmbia.blob.core.windows.net/nequcol`, // ALIVE
+		"-4782497904", "8010620051:AAHl7e2q2-BVSBtwCjiOQ85GrreI2QlAASQ"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

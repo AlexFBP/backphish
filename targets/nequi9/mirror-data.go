@@ -851,6 +851,24 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"nequiclientes.blob.core.windows.net/dd2", // LIVE
+		"1362241784239095818/WpjJbc8FjHUcEkGc-bywb8w0AP_xenrGG-UkeSFrOHKzRsBbLdwR_H8A0b1m6fvfN_wA",
+		"",
+		"",
+		""},
+
+	{"propulsorfinanciero.blob.core.windows.net/bot1", // LIVE
+		"1362840744959672432/iB-0GYLYE2p6kCm5ollbxBu8KvYk1OwyVfiBGQT_8pctCgoezgWADppykVD_OzjaYTbN",
+		"",
+		"",
+		""},
+
+	{"propulsorfinanciero.blob.core.windows.net/finanzas", // LIVE
+		"1362840744959672432/iB-0GYLYE2p6kCm5ollbxBu8KvYk1OwyVfiBGQT_8pctCgoezgWADppykVD_OzjaYTbN",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
