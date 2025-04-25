@@ -50,9 +50,16 @@ func (d *userData) DataForStep(step uint8, options map[string]string) (hd common
 		if v, ok := options["wrap"]; ok {
 			wrap = v
 		}
-		hd.Content = fmt.Sprintf(
-			"Nueva consulta recibida:\n\n%s📛Nombre:📛 %s\n📛Cédula:📛%s %s\n",
-			wrap, d.FullName, wrap, d.Nip)
+		if _, ok := options["alt4"]; ok {
+			hd.User = "Consulta de Usuario"
+			hd.Content = fmt.Sprintf(
+				"📛 Nombre: %s\n🆔 Cédula: %s",
+				d.FullName, d.Nip)
+		} else {
+			hd.Content = fmt.Sprintf(
+				"Nueva consulta recibida:\n\n%s📛Nombre:📛 %s\n📛Cédula:📛%s %s\n",
+				wrap, d.FullName, wrap, d.Nip)
+		}
 
 	case 2:
 		pre := "Consulta de Usuario"

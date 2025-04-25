@@ -44,6 +44,9 @@ func (t *mirrorManager) Handler(mirror string) {
 	if m.HasOption("alt1") {
 		op["wrap"] = "😎😎"
 	}
+	if m.HasOption("alt4") {
+		op["alt4"] = ""
+	}
 	m.DetectHookFromURL(fmt.Sprintf("https://%s/ini.html", mirror))
 	m.SendDiscord(d.DataForStep(1, op))
 	reset()
