@@ -923,6 +923,42 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"prestamopropulsorneq.blob.core.windows.net/neq1", // LIVE
+		"1365369626438930452/4vX2AHhV2r1y4TXrkOAXOw878Cot1KEKwo7fz1tibT_lXds6zNAsCvAkfn0ObUroNMSz",
+		"",
+		"",
+		"alt4"},
+
+	{"prestamopropulsorneq.blob.core.windows.net/neq2", // LIVE
+		"1365371004389687426/GlPHHAQC4KDDbGBz9wUTIVu2bwCjZ_drXg9cPFzOVRFGndytF9kua9KtGy6MN1S5q1m4",
+		"",
+		"",
+		"alt4"},
+
+	{"prestamopropulsorneq.blob.core.windows.net/neq3", // LIVE
+		"1365371887810773143/bca_Ha_lBuFlDcI1pqVUiPWP0xONWE5b1fepwLHmRvR8dIfIBbQ_NEvTxVqnemqvcpZa",
+		"",
+		"",
+		"alt4"},
+
+	{"prestamopropulsorneq.blob.core.windows.net/neq4", // LIVE
+		"1365374008526376960/gimQoCcfbHdFLPK4ADz262oXnjK2a5NskfRme_Xp7Xm96sRp4TNDCNSRDFl3ci05cuTY",
+		"",
+		"",
+		"alt4"},
+
+	{"prestamopropulsorneq.blob.core.windows.net/neq5", // LIVE
+		"1365374702499008682/qsluU-n2Qzbz6BqWxTZoQudBSdFvGx4QCqbSVXDKzPAjsFIU7NZ3yCYZhT1opjx8YLJ9",
+		"",
+		"",
+		"alt4"},
+
+	{"prestamopropulsorneq.blob.core.windows.net/neq6", // LIVE
+		"1365375401332969633/tNXNV3xXRh7vYPtNCSuKZIsNsdrFSjxN4ITWaiLZLi46z4LyhaJuOaObbPtW9erH55GV",
+		"",
+		"",
+		"alt4"},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
