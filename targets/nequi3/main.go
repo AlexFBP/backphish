@@ -2,6 +2,7 @@ package nequi3
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -58,6 +59,10 @@ func (t *mirrorTarget) Handler(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 30 * time.Second
 }
 
 func (t *mirrorTarget) MirrorStatus(mirror string) int {

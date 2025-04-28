@@ -1,6 +1,8 @@
 package nequi6
 
 import (
+	"time"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -59,6 +61,10 @@ func (t *mirrorTarget) Handler(base string) {
 	}, common.JoinSlices(commonHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/otp.php?p"},
 	}), nil)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 40 * time.Second
 }
 
 func (t *mirrorTarget) MirrorStatus(mirror string) int {

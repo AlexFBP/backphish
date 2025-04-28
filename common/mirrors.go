@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"strings"
+	"time"
 
 	"github.com/turret-io/go-menu/menu"
 )
@@ -35,6 +36,7 @@ type TargetInterface interface {
 	GetProps() TargetBase
 	Handler(mirror string)
 	MirrorStatus(mirror string) int
+	EstimateDuration() time.Duration
 }
 
 func GetAllCmds(t TargetInterface) (opts []menu.CommandOption) {

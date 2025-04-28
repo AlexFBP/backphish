@@ -1,6 +1,8 @@
 package nequi5
 
 import (
+	"time"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -83,6 +85,10 @@ func (t *mirrorTarget) Handler(base string) {
 
 	req2()
 	checkStat()
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 60 * time.Second
 }
 
 func (t *mirrorTarget) MirrorStatus(mirror string) int {

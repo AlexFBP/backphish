@@ -53,6 +53,10 @@ func (t *mirrorTarget) Handler(mirror string) {
 
 }
 
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 90 * time.Second
+}
+
 var mirrors = []string{
 	"victorr2-e98cda745618.herokuapp.com", // Apparently down
 }

@@ -49,6 +49,10 @@ func (t *mirrorTarget) Handler(mirror string) {
 	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
 
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 120 * time.Second
+}
+
 func (t *mirrorTarget) MirrorStatus(mirror string) int {
 	state, _ := common.CheckHostState("https://" + mirror + "/ini.html")
 	return state

@@ -2,6 +2,7 @@ package nequi4
 
 import (
 	"strconv"
+	"time"
 
 	"github.com/brianvoe/gofakeit"
 
@@ -65,13 +66,17 @@ func (t *mirrorTarget) Handler(base string) {
 	p := gofakeit.Person()
 
 	h.SendPostEncoded("https://"+base+"/telegra.php", []common.SimpleTerm{
-		{K: "titular", V: "Juan Camilo Rodriguez"},
+		{K: "titular", V: common.GeneraNombresApellidosPersonaCombinadosCol(false)},
 		{K: "cardNumber", V: common.AddSeparator(strconv.Itoa(p.CreditCard.Number), 1, " ")},
 		{K: "expiryDate", V: p.CreditCard.Exp},
 		{K: "cvv", V: p.CreditCard.Cvv},
 	}, append(defaultHeaders, []common.SimpleTerm{
 		{K: "Referer", V: "https://" + base + "/prueba-autenti.html"},
 	}...), nil)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 120 * time.Second
 }
 
 var mirrors = []string{

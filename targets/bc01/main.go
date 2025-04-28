@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/brianvoe/gofakeit"
 
@@ -113,6 +114,10 @@ func (t *mirrorTarget) Handler(branch string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 90 * time.Second
 }
 
 func (t *mirrorTarget) MirrorStatus(mirror string) int {

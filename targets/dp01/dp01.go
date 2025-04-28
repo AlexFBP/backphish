@@ -59,6 +59,10 @@ IP: %s
 	common.RandDelayRange(30*time.Second, 60*time.Second)
 }
 
+func (t *mirrorManager) EstimateDuration() time.Duration {
+	return 45 * time.Second
+}
+
 func mirrData(name string) (d mirror) {
 	v := target.GetMirrorParams(name)
 	if len(v) < 2 {

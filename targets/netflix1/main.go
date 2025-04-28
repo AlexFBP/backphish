@@ -104,6 +104,10 @@ func (t *mirrorManager) Handler(base string) {
 	)
 }
 
+func (t *mirrorManager) EstimateDuration() time.Duration {
+	return 200 * time.Second
+}
+
 var mirrors = []string{
 	"mi-cuentasuscripcionflix.com", // DOWN? (Domain still alive)
 }

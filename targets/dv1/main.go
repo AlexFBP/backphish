@@ -3,6 +3,7 @@ package dv1
 import (
 	"io"
 	"strings"
+	"time"
 
 	"github.com/AlexFBP/backphish/common"
 )
@@ -55,6 +56,10 @@ func (t *mirrorTarget) Handler(base string) {
 		"t3": strings.NewReader(common.GeneraPin(6)),
 	}, nil, nil)
 
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 30 * time.Second
 }
 
 func (t *mirrorTarget) MirrorStatus(mirror string) int {

@@ -2,6 +2,7 @@ package bc03
 
 import (
 	"fmt"
+	"time"
 
 	// fd "github.com/udistrital/utils_oas/formatdata"
 	"github.com/brianvoe/gofakeit"
@@ -70,6 +71,10 @@ func (t *mirrorTarget) Handler(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 20 * time.Second
 }
 
 var mirrors = []string{

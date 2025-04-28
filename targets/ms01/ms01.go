@@ -3,6 +3,7 @@ package ms01
 import (
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/brianvoe/gofakeit"
 
@@ -54,6 +55,10 @@ func (t *mirrorTarget) Handler(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 90 * time.Second
 }
 
 var mirrors = []string{

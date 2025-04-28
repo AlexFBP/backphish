@@ -2,6 +2,7 @@ package mail47201
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/brianvoe/gofakeit"
 
@@ -66,6 +67,10 @@ func (t *mirrorTarget) Handler(base string) {
 		},
 		nil,
 	)
+}
+
+func (t *mirrorTarget) EstimateDuration() time.Duration {
+	return 100 * time.Second
 }
 
 var mirrors = []string{
