@@ -959,6 +959,12 @@ var mirrors = [][]string{
 		"",
 		"alt4"},
 
+	{"consultapuntajeneq.blob.core.windows.net/ferianeq", // LIVE
+		"1366609980207136808/5JBS8meAv8aACREN6CtIFECAMISOhk7Rb9hidAque92VrT-Pgh0smCLyyZjT0Y8wmYp3",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
