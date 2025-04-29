@@ -965,6 +965,54 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"neqpropulsandoideas.blob.core.windows.net/neq3", // LIVE
+		"1362118710785081606/KvW2ZcYtfXA7oe6cBPf0xzpIuzzskQ67bDi_KYgggvkzI6I4hKA7KemHQIQQuqg7bqWF",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/post", // LIVE
+		"1365351745248821348/6VpaaugEBmwEksqc_GFdtb3l0KXveWxy_8Jvhubuym0YxZI3IMBfr2CqjAWdQOmJmCLf",
+		"",
+		"",
+		"alt4"},
+
+	{"adquiereloenseguida1.blob.core.windows.net/recursos", // LIVE
+		"1364060561020686377/ChGHrEdgcJSceO05hzoJptW6EFtcLn0U4L3FQ9aoI_SxFvD-pRcImV6TCHe61A0IRkG5",
+		"",
+		"",
+		"alt4"},
+
+	{"consultapuntajeneq.blob.core.windows.net/neq", // LIVE
+		"1366453756648099840/HL-diHHXzk9UU_lbXITirGNueU2lWlmkwCzmzE4PDYTWXMnzkOBCRFyyySxfotMV9oS0",
+		"",
+		"",
+		""},
+
+	{"solucionneq.blob.core.windows.net/neq3", // LIVE
+		"1362464493858455573/acX5s26SDplG_MUZj1yUJA4wld9tMwa6Kg9cPqAC3ykPCtgCoSIGRn3dcskEQdjbO6A0",
+		"",
+		"",
+		""},
+
+	{"nequiclientes.blob.core.windows.net/inmediato", // LIVE
+		"1366602812582006796/3gtez--TGfh4Jsz3Z96--3mlp3D2VVbAsbeeNp30GEWtLOY6cdinYKSSWAzo8wtvPni1",
+		"",
+		"",
+		""},
+
+	{"consultapuntajeneq.blob.core.windows.net/priv", // LIVE
+		"1366518005596688536/M1jECSWDaBo7FFwoIxqxwe8zKiiVGze4ItVBu-qxyzxQOSqdPoX7YJ3b17SXv4MRn1le",
+		"",
+		"",
+		"alt4"},
+
+	{"propulsorfinanciero.blob.core.windows.net/bot2", // LIVE
+		"1362842278095360224/jj-lGqvdKdBKCw9YtZ-forV7aeT0Y4Cf8KxfW-wA2Y83wwJwndD8pzVfQhIT8Wc9gFNq",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
