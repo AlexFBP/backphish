@@ -16,9 +16,9 @@ All pending improvements have a rating (Priority-Difficulty):
       - On full buffer, should add 1 to the incoming type, and decrease 1 to oldest one.
 - [ ] **5.** (M-H) CICD - Create CI-CD workflow, in order to create binaries and/or docker images, i.e., by means of GitHub Actions, GitLab CI or Jenkins
 - [ ] **6.** (L-M) Debug/Devel - Improve `PrintCookies()` to print all cookies being used without need to give a URL, maybe with a new type extending cookie jar
-- [ ] **7.** (L-H) Behavior - With concurrency, improve the spread time between attacks according to consequent goroutines
-      - implement calculus of `totalShift` in `AttackRunner()`
-      - Possibly a **refactor** in which each mirror has a way to calculate the average attack time
+- [x] **7.** ~~(L-H) Behavior - With concurrency, improve the spread time between attacks according to consequent goroutines~~
+      - ~~implement calculus of `totalShift` in `AttackRunner()`~~
+      - ~~Possibly a **refactor** in which each mirror has a way to calculate the average attack time~~
 - [ ] **8.** (L-E) Performance - [Discard body reply](https://www.google.com/search?q=golang+http+client+%22discard+OR+drop%22+reply+body) when not passed an object to be filled with that reply
 - [ ] **9.** (L-L) Debug/Devel - [Build and restart on change](https://www.reddit.com/r/golang/comments/6yap3o/how_do_you_rebuildrestart_your_app_on_file_changes/)
 - [ ] **10.** (H-M) Performance - Allow to test that a target/mirror is still alive
@@ -34,7 +34,7 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **13.** (M-M) Performance - Attack all alive targets/mirrrors (depends on **10.** and **11.**)
       - This could be through a CLI flag
 - [ ] **14.** (L-M) Performance - Retry only if error is not "no such host" (depends on **18.**)
-- [ ] **15.** (L-H) Appearance - With concurrency (and no limit?), show a statistic/sum of final status of last N attacks
+- [ ] **15.** (L-H) Appearance - With concurrency (and no limit?), show a statistic/sum of final status of last N attacks (depends on **4.**)
       - 15.1 Update every time an attack/goroutine finishes
       - 15.2 [clear screen](https://stackoverflow.com/questions/22891644/how-can-i-clear-the-terminal-screen-in-go) on every update
         - https://github.com/buger/goterm
@@ -44,9 +44,9 @@ All pending improvements have a rating (Priority-Difficulty):
       - show a matrix/table of running attacks (maybe with something like an array of -status- chans... maybe with last status code)
 - [ ] **16.** (L-H) When using menu (and no target selected in CLI), create a sub-menu that allows to save custom defaults in a [.ini file](https://ini.unknwon.io/docs/intro/getting_started), so if the .ini is available, any default values there will take precedence. Also, it must be an option to restore defaults. (Might reuse **11.**)
 - [x] **17.** ~~(H-M) Debug/Devel - Normalize all attacks: Make all of them to work with mirrors, at least 1 per target~~
-- [ ] **18.** (M-M) Metrics/Maintenance - Once attack finished, return metrics like: status after each attack, and ellapsed time on success of all queries of the attack
+- [ ] **18.** (M-M) Metrics/Maintenance - Once attack finished, return metrics like: status after each attack, and ellapsed time on success of all queries of the attack (depends on **4.**)
 - [ ] **19.** (L-E) Debug/Devel/Behavior - In verbose mode, restrict a single runner. If any value given to "-p" flag, bypass and warn
-- [ ] **20.** Once detected Ctrl+C or attacks finished, update [.ini file](https://ini.unknwon.io/docs/intro/getting_started) (depends on **11.** or **12.**):
+- [ ] **20.** Once detected Ctrl+C or attacks finished, update [.ini file](https://ini.unknwon.io/docs/intro/getting_started) (depends on **4.**, **11.** or **12.**):
       - ask if update all targets
       - optionally, also update last average time of last sucessful attacks
 - [ ] **21.** (L-M) Feature - Script to generate a json/yaml report of phishing sites (no matter if being scammed-back or not). (depends on **11.**)
@@ -55,7 +55,7 @@ All pending improvements have a rating (Priority-Difficulty):
 - [ ] **22.** (L-M) Debug - Prepare "-version" option, initially to show the commit under it was built the binary
 - [ ] **23.** (L-M) Devel. - Create utility to test URL patterns, as example, `url-NNN` where `NNN` is dynamic
 - [ ] **24.** (M-H) Save/read each mirror/target parameters [in a yaml file](https://medium.com/better-programming/parsing-and-creating-yaml-in-go-crash-course-2ec10b7db850) (maybe related with **21.**)
-- [ ] **25.** (H-M) Performance - Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)
+- [x] **25.** ~~(H-M) Performance - Allow per target to have a handler that checks if a mirror is still valid and alive (might be related with **11.**)~~
 - [ ] **26.** (L-M) UI - On the first line of an attack, include also the full mirror name
 - [ ] **27.** (M-M) Performance - Read parameter [on file changes](https://github.com/fsnotify/fsnotify). If change is detected, evaluate first if content changed (by calculating/comparating a hash) - Requires **24.**
 - [ ] **28.** (L-H) UI - [Allow translations](https://lokalise.com/blog/go-internationalization-using-go-i18n/)
