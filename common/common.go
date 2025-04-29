@@ -60,7 +60,7 @@ func ArgsHaveTimes(args ...string) int {
 type AttemptHander func()
 type DummyType struct{}
 
-func AttackRunner(attemptHandle AttemptHander) error {
+func AttackRunner(attemptHandle AttemptHander, estimateDuration time.Duration) error {
 	q := conf.GetTimes()
 	attempts := NewSafeCounter(0)
 	maxGoRoutines := conf.threadQty
@@ -93,7 +93,7 @@ func AttackRunner(attemptHandle AttemptHander) error {
 	// Chan for ended routines
 	done := make(chan DummyType)
 
-	totalShift := 3 * time.Second
+	totalShift := estimateDuration
 	baseDelay := totalShift / time.Duration(maxGoRoutines)
 	jitter := baseDelay / 10
 

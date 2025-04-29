@@ -64,7 +64,7 @@ func GetAllCmds(t TargetInterface) (opts []menu.CommandOption) {
 
 func getCmd(t TargetInterface, k int) (f func(...string) error) {
 	return func(args ...string) error {
-		return AttackRunner(mirrorAttempt(t, k))
+		return AttackRunner(mirrorAttempt(t, k), t.EstimateDuration())
 	}
 }
 
