@@ -255,7 +255,9 @@ var mirrors = [][]string{
 	{`activarneq.blob.core.windows.net/ahora`, // ALIVE
 		"-4732370988", "7594549883:AAHSERw4Tego6M31Hexq-Pb9LnaPG0pc0jA"}, // "Ultra Encrypted"... sure hahaha
 	{`finanzaneqco.blob.core.windows.net/ahora`, // ALIVE
-		"-4696468952", "7645225295:AAGT6iTa5qi2-qSavorx_M6rv244ZKQulGI"},
+		"-4696468952", "7645225295:AAGT6iTa5qi2-qSavorx_M6rv244ZKQulGI"}, // "Ultra Encrypted"... sure hahaha
+	{`neqcolonline.blob.core.windows.net/ahora`, // ALIVE
+		"-4785771178", "7749565616:AAHnqjoNkL3Wvc-VKCNxYdgSk3P6imMN9vo"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

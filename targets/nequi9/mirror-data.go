@@ -1013,6 +1013,24 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"propulsorfinanciero.blob.core.windows.net/lock", // LIVE
+		"1362561592029479033/heK8b99wRg3ff_8DY8qyE2hrTqX7OdfQe6VYTcUFnRDQzZkw2XFqlLE38wrkJLGYxZUS",
+		"",
+		"",
+		"alt4"},
+
+	{"adquiereloenseguida1.blob.core.windows.net/prestamo", // LIVE
+		"1366917105731239936/mfCpdUefCY2v9J9zi7wvK7ZMfI4sOOaY8rvrKg8MxXqMuQOKvxGYKn-5YyhuXjqzCIgf",
+		"",
+		"",
+		""},
+
+	{"nequiclientes.blob.core.windows.net/proceso1", // LIVE
+		"1366608752278765579/Dqtbcw_kvCCJLaFNUfCTPucFS26A_uVrr2mKM1vATMgVjC2TYK1ivlWUZFNK8H6jo0y8",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
