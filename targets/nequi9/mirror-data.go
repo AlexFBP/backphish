@@ -1031,6 +1031,36 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"consultapuntajeneq.blob.core.windows.net/ideas", // LIVE
+		"1366914936781017109/fDIxhM2_zakxTiLj6t09b2hHPLRMYvS4zcqle8ZTrRKhdIe34RaEyiO4lZ2kX0DIe8Jy",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/propul", // LIVE
+		"1367157900996382751/iqF9iEZ9JFZqcFeV83yBDtDrkNhFTc6603GzsK34NmiKh7kVq0FKIGQ6Bq2GeYJacZvr",
+		"",
+		"",
+		""},
+
+	{"consultapuntajeneq.blob.core.windows.net/win", // LIVE
+		"1366810349399052388/Cmy_Hz8kJ0gK5ARLHbXesZWVeCCoWp5g4Lh77WiuwYMaY5KowCYIuyd8x6RBM5_cElvs",
+		"",
+		"",
+		""},
+
+	{"nequiclientes.blob.core.windows.net/produccion1", // LIVE
+		"1366917404395044895/DLRTiroep-AMyZKTSe_KJhgAEn0ecbhCazbvwtJOHDnZwKuU5U07qfe3vWwJ-deSFZmu",
+		"",
+		"",
+		"alt4"},
+
+	{"consultapuntajeneq.blob.core.windows.net/interes", // LIVE
+		"1366582635505389568/rnVZfzONKAGZfYGzB6Ib3RFet9VPYF07TQSJldCgZtv95Fs8a83eXGq1gfj28_53PI6d",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

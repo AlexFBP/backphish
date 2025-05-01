@@ -224,7 +224,7 @@ var mirrors = [][]string{
 		"-1002661514871", "8167813074:AAE-oztpdD0Xg48saTtkNs6reBreiBW5H8g", "templ-2"},
 	{`preopulso.blob.core.windows.net/ahora`, // (*1)
 		"-4701397367", "8149360843:AAGJJSGCmYzwH8CsRozY4EWknfKI9uValA8"}, // "Ultra Encrypted"... sure hahaha
-	{`propulne.blob.core.windows.net/ahora`, // Reported
+	{`propulne.blob.core.windows.net/ahora`, // (*1)
 		"-4776736277", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
 	{`prestampropulsornq.azurewebsites.net/6`, // Reported - down?
 		"-1002544855225", "7082292759:AAFD-7FCsv-z_g47tD8bUVX2ba3CnCZ-oic", "templ-2"},
@@ -234,19 +234,19 @@ var mirrors = [][]string{
 		"-4691937617", "8094124283:AAGFLW6M3YNeOEL3drNKjX4Xb6gMsksxQHg"}, // "Ultra Encrypted"... sure hahaha
 	{`prestampropulsornq.azurewebsites.net/5`, // Reported - down?
 		"-1002445233950", "7628962436:AAEmcjAPOL_Pjqvqk_Yag_BN87ig_tmTMJ0", "templ-2"},
-	{`neqpreopul.blob.core.windows.net/ahora`, // ALIVE
+	{`neqpreopul.blob.core.windows.net/ahora`, // (*1)
 		"-4754652599", "7755234751:AAH9d1YJt68mThYQPKtAQhzFSYIOJjLNODg"}, // "Ultra Encrypted"... sure hahaha
-	{`solicitarneq.blob.core.windows.net/ahora`, // ALIVE
+	{`solicitarneq.blob.core.windows.net/ahora`, // (*1)
 		"-4655974029", "7602932706:AAH5UzoWnuyZn3ZqH0W0Gcl-_JpWFPJWkU4"}, // "Ultra Encrypted"... sure hahaha
 	{`nequcolmbiaproplsor.blob.core.windows.net/nquicolombia`, // (*1)
 		"-4088574570", "6760159749:AAFva2BwPCHJ7iuAjjyis-iZiYsR4N5ccmU"}, // "Ultra Encrypted"... sure hahaha
 	{`nequcolmbiaproplsor.blob.core.windows.net/colombianeq`, // (*1)
 		"-4691937617", "8028105005:AAH0NEGopY3TdWgLNNTcE9BRPyrd9q4WwNg"}, // "Ultra Encrypted"... sure hahaha
-	{`propulnequl.blob.core.windows.net/ahora`, // ALIVE
+	{`propulnequl.blob.core.windows.net/ahora`, // (*1)
 		"-4711138442", "7899389286:AAF3UKvP0oYq3Hg5mJEH-dHt93Hb7Mlnvpg"}, // "Ultra Encrypted"... sure hahaha
-	{`solicitarneqprop.blob.core.windows.net/ahora`, // ALIVE
+	{`solicitarneqprop.blob.core.windows.net/ahora`, // (*1)
 		"-4707694228", "7968383500:AAFUlkAbkSAnfUTJBpPhHbq3p1nQlAjkYpo"}, // "Ultra Encrypted"... sure hahaha
-	{`necolmbia.blob.core.windows.net/nequcol`, // ALIVE
+	{`necolmbia.blob.core.windows.net/nequcol`, // (*1)
 		"-4782497904", "8010620051:AAHl7e2q2-BVSBtwCjiOQ85GrreI2QlAASQ"}, // "Ultra Encrypted"... sure hahaha
 	{`finanzaneqcol.blob.core.windows.net/ahora`, // ALIVE
 		"-4728804652", "7594549883:AAHSERw4Tego6M31Hexq-Pb9LnaPG0pc0jA"}, // "Ultra Encrypted"... sure hahaha
@@ -258,6 +258,8 @@ var mirrors = [][]string{
 		"-4696468952", "7645225295:AAGT6iTa5qi2-qSavorx_M6rv244ZKQulGI"}, // "Ultra Encrypted"... sure hahaha
 	{`neqcolonline.blob.core.windows.net/ahora`, // ALIVE
 		"-4785771178", "7749565616:AAHnqjoNkL3Wvc-VKCNxYdgSk3P6imMN9vo"}, // "Ultra Encrypted"... sure hahaha
+	{`neqsolicitar.blob.core.windows.net/ahora`, // ALIVE
+		"-4605745881", "7594549883:AAHSERw4Tego6M31Hexq-Pb9LnaPG0pc0jA"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
