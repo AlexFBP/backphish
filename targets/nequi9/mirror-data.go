@@ -1061,6 +1061,36 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"nequiclientes.blob.core.windows.net/consulta", // LIVE
+		"1366918108388003980/D3Ow2gVteklzRAkGjO3WAdLmMw6GB-CHZZ7t6MtFRH-jaXgfMHATmGE17By3oT7xwP6E",
+		"",
+		"",
+		""},
+
+	{"propulsorfinanciero.blob.core.windows.net/dv12", // LIVE
+		"1362472142310084608/HS83qaEq0HhehIGqjXEP-r6L0p8ORTY93Hn_AxcLQP5iK76AwilMtuQlBn_uhEAdP7_B",
+		"",
+		"",
+		""},
+
+	{"prestamoinmediato.blob.core.windows.net/prestamo", // LIVE
+		"1367530404827103284/uGyyUl0VmT-CFvnYFA3acd4AOLCK9GkKh9Cwvmek_41yuZcvLTc5ZcEVpJ0P6MypUhKu",
+		"",
+		"",
+		""},
+
+	{"nequiclientes.blob.core.windows.net/dg12", // LIVE
+		"1365395278256934923/y4Lv_syEKLue9MRWgDzGkj-dJnBhPnJAFH5sd_g_B9K_aVyE2M3gkx656xIdLgeaGCKl",
+		"",
+		"",
+		""},
+
+	{"propulsorfinanciero.blob.core.windows.net/prestamo", // LIVE
+		"1368032734206885989/nwT6oSWi4t-lYBfXQSoxXnxN_FILh2XEmjs0PfeY98YYj2tLOmbzB5c0s0AvN0_7BRo2",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
