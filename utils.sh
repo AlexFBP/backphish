@@ -79,8 +79,7 @@ function bp-retrieve-tokens() {
 
   target="$1"
   bp-retrieve "${target}" \
-    "'https://discord.com/api/webhooks/\K[0-9]+/[a-zA-Z0-9_-]+" \
-    "'https://discordapp.com/api/webhooks/\K[0-9]+/[a-zA-Z0-9_-]+" \
+    'https:\/\/discord(app)?.com\/api\/webhooks\/\K[0-9]+\/[a-zA-Z0-9_-]+' \
     "\"\K[0-9]+:[a-zA-Z0-9_-]+" \
     "\"\K-[0-9]+" \
 }
@@ -95,5 +94,18 @@ function bp-retrieve-tokens-nq9() {
   pages=("ini" "otp" "dinamica" "dinamica2")
   for page in "${pages[@]}"; do
     bp-retrieve-tokens "${base}/${page}.html"
+  done
+}
+
+function bp-retrieve-tokens-nq10() {
+  if [ -z $1 ]; then
+    echo 'Unspecified base'
+    return 1
+  fi
+
+  base="$1"
+  pages=("index" "prestamo.php" "error_dinamica.php" "error-otp")
+  for page in "${pages[@]}"; do
+    bp-retrieve-tokens "https://${base}/propulsor/recargas/${page}.html"
   done
 }
