@@ -12,14 +12,14 @@ type userData struct {
 
 func CreateUserData() (d userData) {
 	d.Name = common.GeneraNombresApellidosPersonaCombinadosCol(false)
-	// d.Email = common.GeneraEmailColombia()
+	d.Email = common.RandEmail(d.Name, 0)
 	d.ID = common.GeneraNIPcolombia()
 	d.Phone = common.GeneraCelColombia()
 	d.Pin = common.GeneraPin(4)
 	d.IP = common.GeneraIP()
 	d.City, _ = common.GeneraCiudadDeptoColombia()
 	d.Country = "Colombia"
-	return userData{}
+	return
 }
 
 func (u *userData) DataForStep(step uint8) (hd common.HookData) {
