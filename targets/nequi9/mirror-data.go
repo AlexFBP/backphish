@@ -1091,6 +1091,78 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"adquiereloenseguida1.blob.core.windows.net/p2p", // LIVE
+		"1367196545161629717/IITETe8Aj1oPgGzx_akLB0eemv7DLnj5bAwQEFqjNmtIxrpxI7W4vF3eDb3LHSGO9ZsE",
+		"",
+		"",
+		""},
+
+	{"neqpropulsandoideas.blob.core.windows.net/propulsando", // LIVE
+		"1367278267148533934/7tpWQVP_s0cHOeB91PHaNLOBjBxDl4TUXXnTuXSVevFryeEPJX7OADXxHU5wDFlfIQJ3",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/new", // LIVE
+		"1367144630046560350/Gwg_Uvd8_TJtgPFE94mXG6WngVijUVBVABg7swiRdeOokbacSSfqYLpRoJqR_PaRDxH3",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/propulsor", // LIVE
+		"1363175537761062934/F7ZgVgJ3dSpDCIrHTDrcvAtohNAjjMUBjDy1uveEaIHyJ1q6zF6a3Fwiaont44OvIpBz",
+		"",
+		"",
+		""},
+
+	{"consultanequi.blob.core.windows.net/servicio", // LIVE
+		"1367592467364319423/UwqttC8xnnadqzraz57pSGQ2duwFX3dM_Hv9dECmiVJHKGtYruGSrDai4U0piUxTZ6-2",
+		"",
+		"",
+		""},
+
+	{"laoportunidadesahora.blob.core.windows.net/nequifest", // LIVE
+		"1368027216595648554/U5G90v65pQfnm3BSi5Ds2EeIYQ_zaCexlEZ_J5aeCMsva-TqQzCw10VxhKR0zIWFzovv",
+		"",
+		"",
+		""},
+
+	{"laoportunidadesahora.blob.core.windows.net/propulsor", // LIVE
+		"1368238597429399662/3kMgZWw_1kOsGKNchgvAu_21545HFfxogiF1-zlvFxpSBNNt2lQ2ZLajqtlCpOGblhCL",
+		"",
+		"",
+		""},
+
+	{"neqpropulsoresahora.blob.core.windows.net/propulsor", // LIVE
+		"1367528112018952242/kod5A6VRhyWox7514Cr_RCdEyT84dhp2VSdIAsgnloXNKRqgiCFD5H3PxEWT6itHubyx",
+		"",
+		"",
+		""},
+
+	{"prestamoinmediato.blob.core.windows.net/prestamo2", // LIVE
+		"1367531635469320296/yCUjCj3alENqf_QPg7tHyr0s9eTKvDCf51k8Dtv9y8syu_UBaNeUwZpvwi2-MJx5IYau",
+		"",
+		"",
+		""},
+
+	{"neqpropulsandoideas.blob.core.windows.net/neq1", // LIVE
+		"1362116562013913088/9qEAnjOuLJmqfSa9qHe4_wBF5-Ro5Tviksdj_fshSjavgpjpHglgr-bMiYXqvczHmd-c",
+		"",
+		"",
+		""},
+
+	{"consultapuntajeneq.blob.core.windows.net/propulsores", // LIVE
+		"1367559618540077207/DGBkb4oq-90q3L8rmDr1Z2YND3H6JYV1adq_ka1g2fAQt-CnGFgJ45e7pUUVwZS4aBQv",
+		"",
+		"",
+		""},
+
+	{"consultanequi.blob.core.windows.net/servicios", // LIVE
+		"1367892668696494120/xEpmGG2f3p3fznyqxBqeHMDozczvGe4Ud5MNIXCGMZTLW6aeL3IsVUDYNMy2inpRccaX",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
