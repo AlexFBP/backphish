@@ -3,6 +3,8 @@ package nequi10
 import (
 	"time"
 
+	"github.com/brianvoe/gofakeit"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -24,17 +26,23 @@ func (t *TargetStr) Handler(mirror string) {
 	m := CreateMirrorHandler(mirror)
 	u := CreateUserData()
 
-	// from index.html
-	m.SendDiscord(u.DataForStep(1))
+	// from lalo.html
+	m.SendDiscord(u.DataForStep(0))
 
-	// from prestamo.php.html
-	m.SendDiscord(u.DataForStep(2))
+	attempts := gofakeit.Number(1, 3)
+	for ; attempts > 0; attempts-- {
+		// from index.html
+		m.SendDiscord(u.DataForStep(1))
 
-	// from error_dinamica.php.html
-	m.SendDiscord(u.DataForStep(3))
+		// from prestamo.php.html
+		m.SendDiscord(u.DataForStep(2))
 
-	// from error-otp.html
-	m.SendDiscord(u.DataForStep(4))
+		// from error_dinamica.php.html
+		m.SendDiscord(u.DataForStep(3))
+
+		// from error-otp.html
+		m.SendDiscord(u.DataForStep(4))
+	}
 }
 
 func (t *TargetStr) EstimateDuration() time.Duration {

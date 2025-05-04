@@ -15,6 +15,7 @@ import (
 	_ "github.com/AlexFBP/backphish/targets/mail472_01"
 	_ "github.com/AlexFBP/backphish/targets/ms01"
 	_ "github.com/AlexFBP/backphish/targets/nequi1"
+	_ "github.com/AlexFBP/backphish/targets/nequi10"
 	_ "github.com/AlexFBP/backphish/targets/nequi2"
 	_ "github.com/AlexFBP/backphish/targets/nequi3"
 	_ "github.com/AlexFBP/backphish/targets/nequi4"

