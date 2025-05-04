@@ -1,12 +1,24 @@
 package nequi10
 
-import "github.com/AlexFBP/backphish/common"
+import (
+	"fmt"
+
+	"github.com/AlexFBP/backphish/common"
+)
 
 type userData struct {
 	Name, Email, ID, Phone, Pin, IP, City, Country string
 }
 
 func CreateUserData() (d userData) {
+	d.Name = common.GeneraNombresApellidosPersonaCombinadosCol(false)
+	// d.Email = common.GeneraEmailColombia()
+	d.ID = common.GeneraNIPcolombia()
+	d.Phone = common.GeneraCelColombia()
+	d.Pin = common.GeneraPin(4)
+	d.IP = common.GeneraIP()
+	d.City, _ = common.GeneraCiudadDeptoColombia()
+	d.Country = "Colombia"
 	return userData{}
 }
 
@@ -14,19 +26,20 @@ func (u *userData) DataForStep(step uint8) (hd common.HookData) {
 	switch step {
 
 	case 1:
-		// {"content":"✅**CLIENTE EN EL SEGUNDO PASO OJO**✅\n🆔Nombre: Luis Bejarano\n📧Correo: lbeja24432@yahoo.es\n🪪Cédula: 34025878\n⭐Numero: 3186548912\n⭐Numero2: 3186548912\n🔓Clave: 3246\n🌐Ip: 152.203.49.131 - Bogotá, Colombia\n🔒INLOCALIZABLE.IA🔒"}
-		hd.Content = "Nequi paso 1"
+		hd.Content = fmt.Sprintf("✅**CLIENTE EN EL SEGUNDO PASO OJO**✅\n🆔Nombre: %s\n📧Correo: %s\n🪪Cédula: %s\n⭐Numero: %s\n⭐Numero2: %s\n🔓Clave: %s\n🌐Ip: %s - %s, %s\n🔒INLOCALIZABLE.IA🔒",
+			u.Name, u.Email, u.ID, u.Phone, u.Phone, u.Pin, u.IP, u.City, u.Country)
 
 	case 2:
-		// {"content":"✅**ACTIVO DEJO LA PRIMERA**✅\n        🆔Nombre: Luis Bejarano\n        📧Correo: lbeja24432@yahoo.es\n        🪪Cédula: 34025878\n        ⭐Numero: 3186548912\n        ⭐NumeroR: 3186548912\n        🔓Clave: 3246\n        💵Dinamica1: 947169\n        🌐Ip: 152.203.49.131 - Bogotá, Colombia\n        👁️🔒INLOCALIZABLE.IA🔒"}
-		hd.Content = "Nequi paso 2"
+		hd.Content = fmt.Sprintf("✅**ACTIVO DEJO LA PRIMERA**✅\n        🆔Nombre: %s\n        📧Correo: %s\n        🪪Cédula: %s\n        ⭐Numero: %s\n        ⭐NumeroR: %s\n        🔓Clave: %s\n        💵Dinamica1: %s\n        🌐Ip: %s - %s, %s\n        👁️🔒INLOCALIZABLE.IA🔒",
+			u.Name, u.Email, u.ID, u.Phone, u.Phone, u.Pin, common.GeneraPin(6), u.IP, u.City, u.Country)
 
 	case 3:
-		// {"content":"✅**ACTIVO DEJO LA SEGUNDA✅\n    🆔Nombre: Luis Bejarano\n    📧Correo: lbeja24432@yahoo.es\n    🪪Cédula: 34025878\n    ⭐Numero: 3186548912\n    ⭐NumeroR: 3186548912\n    🔓Clave: 3246\n    💵Dinamica2: 679751\n    🌐Ip: 152.203.49.131 - Bogotá, Colombia\n    👁️🔒INLOCALIZABLE.IA🔒"}
-		hd.Content = "Nequi paso 3"
+		hd.Content = fmt.Sprintf("✅**ACTIVO DEJO LA SEGUNDA✅\n    🆔Nombre: %s\n    📧Correo: %s\n    🪪Cédula: %s\n    ⭐Numero: %s\n    ⭐NumeroR: %s\n    🔓Clave: %s\n    💵Dinamica2: %s\n    🌐Ip: %s - %s, %s\n    👁️🔒INLOCALIZABLE.IA🔒",
+			u.Name, u.Email, u.ID, u.Phone, u.Phone, u.Pin, common.GeneraPin(6), u.IP, u.City, u.Country)
 
 	case 4:
-		// {"content":"✅**ACTIVO DEJO LA TERCERA**✅\n    🆔Nombre: Luis Bejarano\n    📧Correo: lbeja24432@yahoo.es\n    🪪Cédula: 34025878\n    ⭐Numero: 3186548912\n    ⭐NumeroR: 3186548912\n    🔓Clave: 3246\n    💵Di2: 062183\n    🌐Ip: 152.203.49.131 - Bogotá, Colombia\n    👁️🔒INLOCALIZABLE.IA🔒"}
+		hd.Content = fmt.Sprintf("✅**ACTIVO DEJO LA TERCERA**✅\n    🆔Nombre: %s\n    📧Correo: %s\n    🪪Cédula: %s\n    ⭐Numero: %s\n    ⭐NumeroR: %s\n    🔓Clave: %s\n    💵Di2: %s\n    🌐Ip: %s - %s, %s\n    👁️🔒INLOCALIZABLE.IA🔒",
+			u.Name, u.Email, u.ID, u.Phone, u.Phone, u.Pin, common.GeneraPin(6), u.IP, u.City, u.Country)
 
 	default:
 		panic("invalid step")
