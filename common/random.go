@@ -102,6 +102,10 @@ func RandEmail(names string, year int) string {
 	if names == "" {
 		return gofakeit.Email()
 	}
+	RemoveAccents(&names)
+	if rand.Intn(2) == 0 {
+		names = strings.ToLower(names)
+	}
 
 	// Split names by space
 	nameParts := strings.Fields(names)
