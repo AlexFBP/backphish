@@ -8,7 +8,7 @@ type mirrorData struct {
 	common.Discord
 }
 
-func mirrData(name string) (d mirrorData) {
+func CreateMirrorHandler(name string) (d mirrorData) {
 	v := target.GetMirrorParams(name)
 	d.Webhook = v[0]
 	return
