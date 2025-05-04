@@ -97,6 +97,88 @@ func RandUserName(p *gofakeit.PersonInfo) string {
 	return u
 }
 
+func RandEmail(names string, year int) string {
+	// If names is empty, just return a random email with gofakeit
+	if names == "" {
+		return gofakeit.Email()
+	}
+
+	// Split names by space
+	nameParts := strings.Fields(names)
+
+	// If more than one name, randomly decide if take one or all names
+	if len(nameParts) > 1 && rand.Intn(2) == 0 {
+		nameParts = []string{PickRand(nameParts)}
+	}
+
+	// For each remaining name, randomly decide among: first letter, first 2 letters, full name
+	for i, name := range nameParts {
+		switch rand.Intn(3) {
+		case 0:
+			nameParts[i] = string(name[0]) // First letter
+		case 1:
+			if len(name) > 1 {
+				nameParts[i] = name[:2] // First 2 letters
+			}
+		}
+	}
+
+	// If more than one name, randomly decide if glue them with dot, underscore or nothing
+	separator := ""
+	if len(nameParts) > 1 {
+		switch rand.Intn(3) {
+		case 0:
+			separator = "."
+		case 1:
+			separator = "_"
+		}
+	}
+	username := strings.Join(nameParts, separator)
+
+	// If year is 0, randomly decide if add a number (0-99) at the end, or a year (19 to 60 years ago) or nothing
+	if year == 0 {
+		switch rand.Intn(3) {
+		case 0:
+			// Generate a year between 19 and 60 years ago
+			year = time.Now().Year() - gofakeit.Number(19, 60)
+		case 1:
+			// Generate a random two-digit number
+			year = gofakeit.Number(0, 99)
+		}
+	}
+
+	// Randomly decide if add the full digits or just the last 2 digits
+	yearStr := ""
+	if year != 0 {
+		if rand.Intn(2) == 0 {
+			yearStr = strconv.Itoa(year % 100) // Last 2 digits
+			if year%100 < 10 {
+				yearStr = "0" + yearStr // Add leading zero
+			}
+		} else {
+			yearStr = strconv.Itoa(year) // Full year
+		}
+	}
+
+	// If to be added either the number or the year, randomly decide if join with a dot, underscore or nothing
+	if yearStr != "" {
+		switch rand.Intn(3) {
+		case 0:
+			username += "." + yearStr
+		case 1:
+			username += "_" + yearStr
+		default:
+			username += yearStr
+		}
+	}
+
+	// Finally, randomly decide the domain (gmail, hotmail, yahoo, etc)
+	domains := []string{"gmail.com", "hotmail.com", "yahoo.com", "outlook.com", "protonmail.com"}
+	domain := PickRand(domains)
+
+	return fmt.Sprintf("%s@%s", username, domain)
+}
+
 func RandUserAgent() string {
 
 	// Generated with https://iplogger.org/useragents/
