@@ -15,7 +15,7 @@ type Discord struct {
 }
 
 type HookData struct {
-	User    string `json:"username"`
+	User    string `json:"username,omitempty"`
 	Content string `json:"content"`
 }
 
