@@ -1163,6 +1163,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"consultapuntajeneq.blob.core.windows.net/propulsando1", // LIVE
+		"1368654272853708800/0Nt1rSl0zUKjEWUSC6mLI3_RZisdrqUFip1RKQNY7YGA2wXx4qEZpEyZKluP31PI-cHH",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
