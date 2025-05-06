@@ -1169,6 +1169,18 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"consultanequi.blob.core.windows.net/propulsando", // LIVE
+		"1368653575235960903/OIpiXueNoFnkonRU4sR4ATlqy9ngBj2FZYXjcENiaNTDZeMxmPaOEel_TvqUZL6cRpkH",
+		"",
+		"",
+		""},
+
+	{"consultapuntajeneq.blob.core.windows.net/interess", // LIVE
+		"1368705554783932496/0ZzxOTsEDb8z96_VQ981dHrHBiZNOZ_hsorYVIaYG7c6-JD27EMPqh1VowUBNTRYjZO1",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
