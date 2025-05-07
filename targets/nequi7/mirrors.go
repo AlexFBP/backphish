@@ -276,6 +276,26 @@ var mirrors = [][]string{
 		"-4611311823", "7625931347:AAHzO3J1FhQHw7BQ1eycfZcSw0_fhFGs3sA"}, // "Ultra Encrypted"... sure hahaha
 	{`finanzanequi.blob.core.windows.net/ahora`, // ALIVE
 		"-4782687045", "7663361040:AAFrbN0mpk7pLmR329CiTXyov0dOGwCCUPM"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzasnequi.blob.core.windows.net/ahora`, // ALIVE
+		"-4685925038", "8146615953:AAGFNb18fQk5NyTl07bOx-dyCaCTLxE1l4s"}, // "Ultra Encrypted"... sure hahaha
+	{`activarcolneq.blob.core.windows.net/ahora`, // ALIVE
+		"-4636088031", "7917193570:AAGigQ7jK1r1RwuCJqovFidEmijlpMLCp-Y"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarnequicolo.blob.core.windows.net/ahora`, // ALIVE
+		"-4700241254", "8139567684:AAHuEZdRwV0rMgCYmhUyYDuM_1InsXgAowE"}, // "Ultra Encrypted"... sure hahaha
+	{`activatupropuls.blob.core.windows.net/ahora`, // ALIVE
+		"-4610497283", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
+	{`nquicolmbiapropulsr.blob.core.windows.net/nqui`, // ALIVE
+		"-4742794187", "8052984313:AAE2NFxDiWK3-rYcl7YH3Y7SBs2QQhRAUL0"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarneqcolomb.blob.core.windows.net/ahora`, // ALIVE
+		"-4640825517", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarnequ.blob.core.windows.net/ahora`, // ALIVE
+		"-4781360233", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzaneqcolo.blob.core.windows.net/ahora`, // ALIVE
+		"-4772656708", "8146615953:AAGFNb18fQk5NyTl07bOx-dyCaCTLxE1l4s"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzacolnequ.blob.core.windows.net/ahora`, // ALIVE
+		"-4701160319", "7625931347:AAHzO3J1FhQHw7BQ1eycfZcSw0_fhFGs3sA"}, // "Ultra Encrypted"... sure hahaha
+	{`activarpropul.blob.core.windows.net/ahora`, // ALIVE
+		"-4691663203", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }

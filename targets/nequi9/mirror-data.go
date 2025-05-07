@@ -1181,6 +1181,66 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"prestamopropulsorneq.blob.core.windows.net/neq", // LIVE
+		"1364270802668748911/5zMQlly3XqO7yGrsS8HISkfuAuAnwo-PX8ErYvBuxwvmesLHCYMEXA4VBX3Iz20CmWM1",
+		"",
+		"",
+		""},
+
+	{"consultanequi.blob.core.windows.net/principal", // LIVE
+		"1369026130274947173/w4yx5mwZeXDzRCqw-lJcxRC4SBjIAM8Fj-7rSCd2qDamq8VB8dpCPy07RpTyU2oN2Kdf",
+		"",
+		"",
+		""},
+
+	{"neqpropulsandoideas.blob.core.windows.net/contenedor", // LIVE
+		"1366958304273633390/3O9DRGMRIEL3QiuaMNC5HzDKZmKFATKpIb7j0hmVA8IPlMlGpsqZOCiutYUje00MiAMN",
+		"",
+		"",
+		""},
+
+	{"neqpropulsor.blob.core.windows.net/prestamo4", // LIVE
+		"1368627964434190500/QK6Q4hWh03DA6fqLuyCBHKkhw6T7uq9ZXRDmdC6oF_yNFs3htMaOSoCIP_trEaXIWbUm",
+		"",
+		"",
+		""},
+
+	{"neqpropulsor.blob.core.windows.net/prestamo10", // LIVE
+		"1368624095197139004/ocwgHCnITQzn1PP7kZ65rgeUBVpWW4wlbWGXWv8f01YoCBlI3AaonGcF8A2jAF8g8bu5",
+		"",
+		"",
+		""},
+
+	{"prestamopropulsornq.blob.core.windows.net/interes", // LIVE
+		"1369011011964895374/3TomqIWYjOJE7G2vYwg3_26mV_3hoQqO9eR-az5GXZ6Tho2TvWLAXF64xluVDzMWDSgd",
+		"",
+		"",
+		""},
+
+	{"neqpropulsor.blob.core.windows.net/prestamo8", // LIVE
+		"1368636846577418320/RDKQcrRC620FtjWTCz1okefiePzxQv3MHZgxB1_vmunJ6ivIHLY7R6h-382TcVjkzsLd",
+		"",
+		"",
+		""},
+
+	{"consultanequi.blob.core.windows.net/consulta", // LIVE
+		"1367549420861788232/fHAC7zmJdl031xWCbbZSNDi2lnIzBW6S89Ryse97uM1lu41hHPBXBTPk6-vC4oLnBWzW",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/interess", // LIVE
+		"1369174716832809011/Fp3oZopiNqLG6wdhFyPlHL3mDF1C6dgRkLdHVDeeAiGwAHtqF8Bs8asecqUvSm4p2ZVb",
+		"",
+		"",
+		""},
+
+	{"neqpropulsor.blob.core.windows.net/prestamo3", // LIVE
+		"1368626331209957386/4m68ZfnJ6xrOhoV6Tk8ZqrevRn7GGglEaCCQtZ7kKimmxjQ_Wi6zi8g5ZunFCxFcxsco",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
