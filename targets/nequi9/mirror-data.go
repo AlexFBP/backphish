@@ -1277,6 +1277,42 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"nqprestamopropulsor.blob.core.windows.net/prestamo", // LIVE
+		"1369507842633109514/5UQ9EoX3FuXyUNZxpNPb1qDiHSLa8gfNEs2gH3iHx4DndLCVKpuxn7UeIwiK3UOrcunz",
+		"tk",
+		"chat",
+		"opts"},
+
+	{"nequiclientes.blob.core.windows.net/propulsor1", // LIVE
+		"1362421927276187943/DzcAILn_WrGSe4b4h9gYZg46ph0KM8gcc-_o7axd-jTzkeAZAa_y043TE2qJ7BicArRb",
+		"",
+		"",
+		""},
+
+	{"adquiereloenseguida1.blob.core.windows.net/finanza", // LIVE
+		"1369776778377166888/hslOXU-lC21KNqfofbiQdYq0kX4pCCHpiNa4jYtac3aXVHh_DCsflRSwcsvIHTI8chRs",
+		"",
+		"",
+		""},
+
+	{"nqprestamopropulsor.blob.core.windows.net/post", // LIVE
+		"1370422242000769065/neoDXItd7G-dYw7fYVGtcezv2aRPUpXsACUgN-ry9Ps9Wc7Vb3p6h90FWiFH9VnEfzLB",
+		"",
+		"",
+		""},
+
+	{"consultanequi.blob.core.windows.net/propulsor", // LIVE
+		"1369752396066193508/JBBPQGyIYVUfqo3Qer2GiTN_cAKXzjAXDlxIGnr68cOVVub5crOStZKbGaY_8xtFCuS5",
+		"tk",
+		"chat",
+		"opts"},
+
+	{"nqprestamopropulsor.blob.core.windows.net/time", // LIVE
+		"1370430509099778150/2YUNd7mIiKxlff7MTzjwwJOLa4plbC_UWiRSCkvMzzG18JtJwX37Qv-KHQrgrmwdMX51",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
