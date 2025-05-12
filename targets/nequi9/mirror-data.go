@@ -1313,6 +1313,18 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"adquiereloenseguida1.blob.core.windows.net/barca", // LIVE
+		"1367165791245439120/zbTUWVwgi6p5v7Qkrn1h6pk0xJkbh__NIu5BYDUDrl-9toGrGPDcbMmQSHDIyIZlsDrN",
+		"",
+		"",
+		""},
+
+	{"propulsandoideasnq1.blob.core.windows.net/products", // LIVE
+		"1369737972135755846/BuJ6O4U1tUwqSKuS0rE0Gj0PS95kH79BA27zrMOVLTnG4cvlmKEqcRAS-VJCNgFx2Nrl",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",
