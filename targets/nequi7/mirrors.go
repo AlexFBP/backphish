@@ -1,6 +1,8 @@
 package nequi7
 
 import (
+	"regexp"
+
 	"github.com/AlexFBP/backphish/common"
 )
 
@@ -18,6 +20,29 @@ func (m *mirrorData) selectTemplate(d *usrData, step uint8) string {
 		}
 		return d.template1b(step - 2)
 	}
+}
+
+func (m *mirrorData) detectParams(hostUrl string) (token, chat string) {
+	body := ""
+	if e, _ := m.SendGet(hostUrl, nil, nil, &body); e != nil {
+		return
+	}
+
+	// Regular expression pattern with (?s) to enable multiline matching
+	pattern := `(?s)var xorKeycryp.*encryptedChat, xorKey\)`
+	re := regexp.MustCompile(pattern)
+
+	// Find matches
+	matches := re.FindAllStringSubmatch(body, -1)
+	jsSnippet := ""
+	for _, match := range matches {
+		if len(match) > 0 && len(match[0]) > 400 {
+			jsSnippet = match[0]
+			break
+		}
+	}
+	token = jsSnippet
+	return
 }
 
 func mirrData(name string) (d mirrorData) {
