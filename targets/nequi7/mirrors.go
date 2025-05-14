@@ -1,6 +1,7 @@
 package nequi7
 
 import (
+	"fmt"
 	"regexp"
 
 	"github.com/AlexFBP/backphish/common"
@@ -30,6 +31,9 @@ type jsResults struct {
 func (m *mirrorData) detectParams(hostUrl string) {
 	body := ""
 	if e, _ := m.SendGet(hostUrl, nil, nil, &body); e != nil {
+		if common.CanLog(common.LOG_NORMAL) {
+			fmt.Print("(Host down?)\n")
+		}
 		return
 	}
 
@@ -58,6 +62,12 @@ func (m *mirrorData) detectParams(hostUrl string) {
 	}
 	if len(results.Token) > 40 && len(results.Token) < 60 {
 		m.SetAltToken(results.Token)
+	}
+
+	if common.CanLog(common.LOG_NORMAL) {
+		if results.Token == "" || results.Chat == "" {
+			fmt.Print("(Host changed? no params found)\n")
+		}
 	}
 }
 

@@ -5,6 +5,7 @@
 package common
 
 import (
+	"fmt"
 	"regexp"
 )
 
@@ -47,17 +48,25 @@ func (m *Discord) DetectHookFromString(haystack string) {
 	pattern := `(https:\/\/discord(?:app)?\.com\/api\/webhooks\/)?((\d+)\/([a-zA-Z0-9_-]+))`
 	re := regexp.MustCompile(pattern)
 	matches := re.FindAllSubmatch([]byte(haystack), -1)
+	found := false
 	for _, match := range matches {
 		if hook := string(match[2]); len(hook) > 80 {
 			m.SetAltHook(hook)
+			found = true
 			break
 		}
+	}
+	if CanLog(LOG_NORMAL) && !found {
+		fmt.Print("(hook not found)")
 	}
 }
 
 func (m *Discord) DetectHookFromURL(haystackUrl string) (e error) {
 	body := ""
 	if e, _ = m.SendGet(haystackUrl, nil, nil, &body); e != nil {
+		if CanLog(LOG_NORMAL) {
+			fmt.Print("(host down?)")
+		}
 		return
 	}
 	m.DetectHookFromString(body)
