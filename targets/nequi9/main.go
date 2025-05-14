@@ -37,6 +37,7 @@ func (t *mirrorManager) Handler(mirror string) {
 
 	if m.Token != "" && m.Chat != "" {
 		m.SendToTelegram(d.DataForStep(0, nil).Content)
+		// not sure if this delay is needed
 		common.RandDelayRange(10*time.Second, 30*time.Second)
 	}
 
@@ -48,9 +49,9 @@ func (t *mirrorManager) Handler(mirror string) {
 		op["alt4"] = ""
 	}
 	m.DetectHookFromURL(fmt.Sprintf("https://%s/ini.html", mirror))
+	common.RandDelayRange(10*time.Second, 30*time.Second)
 	m.SendDiscord(d.DataForStep(1, op))
 	reset()
-	common.RandDelayRange(10*time.Second, 30*time.Second)
 
 	// (step 2) POST webhook (from neq.html)
 	if m.HasOption("alt1") {
@@ -64,9 +65,9 @@ func (t *mirrorManager) Handler(mirror string) {
 		op["alt2"] = ""
 	}
 	m.DetectHookFromURL(fmt.Sprintf("https://%s/neq.html", mirror))
+	common.RandDelayRange(15*time.Second, 30*time.Second)
 	m.SendDiscord(d.DataForStep(2, op))
 	reset()
-	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 3) POST webhook (from otp.html)
 	if m.HasOption("alt1") {
@@ -86,9 +87,9 @@ func (t *mirrorManager) Handler(mirror string) {
 		alt_hook()
 	}
 	m.DetectHookFromURL(fmt.Sprintf("https://%s/otp.html", mirror))
+	common.RandDelayRange(15*time.Second, 30*time.Second)
 	m.SendDiscord(d.DataForStep(3, op))
 	reset()
-	common.RandDelayRange(15*time.Second, 30*time.Second)
 
 	// (step 4) POST back2 (from loading --> dinamica)
 	if m.HasOption("alt1") {
@@ -112,9 +113,9 @@ func (t *mirrorManager) Handler(mirror string) {
 		alt_hook()
 	}
 	m.DetectHookFromURL(fmt.Sprintf("https://%s/dinamica2.html", mirror))
+	common.RandDelayRange(35*time.Second, 50*time.Second)
 	m.SendDiscord(d.DataForStep(5, op))
 	reset()
-	common.RandDelayRange(35*time.Second, 50*time.Second)
 }
 
 func (t *mirrorManager) EstimateDuration() time.Duration {
