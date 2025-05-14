@@ -1337,6 +1337,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"procesosremodelacion.blob.core.windows.net/sala", // LIVE - it was nq7
+		"1369509935389479073/_vzAHMqjZEbE3S2gEibSojGLklBsv04AfYMWOLg2AuzLJu45KcIzVkhhkeaDKBJLsqcZ",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

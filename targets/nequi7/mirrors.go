@@ -359,7 +359,7 @@ var mirrors = [][]string{
 		"-4760947576", "7519893456:AAGDW9Yz2b3Hc9VnGcomArlo7OkRvf8BzAs"}, // "Ultra Encrypted"... sure hahaha
 	{`solicitarpropu.blob.core.windows.net/ahora`, // ALIVE
 		"-4668258223", "7615958567:AAEu_h1o6skvkf49gVygLzxRvw41QgE8Q1A"}, // "Ultra Encrypted"... sure hahaha
-	{`procesosremodelacion.blob.core.windows.net/sala`, // ALIVE
+	{`procesosremodelacion.blob.core.windows.net/sala`, // now is nq9
 		"-4799887891", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
 	{`activartupropul.blob.core.windows.net/ahora`, // ALIVE
 		"-4721760430", "7615958567:AAEu_h1o6skvkf49gVygLzxRvw41QgE8Q1A"}, // "Ultra Encrypted"... sure hahaha
