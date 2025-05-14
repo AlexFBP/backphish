@@ -22,7 +22,12 @@ func (m *mirrorData) selectTemplate(d *usrData, step uint8) string {
 	}
 }
 
-func (m *mirrorData) detectParams(hostUrl string) (token, chat string) {
+type jsResults struct {
+	Token string `json:"TELEGRAM_TOKEN"`
+	Chat  string `json:"CHAT_ID"`
+}
+
+func (m *mirrorData) detectParams(hostUrl string) {
 	body := ""
 	if e, _ := m.SendGet(hostUrl, nil, nil, &body); e != nil {
 		return
@@ -41,8 +46,19 @@ func (m *mirrorData) detectParams(hostUrl string) (token, chat string) {
 			break
 		}
 	}
-	token = jsSnippet
-	return
+	ending := ";\nconsole.log(JSON.stringify({TELEGRAM_TOKEN, CHAT_ID}));"
+
+	var results jsResults
+	if common.RunJS(jsSnippet+ending, &results) != nil {
+		return
+	}
+
+	if len(results.Chat) > 5 && len(results.Chat) < 20 {
+		m.SetAltChat(results.Chat)
+	}
+	if len(results.Token) > 40 && len(results.Token) < 60 {
+		m.SetAltToken(results.Token)
+	}
 }
 
 func mirrData(name string) (d mirrorData) {
