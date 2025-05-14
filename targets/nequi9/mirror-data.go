@@ -1325,6 +1325,18 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"puntonequi.blob.core.windows.net/prioridad", // LIVE
+		"1370483424707743816/59Q-Gxe3KghaU43Jki9Rnum0Jye6BO5eb5bYTzEGzPlyk-VPBPl-dXG4tlGhCETFtqUy",
+		"",
+		"",
+		""},
+
+	{"prestamopropulsor2025.blob.core.windows.net/nq3", // LIVE
+		"1370805269034172529/BWXte_DtpVirV72_KVa1Txq_6ABPNY1Xr5YXCw7qUZcNcP_TSV9bcCHeW-0KJr8BZTp0",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

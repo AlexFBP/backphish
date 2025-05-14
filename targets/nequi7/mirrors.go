@@ -332,6 +332,20 @@ var mirrors = [][]string{
 		"-4634298335", "7747053336:AAFx7dCeUJoiLghErlZA9NZJJLQn6kssVk4"}, // "Ultra Encrypted"... sure hahaha
 	{`finanzatupropulneq.blob.core.windows.net/ahora`, // ALIVE
 		"-4648238056", "7747053336:AAFx7dCeUJoiLghErlZA9NZJJLQn6kssVk4"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarprest.blob.core.windows.net/ahora`, // ALIVE
+		"-4740014467", "7518240040:AAEsTEjRXB_PEbp9OLRBgz1ff7TVixtOISo"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarpropuls.blob.core.windows.net/ahora`, // ALIVE
+		"-4693141516", "7518240040:AAEsTEjRXB_PEbp9OLRBgz1ff7TVixtOISo"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarpresta.blob.core.windows.net/ahora`, // ALIVE
+		"-4680830590", "7518240040:AAEsTEjRXB_PEbp9OLRBgz1ff7TVixtOISo"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzaahoratupropul.blob.core.windows.net/ahora`, // ALIVE
+		"-4636873853", "7262756187:AAE5F97RGkUrXKpqoZ-_j9bUEfGK75O9Sx8"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzatusolicitud.blob.core.windows.net/ahora`, // ALIVE
+		"-4667684772", "7262756187:AAE5F97RGkUrXKpqoZ-_j9bUEfGK75O9Sx8"}, // "Ultra Encrypted"... sure hahaha
+	{`activartupreopul.blob.core.windows.net/ahora`, // ALIVE
+		"-4663436350", "8139018743:AAGbD_KfrDRqXyW4xuMmwLoot6in640QLwU"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzastupropuls.blob.core.windows.net/ahora`, // ALIVE
+		"-4744380518", "7262756187:AAE5F97RGkUrXKpqoZ-_j9bUEfGK75O9Sx8"}, // "Ultra Encrypted"... sure hahaha
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
