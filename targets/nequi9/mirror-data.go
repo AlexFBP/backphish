@@ -1343,6 +1343,12 @@ var mirrors = [][]string{
 		"",
 		""},
 
+	{"adquiereloenseguida1.blob.core.windows.net/reds", // LIVE
+		"1372060253213949952/KwTQdwnEJjaTj4nQdN1DDjSmKaOXCVFrHAQIpLl_5EQeyuIXCxgIpEYVUbTu3inVIBQX",
+		"",
+		"",
+		""},
+
 	// {"mirror", // LIVE
 	// 	"hook",
 	// 	"tk",

@@ -397,6 +397,15 @@ var mirrors = [][]string{
 		"-4663436350", "8139018743:AAGbD_KfrDRqXyW4xuMmwLoot6in640QLwU"}, // "Ultra Encrypted"... sure hahaha
 	{`finanzastupropuls.blob.core.windows.net/ahora`, // ALIVE
 		"-4744380518", "7262756187:AAE5F97RGkUrXKpqoZ-_j9bUEfGK75O9Sx8"}, // "Ultra Encrypted"... sure hahaha
+	{`activatupropul.blob.core.windows.net/ahora`, // ALIVE
+		"-4621764802", "8139018743:AAGbD_KfrDRqXyW4xuMmwLoot6in640QLwU"}, // "Ultra Encrypted"... sure hahaha
+	{`finanzatupro.blob.core.windows.net/ahora`, // ALIVE
+		"-4764125008", "7518240040:AAEsTEjRXB_PEbp9OLRBgz1ff7TVixtOISo"}, // "Ultra Encrypted"... sure hahaha
+	{`solicitarpropulneq.blob.core.windows.net/ahora`, // ALIVE
+		"-4672378565", "7988022382:AAEZy3Fu3UiOhPk2SFO-dEgWejrcygQwpCI"}, // "Ultra Encrypted"... sure hahaha
+	{`activartupropuls.blob.core.windows.net/ahora`, // ALIVE
+		"-4708480258", "8139018743:AAGbD_KfrDRqXyW4xuMmwLoot6in640QLwU"}, // "Ultra Encrypted"... sure hahaha
+
 	// {`mirror`, // ALIVE
 	// 	"chat", "token"},
 }
